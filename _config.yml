@@ -1,0 +1,24 @@
+name: MCC Foundation - North Campus
+address1: 480 South Central
+address2: Colorado City, AZ 86021
+phone: 928.875.2799
+email: charles@exceldesign.us
+fax: 928.875.2831
+lat: '37.1003124'
+lng: '-113.5552788'
+mapzoom: 13
+version: 3.0.3
+permalink: pretty
+excerpt_separator: ///
+collections:
+  main-pages:
+    output: true
+  faqs:
+  events:
+    output: true
+  boardmembers:
+    hide_content: true
+  donors:
+    hide_content: true
+  scholars:
+    hide_content: true

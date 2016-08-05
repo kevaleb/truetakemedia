@@ -1,0 +1,26 @@
+<footer class="footer">
+	<section>
+		<a href="/"><img src="/images/logos/logo.png" alt="Custom Cut Shirts Logo" class="footer-logo"/></a>
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		
+		<div class="social">
+			<a href="{{ site.facebook }}"><span class="fa fa-facebook-official"></span></a>
+			<a href="{{ site.instagram }}"><span class="fa fa-instagram"></span></a>
+			<a href="{{ site.pinterest }}"><span class="fa fa-pinterest"></span></a>
+			<a href="{{ site.twitter }}"><span class="fa fa-twitter"></span></a>
+		</div>
+		
+		{% include nav.html %}
+		
+		<p class="copyright">© Copyright {{ 'now' | date: "%Y" }}. {{ site.name }}. All Rights Reserved.</p>
+		
+		<div class="contact">
+			<p>{{ site.name }}</p>
+			<p><i class="fa fa-map-marker" aria-hidden="true"></i>{{ site.address1 }}<br />{{ site.address2 }}</p>
+			<p><i class="fa fa-phone" aria-hidden="true"></i>{{ site.phone }}</p>
+			<p><i class="fa fa-envelope" aria-hidden="true"></i>{{ site.email }}</p>
+			<p><i class="fa fa-fax" aria-hidden="true"></i>{{ site.fax }}</p>
+		</div>
+	</section>
+</footer>

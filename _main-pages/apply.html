@@ -1,0 +1,112 @@
+---
+layout: default
+title: Apply For A Scholarship
+banner_path:
+permalink: /apply/
+navclass: apply
+navtitle: Apply
+---
+<div class="banner half" style="background-image: url('{{ page.banner_path }}');">
+	<hgroup class="center full">
+		<h1 class="animate-right">{{ page.title }}</h1>
+	</hgroup>
+</div>
+
+<div>
+	<section class="contact">
+		<!--<h2>{{ site.name }}</h2>-->
+		<p><i class="fa fa-map-marker" aria-hidden="true"></i><span title="Address">{{ site.address1 }}<br /> {{ site.address2 }}</span></p>
+		<p><i class="fa fa-envelope" aria-hidden="true"></i><span title="email">{{ site.email }}</span></p>
+		<p><i class="fa fa-phone" aria-hidden="true"></i><span title="phone">{{ site.phone }}</span></p>
+		<p><i class="fa fa-fax" aria-hidden="true"></i><span title="fax">{{ site.fax }}</span></p>
+		<!--<div class="social" style="text-align: center;">
+			<a href="{{ site.facebook }}"><span class="fa fa-facebook-official"></span></a>
+			<a href="{{ site.instagram }}"><span class="fa fa-instagram"></span></a>
+			<a href="{{ site.pinterest }}"><span class="fa fa-pinterest"></span></a>
+			<a href="{{ site.twitter }}"><span class="fa fa-twitter"></span></a>
+		</div>-->
+	</section>
+</div>
+
+<div id='winery-map'></div>
+
+<div style="background: #f2f2f2;">
+	<section class="contact-form">
+		<h4>Don't be shy</h4>
+		<h3>We'd love to here from you</h3>
+		<form action="/thank-you" method="post" id="subForm">
+			<label for="Name">
+				<span><i class="fa fa-user" aria-hidden="true"></i>Name:</span>
+				<input type="text" name="Name" value="" />
+			</label>
+			<label for="Email">
+				<span><i class="fa fa-envelope" aria-hidden="true"></i>Email:</span>
+				<input type="text" name="Email" value="" />
+			</label>
+			<label for="Description">
+				<span><i class="fa fa-comment" aria-hidden="true"></i>Description:</span>
+				<textarea name="Description" type="text" class="large"></textarea>
+			</label>
+			
+		    <input type="hidden" name="_to" value="kevaleb@gmail.com"/>
+		    <input type="hidden" name="_subject" value="Contact Form"/>
+		    <input type="text" name="_gotcha" style="display: none;">
+		    <button type="submit" class="button">Contact Us</button>
+		</form>
+	</section>
+</div>
+
+<script src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js'></script> 
+ 
+<script> 
+    google.maps.event.addDomListener(window, 'load', init);
+    var map;
+    function init() {
+        var mapOptions = {
+            center: new google.maps.LatLng({{ site.lat }}, {{ site.lng }}),
+            zoom: {{ site.mapzoom }},
+            zoomControl: true,
+            zoomControlOptions: {
+                style: google.maps.ZoomControlStyle.DEFAULT,
+            },
+            disableDoubleClickZoom: true,
+            mapTypeControl: true,
+            mapTypeControlOptions: {
+                style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+            },
+            scaleControl: true,
+            scrollwheel: false,
+            panControl: true,
+            streetViewControl: true,
+            draggable : true,
+            overviewMapControl: true,
+            overviewMapControlOptions: {
+                opened: false,
+            },
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+        }
+        var mapElement = document.getElementById('winery-map');
+        var map = new google.maps.Map(mapElement, mapOptions);
+        var locations = [
+			['{{ site.name }}', '{{ page.address }}','undefined', 'undefined', 'undefined', {{ site.lat }}, {{ site.lng }}, '/images/icons/gps.png']
+        ];
+        for (i = 0; i < locations.length; i++) {
+			if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
+			if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
+			if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
+           if (locations[i][4] =='undefined'){ web ='';} else { web = locations[i][4];}
+           if (locations[i][7] =='undefined'){ markericon ='';} else { markericon = locations[i][7];}
+            marker = new google.maps.Marker({
+                icon: markericon,
+                position: new google.maps.LatLng(locations[i][5], locations[i][6]),
+                map: map,
+                title: locations[i][0],
+                desc: description,
+                tel: telephone,
+                email: email,
+                web: web
+            });
+link = '';     }
+
+}
+</script>

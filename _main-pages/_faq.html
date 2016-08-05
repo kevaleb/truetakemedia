@@ -1,0 +1,25 @@
+---
+layout: default
+title: Frequently Asked Questions
+banner_path:
+navclass: faq
+navtitle: FAQ
+---
+<div class="banner half" style="background-image: url('{{ page.banner_path }}');">
+	<hgroup class="center full">
+		<h1 class="animate-right">{{ page.title }}</h1>
+	</hgroup>
+</div>
+
+<div>
+	<section class="faq">
+		<ul>
+			{% for faq in site.faqs %}
+				<li>
+					<h3> {{ faq.question }}</h3>
+					<p>{{ faq.content }}</p>
+				</li>
+			{% endfor %}
+		</ul>
+	</section>
+</div>
