@@ -540,7 +540,7 @@ header.open > .menu-button > span.three {
 
 
 
-/* @group Untitled Group */
+/* @group Untitled Scroll CTA */
 
 .scroll-cta {
 	position: absolute;
@@ -981,6 +981,63 @@ header.open > .menu-button > span.three {
 	letter-spacing: 2px;
 }
 
+
+
+@media all and (max-width: 1080px) {
+
+.alternating {
+	padding: 24px;
+}
+
+}
+
+
+
+@media all and (max-width: 720px) {
+/* @group ALTERNATING */
+.alternating {
+	/*max-width: 480px;*/
+}
+.alternating > div {
+	/*padding: 24px 0;*/
+	
+	padding: 0;
+	text-align: center;
+}
+.alternating > div:first-of-type {
+	margin-top: 0;
+}
+.alternating > div > hgroup {
+	padding: 24px 0!important;
+	text-align: left;
+}
+.alternating > div > hgroup > h2 {
+	margin: 0 0 12px 0;
+}
+.alternating > div > hgroup > p {
+	margin: 0;
+}
+.alternating > div:first-of-type {
+	/*padding-bottom: 24px;*/
+}
+
+.alternating > div > img {
+	position: relative;
+	left: auto;
+	right: auto!important;
+	height: 240px;
+	margin: 0!important;
+	
+	height: auto;
+	width: 100%;
+}
+.alternating > div > hgroup > h2 {
+		font-size: 36px;
+}
+.alternating > div > hgroup > p {
+	
+}
+}
 /* @end */
 
 
@@ -1700,12 +1757,12 @@ article {
 
 @media all and (max-width: 540px) {
 .banner > hgroup {
-	padding: 96px 24px;
+	/*padding: 96px 24px;*/
 	text-shadow: 0 1px 5px rgba(0,0,0,.5);
 }
 .banner > hgroup > img {
 	max-width: 320px;
-	margin: 0 0 24px 0;
+	/*margin: 0 0 24px 0;*/
 }
 .banner > hgroup > h1 {
 	margin: 0 0 0px 0;

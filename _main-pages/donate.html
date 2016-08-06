@@ -17,18 +17,39 @@ navtitle: Donate
 	<section>
 		<h3>Giver</h3>
 		<label>
-			<input type="text" name="customdonation" value="25.00" />
+			<input type="text" name="customdonation" id="customdonation" value="25.00" />
 		</label>
 		<p>All proceeds will be used however we choose.</p>
 		<ul>
-			<li>Drugs & Alcohol</li>
-			<li>Gambling</li>
-			<li>Etc</li>
+			<li>Funding events</li>
+			<li>College equipment/facilities</li>
+			<li>Program development & awareness</li>
 		</ul>
 		<div>
-			<a href="#" class="button outline">Donate</a>
+			<button
+			    class="snipcart-add-item button outline customdonation"
+			    data-item-id="2"
+			    data-item-name="Custom Donation"
+			    data-item-price="25.00"
+			    data-item-url="http://northmcc.com/donate/"
+			    data-item-description="Custom Donation">
+			        Donate
+			</button>
+			<script type="text/javascript">
+				$( "input#customdonation").change(function() {
+					var customdonation = $('input#customdonation').val();
+//					$('#price').html(
+//						Math.max(
+//							(({{ page.price }}-((qty)-1))), 
+//							{{ page.price }}-4
+//						)
+//					);
+					$('.snipcart-add-item.customdonation').data('item-price',customdonation);
+				});
+			</script>
 		</div>
 	</section>
+	
 	<section class="red">
 		<h3>Member</h3>
 		<h4>$50/Year</h4>
@@ -39,9 +60,18 @@ navtitle: Donate
 			<li>Other cool stuff</li>
 		</ul>
 		<div>
-			<a href="#" class="button">Join</a>
+			<!--<a href="#" class="button">Join</a>-->
+			<button class="snipcart-add-plan button outline"
+			    data-plan-id="001"
+			    data-plan-name="MCC Foundation Membership"
+			    data-plan-interval="Year"
+			    data-plan-amount="50"
+			    data-plan-url="https://mccfoundation.com/donate/" />
+			    Sign Up
+			</button>
 		</div>
 	</section>
+	
 	<section class="black">
 		<h3>Donor</h3>
 		<h4>Large Donations</h4>
@@ -57,6 +87,6 @@ navtitle: Donate
 	</section>
 </div>
 
-<article>
+<!--<article>
 	<p>Blah blah blah blah blah blah. Blah blah blah blah blah blah. Blah blah blah blah blah blah.	Blah blah blah blah blah blah. Blah blah blah blah blah blah. Blah blah blah blah blah blah.	Blah blah blah blah blah blah. Blah blah blah blah blah blah. Blah blah blah blah blah blah.	Blah blah blah blah blah blah. Blah blah blah blah blah blah. Blah blah blah blah blah blah.	Blah blah blah blah blah blah. Blah blah blah blah blah blah. Blah blah blah blah blah blah.	Blah blah blah blah blah blah. Blah blah blah blah blah blah. Blah blah blah blah blah blah.	Blah blah blah blah blah blah. Blah blah blah blah blah blah. Blah blah blah blah blah blah.</p>
-</article>
+</article>-->
