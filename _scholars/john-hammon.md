@@ -1,4 +1,4 @@
 ---
-name: William LeBaron
-photo_path: /images/scholars/william.jpg
+name: John Hammon
+photo_path: /images/scholars/john.jpg
 ---
