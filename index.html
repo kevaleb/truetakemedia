@@ -5,16 +5,19 @@ banner_path:
 ---
 <div class="banner half">
 	<hgroup>
-		<img src="/images/logos/logo.png" alt="" />
-		<h1>MCC Foundation</h1>
+		<img src="/images/logos/logo.png" alt="" class="animate-right"/>
+		<h1 class="animate-left">MCC Foundation</h1>
 		<h2>North Chapter</h2>
-		<a href="/donate" class="button white-border">Donate</a>
-		<a href="/apply" class="button white-border">Apply</a>
+		<a href="/donate/" class="button white-border animate-up">Donate</a>
+		<a href="/apply/" class="button white-border animate-up-slow">Apply</a>
 	</hgroup>
 </div>
 
 <section>
-	<h2>What We Do</h2>
+	<div class="video-wrapper" style="width: 100%;">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/bQmW_oxah3w?rel=0" frameborder="0" allowfullscreen></iframe>
+	</div>
+	<!--<h2>What We Do</h2>-->
 	<p>We are committed to bringing the college resources which will create more opportunities for the people of Mohave County to receive quality higher education. We are currently Raising funds for scholarships, Sponsoring performing arts events, and working forward to Building a new space on campus.</p>
 </section>
 
@@ -37,8 +40,8 @@ banner_path:
 		<img src="{{ event.featured_image_path }}" alt=""/>
 		<hgroup class="animate-right">
 			<h2>{{ event.title }}</h2>
-			<p>{{ event.description }}</p>
-			<a href="{{ event.url }}" class="button">Show Me More</a>
+			<p>{{ event.excerpt }}</p>
+			<!--<a href="{{ event.url }}" class="button">Show Me More</a>-->
 		</hgroup>
 	</div>
 	{% endfor %}

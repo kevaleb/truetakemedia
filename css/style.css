@@ -62,7 +62,7 @@ a:hover {
 	/*border-color: #b81515;*/
 	background: #b81515;
 	border-radius: 2px;	
-	font: 300 18px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font: 300 14px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	letter-spacing: 2px;
 	cursor: pointer;
 	text-transform: uppercase;
@@ -96,8 +96,8 @@ a:hover {
 
 
 .button.white-border {
-	border: 3px solid #fff;
-	border-radius: 6px;
+	border: 2px solid #fff;
+	border-radius: 3px;
 }
 .button.white-border:hover {
 	background: #fff;
@@ -429,12 +429,12 @@ header.open > .menu-button > span.three {
 }
 .banner > hgroup > img {
 	display: block;
-	max-width: 350px;
+	max-width: 250px;
 	margin: 0 auto 0 auto;
 }
 .banner > hgroup > h1 {
 	margin: 0px 0 0 0;
-	font:400 36px/48px Georgia, "Times New Roman", Times, serif;
+	font:400 30px/48px Georgia, "Times New Roman", Times, serif;
 	letter-spacing: 1px;
 	/*text-shadow: 0 1px 6px rgba(0,0,0,.5);*/
 	text-transform: uppercase;
@@ -442,8 +442,8 @@ header.open > .menu-button > span.three {
 	text-align: center;
 }
 .banner > hgroup > h2 {
-	/*margin: 24px 0;*/
-	font: 100 18px/60px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	margin: 0 0 36px 0;
+	font: 100 18px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	letter-spacing: 2px;
 	color: rgba(255,255,255,1);
 	text-transform: capitalize;
@@ -953,7 +953,7 @@ header.open > .menu-button > span.three {
 .alternating > div:nth-of-type(even) > img  {
 	left: auto;
 	right: 50%;
-	margin: 0 48px 0 0;
+	margin: -160px 48px 0 0;
 }
 .alternating > div:nth-of-type(even) > h2 {
 	float: right;
@@ -1049,7 +1049,7 @@ header.open > .menu-button > span.three {
 
 /* @group Article */
 article {
-	max-width: 800px;
+	max-width: 720px;
 	margin: 0 auto;
 	padding: 60px 0px 60px 0;
 }
@@ -1124,6 +1124,27 @@ article > ul > li{
 /* @end */
 
 
+
+
+/* @group Gallery */
+
+.content .gallery {
+	text-align: center;
+	overflow: hidden;
+	padding: 48px 0 0 0;
+	/*margin: 0 auto;*/
+}
+.gallery > a {
+	display: inline-block;
+	float: left;
+	width: 33.333333%;
+	height: 240px;
+	/*margin: 0 -.25em 0 0;*/
+	background-size: cover;
+	background-position: center;
+}
+
+/* @end */
 
 
 
@@ -1277,6 +1298,7 @@ article > ul > li{
 	/*background: #e5e5e5;*/
 }
 .donors > h2 {
+	/*display: none;*/
 	text-align: center;
 	margin: 0 0 48px 0;
 }
@@ -1287,7 +1309,7 @@ article > ul > li{
 .donors > ul > li {
 	display: inline-block;
 	width: 100%;
-	max-width: 320px;
+	max-width: 150px;
 }
 .donors > ul > li > img {
 	position: relative;
@@ -1296,7 +1318,8 @@ article > ul > li{
 	max-width: 150px;
 	margin: 0 0 12px 0;
 }
-.donors > ul > li > h3{
+.donors > ul > li > h3{	
+	display: none;
 	position: relative;
 	z-index: 50;
 	top: -50px;

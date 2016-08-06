@@ -1,12 +1,17 @@
 ---
 layout: default
 ---
-<div class="banner" style="background-image: url({{ page.bannerimage }});">
+<div class="banner half" style="background-image: url({{ page.banner_path }});">
 	<hgroup class="">
 		<h1>{{ page.title }}</h1>
 		<h2>{{ page.subtitle }}</h2>
 	</hgroup>
 </div>
+<section class="gallery">
+	{% for photo in page.gallery %}
+	<a href="{{ photo.image_path }}" style="background-image: url('{{ photo.image_path }}');" class="strip" data-strip-group="fabric" data-strip-caption="{{ item.Description }}"></a>
+	{% endfor %}
+</section>
 <article class="about-us">
 	{{ content }}
 </article> 
