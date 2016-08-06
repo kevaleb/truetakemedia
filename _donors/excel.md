@@ -1,4 +1,4 @@
 ---
-name: excel.md
-image_path:
+name: Excel Design Associates
+image_path: /images/donors/excel.jpg
 ---
