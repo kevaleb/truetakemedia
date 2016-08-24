@@ -21,11 +21,13 @@ gallery:
 price-tiers:
   - title: Single Ticket
     price: 15
+    more-info: false
     link-to-more-info:
     list:
       - Entree Ticket
   - title: Individual Membership
     price: 50
+    more-info: true
     link-to-more-info: /
     list:
       - blah
@@ -33,6 +35,7 @@ price-tiers:
       - blah
   - title: Family Membership
     price: 100
+    more-info: false
     link-to-more-info:
     list:
       - blah
