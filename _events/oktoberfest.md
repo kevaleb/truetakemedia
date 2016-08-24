@@ -30,17 +30,16 @@ price-tiers:
     more-info: true
     link-to-more-info: /
     list:
-      - blah
-      - blah
-      - blah
+      - 2 tickets
+      - 2 beers
   - title: Family Membership
     price: 100
     more-info: false
     link-to-more-info:
     list:
-      - blah
-      - blah
-      - blah
+      - 2 tickets
+      - 2 beers
+      - 1 ceramic Stein
 ---
 
 
