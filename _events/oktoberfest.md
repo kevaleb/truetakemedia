@@ -18,7 +18,7 @@ gallery:
   - Image_Path: /images/events/octoberfest/2012/4.jpg
   - Image_Path: /images/events/octoberfest/2012/5.jpg
   - Image_Path: /images/events/octoberfest/2012/6.jpg
-pricing:
+price-tiers:
 - title: 
   price:
   description:
