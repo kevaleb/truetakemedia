@@ -5,9 +5,9 @@ banner_path:
 ---
 <div class="banner half">
 	<hgroup>
-		<img src="/images/logos/logo.png" alt="" class="animate-right"/>
-		<h1 class="animate-left">MCC Foundation</h1>
-		<h2>North Chapter</h2>
+		<img src="/images/logos/logo.png" alt="" class="animate-down"/>
+		<h1 class="animate-right">MCC Foundation</h1>
+		<h2 class="animate-left">North Chapter</h2>
 		<a href="/donate/" class="button white-border animate-up">Donate</a>
 		<a href="/apply/" class="button white-border animate-up-slow">Apply</a>
 	</hgroup>
@@ -21,13 +21,13 @@ banner_path:
 	<p>We are committed to bringing the college resources which will create more opportunities for the people of Mohave County to receive quality higher education. We are currently Raising funds for scholarships, Sponsoring performing arts events, and working forward to Building a new space on campus.</p>
 </section>
 
-<section class="donors">
-	<h2>A Special Thanks To Our Donors</h2>
+<section class="scholars">
+	<h2>Past Scholarship Recipients</h2>
 	<ul>
-		{% for donor in site.donors %}
+		{% for scholar in site.scholars %}
 		<li>
-			<img src="{{ donor.image_path }}" alt="" />
-			<h3>{{ donor.name }}</h3>
+			<img src="{{ scholar.photo_path }}" alt="" />
+			<h3>{{ scholar.name }}</h3>
 		</li>
 		{% endfor %}
 	</ul>
@@ -35,13 +35,17 @@ banner_path:
 
 <div class="alternating events">
 	<!--<h2>We Raise Funds Through Community Events</h2>-->
-	{% for event in site.events %}
+	{% assign sorted_events = (site.events | sort: "event-sort") %}
+	{% for event in sorted_events %}
 	<div>
 		<img src="{{ event.featured_image_path }}" alt=""/>
-		<hgroup class="animate-right">
-			<h2>{{ event.title }}</h2>
-			<p>{{ event.excerpt }}</p>
-			<!--<a href="{{ event.url }}" class="button">Show Me More</a>-->
+		<hgroup>
+			<h2 class="{% cycle 'animate-right', 'animate-left' %}">{{ event.title }}</h2>
+			<p class="{% cycle 'animate-right', 'animate-left' %}">{{ event.excerpt }}</p>
+			
+			{% if event.details-page == true %}
+			<a href="{{ event.url }}" class="button outline animate-up">Show Me More</a>
+			{% endif %}
 		</hgroup>
 	</div>
 	{% endfor %}
@@ -50,23 +54,26 @@ banner_path:
 
 <div id="mc_embed_signup" style="background: #f2f2f2;">
 	<h2 style="text-align: center;">Want to be notified about upcoming events?</h2>
-	<form action="//northmcc.us1.list-manage.com/subscribe/post?u=2c30710133ef6a400df2b697e&amp;id=2d1684297c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate signup" target="_blank" novalidate>
-		<div class="mc-field-group">
-			<label for="mce-EMAIL">Email Address </label>
-			<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+	<form action="//northmcc.us14.list-manage.com/subscribe/post?u=13d171a64b90120823e330eba&amp;id=1310f5367e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate signup" target="_blank" novalidate>
+		<div id="mc_embed_signup_scroll">
+			<div class="mc-field-group">
+				<label for="mce-EMAIL">Email </label>
+				<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+			</div>
+			<div id="mce-responses" class="clear">
+				<div class="response" id="mce-error-response" style="display:none"></div>
+				<div class="response" id="mce-success-response" style="display:none"></div>
+			</div>			
+			<div style="position: absolute; left: -5000px;" aria-hidden="true">
+				<input type="text" name="b_13d171a64b90120823e330eba_1310f5367e" tabindex="-1" value="">
+			</div>
+			<div class="clear">
+				<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button outline">
+			</div>
 		</div>
-		
-		<div id="mce-responses" class="clear">
-		<div class="response" id="mce-error-response" style="display:none"></div>
-		<div class="response" id="mce-success-response" style="display:none"></div>
-		</div>
-		<div style="position: absolute; left: -5000px;" aria-hidden="true">
-			<input type="text" name="b_2c30710133ef6a400df2b697e_2d1684297c" tabindex="-1" value="">
-		</div>
-		
-		<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button outline">
 	</form>
 </div>
+
 
 
 <section class="scholarships">
@@ -74,13 +81,13 @@ banner_path:
 	<p>With a sole purpose to promote growth and development at our local Mohave Community College campus, the North Mohave Community College Foundation strives to strengthen our students, faculty, staff, and programs. Through the hard work and collaborative efforts of our local volunteers, the North Foundation board has been able to provide financial support through charitable donations and non-profit activities within the walls of our community. It is our hope that we can continue to assist both our current and future students throughout their educational journey and offer encouragement and relief where it is needed. One of the ways we have been able to do this throughout the years is through our Mohave Serves Scholarship; a scholarship made available through the fundraising efforts of the North Mohave Campus. Awarded to an hand-chosen applicant that has exhibited great leadership and service to the community throughout the years, the Mohave Serves Scholarship is a core element of our organization and is one we work diligently on providing every year.</p>
 </section>
 
-<section class="scholars">
-	<h2>Past Scholarship Recipients</h2>
+<section class="donors">
+	<h2>A Special Thanks To Our Donors</h2>
 	<ul>
-		{% for scholar in site.scholars %}
+		{% for donor in site.donors %}
 		<li>
-			<img src="{{ scholar.photo_path }}" alt="" />
-			<h3>{{ scholar.name }}</h3>
+			<img src="{{ donor.image_path }}" alt="" />
+			<h3>{{ donor.name }}</h3>
 		</li>
 		{% endfor %}
 	</ul>
