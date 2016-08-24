@@ -23,20 +23,20 @@ price-tiers:
     price: 15
     more-info: false
     link-to-more-info:
-    list:
+    details:
       - Entree Ticket
   - title: Individual Membership
     price: 50
     more-info: true
     link-to-more-info: /
-    list:
+    details:
       - 2 tickets
       - 2 beers
   - title: Family Membership
     price: 100
     more-info: false
     link-to-more-info:
-    list:
+    details:
       - 2 tickets
       - 2 beers
       - 1 ceramic Stein
