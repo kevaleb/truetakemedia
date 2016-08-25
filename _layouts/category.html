@@ -34,7 +34,7 @@ layout: default
 		    data-plan-name="{{ tier.title }}"
 		    data-plan-interval="Year"
 		    data-plan-amount="{{ tier.price }}"
-		    data-plan-url="http://mccfoundation.com/events/oktoberfest/">
+		    data-plan-url="http://mccfoundation.com{{ page.permalink }}">
 		    Add To Cart
 		</button>
 		{% elsif tier.payment-interval == 'once' %}
@@ -43,7 +43,7 @@ layout: default
 		    data-item-id="{{ count }}"
 		    data-item-name="{{ tier.title }}"
 		    data-item-price="{{ tier.price }}"
-		    data-item-url="http://northmcc.com/events/oktoberfest/">
+		    data-item-url="http://northmcc.com{{ page.permalink }}">
 		    Add To Cart
 		</button>
 		{% endif %}
