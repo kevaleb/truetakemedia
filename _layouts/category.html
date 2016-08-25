@@ -30,8 +30,8 @@ layout: default
 		{% assign count = count | plus: 1 %}
 		{% if tier.payment-interval == 'yearly' %}
 		<button class="snipcart-add-plan button outline"
-		    data-plan-id="{{ product-number }}"
-		    data-plan-name="{{ count }}"
+		    data-plan-id="{{ count }}"
+		    data-plan-name="{{ tier.title }}"
 		    data-plan-interval="Year"
 		    data-plan-amount="{{ tier.price }}"
 		    data-plan-url="http://mccfoundation.com/events/oktoberfest/">
@@ -39,7 +39,7 @@ layout: default
 		</button>
 		{% elsif tier.payment-interval == 'once' %}
 		<button
-		    class="snipcart-add-item button outline customdonation"
+		    class="snipcart-add-item button outline"
 		    data-item-id="{{ count }}"
 		    data-item-name="{{ tier.title }}"
 		    data-item-price="{{ tier.price }}"
