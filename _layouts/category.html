@@ -30,7 +30,7 @@ layout: default
 		{% assign count = count | plus: 1 %}
 		{% if tier.payment-interval == 'yearly' %}
 		<button class="snipcart-add-plan button outline"
-		    data-plan-id="{{ count }}"
+		    data-plan-id="00{{ count }}"
 		    data-plan-name="{{ tier.title }}"
 		    data-plan-interval="Year"
 		    data-plan-amount="{{ tier.price }}"
@@ -40,7 +40,7 @@ layout: default
 		{% elsif tier.payment-interval == 'once' %}
 		<button
 		    class="snipcart-add-item button outline"
-		    data-item-id="{{ count }}"
+		    data-item-id="00{{ count }}"
 		    data-item-name="{{ tier.title }}"
 		    data-item-price="{{ tier.price }}"
 		    data-item-url="{{ page.permalink }}">
