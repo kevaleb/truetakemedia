@@ -7,9 +7,12 @@ layout: default
 	</hgroup>
 </div>
 
+
 {% if page.pricing == true %}
 <section class="pricing">
+	{% assign count = 0 %}
 	{% for tier in page.price-tiers %}
+	
 	<div style="background-color: {% cycle '#d6682f','#c92f32','#009d7f','#4c6fa5','#5e3b3b','#8b5fa8' %};">
 		<h3>{{ tier.title }}</h3>
 		<h4>{{ tier.price }}</h4>
@@ -24,10 +27,11 @@ layout: default
 		<a href="{{ tier.link-to-more-info }}"><i class="fa fa-info-circle" aria-hidden="true"></i> More Info</a>
 		{% endif %}
 		
+		{% assign count = count | plus: 1 %}
 		{% if tier.payment-interval == 'yearly' %}
 		<button class="snipcart-add-plan button outline"
-		    data-plan-id="001"
-		    data-plan-name="{{ tier.title }}"
+		    data-plan-id="{{ product-number }}"
+		    data-plan-name="{{ count }}"
 		    data-plan-interval="Year"
 		    data-plan-amount="{{ tier.price }}"
 		    data-plan-url="http://mccfoundation.com/events/oktoberfest/">
@@ -36,7 +40,7 @@ layout: default
 		{% elsif tier.payment-interval == 'once' %}
 		<button
 		    class="snipcart-add-item button outline customdonation"
-		    data-item-id="2"
+		    data-item-id="{{ count }}"
 		    data-item-name="{{ tier.title }}"
 		    data-item-price="{{ tier.price }}"
 		    data-item-url="http://northmcc.com/events/oktoberfest/">

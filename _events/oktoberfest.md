@@ -10,6 +10,7 @@ featured_image_path: /images/events/oktoberfest/oktoberfest-banner.jpg
 banner_image_path: /images/events/oktoberfest/banner.jpg
 price-tiers:
   - title: Single Ticket
+    product-number: 001
     price: 15
     payment-interval: once
     more-info: false
@@ -17,6 +18,7 @@ price-tiers:
     details:
       - Entree Ticket
   - title: Individual Membership
+    product-number: 002
     price: 50
     payment-interval: yearly
     more-info: true
@@ -25,6 +27,7 @@ price-tiers:
       - 2 tickets
       - 2 beers
   - title: Family Membership
+    product-number: 003
     price: 100
     payment-interval: yearly
     more-info: false
