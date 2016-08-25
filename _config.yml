@@ -25,7 +25,7 @@ collections:
     hide_content: true
   scholars:
     hide_content: true
-  payment-intervals:
-    - once
-    - monthly
-    - yearly
+payment-intervals:
+  - once
+  - monthly
+  - yearly
