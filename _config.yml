@@ -10,7 +10,6 @@ snapchat: /images/icons/snapchat.jpg
 lat: '37.1003124'
 lng: '-113.5552788'
 mapzoom: 13
-version: 3.0.3
 permalink: pretty
 excerpt_separator: <!--more-->
 collections:
