@@ -1,6 +1,12 @@
 <nav>
 	<a href="/">Home</a>
+	
 	{% for item in site.main-pages %}
 	<a href="{{ item.url }}" {% if page.url contains item.navclass %}class="selected"{% endif %}>{{ item.navtitle }}</a>
+	{% endfor %}
+	
+	{% assign sorted_events = (site.events | sort: "event-sort" | where: "details-page", "true") %}
+	{% for event in sorted_events %}
+	<a href="{{ event.url }}">{{ event.title }}</a>
 	{% endfor %}
 </nav>
