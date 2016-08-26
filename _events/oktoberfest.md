@@ -47,6 +47,41 @@ price-tiers:
       - 4 Free Tickets
       - 4 Free Beers
       - 1 ceramic Stein
+  - title: Deans Club Membership
+    product-number: '4'
+    price: '250'
+    payment-interval: yearly
+    more-info: false
+    link-to-more-info:
+    details:
+      - 1 Deans Club Membership
+      - 2 Oktoberfest Tickets
+      - 4 Beers
+      - 1 Ornate Stein
+  - title: Trustees Club Membership
+    product-number: '5'
+    price: '500'
+    payment-interval: yearly
+    more-info: false
+    link-to-more-info:
+    details:
+      - 1 Trustees Club Membership
+      - 2 VIP Tickets
+      - Private Buffet
+      - Free Beer All Night
+      - 1 Ornate Stein
+  - title: Presidents Club Membership
+    product-number: '6'
+    price: '1000'
+    payment-interval: yearly
+    more-info: false
+    link-to-more-info:
+    details:
+      - 1 Presidents Club Membership
+      - 4 VIP Tickets
+      - Private Buffet
+      - Free Beer All Night
+      - 1 Premium Stein
 ---
 
 
