@@ -8,7 +8,7 @@ banner_image_path: /images/events/oktoberfest/banner.jpg
 permalink: /events/oktoberfest/
 cta: true
 cta-text: Buy Tickets
-cta-link: pricing
+cta-link: '#pricing'
 event-sort: 1
 details-page: true
 pricing: true

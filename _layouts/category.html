@@ -6,7 +6,8 @@ layout: default
 		<h1 class="animate-right">{{ page.title }}</h1>
 		<h2 class="animate-left">{{ page.sub-title }}</h1>
 		{% if page.cta == true %}
-			<a href="#pricing" class="button">{{ page.cta-text }}</a>
+			<br />
+			<a href="{{ page.cta-link }}" class="button">{{ page.cta-text }}</a>
 		{% endif %}
 	</hgroup>
 </div>
@@ -15,7 +16,7 @@ layout: default
 
 
 {% if page.pricing == true %}
-<section name="pricing" class="pricing" >
+<section id="pricing" class="pricing" >
 	{% assign count = 0 %}
 	{% for tier in page.price-tiers %}
 	
