@@ -4,8 +4,11 @@ layout: default
 <div class="banner half" style="background-image: url('{{ page.banner_image_path }}');">
 	<hgroup class="center full">
 		<h1 class="animate-right">{{ page.title }}</h1>
+		<h2 class="animate-left">{{ page.sub-title }}</h1>
 	</hgroup>
 </div>
+
+<article style="background: #fff;">{{ content }}</article>
 
 
 {% if page.pricing == true %}
@@ -23,9 +26,9 @@ layout: default
 			</li>
 			{% endfor %}
 		</ul>
-		{% if tier.more-info == true %}
+		<!--{% if tier.more-info == true %}
 		<a href="{{ tier.link-to-more-info }}"><i class="fa fa-info-circle" aria-hidden="true"></i> More Info</a>
-		{% endif %}
+		{% endif %}-->
 		
 		{% assign count = count | plus: 1 %}
 		{% if tier.payment-interval == 'yearly' %}
@@ -34,7 +37,8 @@ layout: default
 		    data-plan-name="{{ tier.title }}"
 		    data-plan-interval="Year"
 		    data-plan-amount="{{ tier.price }}"
-		    data-plan-url="{{ page.permalink }}">
+		    data-plan-url="{{ page.permalink }}"
+		    data-item-shippable="true">
 		    Add To Cart
 		</button>
 		{% elsif tier.payment-interval == 'once' %}
@@ -53,7 +57,10 @@ layout: default
 </section>
 {% endif %}
 
-<article style="background: #fff;">{{ content }}</article>
+<section class="map-address">
+	<p><strong>{{ page.location }}</strong><br />{{ page.address }}</p>
+</section>
+<div id='map'></div>
 
 <!--<ul class="blogposts">
 	{% for post in site.posts %}
@@ -69,3 +76,62 @@ layout: default
 		{% endif %}
 	{% endfor %}
 </ul>-->
+
+
+<script src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js'></script> 
+ 
+<script> 
+    google.maps.event.addDomListener(window, 'load', init);
+    var map;
+    function init() {
+        var mapOptions = {
+            center: new google.maps.LatLng({{ page.lat }}, {{ page.lng }}),
+            zoom: {{ page.mapzoom }},
+            zoomControl: true,
+            zoomControlOptions: {
+                style: google.maps.ZoomControlStyle.DEFAULT,
+            },
+            disableDoubleClickZoom: true,
+            mapTypeControl: true,
+            mapTypeControlOptions: {
+                style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+            },
+            scaleControl: true,
+            scrollwheel: false,
+            panControl: true,
+            streetViewControl: true,
+            draggable : true,
+            overviewMapControl: true,
+            overviewMapControlOptions: {
+                opened: true,
+            },
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+        }
+        
+        var mapElement = document.getElementById('map');
+        var map = new google.maps.Map(mapElement, mapOptions);
+        var locations = [
+			['Gene Dockstaders House', '{{ page.address }}','undefined', 'undefined', 'undefined', {{ page.lat }}, {{ page.lng }}, '/images/icons/gps.png']
+        ];
+        for (i = 0; i < locations.length; i++) {
+			if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
+			if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
+			if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
+           if (locations[i][4] =='undefined'){ web ='';} else { web = locations[i][4];}
+           if (locations[i][7] =='undefined'){ markericon ='';} else { markericon = locations[i][7];}
+            marker = new google.maps.Marker({
+                icon: markericon,
+                position: new google.maps.LatLng(locations[i][5], locations[i][6]),
+                map: map,
+                title: locations[i][0],
+                desc: description,
+                tel: telephone,
+                email: email,
+                web: web
+            });
+link = '';     }
+
+}
+
+
+</script>

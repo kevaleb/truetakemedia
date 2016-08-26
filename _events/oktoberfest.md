@@ -1,13 +1,19 @@
 ---
 layout: category
 title: Oktoberfest
+sub-title: 2016
 event-title: oktoberfest
+featured_image_path: /images/events/oktoberfest/oktoberfest-banner.jpg
+banner_image_path: /images/events/oktoberfest/banner.jpg
 permalink: /events/oktoberfest/
 event-sort: 1
 details-page: true
 pricing: true
-featured_image_path: /images/events/oktoberfest/oktoberfest-banner.jpg
-banner_image_path: /images/events/oktoberfest/banner.jpg
+location: Gene Dockstaders Home
+address: 1740 S Richard St. Centennial Park AZ, 86021
+lat: 36.958923
+lng: -112.98227500000002
+mapzoom: 17
 price-tiers:
   - title: Single Ticket
     product-number: 001
@@ -16,7 +22,7 @@ price-tiers:
     more-info: false
     link-to-more-info:
     details:
-      - Entree Ticket
+      - 1 Ticket
   - title: Individual Membership
     product-number: 002
     price: 50
@@ -24,8 +30,9 @@ price-tiers:
     more-info: true
     link-to-more-info: /
     details:
-      - 2 tickets
-      - 2 beers
+      - 2 Tickets
+      - 2 Beers
+      - 1 Membership
   - title: Family Membership
     product-number: 003
     price: 100
@@ -33,8 +40,9 @@ price-tiers:
     more-info: false
     link-to-more-info:
     details:
-      - 2 tickets
-      - 2 beers
+      - 4 Tickets
+      - 4 Beers
+      - 2 Memberships
       - 1 ceramic Stein
 ---
 Highly anticipated and open to the public, the Oktoberfest is always a continued highlight of our annual festivities. An attractive event for those seeking an enjoyable night of food, drinks and live music, the Oktoberfest has become a  well known, keystone event in the Foundation’s schedule. <!--more--> A great opportunity to connect face to face with our members, the board enjoys using this event to create a strong sense of identity within the community and revisit valued friendship with our members. A fantastic call to action, the Oktoberfest is an ideal venue to invite our community and surrounding areas to participate in a membership with the college in an effort to further the goals of our campus, proving to be one of the most successful calendar events hosted by the Foundation. As a major contributor to the revenue the Foundation is able to raise, the event generates a large portion of the scholarship funds used to give to our gifted students at our MCC campus.
