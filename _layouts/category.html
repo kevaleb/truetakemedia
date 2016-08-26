@@ -5,6 +5,9 @@ layout: default
 	<hgroup class="center full">
 		<h1 class="animate-right">{{ page.title }}</h1>
 		<h2 class="animate-left">{{ page.sub-title }}</h1>
+		{% if page.cta == true %}
+			<a href="#pricing" class="button">{{ page.cta-text }}</a>
+		{% endif %}
 	</hgroup>
 </div>
 
@@ -12,7 +15,7 @@ layout: default
 
 
 {% if page.pricing == true %}
-<section class="pricing">
+<section name="pricing" class="pricing" >
 	{% assign count = 0 %}
 	{% for tier in page.price-tiers %}
 	
@@ -57,11 +60,6 @@ layout: default
 </section>
 {% endif %}
 
-<section class="map-address">
-	<p><strong>{{ page.location }}</strong><br />{{ page.address }}</p>
-</section>
-<div id='map'></div>
-
 <!--<ul class="blogposts">
 	{% for post in site.posts %}
 		{% if page.event-title == post.event %}
@@ -77,61 +75,46 @@ layout: default
 	{% endfor %}
 </ul>-->
 
+<!--<section class="map-address">
+	<p><strong>{{ page.location }}</strong><br />{{ page.address }}</p>
+</section>-->
+<div id='map'></div>
 
-<script src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js'></script> 
- 
-<script> 
-    google.maps.event.addDomListener(window, 'load', init);
-    var map;
-    function init() {
-        var mapOptions = {
-            center: new google.maps.LatLng({{ page.lat }}, {{ page.lng }}),
-            zoom: {{ page.mapzoom }},
-            zoomControl: true,
-            zoomControlOptions: {
-                style: google.maps.ZoomControlStyle.DEFAULT,
-            },
-            disableDoubleClickZoom: true,
-            mapTypeControl: true,
-            mapTypeControlOptions: {
-                style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
-            },
-            scaleControl: true,
-            scrollwheel: false,
-            panControl: true,
-            streetViewControl: true,
-            draggable : true,
-            overviewMapControl: true,
-            overviewMapControlOptions: {
-                opened: true,
-            },
-            mapTypeId: google.maps.MapTypeId.ROADMAP,
-        }
-        
-        var mapElement = document.getElementById('map');
-        var map = new google.maps.Map(mapElement, mapOptions);
-        var locations = [
-			['Gene Dockstaders House', '{{ page.address }}','undefined', 'undefined', 'undefined', {{ page.lat }}, {{ page.lng }}, '/images/icons/gps.png']
-        ];
-        for (i = 0; i < locations.length; i++) {
-			if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
-			if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
-			if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
-           if (locations[i][4] =='undefined'){ web ='';} else { web = locations[i][4];}
-           if (locations[i][7] =='undefined'){ markericon ='';} else { markericon = locations[i][7];}
-            marker = new google.maps.Marker({
-                icon: markericon,
-                position: new google.maps.LatLng(locations[i][5], locations[i][6]),
-                map: map,
-                title: locations[i][0],
-                desc: description,
-                tel: telephone,
-                email: email,
-                web: web
-            });
-link = '';     }
-
-}
-
-
+<script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCcJFPhkoOBXSK_JPqpIyHXfQlPIQGI5ag'></script>
+<script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=4524315f9130bf5da27eb009d53f4dbcd7d6ef3f'></script>
+<script type='text/javascript'>
+	function init_map(){
+		var myOptions = {
+			zoom: {{ page.mapzoom }},
+			zoomControl: true,
+			disableDoubleClickZoom: true,
+			scaleControl: false,
+			scrollwheel: false,
+			center:new google.maps.LatLng({{ page.lat }},{{ page.lng }}),
+			mapTypeControl: true,
+			mapTypeControlOptions: {
+			    style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+			},
+			panControl: true,
+			streetViewControl: true,
+			draggable : true,
+			overviewMapControl: false,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+		
+		map = new google.maps.Map(document.getElementById('map'), myOptions);
+		
+		marker = new google.maps.Marker({
+			map: map,
+			position: new google.maps.LatLng({{ page.lat }},{{ page.lng }})
+		});
+		
+		infowindow = new google.maps.InfoWindow({content:'<h3>{{ page.location }}</h3><h4>{{ page.address }}</h4>'});
+		
+		google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});
+		
+		infowindow.open(map,marker);
+	}
+	
+	google.maps.event.addDomListener(window, 'load', init_map);
 </script>
