@@ -67,7 +67,7 @@ price-tiers:
     details:
       - 1 Trustees Club Membership
       - 4 Tickets
-      - Free Beer All Night
+      - 2 X 1 Gallon Pitcher of Beer
       - 1 Ornate Stein
   - title: Presidents Club Membership
     product-number: '6'
