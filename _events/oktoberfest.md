@@ -66,8 +66,7 @@ price-tiers:
     link-to-more-info:
     details:
       - 1 Trustees Club Membership
-      - 2 VIP Tickets
-      - Private Buffet
+      - 4 Tickets
       - Free Beer All Night
       - 1 Ornate Stein
   - title: Presidents Club Membership
