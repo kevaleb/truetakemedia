@@ -78,7 +78,7 @@ price-tiers:
     details:
       - 1 Presidents Club Membership
       - 4 Tickets
-      - Free Beer All Night
+      - 5 X 1 Gallon Pitcher of Beer
       - 1 Premium Stein
 ---
 
