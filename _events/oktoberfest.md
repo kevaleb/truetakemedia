@@ -55,7 +55,7 @@ price-tiers:
     link-to-more-info:
     details:
       - 1 Deans Club Membership
-      - 2 Oktoberfest Tickets
+      - 4 Oktoberfest Tickets
       - 4 Beers
       - 1 Ornate Stein
   - title: Trustees Club Membership
