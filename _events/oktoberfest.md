@@ -44,7 +44,7 @@ price-tiers:
     link-to-more-info:
     details:
       - 1 Family Membership
-      - 4 Free Tickets
+      - 2 Free Tickets
       - 4 Free Beers
       - 1 ceramic Stein
   - title: Deans Club Membership
