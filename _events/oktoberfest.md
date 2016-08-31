@@ -78,8 +78,7 @@ price-tiers:
     link-to-more-info:
     details:
       - 1 Presidents Club Membership
-      - 4 VIP Tickets
-      - Private Buffet
+      - 4 Tickets
       - Free Beer All Night
       - 1 Premium Stein
 ---
