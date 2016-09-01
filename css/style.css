@@ -15,7 +15,16 @@ body {
 	background: #000;
 }
 
-
+body > .snipcart-checkout {
+	position: fixed;
+	z-index: 100000;
+	top: 0;
+	right: 0;
+	color: #fff;
+	text-shadow: 0 1px 3px rgba(0,0,0,.5);
+	font: 900 36px/96px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	padding: 24px;
+}
 
 h1 {
 	font: 900 36px/48px Georgia, "Times New Roman", Times, serif;
