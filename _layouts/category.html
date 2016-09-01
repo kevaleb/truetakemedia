@@ -61,6 +61,110 @@ layout: default
 </section>
 {% endif %}
 
+
+<!--<section class="beer">
+	<img src="/images/illustrations/beer-mug.png" alt="" />
+	
+	<div class="quantity">
+		<h3>How Many Beers Would You like?</h3>
+		<div>
+			<img src="/images/illustrations/1-beer-mug.png" alt="" />
+			<h3>Just 1 Beer</h3>
+			<p>For people who can't commit.</p>
+			<h4>$4.00/Beer</h4>
+			<a href="#"
+			    class="snipcart-add-item button outline"
+			    id="beer-button"
+			    data-item-id="single-beer"
+			    data-item-name="Single Beer"
+			    data-item-price="4.00"
+			    data-item-quantity="1"
+			    data-item-image="{{ site.url }}/images/illustrations/1-beer-mug.png"
+			    data-item-url="{{ page.permalink }}">
+			    Add To Cart
+			</a>
+		</div>
+		
+		<div>
+			<img src="/images/illustrations/3-beer-mugs.png" alt="" />
+			<h3>3 Beer</h3>
+			<p>For people who know what they want.</p>
+			<h4>$3.33/Beer</h4>
+			<button
+			    class="snipcart-add-item button outline"
+			    id="beer-button"
+			    data-item-id="3-beers"
+			    data-item-name="3 Beers"
+			    data-item-price="10.00"
+			    data-item-quantity="1"
+			    data-item-image="{{ site.url }}/images/illustrations/3-beer-mugs.png"
+			    data-item-url="{{ page.permalink }}">
+			    Add To Cart
+			</button>
+		</div>
+		
+		<div>
+			<img src="/images/illustrations/5-beer-mugs.png" alt="" />
+			<h3>5 Beers</h3>
+			<p>For people who take life for all it's worth.</p>
+			<h4>$3.00/Beer</h4>
+			<a href="#"
+			    class="snipcart-add-item button outline"
+			    id="beer-button"
+			    data-item-id="5-beers"
+			    data-item-name="5 Beers"
+			    data-item-price="15.00"
+			    data-item-quantity="1"
+			    data-item-image="{{ site.url }}/images/illustrations/5-beer-mugs.png"
+			    data-item-url="{{ page.permalink }}">
+			    Add To Cart
+			</a>
+		</div>
+		
+		<!--<label>
+			<span id="qty-minus" class="qtyChange">-</span>
+			<input id="quantity" type="text" name="quantity" value="3" />
+			<span id="qty-plus" class="qtyChange">+</span>
+		</label>
+		<br />
+		<a href="#" class="snipcart-checkout button outline">No Thanks</a>
+		<button
+		    class="snipcart-add-item button outline"
+		    id="beer-button"
+		    data-item-id="beer"
+		    data-item-name="Beer"
+		    data-item-price="4.00"
+		    data-item-quantity="3"
+		    data-item-image="{{ site.url }}/images/illustrations/beer-mug.png"
+		    data-item-url="{{ page.permalink }}">
+		    Add To Cart
+		</button>
+		
+		<script>
+			$(".qtychange").on("click", function() {
+			
+				var $qtyChange = $(this);
+				var oldValue = $("input#quantity").val();
+				
+				if ($qtyChange.attr("id") == "qty-plus") {
+					var newVal = parseFloat(oldValue) + 1;
+				} 
+				else {
+					if (oldValue > 0) {
+						var newVal = parseFloat(oldValue) - 1;
+					} 
+					else {
+						newVal = 0;
+					}
+				}
+				
+				$("input#quantity").val(newVal);
+				$('#beer-button').attr('data-item-quantity',newVal);
+			});
+		</script>--*>
+	</div>
+</section>-->
+
 <!--<ul class="blogposts">
 	{% for post in site.posts %}
 		{% if page.event-title == post.event %}
