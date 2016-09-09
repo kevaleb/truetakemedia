@@ -421,7 +421,37 @@ header.open > .menu-button > span.three {
 	vertical-align: middle;
 }
 
+/* @group Notifications */
 
+.banner > .notification {
+	/*position: absolute;*/
+	top: 0;
+	left: 0;
+	width: 90%;
+	max-width: 480px;
+	margin: 0 auto;
+	padding: 12px;
+	background: #000;
+	border-radius: 0 0 3px 3px;
+	color: #fff;
+}
+.banner > .notification > h3 {
+	color: #fff;
+	font: 200 16px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+.banner > .notification > h3 > i {
+	margin: 0 12px 0 0;
+}
+.banner > .notification > h3 > a {
+	display: inline-block;
+	margin: 0 0 0 24px;
+	padding: 3px 12px;
+	background: #fff;
+	text-decoration: none;
+	border-radius: 3px;
+}
+
+/* @end */
 
 
 /* HGROUP */

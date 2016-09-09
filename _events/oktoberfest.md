@@ -1,7 +1,7 @@
 ---
 layout: category
 title: Oktoberfest
-sub-title: 2016
+sub-title: Friday Sep 23, 2016 @ 6:00PM
 event-title: oktoberfest
 featured_image_path: /images/events/oktoberfest/oktoberfest-banner.jpg
 banner_image_path: /images/events/oktoberfest/banner.jpg
