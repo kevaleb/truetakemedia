@@ -1509,6 +1509,38 @@ article > ul > li{
 
 
 
+/* @group Stein */
+
+.stein {
+	overflow: hidden;
+	padding: 48px 24px;
+	background: #000;
+	background-size: cover;
+	text-align: center;
+}
+.stein > h1 {
+	font: 48px Georgia, "Times New Roman", Times, serif;
+	color: #fff;
+	text-transform: uppercase;
+}
+.stein > h2 {
+	font: 200 18px/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	letter-spacing: 1px;
+	text-transform: capitalize;
+}
+.stein > img {
+	/*float: left;*/
+	width: 50%;
+	max-width: 240px;
+}
+
+/* @end */
+
+
+
+
+
+
 /* @group Beer */
 
 .beer {
