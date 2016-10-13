@@ -1,5 +1,7 @@
 /* @override http://0.0.0.0:4000/css/style.css */
 
+/* @group General */
+
 * {
 	-webkit-box-sizing: border-box;
 	margin: 0;
@@ -60,6 +62,10 @@ a {
 a:hover {
 	color: #b23636;
 }
+
+/* @end */
+
+/* @group Buttons */
 .button {
 	display: inline-block;
 	position: relative;
@@ -142,16 +148,7 @@ a:hover {
 	        animation: buttonpulse 1.5s ease-out infinite;
 }
 
-
-	
-
-
-
-
-
-
-
-
+/* @end */
 
 /* @group header */
 header {
@@ -358,10 +355,10 @@ header.open > .menu-button > span.three {
 	/*max-height: 720px;*/
 	min-height: 320px;
 	padding: 0px 0;
-	background: #b81515;
+	background: #262828;
+	background-position: center center !important;
 	background-size: cover;
 	background-attachment: fixed;
-	background-position: center center!important;
 	color: #fff;
 	text-align: center;
 	white-space: nowrap;
@@ -385,11 +382,29 @@ header.open > .menu-button > span.three {
 .content .banner.half.blog-post {
 	
 }
-/*.content .banner.half > hgroup > h1 {
-	background: #000;
-	float: left;
-	padding: 12px 24px;
-}*/
+
+
+
+.content .banner.home {
+	
+}
+.content .banner.home > hgroup {
+	
+}
+.content .banner.home > hgroup > h1 {
+	font: 900 36px/48px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+.content .banner.home > hgroup > h2 {
+	display: inline-block;
+	padding: 0 0 0 36px;
+	text-transform: uppercase;
+	letter-spacing: 36px;
+}
+.content .banner.home > hgroup > img {
+	/*width: 96px;*/
+}
+
+
 
 .banner > img {
 	position: absolute;
@@ -454,7 +469,9 @@ header.open > .menu-button > span.three {
 /* @end */
 
 
-/* HGROUP */
+
+
+/* @group H Group */
 .banner > hgroup {
 	position: relative;
 	z-index: 1000;
@@ -468,8 +485,8 @@ header.open > .menu-button > span.three {
 }
 .banner > hgroup > img {
 	display: block;
-	max-width: 250px;
-	margin: 0 auto 0 auto;
+	max-width: 150px;
+	margin: 0 auto 48px auto;
 }
 .banner > hgroup > h1 {
 	margin: 0px 0 0 0;
@@ -506,8 +523,7 @@ header.open > .menu-button > span.three {
 	
 }
 
-
-
+/* @end */
 
 /* @group Video Controls */
 /*hgroup.video {
@@ -573,8 +589,47 @@ header.open > .menu-button > span.three {
 
 
 
+/* @group Service Overview */
 
+.service-overview {
+	position: absolute;
+	z-index: 1000;
+	bottom: 0;
+	width: 100%;
+	padding: 24px;
+	text-align: center;
+}
+.service-overview > a {
+	display: inline-block;
+	text-decoration: none;
+}
+.service-overview > a:nth-of-type(2) {
+	margin: 0 2%;
+}
+.service-overview > a > i {
+	position: relative;
+	margin: 0 0 12px 0;
+	font-size: 36px;
+	color: rgba(255,255,255,1);
+	-webkit-transition: top .3s ease-in-out 0s;
+}
+.service-overview > a > h3 {
+	font: 200 14px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	letter-spacing: 0;
+	color: rgba(255,255,255,.5);
+}
 
+.service-overview > a:hover {
+	
+}
+.service-overview > a:hover > i {
+	top: -12px;
+}
+.service-overview > a:hover > h3 {
+	color: #fff;
+}
+
+/* @end */
 
 
 
@@ -948,17 +1003,17 @@ header.open > .menu-button > span.three {
 
 
 
-
 /* @group ALTERNATING */
 .alternating {
 	padding: 0;
-	background: #f2f2f2;
+	background: #262828;
 }
 .alternating > div {
 	position: relative;
 	max-width: 960px;
 	margin: 0 auto;
 	padding: 150px 0;
+	background: #262828;
 }
 .alternating > div:first-of-type {
 	
@@ -966,24 +1021,29 @@ header.open > .menu-button > span.three {
 .alternating > div > img {
 	position: absolute;
 	left: 50%;
-	top: 50%;
-	height: 320px;
-	margin: -160px 0 0 48px;
+	top: 0;
+	height: 100%;
+	margin: 0 0 0 48px;
 }
 
 .alternating > div > hgroup {
 	padding: 0 50% 0 0;
 }
 .alternating > div > hgroup > h2 {
-	margin: 0 0 48px;
-	font: 200 42px/1.0865em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	margin: 0 0 24px;
+	font: 700 42px/1.0865em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #fff;
 }
 
 .alternating > div > hgroup > p {
-	font: 400 18px/1.45em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	margin: 0 0 36px 0;
 	clear: left;
+	font: 200 24px/1.45em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #fff;
+	letter-spacing: 1px;
 }
+
+
 
 
 .alternating > div:nth-of-type(even) > hgroup {
@@ -992,7 +1052,7 @@ header.open > .menu-button > span.three {
 .alternating > div:nth-of-type(even) > img  {
 	left: auto;
 	right: 50%;
-	margin: -160px 48px 0 0;
+	margin: 0px 48px 0 0;
 }
 .alternating > div:nth-of-type(even) > h2 {
 	float: right;
@@ -1009,6 +1069,7 @@ header.open > .menu-button > span.three {
 	max-width: none;
 	text-align: center;
 	padding: 200px 96px;
+	background-color: #fff!important;
 	background-attachment: fixed!important;
 	background-size: cover!important;
 }
@@ -1016,16 +1077,57 @@ header.open > .menu-button > span.three {
 	max-width: 720px;
 	margin: 0 auto;
 	font: 100 36px/48px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	color: #fff;
+	color: #262828;
 	letter-spacing: 2px;
 }
+
+
+
+
+
+
+
+/* @group Websites + Videos */
+.alternating > div > hgroup > ul {
+	overflow: hidden;
+	list-style: none;
+	padding: 12px 0;
+}
+.alternating > div > hgroup > ul > li {
+	float: left;
+	width: 32%;
+	height: 120px;
+	opacity: .5;
+}
+.alternating > div > hgroup > ul > li:hover {
+	opacity: 1;
+}
+.alternating > div > hgroup > ul > li:nth-of-type(2){
+	margin: 0 2%;
+}
+.alternating > div > hgroup > ul > li > a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	text-decoration: none;
+}
+.alternating > div > hgroup > ul > li > a > i {
+	font-size: 24px;
+	line-height: 120px;
+	color: #fff;
+	text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+/* @end */
 
 
 
 @media all and (max-width: 1080px) {
 
 .alternating {
-	padding: 24px;
+	/*padding: 24px;*/
 }
 
 }
@@ -1040,15 +1142,28 @@ header.open > .menu-button > span.three {
 .alternating > div {
 	/*padding: 24px 0;*/
 	
-	padding: 0;
+	padding: 0 0px;
 	text-align: center;
 }
 .alternating > div:first-of-type {
 	margin-top: 0;
 }
 .alternating > div > hgroup {
-	padding: 24px 0!important;
+	position: relative;
+	margin: -96px 0 0 0;
+	padding: 24px!important;
 	text-align: left;
+}
+.alternating > div > hgroup:before {
+	content: '\00a0';
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	top: 0px;
+	width: 100%;
+	height: 96px;
+	background: linear-gradient(to bottom, rgba(38,40,40,0) 0%, rgba(38,40,40,100) 100%);
+	/*background: linear-gradient(to bottom, rgba(43,43,43,0) 0%, rgba(43,43,43,100)72%);*/
 }
 .alternating > div > hgroup > h2 {
 	margin: 0 0 12px 0;
@@ -1893,7 +2008,11 @@ article > ul > li{
 /* @group Footer */
 
 .footer {
-	background: #b81515;
+	padding: 96px;
+	background: #262828 url('/images/backgrounds/footer.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
 	color: #fff;
 }
 .footer > section {
@@ -1909,7 +2028,7 @@ article > ul > li{
 }
 
 .footer > section > a > img {
-	width: 100%;
+	width: 50%;
 }
 
 

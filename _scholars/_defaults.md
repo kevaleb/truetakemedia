@@ -1,4 +1,0 @@
----
-name:
-photo_path:
----

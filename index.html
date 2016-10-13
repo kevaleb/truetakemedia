@@ -3,110 +3,85 @@ layout: default
 title: Home
 banner_path:
 ---
-<div class="banner half">
-	<div class="notification">
-		<h3><i class="fa fa-beer" aria-hidden="true"></i>Oktoberfest is Friday Sep, 23 @ 6:00PM <a href="/events/oktoberfest/">Buy Tickets</a></h3>
-	</div>
+<div class="banner home">
 	<hgroup>
 		<img src="/images/logos/logo.png" alt="" class="animate-down"/>
-		<h1 class="animate-right">MCC Foundation</h1>
-		<h2 class="animate-left">North Chapter</h2>
-		<a href="/donate/" class="button white-border animate-up">Donate</a>
-		<a href="/apply/" class="button white-border animate-up-slow">Apply</a>
+		<h1 class="animate-right">True Take</h1>
+		<h2 class="animate-left">Media</h2>
+		<!--<a href="/apply/" class="button white-border animate-up-slow">Apply</a>-->
 	</hgroup>
+	<div class="service-overview">
+		<a href="#video-production">
+			<i class="fa fa-film" aria-hidden="true"></i>
+			<h3>Video Production</h3>
+		</a>
+		<a href="#web-developement">
+			<i class="fa fa-desktop" aria-hidden="true"></i>
+			<h3> Web Development</h3>
+		</a>
+		<a href="#digital-advertising">
+			<i class="fa fa-thumbs-up" aria-hidden="true"></i>
+			<h3>Digital Advertising</h3>
+		</a>
+	</div>
 </div>
 
-<section>
-	<div class="video-wrapper" style="width: 100%;">
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/bQmW_oxah3w?rel=0" frameborder="0" allowfullscreen></iframe>
-	</div>
-	<!--<h2>What We Do</h2>-->
-	<p>We are committed to bringing the college resources which will create more opportunities for the people of Mohave County to receive quality higher education. We are currently Raising funds for scholarships, Sponsoring performing arts events, and working forward to Building a new space on campus.</p>
-</section>
-
-<section class="scholars">
-	<h2>Past Scholarship Recipients</h2>
-	<ul>
-		{% for scholar in site.scholars %}
-		<li>
-			<img src="{{ scholar.photo_path }}" alt="" />
-			<h3>{{ scholar.name }}</h3>
-		</li>
-		{% endfor %}
-	</ul>
-</section>
-
-<div class="alternating events">
-	<!--<h2>We Raise Funds Through Community Events</h2>-->
-	{% assign sorted_events = (site.events | sort: "event-sort") %}
-	{% for event in sorted_events %}
-	<div>
-		<img src="{{ event.featured_image_path }}" alt=""/>
-		<hgroup>
-			<h2 class="{% cycle 'animate-right', 'animate-left' %}">{{ event.title }}</h2>
-			<p class="{% cycle 'animate-right', 'animate-left' %}">{{ event.excerpt }}</p>
-			
-			{% if event.details-page == true %}
-			<a href="{{ event.url }}" class="button outline animate-up">Show Me More</a>
-			{% endif %}
+<div class="alternating">
+	<section>
+		<h4 class="editable">“Show people the true take on your company.”</h4>
+	</section>
+	
+	<div id="video-production">
+		<img src="/images/home/video-production.jpg" alt=""/>
+		<hgroup class="animate-right">
+			<h2 class="editable">Video Production</h2>
+			<p class="editable">Tell your story the way it should be told.</p>
+			<ul id="videos">
+				{% assign casestudyvideos = site.case-studies | where:"video",true %}
+				{% for video in casestudyvideos limit: 3%}
+					<li>
+						<a href="{{ video.url }}" style="background-image: url('{{ video.video-thumbnail_path }}');">
+							<i class="fa fa-play" aria-hidden="true"></i>
+						</a>
+					</li>
+				{% endfor %}
+			</ul>
 		</hgroup>
 	</div>
-	{% endfor %}
+	
+	<section>
+		<h4 class="editable">“Websites are really cool and stuff”</h4>
+	</section>
+	
+	<div id="web-developement">
+		<img src="/images/home/web-design.png" alt=""/>
+		<hgroup class="animate-left">
+			<h2 class="editable">Web Development</h2>
+			<p class="editable">The core of your companies online presence.</p>
+			<ul id="websites">
+				{% assign casestudywebsites = site.case-studies | where:"website",true %}
+				{% for website in casestudywebsites limit: 3%}
+				<li>
+					<a href="{{ website.website-url }}" style="background-image: url('{{ website.website-thumbnail_path }}');">
+						
+					</a>
+				</li>
+				{% endfor %}
+			</ul>
+		</hgroup>
+	</div>
+	
+	<section>
+		<h4 class="editable">“It's a good idea to get new leads and stuff”</h4>
+	</section>
+	
+	<div id="digital-advertising">
+		<img src="" alt=""/>
+		<hgroup class="animate-right">
+			<h2 class="editable">Digital Advertising</h2>
+			<p class="editable">A consistent flow of new customers.</p>
+		</hgroup>
+	</div>
+	
+	
 </div>
-
-
-<div id="mc_embed_signup" style="background: #f2f2f2;">
-	<h2 style="text-align: center;">Want to be notified about upcoming events?</h2>
-	<form action="//northmcc.us14.list-manage.com/subscribe/post?u=13d171a64b90120823e330eba&amp;id=1310f5367e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate signup" target="_blank" novalidate>
-		<div id="mc_embed_signup_scroll">
-			<div class="mc-field-group">
-				<label for="mce-EMAIL">Email </label>
-				<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-			</div>
-			<div id="mce-responses" class="clear">
-				<div class="response" id="mce-error-response" style="display:none"></div>
-				<div class="response" id="mce-success-response" style="display:none"></div>
-			</div>			
-			<div style="position: absolute; left: -5000px;" aria-hidden="true">
-				<input type="text" name="b_13d171a64b90120823e330eba_1310f5367e" tabindex="-1" value="">
-			</div>
-			<div class="clear">
-				<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button outline">
-			</div>
-		</div>
-	</form>
-</div>
-
-
-
-<section class="scholarships">
-	<h2>Mohave Serves</h2>
-	<p>With a sole purpose to promote growth and development at our local Mohave Community College campus, the North Mohave Community College Foundation strives to strengthen our students, faculty, staff, and programs. Through the hard work and collaborative efforts of our local volunteers, the North Foundation board has been able to provide financial support through charitable donations and non-profit activities within the walls of our community. It is our hope that we can continue to assist both our current and future students throughout their educational journey and offer encouragement and relief where it is needed. One of the ways we have been able to do this throughout the years is through our Mohave Serves Scholarship; a scholarship made available through the fundraising efforts of the North Mohave Campus. Awarded to an hand-chosen applicant that has exhibited great leadership and service to the community throughout the years, the Mohave Serves Scholarship is a core element of our organization and is one we work diligently on providing every year.</p>
-</section>
-
-<section class="donors">
-	<h2>A Special Thanks To Our Donors</h2>
-	<ul>
-		{% for donor in site.donors %}
-		<li>
-			<img src="{{ donor.image_path }}" alt="" />
-			<h3>{{ donor.name }}</h3>
-		</li>
-		{% endfor %}
-	</ul>
-</section>
-
-
-<!--<section class="boardmembers">
-	<ul>
-		{% for member in site.boardmembers %}
-		<li>
-			<img src="{{ member.photo_path }}" alt="" />
-			<h3>{{ member.name }}</h3>
-			<h4>{{ member.title }}</h4>
-		</li>
-		{% endfor %}
-	</ul>
-</section>-->
-
-
