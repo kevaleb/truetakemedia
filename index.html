@@ -28,15 +28,15 @@ banner_path:
 
 <div class="alternating">
 	<section>
-		<h4 class="editable">“Share your story through video.”</h4>
+		<h4 class="editable">“We're not here to re-engineer your brand (your company already has one). It’s our job to tell your story and show the world what makes you special.”</h4>
 	</section>
 	
 	<div id="video-production">
 		<img src="/images/home/video-production.jpg" alt=""/>
 		<hgroup class="animate-right">
 			<h2 class="editable">Video Production</h2>
-			<p class="editable">Tell your story the way it should be told. Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.</p>
-			<ul id="videos">
+			<p class="editable">Have an interesting story to tell? A video is the perfect medium and just so happens to be our specialty. </p>
+			<ul id="videos" class="media">
 				{% assign casestudyvideos = site.case-studies | where:"video",true %}
 				{% for video in casestudyvideos limit: 3%}
 					<li>
@@ -50,15 +50,15 @@ banner_path:
 	</div>
 	
 	<section>
-		<h4 class="editable">“Websites are really cool and stuff”</h4>
+		<h4 class="editable">“Just having a beautiful website isn't particularly useful by itself. We create websites that actually generate new business in the real world. ”</h4>
 	</section>
 	
 	<div id="web-developement">
 		<img src="/images/home/web-design.png" alt=""/>
 		<hgroup class="animate-left">
 			<h2 class="editable">Web Development</h2>
-			<p class="editable">The core of your companies online presence. Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.</p>
-			<ul id="websites">
+			<p class="editable">Whether you need customers to request a quote, find weekly specials or place orders online we can build a site that does what you need it to do.</p>
+			<ul id="websites" class="media">
 				{% assign casestudywebsites = site.case-studies | where:"website",true %}
 				{% for website in casestudywebsites limit: 3%}
 				<li>
@@ -72,16 +72,26 @@ banner_path:
 	</div>
 	
 	<section>
-		<h4 class="editable">“It's a good idea to get new leads and stuff”</h4>
+		<h4 class="editable">“But a website by itself will only give you partial results. That's why we offer a full service advertising solution.”</h4>
 	</section>
 	
 	<div id="digital-advertising">
-		<img src="/images/home/digital-advertising.jpg" alt=""/>
+		<img src="/images/home/digital-advertising.png" alt=""/>
 		<hgroup class="animate-right">
 			<h2 class="editable">Digital Advertising</h2>
-			<p class="editable">A consistent flow of new customers. Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.</p>
+			<p class="editable">We focus on simple campaigns that actually generate results. The targeting capabilities available through online advertising channels can instantly get you in front of your ideal customers.</p>
+			<ul>
+				<li>We’ll create the advertisements</li>
+				<li>Target the right customers</li>
+				<li>And track/report the results of each campaign</li>
+			</ul>
 		</hgroup>
 	</div>
+	
+	
+	 
+	
+	
 	
 	
 </div>
