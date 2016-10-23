@@ -40,7 +40,7 @@ banner_path:
 				{% assign casestudyvideos = site.case-studies | where:"video",true %}
 				{% for video in casestudyvideos limit: 3%}
 					<li>
-						<a href="{{ video.url }}" style="background-image: url('{{ video.video-thumbnail_path }}');">
+						<a href="{{ video.video-url }}" style="background-image: url('{{ video.video-thumbnail_path }}');" target="_blank">
 							<i class="fa fa-play" aria-hidden="true"></i>
 						</a>
 					</li>
@@ -50,7 +50,7 @@ banner_path:
 	</div>
 	
 	<section>
-		<h4 class="editable">“Just having a beautiful website isn't particularly useful by itself. We create websites that actually generate new business in the real world. ”</h4>
+		<h4 class="editable">“A website isn't particularly useful by itself. We help you create an online presence that will actually generate new business for you in the real world. ”</h4>
 	</section>
 	
 	<div id="web-developement">
@@ -62,7 +62,7 @@ banner_path:
 				{% assign casestudywebsites = site.case-studies | where:"website",true %}
 				{% for website in casestudywebsites limit: 3%}
 				<li>
-					<a href="{{ website.website-url }}" style="background-image: url('{{ website.website-thumbnail_path }}');">
+					<a href="{{ website.website-url }}" style="background-image: url('{{ website.website-thumbnail_path }}');" target="_blank">
 						
 					</a>
 				</li>

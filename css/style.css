@@ -355,7 +355,7 @@ header.open > .menu-button > span.three {
 	/*max-height: 720px;*/
 	min-height: 320px;
 	padding: 0px 0;
-	background: #262828;
+	background: #26292d;
 	background-position: center center !important;
 	background-size: cover;
 	background-attachment: fixed;
@@ -389,7 +389,7 @@ header.open > .menu-button > span.three {
 	
 }
 .content .banner.home > hgroup {
-	
+	background: #26292d;
 }
 .content .banner.home > hgroup > h1 {
 	font: 900 36px/48px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
@@ -1006,15 +1006,15 @@ header.open > .menu-button > span.three {
 /* @group ALTERNATING */
 .alternating {
 	padding: 0;
-	background: #262828;
+	background: #26292d;
 }
 .alternating > div {
 	position: relative;
 	max-width: 960px;
 	margin: 0 auto;
 	padding: 150px 0;
-	background: #262828;
-	/*border: 96px solid #262828;
+	background: #26292d;
+	/*border: 96px solid #26292d;
 	border-left: none;
 	border-right: none;*/
 }
@@ -1077,7 +1077,7 @@ header.open > .menu-button > span.three {
 	background-attachment: fixed!important;
 	background-size: cover!important;
 	
-	/*background: #262828 url('/images/backgrounds/footer.jpg');*/
+	/*background: #26292d url('/images/backgrounds/footer.jpg');*/
 }
 /*.alternating > section:before,
 .alternating > section:after {
@@ -2040,7 +2040,7 @@ article > ul > li{
 
 .footer {
 	padding: 96px;
-	background: #262828 url('/images/backgrounds/footer.jpg');
+	background: #26292d url('/images/backgrounds/footer.jpg');
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
