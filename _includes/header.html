@@ -4,14 +4,13 @@
 		<span class="two"></span>
 		<span class="three"></span>
 	</div>
-	<div class="logo">
+	<div>
 		<a href="/">
 			<img src="/images/logos/logo.png" alt="" />
-			<!--Utah<div>Big Trucks</div>-->
+			{{ site.name }}
 		</a>
+		
+		{% include nav.html %}
 	</div>
-	{% include nav.html %}
-	<!--<div class="base">
-		<p>Provided by: <img src="/images/logos/mimis-logo.jpg" alt="mimis dispatch" /></p>
-	</div>-->
+	
 </header>

@@ -1,7 +1,10 @@
 <nav>
-	<a href="/">Home</a>
-	
-	{% for item in site.main-pages %}
-	<a href="{{ item.url }}" {% if page.url contains item.navclass %}class="selected"{% endif %}>{{ item.navtitle }}</a>
-	{% endfor %}
+	<a href="#">Services</a>
+	<a href="#">Industries</a>
+	<a href="#" class="cta">Contact</a>
+	<!--<a href="#" class="cta">Request A Meeting</a>-->
+<!--{% assign navitems = site.main-pages | sort: 'navorder'  %}
+{% for item in navitems %}
+	<a href="{{ item.url }}" {% if page.url == item.navclass %}class="selected"{% endif %} {% if item.hide_from_nav == true %}style="display: none;"{% endif %}>{{ item.navtitle }}</a>
+{% endfor %}-->
 </nav>
