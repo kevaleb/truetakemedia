@@ -1,5 +1,7 @@
 ---
 layout: default
 title: Hardware Store
-icon_path:
+icon_path: /uploads/tools.png
 ---
+
+
