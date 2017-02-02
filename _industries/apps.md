@@ -1,5 +1,7 @@
 ---
 layout: default
 title: Apps
-icon_path:
+icon_path: /uploads/phone.png
 ---
+
+
