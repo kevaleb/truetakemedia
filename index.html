@@ -5,9 +5,8 @@ banner_path:
 ---
 <div class="banner home">
 	<hgroup>
-		<img src="/images/logos/logo.png" alt="" class="animate-down"/>
-		<h1 class="animate-right">True Take</h1>
-		<h2 class="animate-left">Media</h2>
+		<!--<img src="/images/logos/logo.png" alt="" class="animate-down"/>-->
+		<h1 class="animate-right">We Help Small Companies Grow Their Business Online</h1>
 		<!--<a href="/apply/" class="button white-border animate-up-slow">Apply</a>-->
 	</hgroup>
 	<div class="service-overview">
@@ -37,7 +36,7 @@ banner_path:
 			<h2 class="editable">Video Production</h2>
 			<p class="editable">Have an interesting story to tell? A video is the perfect medium and just so happens to be our specialty. </p>
 			<ul id="videos" class="media">
-				{% assign casestudyvideos = site.case-studies | where:"video",true %}
+				{% assign casestudyvideos = site.customers | where:"video",true %}
 				{% for video in casestudyvideos limit: 3%}
 					<li>
 						<a href="{{ video.video-url }}" style="background-image: url('{{ video.video-thumbnail_path }}');" target="_blank">
