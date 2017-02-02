@@ -1,5 +1,7 @@
 ---
 layout: default
 title: Wine
-icon_path:
+icon_path: /uploads/wine.png
 ---
+
+
