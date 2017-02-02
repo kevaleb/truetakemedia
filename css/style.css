@@ -197,19 +197,33 @@ header > div > a {
 	max-width: 50%;
 	height: 100%;
 	position: relative;
-	display: inline-block;
+	/*display: inline-block;*/
 	text-decoration: none;
 	height: 72px;
+	padding: 0 0 0 50px;
 	text-transform: uppercase;
-	letter-spacing: 1px;
-	font: 400 18px/72px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-align: center;
+	font: 200 18px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	color: #fff;
 }
 header > div > a > img {
-	float: left;
+	position: absolute;
+	left: 0px;
+	top: 12px;
 	height: 48px;
-	margin: 9px 12px 0 0;
 }
+header > div > a > span {
+	display: block;
+	font-size: 12px;
+	letter-spacing: 13px;
+}
+header > div > a > strong {
+	display: block;
+	letter-spacing: 1px;
+	white-space: nowrap;
+	border-bottom: 2px solid #fff;
+}
+
 header > div > a > p {
 	font: 400 16px/72px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	white-space: nowrap;
@@ -1071,10 +1085,12 @@ header.open > .menu-button > span.three {
 }
 .alternating > div > hgroup > h2 {
 	margin: 0 0 24px;
-	font: 200 30px/1.0865em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	/*padding: 0 0 0 18px;*/
+	font: 200 36px/1.0865em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	color: #333;
 	letter-spacing: 2px;
 	text-transform: uppercase;
+	/*border-left: 6px solid #cb2027;*/
 }
 .alternating > div > hgroup > p {
 	margin: 0 0 36px 0;
@@ -1085,10 +1101,24 @@ header.open > .menu-button > span.three {
 }
 .alternating > div > hgroup > ul {
 	padding: 0 0 0 24px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 .alternating > div > hgroup > ul > li {
 	margin: 0 0 12px;
+	font: 200 20px/20px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	color: #666;
+}
+.alternating > div > hgroup > ul > li:before {
+	content: '\00a0';
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	margin: -3px 6px 0 0;
+	background-image: url('/images/icons/check.png');
+	background-size: cover;
+	vertical-align: middle;
 }
 
 

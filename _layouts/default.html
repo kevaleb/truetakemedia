@@ -14,21 +14,10 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		
 		<!-- load js scripts -->
-		<!--<script type="text/javascript" src="/scripts/jquery-1.11.3.min.js"></script>-->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script type="text/javascript" src="/scripts/jquery-1.11.3.min.js"></script>
+		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>-->
 		<script type="text/javascript" src="/scripts/strip.pkgd.min.js"></script>
 		<script type="text/javascript" src="/scripts/main.js"></script>
-		
-		
-		<link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
-		<link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">
-		<link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16">
-		<link rel="manifest" href="/images/favicons/manifest.json">
-		<link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#b81414">
-		<link rel="shortcut icon" href="/images/favicons/favicon.ico">
-		<meta name="msapplication-config" content="/images/favicons/browserconfig.xml">
-		<meta name="theme-color" content="#ffffff">
-		
 	</head>
 	<body>
 		{% include header.html%}
@@ -40,44 +29,7 @@
 			<div class="snapchat-overlay snapchat-button"><img src="{{ site.snapchat }}" alt="" /></div>
 		</div>
 		
-		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>-->
-		
-		<script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="YjRmNTE4NzktOTljYy00ZmJkLTgwNmUtMmUxOTJjZmI3OGFiNjM2MDYwNDAwOTA4ODE3MDMx"></script>
-		
-		<link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
-		
-		
-		<script src="https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js"></script>
 		<script type="text/javascript">
-		    (function ($) {
-		        window.sr = ScrollReveal();
-		        sr.reveal('.animate');
-		        
-		        // Up
-		        sr.reveal('.animate-up', { duration: 1000, origin: 'bottom', scale: 1 });
-		        sr.reveal('.animate-up-slow', { duration: 1000, origin: 'bottom', delay: 500, scale: 1 });
-		        sr.reveal('.animate-up-xslow', { duration: 2000, origin: 'bottom', delay: 500, scale: 1 });
-		        
-		        sr.reveal('.animate-up-2', { duration: 1000, origin: 'bottom', delay: 500, viewFactor: 0.01, scale: 1 });
-		        
-		        // Down
-		        sr.reveal('.animate-down', { duration: 1000, origin: 'top', delay: 0, scale: 1 });
-		        sr.reveal('.animate-down-slow', { duration: 1000, origin: 'top', delay: 500, scale: 1 });
-		        sr.reveal('.animate-down-xslow', { duration: 2000, origin: 'top', delay: 500, scale: 1 });
-		        
-		        // Left
-		        sr.reveal('.animate-left', 			{ duration: 1000, delay: 0, 	origin: 'right', distance: '200px', scale: 1 });
-		        sr.reveal('.animate-left-slow', 	{ duration: 1000, delay: 500, 	origin: 'right', distance: '200px', scale: 1 });
-		        sr.reveal('.animate-left-xslow', 	{ duration: 1000, delay: 1000, 	origin: 'right', distance: '200px', scale: 1 });
-		        
-		        // Right
-		        sr.reveal('.animate-right', 		{ duration: 1000, delay: 0, 	origin: 'left', distance: '200px', scale: 1 });
-		        sr.reveal('.animate-right-slow', 	{ duration: 1000, delay: 500, 	origin: 'left', distance: '200px', scale: 1 });
-		        sr.reveal('.animate-right-xslow', 	{ duration: 1000, delay: 1000, 	origin: 'left', distance: '200px', scale: 1 });
-		        
-		        
-		    })();
-		    
 		    $(function() {                       //run when the DOM is ready
 		      $(".snapchat-button").click(function() {  //use a class, since your ID gets mangled
 		        $(".snapchat-overlay").toggleClass("visible");      //add the class to the clicked element
