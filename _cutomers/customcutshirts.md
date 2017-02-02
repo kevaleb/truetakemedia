@@ -2,6 +2,7 @@
 layout: customer
 title: Custom Cut Shirts
 industry: e-commerce
+logo_path:
 website: true
 website-url: customcutshirts.com
 website-thumbnail_path: /images/thumbnails/websites/customcutshirts.jpg

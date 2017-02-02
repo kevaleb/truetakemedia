@@ -2,6 +2,7 @@
 layout: customer
 title: busybusy
 industry: apps
+logo_path:
 website: false
 website-url: http://www.busybusy.com
 website-thumbnail_path: /images/thumbnails/websites/busybusy.jpg

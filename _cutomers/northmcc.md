@@ -2,6 +2,7 @@
 layout: customer
 title: North MCC
 industry: non profit
+logo_path:
 website: true
 website-url: http://www.northmcc.com
 website-thumbnail_path: /images/thumbnails/websites/northmcc.jpg

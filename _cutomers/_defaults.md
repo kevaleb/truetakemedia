@@ -2,6 +2,7 @@
 layout: customer
 title:
 industry:
+logo_path:
 website: false
 website-url:
 website-thumbnail_path:

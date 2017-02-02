@@ -38,7 +38,8 @@ banner_path:
 	<ul>
 		{% for customer in site.customers %}
 		<li>
-			<img src="{{ customer. }}" alt="" />
+			<img src="{{ customer.logo_path }}" alt="" />
+			<h4>{{ customer.title }}</h4>
 		</li>
 		{% endfor %}
 	</ul>
