@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Wine
+title: Wineries
 icon_path: /uploads/wine.png
 ---
 
