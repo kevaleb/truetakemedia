@@ -1052,6 +1052,10 @@ header.open > .menu-button > span.three {
 	background: linear-gradient(to right, white 0%, #eceaea 50%, white 100%) #f2f2f2;
 	
 }
+.alternating > div:nth-of-type(even) > img {
+	height: 120%;
+	top: -10%;
+}
 
 
 .alternating > div > img {
