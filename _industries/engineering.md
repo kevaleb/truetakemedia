@@ -1,5 +1,7 @@
 ---
 layout: default
 title: Engineering
-icon_path:
+icon_path: /uploads/plans.png
 ---
+
+
