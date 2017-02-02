@@ -1,5 +1,7 @@
 ---
 layout: default
 title: E-Commerce
-icon_path:
+icon_path: /uploads/cart.png
 ---
+
+
