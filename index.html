@@ -17,28 +17,16 @@ banner_path:
 			</li>
 		{% endfor %}
 	</ul>
-	<!--<div class="service-overview">
-		<a href="#video-production">
-			<i class="fa fa-film" aria-hidden="true"></i>
-			<h3>Video Production</h3>
-		</a>
-		<a href="#web-developement">
-			<i class="fa fa-desktop" aria-hidden="true"></i>
-			<h3> Web Development</h3>
-		</a>
-		<a href="#digital-advertising">
-			<i class="fa fa-thumbs-up" aria-hidden="true"></i>
-			<h3>Digital Advertising</h3>
-		</a>
-	</div>-->
 </div>
+
+
 
 <div class="customers">
 	<ul>
-		{% for customer in site.customers %}
+		{% assign featured-customers = site.customers | where:"featured",true %}
+		{% for customer in featured-customers %}
 		<li>
-			<img src="{{ customer.logo_path }}" alt="" />
-			<h4>{{ customer.title }}</h4>
+			<img src="{{ customer.featured-logo-path }}" alt="{{ customer.title }}" />
 		</li>
 		{% endfor %}
 	</ul>

@@ -588,6 +588,7 @@ header.open > .menu-button > span.three {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
+	padding: 48px 0;
 	list-style: none;
 	white-space: normal;
 }
@@ -617,47 +618,50 @@ header.open > .menu-button > span.three {
 
 
 
-/* @group Service Overview */
 
-.service-overview {
-	position: absolute;
-	z-index: 1000;
-	bottom: 0;
-	width: 100%;
-	padding: 24px;
+
+
+
+
+
+
+/* @group Customers */
+
+.customers {
+	padding: 12px;
+	background: #f2f2f2;
+	border-top: 1px solid rgba(0,0,0,.75);
+	border-bottom: 1px solid #ccc;
+}
+.customers > ul {
+	max-width: 960px;
+	height: 72px;
+	margin: 0 auto;
+	padding: 0;
 	text-align: center;
+	list-style: none;
 }
-.service-overview > a {
+.customers > ul > li {
 	display: inline-block;
-	text-decoration: none;
+	margin: 0;
+	padding: 0;
 }
-.service-overview > a:nth-of-type(2) {
-	margin: 0 2%;
+.customers > ul > li+li {
+	margin-left: 24px;
+	/*border-left: 1px solid #ccc;*/
 }
-.service-overview > a > i {
-	position: relative;
-	margin: 0 0 12px 0;
-	font-size: 36px;
-	color: rgba(255,255,255,1);
-	-webkit-transition: top .3s ease-in-out 0s;
+.customers > ul > li > img {
+	height: 72px;
+	margin: 0;
+	padding: 0;
 }
-.service-overview > a > h3 {
-	font: 200 14px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	letter-spacing: 0;
-	color: rgba(255,255,255,.5);
-}
-
-.service-overview > a:hover {
+.customers > ul > li > h4 {
 	
-}
-.service-overview > a:hover > i {
-	top: -12px;
-}
-.service-overview > a:hover > h3 {
-	color: #fff;
 }
 
 /* @end */
+
+
 
 
 
