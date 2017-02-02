@@ -1,11 +1,11 @@
 ---
-layout: case-studies
+layout: customer
 title: Custom Cut Shirts
-description:
+industry: e-commerce
 website: true
-website-url: http://www.customcutshirts.com
+website-url: customcutshirts.com
 website-thumbnail_path: /images/thumbnails/websites/customcutshirts.jpg
-video: true
+---
+
 video-url: https://www.youtube.com/embed/nj-iDGfQKMg
 video-thumbnail_path: /images/thumbnails/videos/customcutshirts.jpg
----

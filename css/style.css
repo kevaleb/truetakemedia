@@ -589,6 +589,43 @@ header.open > .menu-button > span.three {
 
 
 
+
+
+/* @group Industries */
+
+.industries {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	list-style: none;
+	white-space: normal;
+}
+.industries > li {
+	margin: 12px 0;
+	display: inline-block;
+	text-align: center;
+}
+.industries > li+li {
+	margin-left: 12px;
+}
+.industries > li > img {
+	width: 30px;
+	margin: 0 0 12px 0;
+}
+.industries > li > h4 {
+	font: 10px/12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #fff;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+/* @end */
+
+
+
+
+
+
 /* @group Service Overview */
 
 .service-overview {
