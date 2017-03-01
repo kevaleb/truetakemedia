@@ -23,7 +23,7 @@ hide_from_nav: false
 
 <div class="video-grid" id="video-grid">
 	<ul>
-	{% assign videos = site.posts | where:"category","video" %}
+	{% assign videos = site.posts | where:"category","videos" %}
 	{% for video in videos  %}
 		<li>
 			<a href="{{ video.url }}">

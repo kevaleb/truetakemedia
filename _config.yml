@@ -12,6 +12,11 @@ lat:
 lng:
 mapzoom: 13
 permalink: /blog/:title/
+categories:
+- videos
+- case studies
+- just for fun
+- how we do
 excerpt_separator: <!--more-->
 collections:
   main-pages:
