@@ -3,9 +3,11 @@ layout: article
 title: Boones Wine
 description:
 permalink:
-customer:
-category:
-video: false
-youtube_id:
-banner_path:
+customer: beesmarketplace
+category: videos
+video: true
+youtube_id: sRKHKkJt3hU
+banner_path: /uploads/boones4.jpg
 ---
+
+
