@@ -1,11 +1,7 @@
 <nav>
-	<!--<a href="#">Our Work</a>
-	<a href="#">About Us</a>-->
-	<a href="#contact-form">Contact Us</a>
-	<a href="#contact-form" class="cta">Request A Meeting</a>
-	<!--<a href="#" class="cta">Request A Meeting</a>-->
-<!--{% assign navitems = site.main-pages | sort: 'navorder'  %}
-{% for item in navitems %}
-	<a href="{{ item.url }}" {% if page.url == item.navclass %}class="selected"{% endif %} {% if item.hide_from_nav == true %}style="display: none;"{% endif %}>{{ item.navtitle }}</a>
-{% endfor %}-->
+	{% assign navitems = site.main-pages | sort: 'nav_order'  %}
+	{% for item in navitems %}
+		<a href="{{ item.url }}" {% if page.url contains item.nav_class %}class="selected"{% endif %} {% if item.hide_from_nav == true %}style="display: none;"{% endif %}>{{ item.nav_title }}</a>
+	{% endfor %}
+	<a href="/request-a-meeting/" class="cta">Request A Meeting</a>
 </nav>

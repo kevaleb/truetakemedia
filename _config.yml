@@ -11,7 +11,7 @@ snapchat:
 lat:
 lng:
 mapzoom: 13
-permalink: pretty
+permalink: /blog/:title/
 excerpt_separator: <!--more-->
 collections:
   main-pages:
