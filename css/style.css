@@ -526,7 +526,7 @@ header.open > .menu-button > span.three {
 	box-shadow: 0 100px 50px -50px rgba(0,0,0,.5) inset;
 }
 .banner.small {
-	height: 48%;
+	height: 60%;
 }
 .banner > img {
 	position: absolute;
@@ -1021,10 +1021,12 @@ header.open > .menu-button > span.three {
 	list-style: none;
 }
 .video-grid > ul > li {
+	display: inline-block;
 	width: 48%;
+	margin: 0 0 4% 0;
 }
-.video-grid > ul > li:nth-of-type(2n) {
-	
+.video-grid > ul > li:nth-of-type(even) {
+	margin-left: 3%;
 }
 .video-grid > ul > li > a {
 	display: block;
