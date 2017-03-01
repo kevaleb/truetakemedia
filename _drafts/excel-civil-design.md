@@ -7,7 +7,7 @@ customer: exceldesign
 category:
 video: true
 youtube_id: sRKHKkJt3hU
-banner_path:
+banner_path: /uploads/charles.jpg
 ---
 
 
