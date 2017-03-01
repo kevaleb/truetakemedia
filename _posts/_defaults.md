@@ -3,7 +3,9 @@ layout: article
 title:
 description:
 permalink: 
-featured_image_path:
-gallery:
-  - image_path: /images/events/donors/2.jpg
+customer:
+category:
+video: false
+youtube_id: 
+banner_path:
 ---

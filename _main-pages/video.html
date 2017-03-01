@@ -1,0 +1,49 @@
+---
+layout: default
+title:
+banner_path:
+permalink: /video/
+---
+<div class="banner home">
+	<hgroup>
+		<h1>We Produce High Quality Videos</h1>
+		<ul>
+			<li>Get Your Customers Attention</li>
+			<li>Communicate Your Message</li>
+			<li>Create Brand Awareness</li>
+			<li>Produce Real Business Results</li>
+		</ul>
+	</hgroup>
+</div>
+
+<article>
+	<p></p>
+	<h2>No Script Needed</h2>
+	<p>Through our recorded interview process we’ll draw the information we need from you without an extended scripting process where you have to conceptualize and compose the script.</p>
+	
+	<h2>A True Representation of Your Brand</h2>
+	<p>Because of the conversational style of the interview you’ll end up with a natural, sincere communication of your story (that isn't overly hyped or salesy).</p>
+	
+	<h2>An Engaging Experience For Your Customers</h2>
+	<p>By incorporating high quality b-roll footage we create a more engaging film that your customers will actually enjoy watching.</p>
+	
+	<h2>Minimum Time Requirement From You</h2>
+	<p>By pulling you in for review and feedback during crucial parts of production we can ensure the video conveys the proper message while still respecting your valuable time.</p>
+</article>
+
+<div class="videos">
+	<ul>
+	{% assign video_post = site.posts | where:"category","video" %}
+	{% for video in video_posts %}
+		<li>
+			<a href="{{ video.url }}">
+				<div style="background-image: url({{ video_thumbnail_path }});"></div>
+				<hgroup>
+					<h4>{{ video.date }}</h4>
+					<h3>{{ video.title }}</h3>
+				</hgroup>
+			</a>
+		</li>
+	{% endfor %}
+	</ul>
+</div>
