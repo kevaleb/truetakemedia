@@ -1,6 +1,6 @@
 ---
 layout: article
-title: 'Excel Design & Asscociates'
+title: Excel Design Asscociates
 description:
 permalink:
 customer: exceldesign
