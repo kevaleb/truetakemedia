@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Mortgages
+title: Banking
 icon_path: /uploads/home.png
 ---
 

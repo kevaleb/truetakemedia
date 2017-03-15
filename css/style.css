@@ -1529,24 +1529,14 @@ header.open > .menu-button > span.three {
 
 
 
-@media all and (max-width: 1080px) {
-
-.alternating {
-	/*padding: 24px;*/
-}
-
-}
-
 
 
 @media all and (max-width: 720px) {
-/* @group ALTERNATING */
+
 .alternating {
-	/*max-width: 480px;*/
+	
 }
 .alternating > div {
-	/*padding: 24px 0;*/
-	
 	padding: 0 0px;
 	text-align: center;
 }
@@ -1568,7 +1558,6 @@ header.open > .menu-button > span.three {
 	width: 100%;
 	height: 96px;
 	background: linear-gradient(to bottom, rgba(38,40,40,0) 0%, rgba(38,40,40,100) 100%);
-	/*background: linear-gradient(to bottom, rgba(43,43,43,0) 0%, rgba(43,43,43,100)72%);*/
 }
 .alternating > div > hgroup > h2 {
 	margin: 0 0 12px 0;
@@ -1577,18 +1566,23 @@ header.open > .menu-button > span.three {
 	margin: 0;
 }
 .alternating > div:first-of-type {
-	/*padding-bottom: 24px;*/
+	
 }
 
-.alternating > div > img {
+.alternating > div > img  {
 	position: relative;
 	left: auto;
-	right: auto!important;
-	height: 240px;
+	top: ;
 	margin: 0!important;
-	
 	height: auto;
 	width: 100%;
+}
+.alternating > div:nth-of-type(even) > img {
+	right: auto;
+	height: auto;
+}
+.alternating > div > hgroup {
+	margin: 0;
 }
 .alternating > div > hgroup > h2 {
 		font-size: 36px;
