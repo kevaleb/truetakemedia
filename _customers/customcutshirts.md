@@ -3,9 +3,8 @@ layout: article
 title: Custom Cut Shirts
 industry: e-commerce
 logo_path: /uploads/dark-logo-large.jpg
-website: true
-website-url: customcutshirts.com
-website-thumbnail_path: /images/thumbnails/websites/customcutshirts.jpg
+website_url: http://customcutshirts.com
+website_thumbnail_path: /images/customers/custom_cut_shirts/ccs_screenshot.jpg
 ---
 
 

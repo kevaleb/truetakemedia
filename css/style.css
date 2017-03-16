@@ -704,6 +704,73 @@ header.open > .menu-button > span.three {
 
 
 
+/* @group Websites */
+
+.websites {
+	padding: 96px 0;
+	background: #f2f2f2;
+}
+.websites > ul {
+	max-width: 960px;
+	margin: 0 auto;
+	list-style: none;
+	padding: 24px;
+	text-align: center;
+}
+.websites > ul > li {
+	display: inline-block;
+	margin: 0 0 48px 0;
+	width: 48%;
+	vertical-align: top;
+}
+.websites > ul > li:nth-of-type(even) {
+	margin-left: 1.5%;
+}
+.websites > ul > li > a {
+	text-decoration: none;
+}
+.websites > ul > li > a > div {
+	height: 250px;
+	background-color: #fff;
+	background-size: cover;
+	background-position: center top;
+	-webkit-transition: background-position 1s ease-in 0s;
+	border-radius: 0 0 12px 12px;
+	box-shadow: 1.5px 5px 0px -2px rgba(0,0,0,.15);
+}
+.websites > ul > li > a > div:hover {
+	background-position: center bottom;
+}
+.websites > ul > li > a > h3 {
+	margin: 12px 0 0 0;
+	font: 200 18px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+
+
+
+@media all and (max-width: 720px) {
+	.websites {
+		position: relative;
+		margin: 0;
+		padding: 0;
+	}
+	.websites > ul > li {
+		display: block;
+		width: 100%;
+	}
+	.websites > ul > li:first-of-type {
+		margin: -96px 0 48px 0;
+	}
+}
+
+/* @end */
+
+
+
+
+
+
 /* @group Untitled Scroll CTA */
 
 .scroll-cta {
