@@ -209,8 +209,8 @@ header > div > a {
 header > div > a > img {
 	position: absolute;
 	left: 0px;
-	top: 12px;
-	height: 48px;
+	top: 18px;
+	height: 36px;
 }
 header > div > a > span {
 	display: block;
@@ -328,7 +328,7 @@ header {
 	height: 100%;
 	width: 250px;
 	padding: 175px 0px 0px 0px;
-	background: #fff;
+	background: #402828;
 	/*background: #000 url('/images/banners/left-nav.jpg') no-repeat left top;*/
 	background-size: cover;
 	background-position: center;
@@ -342,6 +342,7 @@ header {
 header > div {
 	display: block;
 	width: 100%;
+	height: auto;
 }
 
 header > div > a {
@@ -353,13 +354,19 @@ header > div > a {
 	left: 0;
 	top: 0;
 	margin: 0;
+	padding: 0;
+	text-align: center;
+	border-bottom: 1px solid rgba(255,255,255,.15);
 }
 header > div > a > img {
 	float: none;
-	display: block;
-	width: 96px;
+	position: relative;
+	left: auto;
+	right: auto;
+	display: inline-block;
+	width: 80%;
 	height: auto;
-	margin: 12px auto;
+	margin: 48px auto 0 auto;
 }
 header > div > a > h1 {
 	font-size: 12px;
@@ -408,6 +415,7 @@ header > div > nav {
 	overflow-x: hidden;
 	overflow-y: scroll;
 	list-style: none;
+	text-align: left;
 }
 header > div > nav > a {
 	position: relative;
@@ -417,13 +425,13 @@ header > div > nav > a {
 	display: block;
 	text-decoration: none;
 	font:200 18px/48px"Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	color: #000;
+	color: #fff;
 	letter-spacing: 1px;
 	text-align: left;
 }
 header > div > nav > a.selected {
 	font-weight: 400;
-	background: #f5f5f5;
+	background: rgba(0,0,0,.25);
 }
 header > div > nav > a.selected:after {
 	top: 0px;
@@ -436,6 +444,10 @@ header > div > nav > a.selected:before {
 	bottom: 50%;
 	left: -1px;
 	margin: 0 0 -4px 0;
+}
+header > div > nav > a.cta {
+	display: inline-block;
+	margin: 12px 0 0 24px;
 }
 
 
@@ -514,6 +526,7 @@ header.open > .menu-button > span.three {
 	height: 100%;
 	/*max-height: 720px;*/
 	min-height: 320px;
+	max-height: 960px;
 	padding: 0px 0;
 	background: #26292d;
 	background-image: url('/images/banners/workspace.jpg');
@@ -575,6 +588,16 @@ header.open > .menu-button > span.three {
 	color: #fff;
 	text-align: center;
 }
+.banner > hgroup > h1.two-tone {
+	font: 100 24px/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	letter-spacing: 4px;
+}
+.banner > hgroup > h1.two-tone > strong {
+	display: block;
+	font: 900 36px/48px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	letter-spacing: 0;
+}
+
 .banner > hgroup > h2 {
 	margin: 0 0 36px 0;
 	font: 100 24px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
@@ -609,6 +632,19 @@ header.open > .menu-button > span.three {
 .banner {
 	height: 50%;
 	background-attachment: scroll;
+}
+
+.banner > hgroup {
+	padding: 24px;
+}
+.banner > hgroup > h1.two-tone {
+	font: 200 14px/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	letter-spacing: 1px;
+}
+.banner > hgroup > h1.two-tone > strong {
+	display: block;
+	font: 900 30px/48px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	letter-spacing: 0;
 }
 
 }
@@ -1459,8 +1495,8 @@ header.open > .menu-button > span.three {
 	
 }
 .alternating > div:nth-of-type(even) > img {
-	height: 120%;
-	top: -10%;
+	height: 150%;
+	top: -25%;
 }
 
 
@@ -2088,7 +2124,7 @@ article > ul > li{
 
 .footer {
 	padding: 96px;
-	background: #26292d url('/images/backgrounds/footer.jpg');
+	background: #402828;
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -2101,13 +2137,13 @@ article > ul > li{
 
 .footer > section > a {
 	display: block;
-	margin: 0 auto 12px auto;
-	max-width: 120px;
+	margin: 0 auto 24px auto;
+	max-width: 150px;
 	text-decoration: none;
 }
 
 .footer > section > a > img {
-	width: 50%;
+	
 }
 
 
