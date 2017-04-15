@@ -4,8 +4,10 @@ title: MCC
 description:
 permalink:
 customer:
-category:
-video: false
+category: videos
+video: true
 youtube_id:
 banner_path:
 ---
+
+
