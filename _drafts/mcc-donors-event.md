@@ -5,7 +5,9 @@ description:
 permalink:
 customer:
 category:
-video: false
-youtube_id:
+video: true
+youtube_id: 6BlR0HTmorI
 banner_path:
 ---
+
+
