@@ -2014,6 +2014,7 @@ article > ul > li{
 /* @group Contact Form */
 
 .contact-form {
+	
 	text-align: center;
 	padding: 96px 24px!important;
 	background: #f2f2f2;
@@ -2074,6 +2075,14 @@ article > ul > li{
 	background: rgba(255,255,255,.5);
 	vertical-align: top;
 	font: 200 16px/16px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+.contact-form > form > .g-recaptcha {
+	text-align: center;
+	margin: 0 0 24px 0;
+}
+.contact-form > form > .g-recaptcha > div {
+	display: inline-block;
+	width: auto!important;
 }
 /* @end */
 
