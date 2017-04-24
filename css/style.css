@@ -2190,6 +2190,13 @@ article > ul > li{
 .footer > section > .contact > p {
 	font:200  14px/14px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 }
+
+
+@media all and (max-width:480px) {
+	footer.footer {
+		padding: 12px;
+	}
+}
 /* @end */
 
 
