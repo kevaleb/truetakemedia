@@ -1,6 +1,6 @@
 ---
 layout: customer
-title: test
+title: Test
 industry:
 logo_path:
 website_url:
