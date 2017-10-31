@@ -37,7 +37,7 @@ defaults:
   -
     scope:
       path: ""
-      type: "industry" 
+      type: "industries" 
     values:
       layout: "industry"
       _hide_content: false
