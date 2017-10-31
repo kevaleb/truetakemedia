@@ -19,6 +19,12 @@ features:
       gender, location, income, interests, past purchases. Example: Single woman
       within 20 miles of your tasting room, between the age of 35-50 who own a
       home, like chardonnay and have purchased wine online before.</p>
+  - feature_title: Lead Generation
+    feature_image_path:
+    feature_description_html: >-
+      <p>Offer a free tasting the first time they visit the tasting room. The
+      coupon is delivered digitally when the customer fills out a form which
+      includes contact information.</p>
 _comments:
   cpm: Cost Per Thousand Views
   ctr: Click Through Rate
