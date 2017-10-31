@@ -12,9 +12,13 @@ features:
     feature_description_html: >-
       <p>Produce video ads showing the customers enjoying themselves at the
       vineyard, tasting room, grove, etc.</p>
-  - feature_title:
+  - feature_title: Targeted Advertising
     feature_image_path:
-    feature_description_html:
+    feature_description_html: >-
+      <p>Run these ads to wine lovers in your local area. We can target by age,
+      gender, location, income, interests, past purchases. Example: Single woman
+      within 20 miles of your tasting room, between the age of 35-50 who own a
+      home, like chardonnay and have purchased wine online before.</p>
 _comments:
   cpm: Cost Per Thousand Views
   ctr: Click Through Rate
