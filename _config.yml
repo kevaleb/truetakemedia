@@ -12,11 +12,18 @@ lat:
 lng:
 mapzoom: 13
 permalink: /blog/:title/
+
 categories:
 - videos
 - case studies
 - just for fun
 - how we do
+
+objectives:
+- lead
+- reach
+- none
+
 excerpt_separator: <!--more-->
 collections:
   main-pages:
@@ -25,3 +32,29 @@ collections:
     output: true
   industries:
     output: true
+    
+defaults:
+  -
+    scope:
+      path: ""
+      type: "industry" 
+    values:
+      layout: "industry"
+      _hide_content: false
+      permalink: /:title/
+      navclass: /industry/
+
+
+      
+_options:
+  image_path:
+    width: 90
+    height: 120
+    resize_style: "contain"
+    mime_type: "image/jpeg"
+    expandable: true
+  content:
+    width: 90
+    height: 120
+    resize_style: "cover"
+    mime_type: "image/png"
