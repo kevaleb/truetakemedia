@@ -1,12 +1,11 @@
 ---
-layout: default
 icon_path: /uploads/wine.png
 image_path:
-cpm:
-ctr:
-sr:
-cr:
-acv:
+cpm_number: 30.00
+ctr_number: 1.45
+sr_number: 15
+cr_number: 35
+acv_number: 250
 features:
   - feature_title:
     feature_image_path:
@@ -21,5 +20,3 @@ _comments:
   cr: Conversion Rate
   acv: Average Customer Value
 ---
-
-

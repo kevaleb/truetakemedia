@@ -2,11 +2,11 @@
 layout: default
 icon_path:
 image_path:
-cpm:
-ctr:
-sr:
-cr:
-acv:
+cpm_number: 30.00
+ctr_number: 
+sr_number:
+cr_number:
+acv_number:
 features:
   - feature_title:
     feature_image_path:
