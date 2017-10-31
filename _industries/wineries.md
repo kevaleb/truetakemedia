@@ -30,6 +30,12 @@ features:
     feature_description_html: >-
       <p>Track return on investment by linking leads acquired online to sales
       generated in your tasting room.</p>
+  - feature_title: Optimize
+    feature_image_path:
+    feature_description_html: >-
+      <p>Break campaigns down to core demographics and analyze results
+      independently to identify top performing customer segments and improve ad
+      performance over time.</p>
 _comments:
   cpm: Cost Per Thousand Views
   ctr: Click Through Rate
