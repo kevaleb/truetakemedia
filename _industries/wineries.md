@@ -25,6 +25,11 @@ features:
       <p>Offer a free tasting the first time they visit the tasting room. The
       coupon is delivered digitally when the customer fills out a form which
       includes contact information.</p>
+  - feature_title: Report Results
+    feature_image_path:
+    feature_description_html: >-
+      <p>Track return on investment by linking leads acquired online to sales
+      generated in your tasting room.</p>
 _comments:
   cpm: Cost Per Thousand Views
   ctr: Click Through Rate
