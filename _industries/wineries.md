@@ -38,12 +38,21 @@ features:
       performance over time.</p>
 description:
 pricing:
+  - title: Basic
+    icon_image_path:
+    description_html: '<p>For companies looking to spend $500-$1,500/month on advertising.</p>'
+    snippet:
+    list:
+      - listitem: Ad creation
+      - listitem: Weekly ad refresh
+      - listitem: Monthly campaign reports
+      - listitem: Monthly strategy meeting
   - title:
     icon_image_path:
     description_html:
     snippet:
     list:
-    - listitem:
+      - listitem:
 _comments:
   cpm: Cost Per Thousand Views
   ctr: Click Through Rate
