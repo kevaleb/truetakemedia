@@ -37,8 +37,7 @@ features:
       independently to identify top performing customer segments and improve ad
       performance over time.</p>
 pricing:
-  - pricetier
-    title:
+  - title:
     icon_image_path:
     description:
     snippet:
