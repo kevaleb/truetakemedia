@@ -36,10 +36,11 @@ features:
       <p>Break campaigns down to core demographics and analyze results
       independently to identify top performing customer segments and improve ad
       performance over time.</p>
+description:
 pricing:
   - title:
     icon_image_path:
-    description:
+    description_html:
     snippet:
     list:
     - listitem:
