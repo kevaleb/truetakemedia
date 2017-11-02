@@ -5,122 +5,110 @@ layout: default
 <div class="banner" style="background-image: url('{{ page.image_path }}');">
 	<hgroup>
 		<h1>{{ page.title }}</h1>
-		<a href="#quote-form" class="button">Request A Discovery Call</a>
+		<a href="#quote-form" class="button">Lets Talk</a>
 	</hgroup>
+	<img src="/images/banners/banner-bottom.svg" alt="" class="banner-bottom" />
 </div>
 
 <div class="alternating">
+	{% for feature in page.features %}
 	<div id="video-production">
 		<img src="/images/home/clapper.png" alt=""/>
 		<hgroup class="">
-			<h2 class="editable">Professional video production</h2>
-			<!--<p class="editable">Have an interesting story to tell? A video is the perfect medium and just so happens to be our specialty. </p>-->
-			<ul>
-				<li>Branding</li>
-				<li>Advertising</li>
-				<li>Informational</li>
-				<li>Entertaining</li>
-			</ul>
+			<h2 class="editable">{{ feature.feature_title }}</h2>
+			<article>
+				{{ feature.feature_description_html }}
+			</article>
+			
 		</hgroup>
 	</div>
+	{% endfor %}
+</div>
 
-	<div id="web-developement">
-		<img src="/images/home/web-design.png" alt=""/>
-		<hgroup class="">
-			<h2 class="editable">High performance websites.</h2>
-			<!--<p class="editable">Whether you need customers to request a quote, find weekly specials or place orders online we can build a site that does what you need it to do.</p>-->
-			<ul>
-				<li>Mobile Optimized</li>
-				<li>Fast Load Times</li>
-				<li>Customizable</li>
-				<li>Easy To Manage</li>
-			</ul>
-			<!--<ul id="websites" class="media">
-				{% assign casestudywebsites = site.case-studies | where:"website",true %}
-				{% for website in casestudywebsites limit: 3%}
-				<li>
-					<a href="{{ website.website-url }}" style="background-image: url('{{ website.website-thumbnail_path }}');" target="_blank">
-						
-					</a>
-				</li>
-				{% endfor %}
-			</ul>-->
-		</hgroup>
-	</div>
-	
-	<div id="digital-advertising">
-		<img src="/images/home/graph.png" alt=""/>
-		<hgroup class="">
-			<h2 class="editable">Effective online advertising</h2>
-			<!--<p class="editable">We focus on simple campaigns that actually generate results. The targeting capabilities available through online advertising channels can instantly get you in front of your ideal customers.</p>-->
-			<ul>
-				<li>Local</li>
-				<li>National</li>
-				<li>Awareness</li>
-				<li>Direct Response</li>
-			</ul>
-		</hgroup>
-	</div>
-</div>asdf<div class="alternating">
-	<div id="video-production">
-		<img src="/images/home/clapper.png" alt=""/>
-		<hgroup class="">
-			<h2 class="editable">Professional video production</h2>
-			<!--<p class="editable">Have an interesting story to tell? A video is the perfect medium and just so happens to be our specialty. </p>-->
-			<ul>
-				<li>Branding</li>
-				<li>Advertising</li>
-				<li>Informational</li>
-				<li>Entertaining</li>
-			</ul>
-			<!--<ul id="videos" class="media">
-				{% assign casestudyvideos = site.customers | where:"video",true %}
-				{% for video in casestudyvideos limit: 3%}
-					<li>
-						<a href="{{ video.video-url }}" style="background-image: url('{{ video.video-thumbnail_path }}');" target="_blank">
-							<i class="fa fa-play" aria-hidden="true"></i>
-						</a>
-					</li>
-				{% endfor %}
-			</ul>-->
-		</hgroup>
-	</div>
+<div class="conversions">
+	<h2>Return On Investment</h2>
+	<ul>
+		<li>
+			<img src="/images/icons/money.svg" alt="" />
+			<h3>Ad Spend</h3>
+			<h4>$1,500</h4>
+		</li>
+		<div>
+			<h3>CPM</h3>
+			<h4>${{ page.cpm_number }}</h4>
+			<img src="/images/icons/arrow.svg" alt="" />
+		</div>
+		
+		<li>
+			<img src="/images/icons/eye.svg" alt="" />
+			<h3>Reach</h3>
+			<h4>50,000</h4>
+		</li>
+		<div>
+			<h3>CTR</h3>
+			<h4>{{ page.ctr_number }}%</h4>
+			<img src="/images/icons/arrow.svg" alt="" />
+		</div>
+		
+		<li>
+			<img src="/images/icons/hand.svg" alt="" />
+			<h3>Clicks</h3>
+			<h4>725</h4>
+		</li>
+		<div>
+			<h3>SR</h3>
+			<h4>{{ page.sr_number }}%</h4>
+			<img src="/images/icons/arrow.svg" alt="" />
+		</div>
+		
+		<li>
+			<img src="/images/icons/female.svg" alt="" />
+			<h3>Leads</h3>
+			<h4>109</h4>
+		</li>
+		<div>
+			<h3>CR</h3>
+			<h4>{{ page.cr_number }}%</h4>
+			<img src="/images/icons/arrow.svg" alt="" />
+		</div>
+		
+		<li>
+			<img src="/images/icons/heart.svg" alt="" />
+			<h3>Customers</h3>
+			<h4>27</h4>
+		</li>
+		<div>
+			<h3>ACV</h3>
+			<h4>${{ page.acv_number }}</h4>
+			<img src="/images/icons/arrow.svg" alt="" />
+		</div>
+		
+		<li>
+			<img src="/images/icons/money.svg" alt="" />
+			<h3>Revenue</h3>
+			<h4>$6,797</h4>
+		</li>
+	</ul>
+</div>
 
-	<div id="web-developement">
-		<img src="/images/home/web-design.png" alt=""/>
-		<hgroup class="">
-			<h2 class="editable">High performance websites.</h2>
-			<!--<p class="editable">Whether you need customers to request a quote, find weekly specials or place orders online we can build a site that does what you need it to do.</p>-->
-			<ul>
-				<li>Mobile Optimized</li>
-				<li>Fast Load Times</li>
-				<li>Customizable</li>
-				<li>Easy To Manage</li>
-			</ul>
-			<!--<ul id="websites" class="media">
-				{% assign casestudywebsites = site.case-studies | where:"website",true %}
-				{% for website in casestudywebsites limit: 3%}
-				<li>
-					<a href="{{ website.website-url }}" style="background-image: url('{{ website.website-thumbnail_path }}');" target="_blank">
-						
-					</a>
-				</li>
-				{% endfor %}
-			</ul>-->
-		</hgroup>
-	</div>
-	
-	<div id="digital-advertising">
-		<img src="/images/home/graph.png" alt=""/>
-		<hgroup class="">
-			<h2 class="editable">Effective online advertising</h2>
-			<!--<p class="editable">We focus on simple campaigns that actually generate results. The targeting capabilities available through online advertising channels can instantly get you in front of your ideal customers.</p>-->
-			<ul>
-				<li>Local</li>
-				<li>National</li>
-				<li>Awareness</li>
-				<li>Direct Response</li>
-			</ul>
-		</hgroup>
-	</div>
+
+
+<div class="price-tiers">
+	{% for pricetier in page.pricing %}
+	<section>
+		<div class="image">
+			<img src="{{ pricetier.icon_image_path }}" alt="" />
+		</div>
+		<h2>{{ pricetier.title }}</h2>
+		<p>{{ pricetier.description }}</p>
+		<span>{{ pricetier.snippet }}</span>
+		<br />
+		<ul>
+			{% for listitem in pricetier.list %}
+			<li>{{ listitem.listitem }}</li>
+			{% endfor %}
+		</ul>
+		<h3>${{ pricetier.price }}</h3>
+	</section>
+	{% endfor %}
 </div>
