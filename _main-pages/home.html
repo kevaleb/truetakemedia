@@ -14,16 +14,19 @@ hide_from_nav: true
 	<ul class="industries">
 		{% for industry in site.industries %}
 			<li>
-				<img src="{{ industry.icon_path }}" alt="" />
-				<h4><a href="{{ industry.url }}">{{ industry.title }}</a></h4>
+				<a href="{{ industry.url }}">
+					<img src="{{ industry.icon_path }}" alt="" />
+					<h4>{{ industry.title }}</h4>
+				</a>
 			</li>
 		{% endfor %}
 	</ul>
+	<img src="/images/banners/banner-bottom.svg" alt="" class="banner-bottom" />
 </div>
 
 
 
-<div class="customers">
+<!--<div class="customers">
 	<ul>
 		{% assign featured-customers = site.customers | where:"featured",true %}
 		{% for customer in featured-customers %}
@@ -32,7 +35,7 @@ hide_from_nav: true
 		</li>
 		{% endfor %}
 	</ul>
-</div>
+</div>-->
 
 
 

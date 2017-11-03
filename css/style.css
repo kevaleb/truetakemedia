@@ -819,6 +819,7 @@ video#bgvid {
 
 .industries {
 	position: absolute;
+	z-index: 100000000000;
 	bottom: 0;
 	width: 100%;
 	padding: 48px 0;
@@ -833,11 +834,14 @@ video#bgvid {
 .industries > li+li {
 	margin-left: 12px;
 }
-.industries > li > img {
+.industries > li > a {
+	
+}
+.industries > li > a > img {
 	width: 30px;
 	margin: 0 0 12px 0;
 }
-.industries > li > h4 {
+.industries > li > a > h4 {
 	font: 10px/12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	color: #fff;
 	letter-spacing: 1px;
