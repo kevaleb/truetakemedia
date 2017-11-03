@@ -2,9 +2,10 @@
 layout: article
 title:
 description:
-permalink: 
-customer:
+permalink:
 category:
+industry:
+customer:
 video: false
 youtube_id: 
 banner_path:

@@ -40,12 +40,13 @@ h1 {
 	color: #d75151;
 }
 h2 {
-	font:900  30px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	color: #444;
-	left: 1px;
+	font: 200 30px/48px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #333;
 }
 h3 {
-	font: 500 24px/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font: 200 24px/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	color: #444;
 	letter-spacing: 1px;
 }
@@ -609,10 +610,11 @@ header.open > .menu-button > span.three {
 /* @group BANNER */
 .banner {
 	position: relative;
-	height: 100%;
+	height: 80%;
 	/*max-height: 720px;*/
 	min-height: 320px;
 	max-height: 960px;
+	overflow: hidden;
 	padding: 0px 0;
 	background: #26292d;
 	background-image: url('/images/banners/workspace.jpg');
@@ -625,11 +627,12 @@ header.open > .menu-button > span.three {
 	box-shadow: 0 100px 50px -50px rgba(0,0,0,.5) inset;
 }
 .banner.small {
-	height: 60%;
+	height: 50%;
 }
 
 .banner > .banner-bottom {
 	position: absolute;
+	z-index: 100000000;
 	width: 100%;
 	height: auto;
 	left: 0;
@@ -647,13 +650,23 @@ header.open > .menu-button > span.three {
 	top: 0;
 	right: 0;
 }
-.banner:after {
+.banner:before {
 	content: '\00a0';
 	display: inline-block;
 	width: 0;
 	height: 100%;
 	vertical-align: middle;
 }
+/*.banner:after {
+	content: '\00a0';
+	position: absolute;
+	z-index: 100;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(64,40,40,.5);
+}*/
 
 
 /* @group H Group */
@@ -675,12 +688,18 @@ header.open > .menu-button > span.three {
 }
 .banner > hgroup > h1 {
 	margin: 0px 0 0 0;
-	font: 900 36px/48px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	letter-spacing: 2px;
+	font: 400 30px/48px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	letter-spacing: 0px;
 	/*text-shadow: 0 1px 6px rgba(0,0,0,.5);*/
 	text-transform: uppercase;
 	color: #fff;
 	text-align: center;
+}
+.banner > hgroup > h1 > strong {
+	display: block;
+	font-weight: 900;
+	font-size: 48px;
+	letter-spacing: 2;
 }
 .banner > hgroup > h1.two-tone {
 	font: 100 24px/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
@@ -720,6 +739,20 @@ header.open > .menu-button > span.three {
 
 /* @end */
 
+@media all and (max-width: 1080px) {
+
+.banner {
+	height: 50%;
+}
+.banner > hgroup > h1 {
+	font-size: 24px;
+	line-height: 30px;
+}
+.banner > hgroup > h1 > strong {
+	font-size: 36px;
+}
+
+}
 
 @media all and (max-width: 540px) {
 
@@ -730,6 +763,13 @@ header.open > .menu-button > span.three {
 
 .banner > hgroup {
 	padding: 24px;
+}
+.banner > hgroup > h1 {
+	font-size: 16px;
+	line-height: 24px;
+}
+.banner > hgroup > h1 > strong {
+	font-size: 24px;
 }
 .banner > hgroup > h1.two-tone {
 	font: 200 14px/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
@@ -745,6 +785,31 @@ header.open > .menu-button > span.three {
 
 /* @end */
 
+
+
+
+
+/* @group BG Vid */
+
+video { display: block; }
+
+video#bgvid { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 10;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover; 
+}
+
+/* @end */
 
 
 
@@ -1218,6 +1283,10 @@ header.open > .menu-button > span.three {
 .video-grid {
 	padding: 96px 0;
 	background: #f2f2f2;
+	text-align: center;
+}
+.video-grid > h2 {
+	margin: 0 0 48px 0;
 }
 .video-grid > ul {
 	max-width: 960px;
@@ -1228,6 +1297,7 @@ header.open > .menu-button > span.three {
 	display: inline-block;
 	width: 48%;
 	margin: 0 0 4% 0;
+	text-align: left;
 }
 .video-grid > ul > li:nth-of-type(even) {
 	margin-left: 3%;
@@ -1413,8 +1483,17 @@ header.open > .menu-button > span.three {
 /* @group Price Tiers */
 
 .price-tiers {
-	padding: 24px;
+	padding: 48px 24px;
 	text-align: center;
+}
+.price-tiers > h1 {
+	
+}
+.price-tiers > h2 {
+	
+}
+.price-tiers > h3 {
+	margin: 0 0 48px 0;
 }
 .price-tiers > section {
 	position: relative;
@@ -1509,13 +1588,16 @@ header.open > .menu-button > span.three {
 	text-transform: uppercase;
 	letter-spacing: 1px;
 }
+.price-tiers > section > h3 > i {
+	font-weight: 200;
+	font-size: 14px;
+	vertical-align: middle;
+	letter-spacing: 1;
+}
 .price-tiers > section > a {
-	position: absolute;
-	bottom: -36px;
-	left: 0;
+	display: inline-block;
+	margin: -12px 0 24px 0;
 	text-align: center;
-	width: 100%;
-	/*text-decoration: none;*/
 	font: 200 14px/14px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 }
 .price-tiers > section > a > img {
@@ -1527,31 +1609,31 @@ header.open > .menu-button > span.three {
 
 
 
-.price-tiers > section:nth-of-type(2) {
+.price-tiers > section:last-of-type {
 	border-color: #000;
 }
-.price-tiers > section:nth-of-type(2) > h2 {
+.price-tiers > section:last-of-type > h2 {
 	background: #000;
 }
-.price-tiers > section:nth-of-type(2) > .image {
+.price-tiers > section:last-of-type > .image {
 	border-color: #000;
 }
-.price-tiers > section:nth-of-type(2) > h3 {
+.price-tiers > section:last-of-type > h3 {
 	color: #000;
 }
 
 
-.price-tiers > section:nth-of-type(3) {
-	border-color: #999;
+.price-tiers > section:first-of-type {
+	border-color: #000;
 }
-.price-tiers > section:nth-of-type(3) > h2 {
-	background: #999;
+.price-tiers > section:first-of-type > h2 {
+	background: #000;
 }
-.price-tiers > section:nth-of-type(3) > .image {
-	border-color: #999;
+.price-tiers > section:first-of-type > .image {
+	border-color: #000;
 }
-.price-tiers > section:nth-of-type(3) > h3 {
-	color: #999;
+.price-tiers > section:first-of-type > h3 {
+	color: #000;
 }
 
 
@@ -1584,14 +1666,7 @@ header.open > .menu-button > span.three {
 .alternating > div:first-of-type {
 	
 }
-.alternating > div:nth-of-type(even) {
-	background: linear-gradient(to right, white 0%, #eceaea 50%, white 100%) #f2f2f2;
-	
-}
-.alternating > div:nth-of-type(even) > img {
-	height: 150%;
-	top: -25%;
-}
+
 
 
 .alternating > div > img {
@@ -1603,26 +1678,16 @@ header.open > .menu-button > span.three {
 }
 
 .alternating > div > hgroup {
-	padding: 0 50% 0 0;
+	padding: 0 50% 0 24px;
 }
 .alternating > div > hgroup > article {
 	padding: 0;
 }
-.alternating > div > hgroup > h2 {
+.alternating > div > hgroup > article > h2 {
 	margin: 0 0 24px;
-	/*padding: 0 0 0 18px;*/
-	font: 200 36px/1.0865em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	color: #333;
-	letter-spacing: 2px;
-	text-transform: uppercase;
-	/*border-left: 6px solid #cb2027;*/
 }
-.alternating > div > hgroup > p {
+.alternating > div > hgroup > article > p {
 	margin: 0 0 36px 0;
-	clear: left;
-	font: 200 24px/1.45em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	color: #666;
-	letter-spacing: 1px;
 }
 .alternating > div > hgroup > ul {
 	padding: 0 0 0 24px;
@@ -1647,10 +1712,17 @@ header.open > .menu-button > span.three {
 }
 
 
-
+.alternating > div:nth-of-type(even) {
+	background: linear-gradient(to right, white 0%, #eceaea 50%, white 100%) #f2f2f2;
+	
+}
+.alternating > div:nth-of-type(even) > img {
+	/*height: 150%;*/
+	/*top: -25%;*/
+}
 
 .alternating > div:nth-of-type(even) > hgroup {
-	padding: 0 0 0 50%;
+	padding: 0 24px 0 50%;
 }
 .alternating > div:nth-of-type(even) > img  {
 	left: auto;
@@ -1747,7 +1819,7 @@ header.open > .menu-button > span.three {
 	position: relative;
 	margin: -96px 0 0 0;
 	padding: 24px!important;
-	text-align: left;
+	text-align: center;
 }
 .alternating > div > hgroup:before {
 	content: '\00a0';
@@ -2372,77 +2444,3 @@ header.open > .menu-button > span.three {
 	margin: -120px auto 0 auto;
 }
 /* @end */
-
-
-
-
-
-
-
-
-
-
-@media all and (max-width: 1080px) {
-
-.content section {
-	padding: 36px;
-}
-article {
-	padding: 36px;
-}
-
-}
-
-
-
-
-
-
-@media all and (max-width: 720px) {
-
-.blogposts {
-	padding: 48px;
-}
-.blogposts > li,
-.blogposts > li:nth-last-of-type(even) {
-	max-width: 100%;
-	margin: 0 0 48px 0;
-}
-
-}
-
-
-
-
-
-
-@media all and (max-width: 540px) {
-.banner > hgroup {
-	/*padding: 96px 24px;*/
-	text-shadow: 0 1px 5px rgba(0,0,0,.5);
-}
-.banner > hgroup > img {
-	max-width: 320px;
-	/*margin: 0 0 24px 0;*/
-}
-.banner > hgroup > h1 {
-	margin: 0 0 0px 0;
-	font-size: 24px;
-	line-height: 30px;
-}
-
-
-.trucks > ul > li {
-	max-width: 100%;
-	width: 100%;
-}
-
-
-
-
-}
-
-
-
-
-

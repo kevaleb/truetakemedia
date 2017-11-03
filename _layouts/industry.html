@@ -2,9 +2,13 @@
 layout: default
 ---
 
-<div class="banner" style="background-image: url('{{ page.image_path }}');">
+<div class="banner" style="background-image: url('{{ page.banner_image_path }}');">
+	<video playsinline autoplay muted loop poster="{{ page.banner_vid_image_path }}" id="bgvid">
+	    <!--<source src="polina.webm" type="video/webm">-->
+	    <source src="{{ page.banner_vid_path }}" type="video/mp4">
+	</video>
 	<hgroup>
-		<h1>{{ page.title }}</h1>
+		<h1>{{ page.headline }}</h1>
 		<a href="#quote-form" class="button">Lets Talk</a>
 	</hgroup>
 	<img src="/images/banners/banner-bottom.svg" alt="" class="banner-bottom" />
@@ -13,19 +17,43 @@ layout: default
 <div class="alternating">
 	{% for feature in page.features %}
 	<div id="video-production">
-		<img src="/images/home/clapper.png" alt=""/>
+		<img src="{{ feature.feature_image_path }}" alt=""/>
 		<hgroup class="">
 			<h2 class="editable">{{ feature.feature_title }}</h2>
 			<article>
 				{{ feature.feature_description_html }}
 			</article>
-			
+			{% unless feature.button_url == nil %}
+			<a href="{{ feature.button_url }}" class="button">{{ feature.button_text }}</a>
+			{% endunless %}
 		</hgroup>
 	</div>
 	{% endfor %}
 </div>
 
-<div class="conversions">
+<div class="video-grid" id="video-grid">
+	<h2>Some of our work</h2>
+	<ul>
+	{% assign videos = site.posts | where:"category","videos" %}
+	{% for video in videos  %}
+		<li>
+			<a href="{{ video.url }}" target="blank">
+				<div style="background-image: url('{{ video.banner_path }}');">
+					<img src="/images/icons/play.svg" alt="Play Video" />
+				</div>
+				<hgroup>
+					<h4>{{ video.date | date: "%b %d, %y" }}</h4>
+					<h3>{{ video.title }}</h3>
+				</hgroup>
+			</a>
+		</li>
+	{% endfor %}
+	</ul>
+</div>
+
+
+
+<div class="conversions" id="conversions">
 	<h2>Return On Investment</h2>
 	<ul>
 		<li>
@@ -94,21 +122,25 @@ layout: default
 
 
 <div class="price-tiers">
+	<h2>We'll Manage Your Advertising</h2>
 	{% for pricetier in page.pricing %}
 	<section>
+		{% unless pricetier.icon_image_path == nil %}
 		<div class="image">
 			<img src="{{ pricetier.icon_image_path }}" alt="" />
 		</div>
+		{% endunless %}
 		<h2>{{ pricetier.title }}</h2>
-		<p>{{ pricetier.description }}</p>
-		<span>{{ pricetier.snippet }}</span>
+		{{ pricetier.description_html }}
+		{% unless pricetier.snippet == nil %}<span>{{ pricetier.snippet }}</span>{% endunless %}
 		<br />
 		<ul>
 			{% for listitem in pricetier.list %}
 			<li>{{ listitem.listitem }}</li>
 			{% endfor %}
 		</ul>
-		<h3>${{ pricetier.price }}</h3>
+		<h3>${{ pricetier.price_number }}<i>/Mo</i></h3>
+		<a href="#quote-form" class="button">Learn More</a>
 	</section>
 	{% endfor %}
 </div>
