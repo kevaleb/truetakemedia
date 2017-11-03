@@ -1300,6 +1300,7 @@ video#bgvid {
 .video-grid > ul > li {
 	display: inline-block;
 	width: 48%;
+	max-width: 400px;
 	margin: 0 0 4% 0;
 	text-align: left;
 }
@@ -1307,11 +1308,13 @@ video#bgvid {
 	margin-left: 3%;
 }
 .video-grid > ul > li > a {
+	position: relative;
 	display: block;
 	text-decoration: none;
 	background: #cb2027;
 }
 .video-grid > ul > li > a > div {
+	position: relative;
 	background-size: cover;
 	background-position: center;
 	text-align: center;
@@ -1323,17 +1326,25 @@ video#bgvid {
 	height: 48px;
 }
 .video-grid > ul > li > a > hgroup {
-	background: #fff;
-	padding: 24px;
-	border-top: 3px solid #cb2027;
+	position: absolute;
+	z-index: 1000000;
+	bottom: 12px;
+	left: 2%;
+	width: 96%;
+	padding: 6px;
+	background: none;
+	border-bottom: 3px solid #cb2027;
+	color: #fff;
 }
 .video-grid > ul > li > a > hgroup > h3 {
 	font: 700 18px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	text-transform: uppercase;
+	color: inherit;
 }
 .video-grid > ul > li > a > hgroup > h4 {
 	margin: 0 0 3px 0;
 	font:100 12px/12px"Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: inherit;
 }
 
 .video-grid > ul > li:hover > a > div {

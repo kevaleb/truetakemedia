@@ -34,7 +34,8 @@ layout: default
 <div class="video-grid" id="video-grid">
 	<h2>Some of our work</h2>
 	<ul>
-	{% assign videos = site.posts | where:"category","videos" %}
+	{% assign pageindustry = page.title | downcase  %}
+	{% assign videos = site.posts | where:"category","videos" | where:"industry",pageindustry %}
 	{% for video in videos  %}
 		<li>
 			<a href="{{ video.url }}" target="blank">
@@ -42,7 +43,7 @@ layout: default
 					<img src="/images/icons/play.svg" alt="Play Video" />
 				</div>
 				<hgroup>
-					<h4>{{ video.date | date: "%b %d, %y" }}</h4>
+					<h4>{{ video.customer }}, {{ video.date | date: "%b %d, %y" }}</h4>
 					<h3>{{ video.title }}</h3>
 				</hgroup>
 			</a>
