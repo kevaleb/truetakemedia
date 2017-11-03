@@ -4,7 +4,7 @@ title: MCC Donors Event
 description:
 permalink:
 category: videos
-industry:
+industry: other
 customer: northmcc
 video: true
 youtube_id: 6BlR0HTmorI

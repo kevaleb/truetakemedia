@@ -31,29 +31,6 @@ layout: default
 	{% endfor %}
 </div>
 
-<div class="video-grid" id="video-grid">
-	<h2>Some of our work</h2>
-	<ul>
-	{% assign pageindustry = page.title | downcase  %}
-	{% assign videos = site.posts | where:"category","videos" | where:"industry",pageindustry %}
-	{% for video in videos  %}
-		<li>
-			<a href="{{ video.url }}" target="blank">
-				<div style="background-image: url('{{ video.banner_path }}');">
-					<img src="/images/icons/play.svg" alt="Play Video" />
-				</div>
-				<hgroup>
-					<h4>{{ video.customer }}, {{ video.date | date: "%b %d, %y" }}</h4>
-					<h3>{{ video.title }}</h3>
-				</hgroup>
-			</a>
-		</li>
-	{% endfor %}
-	</ul>
-</div>
-
-
-
 <div class="conversions" id="conversions">
 	<h2>Return On Investment</h2>
 	<ul>
@@ -120,10 +97,67 @@ layout: default
 	</ul>
 </div>
 
+<div class="video-grid" id="video-grid">
+	<h2>Some of our work</h2>
+	<ul>
+	{% assign pageindustry = page.title | downcase | remove:' '  %}
+	{% assign videos = site.posts | where:"category","videos" | where:"industry",pageindustry %}
+	{% for video in videos  %}
+		<li>
+			<a href="{{ video.url }}" target="blank">
+				<div style="background-image: url('{{ video.banner_path }}');">
+					<img src="/images/icons/play.svg" alt="Play Video" />
+				</div>
+				<hgroup>
+					<h4>{{ video.customer }}, {{ video.date | date: "%b %d, %y" }}</h4>
+					<h3>{{ video.title }}</h3>
+				</hgroup>
+			</a>
+		</li>
+	{% endfor %}
+	</ul>
+</div>
+
+
+<div class="production_price">
+	<h2>Video Prodcution</h2>
+	
+	<article>
+		<h4>Starting at:</h4>
+		<h3>$500</h3>
+		<p>With video production it’s hard to give a standard price because there are so many variables to take into account like…</p>
+		
+		<ul>
+			<li>How much raw footage will we be editing?</li>
+			<li>What is the final Length of the video?</li>
+			<li>Will there be travel expenses?</li>
+			<li>How long will we be filming?</li>
+			<li>Do we need to hire actors?</li>
+			<li>Does the video require a voice over?</li>
+			<li>Will we have to rent special equipment, props or materials?</li>
+			<li>Do we need to write a script?</li>
+			<li>Does the video require animation?</li>
+			<li>Etc…</li>
+		</ul>
+		
+		<p>And then there are different video styles…</p>
+		<ul>
+			<li>Interview</li>
+			<li>Cinematic</li>
+			<li>Testimonial</li>
+			<li>Product</li>
+			<li>Sales</li>
+			<li>Etc.</li>
+		</ul>
+		
+		<p>In other words… every project is unique. So to give you a true price we need to have a conversation and figure out exactly what you’re looking to accomplish.</p>
+	</article>
+	
+</div>
 
 
 <div class="price-tiers">
-	<h2>We'll Manage Your Advertising</h2>
+	<h2>Advertising Management</h2>
 	{% for pricetier in page.pricing %}
 	<section>
 		{% unless pricetier.icon_image_path == nil %}

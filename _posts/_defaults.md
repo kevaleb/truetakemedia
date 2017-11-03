@@ -4,7 +4,7 @@ title:
 description:
 permalink:
 category:
-industry:
+industry: other
 customer:
 video: false
 youtube_id: 
