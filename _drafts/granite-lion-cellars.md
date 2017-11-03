@@ -1,12 +1,14 @@
 ---
 layout: article
 title: Granite Lion Cellars
-description:
+description: Teaser video for Granite Lion Cellars
 permalink:
-category:
-industry:
-customer:
-video: false
-youtube_id:
+category: videos
+industry: wineries
+customer: granitelioncellars
+video: true
+youtube_id: Ji5ILx5NP24
 banner_path:
 ---
+
+
