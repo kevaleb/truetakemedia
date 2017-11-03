@@ -3,7 +3,7 @@ headline: 'How to get more customers into<strong>your tasting room</strong>'
 icon_path: /uploads/wine.png
 banner_image_path: /images/banners/videos/wineries.jpg
 banner_vid_image_path: /images/banners/videos/wineries_vid.jpg
-banner_vid_path: /images/banners/videos/wineries3.mp4
+banner_vid_path: /images/banners/videos/wineries4.mp4
 cpm_number: 30
 ctr_number: 1.45
 sr_number: 15
