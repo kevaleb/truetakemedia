@@ -8,7 +8,7 @@ industry: wineries
 customer: granitelioncellars
 video: true
 youtube_id: Ji5ILx5NP24
-banner_path:
+banner_path: /uploads/wineries-1.jpg
 ---
 
 
