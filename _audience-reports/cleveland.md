@@ -7,7 +7,7 @@ banner_icon_path: /images/illustrations/wine_lovers.svg
 banner_img_path:
 reach_img_path: /images/audience-reports/cleveland/map.png
 potential_reach: '87,000 <i>Wine Lovers</i>'
-audience_description_markdown: |-
+audience_description_html: |-
   * Location - Living In:
     * United States: Jamul (+50 mi) California Age: 21 - 65+ People Who Match: Behaviors: Wine And Must Also Match: Interests: Merlot, Wine, Sangiovese, Pinot noir, Food & Wine, Chardonnay, Cabernet Sauvignon, Wine tasting, Riesling, Winery, Wine and food matching, Sparkling wine, Pinot gris, Zinfandel, Red wine, White Zinfandel or Cabernet Franc
 age_gender_img_path:
