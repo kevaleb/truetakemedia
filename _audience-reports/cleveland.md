@@ -15,7 +15,22 @@ audience_description_html: >-
   Wine, Chardonnay, Cabernet Sauvignon, Wine tasting, Riesling, Winery, Wine and
   food matching, Sparkling wine, Pinot gris, Zinfandel, Red wine, White
   Zinfandel or Cabernet Franc</li></ul></li></ul>
-age_gender_img_path:
+demographics:
+  - image_path:
+    image_title: Age & Gender
+  - image_path:
+    image_title: Relationship & Education
+  - image_path:
+    image_title: Job Titles
+  - image_path:
+    image_title: Page Likes
+  - image_path: 
+    image_title: Devices
+  - image_path:
+    image_title: Household & Income
+  - image_path:
+    image_title: Spending
+
 relationship_education_img_path:
 job_title_img_path:
 page_likes_img_path:
