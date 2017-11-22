@@ -7,7 +7,7 @@ banner_icon_path: /images/illustrations/wine_lovers.svg
 banner_img_path:
 reach_img_path: /images/audience-reports/cleveland/map.png
 potential_reach: '87,000 <i>Wine Lovers</i> '
-audience_description_md: '
+audience_description_markdown: '
 - Location - Living In:
 United States: Jamul (+50 mi) California
 Age:
