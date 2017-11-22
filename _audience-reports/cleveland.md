@@ -30,12 +30,6 @@ demographics:
     image_title: Household & Income
   - image_path:
     image_title: Spending
-relationship_education_img_path:
-job_title_img_path:
-page_likes_img_path:
-devices_img_path:
-household_income_img_path:
-spending_img_path:
 ---
 
 
