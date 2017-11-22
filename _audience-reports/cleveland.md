@@ -22,13 +22,13 @@ demographics:
     image_title: Relationship & Education
   - image_path: /uploads/cleveland-job-title.jpg
     image_title: Job Titles
-  - image_path:
+  - image_path: /uploads/cleveland-page-likes.jpg
     image_title: Page Likes
-  - image_path:
+  - image_path: /uploads/cleveland-device-users.jpg
     image_title: Devices
-  - image_path:
+  - image_path: /uploads/cleveland-household-income.jpg
     image_title: Household & Income
-  - image_path:
+  - image_path: /uploads/cleveland-spending.jpg
     image_title: Spending
 ---
 
