@@ -5,7 +5,7 @@ permalink: /wineries/wine-lovers/cleveland/
 region: 'Cleveland, OH'
 banner_icon_path: /images/illustrations/wine_lovers.svg
 banner_img_path:
-reach_img_path: /images/audience-reports/cleveland/map.png
+reach_img_path: /images/audience-reports/cleveland/cleveland-map.png
 potential_reach: '87,000 <i>Wine Lovers</i>'
 audience_description_html: >-
   <ul><li>Location - Living In:<ul><li>United States: Jamul (+50 mi)
