@@ -6,7 +6,7 @@ region: 'Cleveland, OH'
 banner_icon_path: /images/illustrations/wine_lovers.svg
 banner_img_path:
 reach_img_path: /images/audience-reports/cleveland/cleveland-map.png
-potential_reach: '87,000 <i>Wine Lovers</i>'
+potential_reach: '72,000 <i>Wine Lovers</i>'
 audience_description_html: >-
   <ul><li>Location - Living In:<ul><li>United States: Jamul (+50 mi)
   California</li></ul></li><li>Age:<ul><li>21 - 65+</li></ul></li><li>People Who
