@@ -8,8 +8,8 @@ banner_img_path:
 reach_img_path: /images/audience-reports/cleveland/cleveland-map.png
 potential_reach: '72,000 <i>Wine Lovers</i>'
 audience_description_html: >-
-  <ul><li>Location - Living In:<ul><li>United States: Jamul (+50 mi)
-  California</li></ul></li><li>Age:<ul><li>21 - 65+</li></ul></li><li>People Who
+  <ul><li>Location - Living In:<ul><li>United States: Cleveland (+50 mi)
+  Ohio</li></ul></li><li>Age:<ul><li>21 - 65+</li></ul></li><li>People Who
   Match:<ul><li>Behaviors: Wine</li></ul></li><li>And Must Also
   Match:<ul><li>Interests: Merlot, Wine, Sangiovese, Pinot noir, Food &amp;
   Wine, Chardonnay, Cabernet Sauvignon, Wine tasting, Riesling, Winery, Wine and
