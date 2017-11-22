@@ -1,8 +1,8 @@
 ---
+industry: wineries
 title: Wine Lovers In Cleveland
 permalink: /wineries/wine-lovers/cleveland/
 region: Cleveland, OH
-industry: wineries
 banner_icon_path: /images/illustrations/wine_lovers.svg
 banner_img_path:
 reach_img_path: /images/audience-reports/cleveland/map.png
