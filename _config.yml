@@ -12,6 +12,8 @@ lat:
 lng:
 mapzoom: 13
 permalink: /blog/:title/
+excerpt_separator: <!--more-->
+
 
 categories:
 - videos
@@ -19,12 +21,13 @@ categories:
 - just for fun
 - how we do
 
+
 objectives:
 - lead
 - reach
 - none
 
-excerpt_separator: <!--more-->
+
 collections:
   main-pages:
     output: true
@@ -32,6 +35,9 @@ collections:
     output: true
   industries:
     output: true
+  audience-reports:
+    output: true
+
     
 defaults:
   -
@@ -52,6 +58,14 @@ defaults:
       _hide_content: false
       permalink: /:title/
       navclass: /industry/
+  -
+    scope:
+      path: ""
+      type: "audience-reports" 
+    values:
+      layout: "audience-report"
+      _hide_content: false
+      permalink: /:title/
 
 
       

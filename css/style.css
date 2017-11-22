@@ -37,7 +37,7 @@ body > .snipcart-checkout {
 
 h1 {
 	font: 900 36px/48px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	color: #d75151;
+	color: #000;
 }
 h2 {
 	font: 200 30px/48px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
@@ -638,18 +638,7 @@ header.open > .menu-button > span.three {
 	left: 0;
 	bottom: -1;
 }
-.banner > img {
-	position: absolute;
-	height: 100%;
-}
-.banner > img.left {
-	left: 0;
-	top: 0;
-}
-.banner > img.right {
-	top: 0;
-	right: 0;
-}
+
 .banner:before {
 	content: '\00a0';
 	display: inline-block;
@@ -684,7 +673,7 @@ header.open > .menu-button > span.three {
 .banner > hgroup > img {
 	display: block;
 	max-width: 150px;
-	margin: 0 auto 48px auto;
+	margin: 0 auto;
 }
 .banner > hgroup > h1 {
 	margin: 0px 0 0 0;
@@ -1692,6 +1681,15 @@ video#bgvid {
 
 .alternating > div > hgroup {
 	padding: 0 50% 0 24px;
+}
+.alternating > div > hgroup > h1 {
+	
+}
+.alternating > div > hgroup > h1 > i {
+	font-weight: 100;
+	text-transform: uppercase;
+	font-size: 16px;
+	vertical-align: middle;
 }
 .alternating > div > hgroup > article {
 	padding: 0;
