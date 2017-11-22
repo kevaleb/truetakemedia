@@ -1876,6 +1876,9 @@ video#bgvid {
 .alternating > div > hgroup > p {
 	
 }
+.alternating > div > hgroup > article > ul {
+	text-align: left;
+}
 }
 /* @end */
 
@@ -2423,6 +2426,25 @@ video#bgvid {
 	top: 0px;
 	margin: 0;
 	vertical-align: middle;
+}
+
+/* @end */
+
+
+
+
+
+
+/* @group Demographics */
+
+#demographics {
+	padding: 96px 24px;
+	background: #e9ebee;
+	text-align: center;
+}
+#demographics > img {
+	width: 100%;
+	max-width: 800px;
 }
 
 /* @end */

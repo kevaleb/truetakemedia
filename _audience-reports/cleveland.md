@@ -16,20 +16,21 @@ audience_description_html: >-
   food matching, Sparkling wine, Pinot gris, Zinfandel, Red wine, White
   Zinfandel or Cabernet Franc</li></ul></li></ul>
 demographics:
-  - image_path: /uploads/cleveland-age-and-gender.jpg
+  - image_path: /images/audience-reports/cleveland/cleveland-age-and-gender.png
     image_title: Age & Gender
-  - image_path: /uploads/cleveland-relationship-education.jpg
+  - image_path: /images/audience-reports/cleveland/cleveland-relationship-education.png
     image_title: Relationship & Education
-  - image_path: /uploads/cleveland-job-title.jpg
+  - image_path: /images/audience-reports/cleveland/cleveland-job-title.png
     image_title: Job Titles
-  - image_path: /uploads/cleveland-page-likes.jpg
+  - image_path: /images/audience-reports/cleveland/cleveland-page-likes.png
     image_title: Page Likes
-  - image_path: /uploads/cleveland-device-users.jpg
+  - image_path: /images/audience-reports/cleveland/cleveland-device-users.png
     image_title: Devices
-  - image_path: /uploads/cleveland-household-income.jpg
+  - image_path: /images/audience-reports/cleveland/cleveland-household-income.png
     image_title: Household & Income
-  - image_path: /uploads/cleveland-spending.jpg
+  - image_path: /images/audience-reports/cleveland/cleveland-spending.png
     image_title: Spending
 ---
 
 
+/images/audience-reports/cleveland/cleveland-spending.png

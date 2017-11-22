@@ -26,8 +26,11 @@ layout: default
 </div>
 
 
-<div class="demagraphics">
-	<a href="{{  }}">Link Text</a>
+<div id="demographics">
+	<h2>Demographics</h2>
+	{% for image in page.demographics %}
+	<img src="{{ image.image_path }}" alt="{{ image.image_title }}" />
+	<!--<h5>{{ image.image_title }}</h5>-->
+	{% endfor %}
 </div>
-
 
