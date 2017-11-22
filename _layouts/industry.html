@@ -2,9 +2,9 @@
 layout: default
 ---
 
-<div class="banner" style="background-image: url('{{ page.banner_image_path }}');">
+<!--<div class="banner" style="background-image: url('{{ page.banner_image_path }}');">
 	<video playsinline autoplay muted loop poster="{{ page.banner_vid_image_path }}" id="bgvid">
-	    <!--<source src="polina.webm" type="video/webm">-->
+	    <!--<source src="polina.webm" type="video/webm">--*>
 	    <source src="{{ page.banner_vid_path }}" type="video/mp4">
 	</video>
 	<hgroup>
@@ -12,9 +12,9 @@ layout: default
 		<a href="#quote-form" class="button">Lets Talk</a>
 	</hgroup>
 	<img src="/images/banners/banner-bottom.svg" alt="" class="banner-bottom" />
-</div>
+</div>-->
 
-<div class="alternating">
+<!--<div class="alternating">
 	{% for feature in page.features %}
 	<div id="video-production">
 		<img src="{{ feature.feature_image_path }}" alt=""/>
@@ -29,7 +29,7 @@ layout: default
 		</hgroup>
 	</div>
 	{% endfor %}
-</div>
+</div>-->
 
 <div class="conversions" id="conversions">
 	<h2>Return On Investment</h2>
@@ -37,65 +37,127 @@ layout: default
 		<li>
 			<img src="/images/icons/money.svg" alt="" />
 			<h3>Ad Spend</h3>
-			<h4>$1,500</h4>
+			<label>
+				<span>$</span>
+				<input type="number" name="ad_spend" value="1500" id="ad_spend" class="primary-input"/>
+			</label>
 		</li>
 		<div>
 			<h3>CPM</h3>
-			<h4>${{ page.cpm_number }}</h4>
+			<label>
+				<span>$</span>
+				<input type="number" name="cpm" value="{{ page.cpm_number }}" id="cpm" class="primary-input"/>
+			</label>
 			<img src="/images/icons/arrow.svg" alt="" />
 		</div>
 		
 		<li>
 			<img src="/images/icons/eye.svg" alt="" />
 			<h3>Reach</h3>
-			<h4>50,000</h4>
+			<h4 id="reach">50,000</h4>
 		</li>
 		<div>
 			<h3>CTR</h3>
-			<h4>{{ page.ctr_number }}%</h4>
+			<label>
+				<input type="number" name="ctr" value="{{ page.ctr_number }}" id="ctr" class="primary-input"/>
+				<span>%</span>
+			</label>
 			<img src="/images/icons/arrow.svg" alt="" />
 		</div>
 		
 		<li>
 			<img src="/images/icons/hand.svg" alt="" />
 			<h3>Clicks</h3>
-			<h4>725</h4>
+			<h4 id="clicks">725</h4>
 		</li>
 		<div>
 			<h3>SR</h3>
-			<h4>{{ page.sr_number }}%</h4>
+			<label>
+				<input type="number" name="sr" value="{{ page.sr_number }}" class="primary-input" id="sr"/>
+				<span>%</span>
+			</label>
 			<img src="/images/icons/arrow.svg" alt="" />
 		</div>
 		
 		<li>
 			<img src="/images/icons/female.svg" alt="" />
 			<h3>Leads</h3>
-			<h4>109</h4>
+			<h4 id="leads">109</h4>
 		</li>
 		<div>
 			<h3>CR</h3>
-			<h4>{{ page.cr_number }}%</h4>
+			<label>
+				<input type="number" name="cr" value="{{ page.cr_number }}" class="primary-input" id="cr"/>
+				<span>%</span>
+			</label>
 			<img src="/images/icons/arrow.svg" alt="" />
 		</div>
 		
 		<li>
 			<img src="/images/icons/heart.svg" alt="" />
 			<h3>Customers</h3>
-			<h4>27</h4>
+			<h4 id="customers">27</h4>
 		</li>
 		<div>
 			<h3>ACV</h3>
-			<h4>${{ page.acv_number }}</h4>
+			<label>
+				<span>$</span>
+				<input type="number" name="acv" value="{{ page.acv_number }}" class="primary-input" id="acv"/>
+			</label>
 			<img src="/images/icons/arrow.svg" alt="" />
 		</div>
 		
 		<li>
 			<img src="/images/icons/money.svg" alt="" />
 			<h3>Revenue</h3>
-			<h4>$6,797</h4>
+			<h4 id="revenue">6,797</h4>
 		</li>
 	</ul>
 </div>
+
+<script type="text/javascript">
+	
+	$( ".primary-input" ).change(function() {
+		// Reach
+		var AdSpend = $('#ad_spend').val();
+		var CPM = $('#cpm').val();
+		var Reach = Math.round(AdSpend/CPM*1000);
+		$('#reach').html( Reach.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") );
+		
+		// Clicks
+		var CTR = $('#ctr').val();
+		var Clicks = Math.round(Reach*(CTR/100));
+		$('#clicks').html( Clicks.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") );
+		
+		// Leads
+		var SR = $('#sr').val();
+		var Leads = Math.round(Clicks*(SR/100));
+		$('#leads').html( Leads.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") );
+		
+		// Customers
+		var CR = $('#cr').val();
+		var Customers = Math.round(Leads*(CR/100));
+		$('#customers').html( Customers.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") );
+		
+		// Revenue
+		var ACV = $('#acv').val();
+		var Revenue = Math.round(Customers*ACV);
+		$('#revenue').html( Revenue.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") );
+	});
+	
+
+	
+	
+	
+	
+	
+	
+	// Actions
+	$( ".product_form > #product_measurements > .actions > .back" ).click(function() {	
+		$('.product_form').removeClass('stage3');
+		$('.product_form').addClass('stage2');
+	});
+</script>
 
 <div class="video-grid" id="video-grid">
 	<h2>Some of our work</h2>
