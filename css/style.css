@@ -1903,27 +1903,87 @@ video#bgvid {
 .conversions > ul {
 	white-space: nowrap;
 }
+.conversions > ul > hgroup > h3 {
+	
+}
+.conversions > ul > hgroup > h3:before {
+	content: attr(data-char); 
+}
+.conversions > ul > hgroup > h4 {
+	
+}
+.conversions > ul input {
+	box-sizing: border-box;
+	width: 60px;
+	padding: 0 6px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	font: 900 12px/28px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-align: center;
+	appearance: none !important;
+	-webkit-appearance: none !important;
+	-moz-appearance:textfield !important;
+}
 .conversions > ul > li {
 	display: inline-block;
 	vertical-align: middle;
-	padding: 0 24px;
+	width: 96px;
+	margin: 0;
+}
+
+
+
+.conversions > ul > li > div {
+	position: relative;
+	
+	height: 200px;
+	width: 36px;
+	margin: 0 auto;
+	background: #f2f2f2;
+	border-top: 48px solid #f2f2f2;
+}
+
+.conversions > ul > li > div > span {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	display: inline-block;
+	background: #2488d3;
+	transition: height 1s ease-out 0s;
+}
+.conversions > ul > li > div > span > h5 {
+	position: absolute;
+	top: -12px;
+	width: 100%;
+	text-align: center;
+	font: 200 10px/10px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #999;
 }
 .conversions > ul > li > img {
-	width: 96px;
+	position: relative;
+	top: -6px;
+	display: block;
+	margin: 0 auto;
+	padding: 3px;
+	width: 60px;
 	border: 3px solid #000;
 	border-radius: 96px;
-	margin: 0 0 12px 0;
-	padding: 12px;
+	background: #fff;
 }
-.conversions > ul > li > h3 {
+.conversions > ul > li > hgroup {
+	display: inline-block;
+}
+.conversions > ul > li > hgroup > h3 {
 	width: 100%;
-	font: 900 14px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font: 900 12px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	text-transform: uppercase;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	letter-spacing: 1px;
 }
-.conversions > ul > li > h4 {
+.conversions > ul > li > hgroup > h4 {
 	width: 100%;
 	font: 200 24px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	text-transform: uppercase;
@@ -1932,22 +1992,126 @@ video#bgvid {
 	text-overflow: ellipsis;
 }
 
+
+
+
+.conversions > ul > li:first-of-type {
+	/*margin: 0;*/
+}
+.conversions > ul > li:first-of-type > div {
+	border-top: none;
+}
+.conversions > ul > li:first-of-type > div::after {
+	content: '\00a0';
+	position: absolute;
+	top: 5%;
+	left: 0;
+	width: 100%;
+	height: 24px;
+
+	background-image: url(/images/icons/jagged.svg);
+	background-size: cover;
+}
+.conversions > ul > li:first-of-type > div > span > h5 {
+	/*top: -36px;*/
+	/*border-bottom: 12px solid #fff;*/
+	padding: 0 0 6px 0;
+}
+
+
+.conversions > ul > li.special {
+	width: auto;
+	display: block;
+	margin: 48px auto;
+}
+.conversions > ul > li.special > img {
+	width: 96px;
+}
+.conversions > ul > li.special > hgroup {
+	
+}
+
+
+
+
+
 .conversions > ul > div {
+	position: relative;
+	z-index: 100000000;
 	display: inline-block;
 	vertical-align: middle;
-	margin: -84px 0 0 0;
+	margin: -48px -10px 0 -24px;
+	padding: 3px 0;
+	background: #000;
+	color: #fff;
+	white-space: nowrap;
 }
+.conversions > ul > div:after {
+	content: '\00a0';
+	position: absolute;
+	top: 5px;
+	right: -12px;
+	width: 26px;
+	height: 26px;
+	transform: rotate(45deg);
+	background: #000;
+}
+.conversions > ul > div > label {
+	position: relative;
+	z-index: 100;
+	left: 3px;
+	display: block;
+	height: 30px;
+	padding: 0 6px;
+	
+	background: #fff;
+	color: #000;
+	border-radius: 0 16px 16px 0;
+}
+.conversions > ul > div > label > input {
+	position: relative;
+	z-index: 10000;
+	height: 30px;
+	width: 42px;
+	padding: 0;
+	background: none;
+	border: none;
+	color: #000;
+	outline: none;
+	vertical-align: top;
+	line-height: 30px;
+	text-align: center;
+	
+}
+.conversions > ul > div > label > span {
+	position: absolute;
+	z-index: 10000;
+	top: 0;
+	right: 9px;
+	display: inline-block;
+	margin: 0;
+	height: 30px;
+	vertical-align: top;
+	font: 100 14px/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
 .conversions > ul > div > img {
+	display: none!important;
 	width: 30px;
+	display: block;
+	margin: 0 auto;
 }
 .conversions > ul > div > h3 {
+	display: none;
+	position: absolute;
+	top: -24px;
 	width: 100%;
 	font: 900 12px/16px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	text-transform: uppercase;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	/*color: #999;*/
+	color: #000;
 }
 .conversions > ul > div > h4 {
 	width: 100%;
@@ -1959,43 +2123,55 @@ video#bgvid {
 	/*color: #999;*/
 }
 
-@media all and (max-width: 1080px) {
-	
+@media all and (max-width: 480px) {
+
 .conversions > ul > li {
-	display: block;
+	/*width: 84px;*/
 }
-.conversions > ul > div {
-	display: block;
-	position: relative;
-	margin: 48px 0;
-	padding: 12px;
-	border: 1px solid #ccc;
-	border-left: none;
-	border-right: none;
-	background: rgba(0,0,0,.03);
+.conversions > ul > li > img {
+	width: 48px;
+	top: -9px;
 }
-.conversions > ul > div:before {
-	content: '\00a0';
-	position: absolute;
-	left: 50%;
-	top: -12px;
-	height: 12px;
-	width: 4px;
-	margin: 0 0 0 -3px;
-	background: #000;
-}
-.conversions > ul > div > img {
-	width: 24px;
-	margin: 0 0 0 -12px;
-	position: absolute;
-	transform: rotate(90deg);
-	left: 50%;
-	bottom: -22px;
-}
+.conversions > ul > li > hgroup {
 	
+}
+.conversions > ul > li > hgroup > h3 {
+	font: 200 11px/12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+.conversions > ul > li > hgroup > h4 {
+	font: 900 14px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+
+.conversions > ul > div {
+	position: relative;
+	z-index: 10000000;
+	margin: 0px -30px 0 -48px;
+}
+.conversions > ul > div:nth-of-type(1) {
+	top: -84px;
+}
+.conversions > ul > div:nth-of-type(2) {
+	top: -42px;
 }
 
 /* @end */
+
+@media all and (max-width: 320px) {
+
+.conversions > ul > li {
+	width: 72px;
+}
+
+}
+
+@media all and (max-width: 240px) {
+
+.conversions > ul > li {
+	width: 60px;
+}
+
+}
 
 
 
