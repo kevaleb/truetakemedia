@@ -3,7 +3,16 @@ layout: default
 title: Home
 banner_path:
 permalink: /
+nav_title: Home
+nav_class: /
+nav_order: .5
 hide_from_nav: true
+acv_number: 250
+ad_spend: 1500
+cpm_number: 30.0
+ctr_number: 1.45
+sr_number: 15.0
+cr_number: 35.0
 ---
 <div class="banner home">
 	<hgroup>
@@ -11,7 +20,7 @@ hide_from_nav: true
 		<a href="#quote-form" class="button">Request A Discovery Call</a>
 	</hgroup>
 	
-	<ul class="industries">
+	<!--<ul class="industries">
 		{% for industry in site.industries %}
 			<li>
 				<a href="{{ industry.url }}">
@@ -20,9 +29,10 @@ hide_from_nav: true
 				</a>
 			</li>
 		{% endfor %}
-	</ul>
+	</ul>-->
 	<img src="/images/banners/banner-bottom.svg" alt="" class="banner-bottom" />
 </div>
+
 
 
 
@@ -103,6 +113,9 @@ hide_from_nav: true
 		</hgroup>
 	</div>
 </div>
+
+
+{% include conversion-funnel.html %}
 
 
 

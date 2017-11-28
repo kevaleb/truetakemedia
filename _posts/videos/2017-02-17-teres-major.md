@@ -4,6 +4,7 @@ title: Teres Major
 description:
 permalink:
 customer: beesmarketplace
+industry: other
 category: videos
 video: true
 youtube_id: 8zF60oytYNg

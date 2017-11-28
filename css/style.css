@@ -1290,6 +1290,7 @@ video#bgvid {
 	display: inline-block;
 	width: 48%;
 	max-width: 400px;
+	height: 240px;
 	margin: 0 0 4% 0;
 	text-align: left;
 }
@@ -1900,19 +1901,7 @@ video#bgvid {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
-.conversions > ul {
-	white-space: nowrap;
-}
-.conversions > ul > hgroup > h3 {
-	
-}
-.conversions > ul > hgroup > h3:before {
-	content: attr(data-char); 
-}
-.conversions > ul > hgroup > h4 {
-	
-}
-.conversions > ul input {
+.conversions input {
 	box-sizing: border-box;
 	width: 60px;
 	padding: 0 6px;
@@ -1924,6 +1913,12 @@ video#bgvid {
 	-webkit-appearance: none !important;
 	-moz-appearance:textfield !important;
 }
+
+
+
+.conversions > ul {
+	white-space: nowrap;
+}
 .conversions > ul > li {
 	display: inline-block;
 	vertical-align: middle;
@@ -1932,7 +1927,7 @@ video#bgvid {
 }
 
 
-
+/* bar */
 .conversions > ul > li > div {
 	position: relative;
 	
@@ -1942,7 +1937,6 @@ video#bgvid {
 	background: #f2f2f2;
 	border-top: 48px solid #f2f2f2;
 }
-
 .conversions > ul > li > div > span {
 	position: absolute;
 	width: 100%;
@@ -1960,6 +1954,8 @@ video#bgvid {
 	font: 200 10px/10px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	color: #999;
 }
+
+/* Icons + Titles */
 .conversions > ul > li > img {
 	position: relative;
 	top: -6px;
@@ -1992,9 +1988,7 @@ video#bgvid {
 	text-overflow: ellipsis;
 }
 
-
-
-
+/* Special Treatment */
 .conversions > ul > li:first-of-type {
 	/*margin: 0;*/
 }
@@ -2013,28 +2007,12 @@ video#bgvid {
 	background-size: cover;
 }
 .conversions > ul > li:first-of-type > div > span > h5 {
-	/*top: -36px;*/
-	/*border-bottom: 12px solid #fff;*/
 	padding: 0 0 6px 0;
 }
 
 
-.conversions > ul > li.special {
-	width: auto;
-	display: block;
-	margin: 48px auto;
-}
-.conversions > ul > li.special > img {
-	width: 96px;
-}
-.conversions > ul > li.special > hgroup {
-	
-}
 
-
-
-
-
+/* Conversion Inputs */
 .conversions > ul > div {
 	position: relative;
 	z-index: 100000000;
@@ -2081,7 +2059,6 @@ video#bgvid {
 	vertical-align: top;
 	line-height: 30px;
 	text-align: center;
-	
 }
 .conversions > ul > div > label > span {
 	position: absolute;
@@ -2094,12 +2071,8 @@ video#bgvid {
 	vertical-align: top;
 	font: 100 14px/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 }
-
-.conversions > ul > div > img {
-	display: none!important;
-	width: 30px;
-	display: block;
-	margin: 0 auto;
+.conversions > ul > div > label:hover > span {
+	display: none;
 }
 .conversions > ul > div > h3 {
 	display: none;
@@ -2120,8 +2093,52 @@ video#bgvid {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	/*color: #999;*/
 }
+
+
+
+/* Dollars */
+.conversions > section {
+	
+}
+.conversions > section > label {
+	display: inline-block;
+	position: relative;
+	width: 33%;
+	max-width: 120px;
+	white-space: nowrap;
+}
+.conversions > section > label > h3 {
+	width: 100%;
+	font: 900 8px/14px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	letter-spacing: 0;
+	white-space: normal;
+	text-transform: uppercase;
+	/*background: #f16;*/
+}
+.conversions > section > label > span {
+	position: absolute;
+	left: 9;
+	font: 100 12px/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+.conversions > section > label > input {
+	width: 100%;
+	padding: 0 0 0 12px;
+}
+.conversions > section > div {
+	margin: 48px 0 0 0;
+}
+.conversions > section > div > h2 {
+	
+}
+.conversions > section > div > h3 {
+	
+}
+.conversions > section > div > h3:before {
+	content: attr(data-char); 
+}
+
+
 
 @media all and (max-width: 480px) {
 
@@ -2154,8 +2171,9 @@ video#bgvid {
 .conversions > ul > div:nth-of-type(2) {
 	top: -42px;
 }
+}
 
-/* @end */
+
 
 @media all and (max-width: 320px) {
 
@@ -2172,7 +2190,7 @@ video#bgvid {
 }
 
 }
-
+/* @end */
 
 
 
@@ -2474,7 +2492,7 @@ video#bgvid {
 .contact-form {
 	
 	text-align: center;
-	padding: 96px 24px!important;
+	padding: 0px;
 	background: #f2f2f2;
 }
 .contact-form > h2 {

@@ -4,6 +4,7 @@ title: Boones Wine
 description:
 permalink:
 customer: beesmarketplace
+industry: other
 category: videos
 video: true
 youtube_id: Xs7IfBnFF0g

@@ -50,7 +50,7 @@ $(function() {
 
 
 	// Find all YouTube videos
-	var $allVideos = $("iframe[src^='http://www.youtube.com']"),
+	var $allVideos = $("iframe[src^='https://www.youtube.com']"),
 
 	    // The element that is fluid width
 	    $fluidEl = $(".video-wrapper");
