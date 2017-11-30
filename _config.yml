@@ -65,4 +65,4 @@ defaults:
     values:
       layout: "audience-report"
       _hide_content: false
-      permalink: /:title/
+      permalink: /customer-base/:title/
