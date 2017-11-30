@@ -1,33 +1,35 @@
 ---
 industry: wineries
-meta_title: Wine Lovers In Cleveland
-permalink: /wineries/wine-lovers/cleveland/
-region: 'Cleveland, OH'
+meta_title: Wine Lovers In San Diego
+permalink: /wineries/customer-base/san-diego/
+region: 'San Diego, CA'
 banner_icon_path: /images/illustrations/wine_lovers.svg
 banner_img_path:
 reach_img_path: /images/audience-reports/cleveland/cleveland-map.png
-potential_reach: '72,000 <i>Wine Lovers</i>'
+potential_reach: '48,000 <i>Wine Lovers</i>'
 audience_description_html: >-
-  <ul><li>Location - Living In:<ul><li>United States: Cleveland (+50 mi)
-  Ohio</li></ul></li><li>Age:<ul><li>21 - 65+</li></ul></li><li>People Who
+  <ul><li>Location - Living In:<ul><li>United States: Jamul (+50 mi)
+  California</li></ul></li><li>Age:<ul><li>21 - 65+</li></ul></li><li>People Who
   Match:<ul><li>Behaviors: Wine</li></ul></li><li>And Must Also
-  Match:<ul><li>Interests: Merlot, Wine, Sangiovese, Pinot noir, Food &amp;
-  Wine, Chardonnay, Cabernet Sauvignon, Wine tasting, Riesling, Winery, Wine and
-  food matching, Sparkling wine, Pinot gris, Zinfandel, Red wine, White
-  Zinfandel or Cabernet Franc</li></ul></li></ul>
+  Match:<ul><li>Interests: Merlot, Wine and food matching, Chardonnay,
+  Sangiovese, Wine, Food &amp; Wine, Cabernet Sauvignon, Wine tasting, Winery,
+  Pinot noir, Riesling, Pinot gris, Sparkling wine, White Zinfandel, Zinfandel,
+  Cabernet Franc or Red wine</li></ul></li></ul>
 demographics:
-  - image_path: /images/audience-reports/cleveland/cleveland-age-and-gender.png
+  - image_path: /uploads/sd-age-and-gender.png
     image_title: Age & Gender
-  - image_path: /images/audience-reports/cleveland/cleveland-relationship-education.png
+  - image_path: /uploads/sd-relationship-education.png
     image_title: Relationship & Education
-  - image_path: /images/audience-reports/cleveland/cleveland-job-title.png
+  - image_path: /uploads/sd-job-titles.png
     image_title: Job Titles
-  - image_path: /images/audience-reports/cleveland/cleveland-page-likes.png
+  - image_path: /uploads/sd-page-likes.png
     image_title: Page Likes
   - image_path: /images/audience-reports/cleveland/cleveland-device-users.png
     image_title: Devices
-  - image_path: /images/audience-reports/cleveland/cleveland-household-income.png
+  - image_path: /uploads/sd-household-income.png
     image_title: Household & Income
-  - image_path: /images/audience-reports/cleveland/cleveland-spending.png
+  - image_path: /uploads/sd-retail-spending.png
     image_title: Spending
 ---
+
+
