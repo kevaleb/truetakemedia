@@ -4,7 +4,7 @@ meta_title: Wine Lovers In Cleveland
 permalink: /wineries/customer-base/cleveland/
 region: 'Cleveland, OH'
 banner_icon_path: /images/illustrations/wine_lovers.svg
-banner_img_path: /uploads/cleveland-banner.jpg
+banner_img_path: /uploads/wine-tasting-banner.jpg
 reach_img_path: /uploads/cleveland-map.png
 potential_reach: '72,000 <i>Wine Lovers</i>'
 audience_description_html: >-
