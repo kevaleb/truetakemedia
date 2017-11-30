@@ -4,7 +4,7 @@ meta_title: Wine Lovers In San Diego
 permalink: /wineries/customer-base/san-diego/
 region: 'San Diego, CA'
 banner_icon_path: /images/illustrations/wine_lovers.svg
-banner_img_path:
+banner_img_path: /uploads/sd-banner.jpg
 reach_img_path: /images/audience-reports/cleveland/cleveland-map.png
 potential_reach: '48,000 <i>Wine Lovers</i>'
 audience_description_html: >-
