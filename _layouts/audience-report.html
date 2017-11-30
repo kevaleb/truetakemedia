@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div class="banner">
+<div class="banner dark" style="background-image: url({{ page.banner_img_path }});">
 	<hgroup>
 		<img src="{{ page.banner_icon_path }}" alt="" style="max-width: 240px;"/>
 		<h1>{{ page.region }}</h1>
@@ -33,4 +33,6 @@ layout: default
 	<!--<h5>{{ image.image_title }}</h5>-->
 	{% endfor %}
 </div>
+
+{% include conversion-funnel.html %}
 
