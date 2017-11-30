@@ -5,7 +5,7 @@ permalink: /wineries/customer-base/san-diego/
 region: 'San Diego, CA'
 banner_icon_path: /images/illustrations/wine_lovers.svg
 banner_img_path: /uploads/sd-banner.jpg
-reach_img_path: /images/audience-reports/cleveland/cleveland-map.png
+reach_img_path: /uploads/sd-map.png
 potential_reach: '48,000 <i>Wine Lovers</i>'
 audience_description_html: >-
   <ul><li>Location - Living In:<ul><li>United States: Jamul (+50 mi)
