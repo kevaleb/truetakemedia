@@ -24,7 +24,7 @@ demographics:
     image_title: Job Titles
   - image_path: /uploads/sd-page-likes.png
     image_title: Page Likes
-  - image_path: /images/audience-reports/cleveland/cleveland-device-users.png
+  - image_path: /uploads/sd-devices.png
     image_title: Devices
   - image_path: /uploads/sd-household-income.png
     image_title: Household & Income
