@@ -1,4 +1,6 @@
 ---
 industry: other
-starting_price_number: 1500
+starting_price_number: 500
 ---
+
+
