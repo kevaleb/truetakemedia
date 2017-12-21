@@ -3,10 +3,10 @@ layout: default
 icon_path:
 image_path:
 cpm_number: 30.00
-ctr_number: 
-sr_number:
-cr_number:
-acv_number:
+ctr_number: .015
+sr_number: .15
+cr_number: .5
+acv_number: 100
 features:
   - feature_title:
     feature_image_path:
