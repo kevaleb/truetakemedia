@@ -1,5 +1,4 @@
 ---
 starting_price_number: 1000
 ---
-Workspace, Production Process, Environment, Etc.
-
+Convey Idea/Concept, Teach a Method, Inform About Event, Etc.
