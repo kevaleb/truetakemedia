@@ -1,4 +1,6 @@
 ---
-industry: wineries
-starting_price_number: '500'
+industry: other
+starting_price_number: 1500
 ---
+
+
