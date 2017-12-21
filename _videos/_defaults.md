@@ -2,5 +2,5 @@
 youtube_id:
 industry:
 customer:
-video_type:
+video-type:
 ---

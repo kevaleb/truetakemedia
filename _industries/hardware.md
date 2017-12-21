@@ -1,11 +1,11 @@
 ---
 layout: default
 icon_path:
-image_path:
-cpm_number: 30.00
-ctr_number: .015
-sr_number: .15
-cr_number: .5
+image_path: /images/icons/wrench.svg
+cpm_number: 30
+ctr_number: 1.5
+sr_number: 0.15
+cr_number: 0.5
 acv_number: 100
 features:
   - feature_title:
@@ -18,3 +18,5 @@ _comments:
   cr: Conversion Rate
   acv: Average Customer Value
 ---
+
+
