@@ -1,7 +1,7 @@
 ---
 layout: default
 icon_path:
-image_path:
+image_path: /images/icons/beer.svg
 cpm_number: 30
 ctr_number:
 sr_number:
