@@ -39,6 +39,8 @@ collections:
     output: true
   videos:
     output: false
+  video-types:
+    output: false
     
 defaults:
   -
