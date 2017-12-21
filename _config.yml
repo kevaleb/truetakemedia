@@ -40,7 +40,7 @@ collections:
   videos:
     output: false
   video-types:
-    output: false
+    output: true
     
 defaults:
   -
