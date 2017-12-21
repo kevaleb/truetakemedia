@@ -1,6 +1,6 @@
 ---
 layout: default
-icon_path:
+icon_path: /images/icons/solar.svg
 image_path:
 cpm_number: 30
 ctr_number: 0.015
@@ -18,3 +18,5 @@ _comments:
   cr: Conversion Rate
   acv: Average Customer Value
 ---
+
+
