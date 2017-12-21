@@ -1,7 +1,7 @@
 ---
 layout: default
 icon_path:
-image_path:
+image_path: /images/icons/gas.svg
 cpm_number: 30
 ctr_number: 0.015
 sr_number: 0.15
@@ -18,3 +18,5 @@ _comments:
   cr: Conversion Rate
   acv: Average Customer Value
 ---
+
+
