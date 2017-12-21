@@ -1,8 +1,10 @@
 ---
 layout: customer
-title: Border Store
-industry:
-logo_path:
+title: The Border Store
+industry: convenience-store
+logo_path: /uploads/logo.jpg
 website_url:
 website_thumbnail_path:
 ---
+
+
