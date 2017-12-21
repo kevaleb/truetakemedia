@@ -1,0 +1,4 @@
+---
+industry:
+starting_price:
+---
