@@ -37,7 +37,8 @@ collections:
     output: true
   audience-reports:
     output: true
-
+  videos:
+    output: false
     
 defaults:
   -

@@ -191,11 +191,13 @@ article > ul > li{
 
 .button.white-border {
 	border: 2px solid #fff;
-	border-radius: 3px;
+	background: none;
+	font-weight: 900;
+	/*border-radius: 3px;*/
 }
 .button.white-border:hover {
 	background: #fff;
-	color: #b83125;
+	color: #000;
 }
 
 

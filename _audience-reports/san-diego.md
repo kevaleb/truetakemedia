@@ -30,6 +30,12 @@ demographics:
     image_title: Household & Income
   - image_path: /uploads/sd-retail-spending.png
     image_title: Spending
+acv_number: 250
+ad_spend: 1500
+cpm_number: 30.0
+ctr_number: 1.45
+sr_number: 15.0
+cr_number: 35.0
 ---
 
 
