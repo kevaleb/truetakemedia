@@ -1,8 +1,8 @@
 ---
 youtube_id: PagvIe8bsCM
-industry:
-customer:
-video-type:
+industry: convenience-store
+customer: the-border-store
+video-type: promotional
 ---
 
 
