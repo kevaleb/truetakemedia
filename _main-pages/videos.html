@@ -23,8 +23,11 @@ hide_from_nav: false
 
 <div class="video-grid" id="video-grid">
 	<ul>
-	{% assign videos = site.posts | where:"category","videos" %}
-	{% include video-list.html%}
+	{% for video in site.videos  %}
+		<li class="video-wrapper">
+			<iframe width="280" height="156" src="https://www.youtube.com/embed/{{ video.youtube_id }}?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+		</li>
+	{% endfor %}
 	</ul>
 </div>
 
