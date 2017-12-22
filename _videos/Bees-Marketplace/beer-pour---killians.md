@@ -1,6 +1,8 @@
 ---
-youtube_id:
-industry:
-customer:
-video-type:
+youtube_id: IoTOlBNzZMU
+industry: groceries
+customer: beesmarketplace
+video-type: product
 ---
+
+
