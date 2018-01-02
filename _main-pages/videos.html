@@ -1,35 +1,30 @@
 ---
 layout: default
 title: Videos
-banner_path:
+headline: 'We Specialize In The Production Of<strong>Facebook Video Ads</strong>'
+banner_image_path: /images/banners/videos/wineries.jpg
+banner_vid_image_path: /images/banners/videos/wineries_vid.jpg
+banner_vid_path: /images/banners/videos/wineries4.mp4
 permalink: /videos/
 nav_title: videos
 nav_class: videos
 nav_order: 1
 hide_from_nav: false
 ---
-<div class="banner small" style="background: #402828 url('/images/backgrounds/footer.jpg') no-repeat left top;">
+<div class="banner" style="background-image: url('{{ page.banner_image_path }}');">
+	<video playsinline autoplay muted loop poster="{{ page.banner_vid_image_path }}" id="bgvid">
+	    <!--<source src="polina.webm" type="video/webm">-->
+	    <source src="{{ page.banner_vid_path }}" type="video/mp4">
+	</video>
 	<hgroup>
-		<h1>Professional Video Production</h1>
-		<ul>
-			<li>Get Attention</li>
-			<li>Tell Your Story</li>
-			<li>Brand Awareness</li>
-			<li>Business Results</li>
-		</ul>
-		<a href="#video-grid" class="button">See Samples of Our Videos</a>
+		<h1>{{ page.headline }}</h1>
+		<a href="#video-grid" class="button white-border">See A Bit Of Our Work</a>
 	</hgroup>
+	<img src="/images/banners/banner-bottom.svg" alt="" class="banner-bottom" />
 </div>
 
-<div class="video-grid" id="video-grid">
-	<ul>
-	{% for video in site.videos  %}
-		<li class="video-wrapper">
-			<iframe width="280" height="156" src="https://www.youtube.com/embed/{{ video.youtube_id }}?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-		</li>
-	{% endfor %}
-	</ul>
-</div>
+{% assign videos = site.videos %}
+{% include video-list.html %}
 
 <!--<div class="quarters">
 	<section>

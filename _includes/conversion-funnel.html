@@ -1,5 +1,5 @@
 <div class="conversions" id="conversions">
-	<h2>Customer Funnel</h2>
+	<h2>Advertising Effectiveness Calculator</h2>
 	<ul>
 		<li>
 			<div>
@@ -11,7 +11,7 @@
 			
 			<img src="/images/icons/eye.svg" alt="" />
 			<hgroup>
-				<h3>Imoressions</h3>
+				<h3>Impressions</h3>
 				{% assign reach = page.ad_spend | times:1000.0 | divided_by:page.cpm_number %}
 				<h4 id="reach">{{ reach | round }}</h4>
 			</hgroup>

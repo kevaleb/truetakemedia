@@ -1,8 +1,9 @@
 ---
-youtube_id: 'https://youtu.be/P2ADe07aeWg'
+youtube_id: P2ADe07aeWg
 industry: wineries
 customer: beesmarketplace
 video-type:
+featured: true
 ---
 
 
