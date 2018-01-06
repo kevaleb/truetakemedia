@@ -1,0 +1,23 @@
+<div class="price-tiers" id="pricing">
+	<h2>Advertising Management</h2>
+	{% for pricetier in page.pricing %}
+	<section>
+		{% unless pricetier.icon_image_path == nil %}
+		<div class="image">
+			<img src="{{ pricetier.icon_image_path }}" alt="" />
+		</div>
+		{% endunless %}
+		<h2>{{ pricetier.title }}</h2>
+		{{ pricetier.description_html }}
+		{% unless pricetier.snippet == nil %}<span>{{ pricetier.snippet }}</span>{% endunless %}
+		<br />
+		<ul>
+			{% for listitem in pricetier.list %}
+			<li>{{ listitem.listitem }}</li>
+			{% endfor %}
+		</ul>
+		<h3>${{ pricetier.price_number }}<i>/Mo</i></h3>
+		<a href="#quote-form" class="button">Learn More</a>
+	</section>
+	{% endfor %}
+</div>

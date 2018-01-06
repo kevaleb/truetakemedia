@@ -1,0 +1,16 @@
+<div class="alternating" id="alternating">
+	{% for feature in page.features %}
+	<div id="video-production">
+		<img src="{{ feature.feature_image_path }}" alt=""/>
+		<hgroup class="">
+			<h2 class="editable">{{ feature.feature_title }}</h2>
+			<article>
+				{{ feature.feature_description_html }}
+			</article>
+			{% unless feature.button_url == nil %}
+			<a href="{{ feature.button_url }}" class="button">{{ feature.button_text }}</a>
+			{% endunless %}
+		</hgroup>
+	</div>
+	{% endfor %}
+</div>
