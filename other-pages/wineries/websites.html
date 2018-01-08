@@ -8,7 +8,7 @@ permalink: /wineries/web-development/
 features:
   - feature_title: Video Production
     feature_image_path: /images/illustrations/features/video.png
-    feature_description_html:
+    feature_description_html: >-
       <p>Produce video ads showing the customers enjoying themselves at the
       vineyard, tasting room, grove, etc.</p>
     button_url: '#video-grid'
@@ -34,7 +34,7 @@ features:
     feature_image_path: /images/illustrations/features/fb_reports.png
     feature_description_html: >-
       <p>Track return on investment by linking leads acquired online to sales
-      generated in your tasting room.</p> 
+      generated in your tasting room.</p>
     button_url: '#conversions'
     button_text: See How We Track Results
   - feature_title: Optimize
@@ -48,19 +48,30 @@ features:
 pricing:
   - title: Basic
     icon_image_path:
-    description_html: '<p>For companies looking to spend $15-$50/day on advertising.</p>'
+    description_html: >-
+      <p>Great for wineries looking for a professional website that Loads fast,
+      Looks great, Requires minimal upkeep and helps attract new customers to
+      your tasting room.</p>
     snippet:
-    price_number: 250 
+    price_number: 250
     list:
-      - listitem: Ad creation
-      - listitem: Weekly ad refresh
-      - listitem: Monthly campaign reports
-      - listitem: Monthly strategy meeting
+      - listitem: Simple navigation
+      - listitem: Clear call to action
+      - listitem: About us
+      - listitem: Wines
+      - listitem: Events
+      - listitem: Tasting Info
+      - listitem: Hours of operation
+      - listitem: Contact Info
+      - listitem: Social media links
+      - listitem: Address
+      - listitem: Directions
+      - listitem: Map
   - title: Pro
     icon_image_path:
-    description_html: '<p>For companies looking to spend $50-$150/day on advertising.</p>'
+    description_html: <p>For companies looking to spend $50-$150/day on advertising.</p>
     snippet:
-    price_number: 500 
+    price_number: 500
     list:
       - listitem: Ad creation
       - listitem: Weekly ad refresh
@@ -68,14 +79,14 @@ pricing:
       - listitem: Monthly strategy meeting
   - title: Premium
     icon_image_path:
-    description_html: '<p>For companies looking to spend $150+/day on advertising.</p>'
+    description_html: <p>For companies looking to spend $150+/day on advertising.</p>
     snippet:
-    price_number: 1000 
+    price_number: 1000
     list:
       - listitem: Ad creation
       - listitem: Weekly ad refresh
       - listitem: Monthly campaign reports
-      - listitem: Monthly strategy meeting 
+      - listitem: Monthly strategy meeting
 ---
 <div class="banner" style="background-image: url('{{ page.banner_image_path }}');">
 	<video playsinline autoplay muted loop poster="{{ page.banner_vid_image_path }}" id="bgvid">
