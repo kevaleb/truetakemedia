@@ -2133,7 +2133,9 @@ video#bgvid {
 	
 }
 .conversions > section > div > h3 {
-	
+	font: 900 48px/48px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #4ea426;	
+	letter-spacing: 2px;
 }
 .conversions > section > div > h3:before {
 	content: attr(data-char); 

@@ -1,4 +1,6 @@
 ---
+layout: default
+permalink: /wineries/advertising/
 headline: 'How to get more customers into<strong>your tasting room</strong>'
 icon_path: /uploads/wine.png
 banner_image_path: /images/banners/videos/wineries.jpg
@@ -6,7 +8,7 @@ banner_vid_image_path: /images/banners/videos/wineries_vid.jpg
 banner_vid_path: /images/banners/videos/wineries4.mp4
 acv_number: 250
 ad_spend: 1500
-cpm_number: 30.0
+cpm_number: 49.0
 ctr_number: 1.45
 sr_number: 15.0
 cr_number: 35.0
@@ -90,4 +92,22 @@ _comments:
   acv: Average Customer Value
 ---
 
+
+<div class="banner" style="background-image: url('{{ page.banner_image_path }}');">
+	<video playsinline autoplay muted loop poster="{{ page.banner_vid_image_path }}" id="bgvid">
+	    <!--<source src="polina.webm" type="video/webm">-->
+	    <source src="{{ page.banner_vid_path }}" type="video/mp4">
+	</video>
+	<hgroup>
+		<h1>{{ page.headline }}</h1>
+		<a href="#quote-form" class="button">Lets Talk</a>
+	</hgroup>
+	<img src="/images/banners/banner-bottom.svg" alt="" class="banner-bottom" />
+</div>
+
+{% include alternating.html %}
+
+{% include conversion-funnel.html %}
+
+{% include price-tiers.html %}
 
