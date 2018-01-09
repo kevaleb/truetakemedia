@@ -1703,7 +1703,8 @@ video#bgvid {
 	margin: 0 0 24px;
 }
 .alternating > div > hgroup > article > p {
-	margin: 0 0 36px 0;
+	margin: 0 0 12px 0;
+	line-height: 30px;
 }
 .alternating > div > hgroup > article > ul {
 	
@@ -1726,6 +1727,48 @@ video#bgvid {
 	background-size: cover;
 	vertical-align: middle;
 }*/
+
+
+.alternating > div > hgroup > .special-info {
+	display: inline-block;
+	/*float: left;*/
+	list-style: none;
+	border: 1px dashed #ccc;
+	border-radius: 3px;
+	padding: 12px 24px;
+}
+.alternating > div > hgroup > .special-info > li {
+	font: 200 18px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+.alternating > div > hgroup > .special-info > li+li {
+	margin: 6px 0 0 0;
+}
+.alternating > div > hgroup > .special-info > li:before {
+	content: attr(title);
+	display: block;
+	font: 900 10px/14px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #666;
+}
+
+
+
+
+.alternating > div > hgroup > .videos {
+	list-style: none;
+	padding:0;
+}
+.alternating > div > hgroup > ul.videos > li.video-wrapper {
+	display: inline-block;
+	width: 48%;
+	margin: 0 0 12px 0;
+	background: #000;
+	overflow: hidden;
+}
+.alternating > div > hgroup > .videos > li > * {
+	height: auto!important;
+}
+
+
 
 
 .alternating > div:nth-of-type(even) {
@@ -1833,7 +1876,7 @@ video#bgvid {
 }
 .alternating > div > hgroup {
 	position: relative;
-	margin: -96px 0 0 0;
+	margin: 0;
 	padding: 24px!important;
 	text-align: center;
 }
@@ -1849,6 +1892,9 @@ video#bgvid {
 }
 .alternating > div > hgroup > h2 {
 	margin: 0 0 12px 0;
+	font-size: 20px;
+	font-weight: 400;
+	letter-spacing: 0;
 }
 .alternating > div > hgroup > p {
 	margin: 0;
@@ -1856,7 +1902,6 @@ video#bgvid {
 .alternating > div:first-of-type {
 	
 }
-
 .alternating > div > img  {
 	position: relative;
 	left: auto;
@@ -1868,15 +1913,6 @@ video#bgvid {
 .alternating > div:nth-of-type(even) > img {
 	right: auto;
 	height: auto;
-}
-.alternating > div > hgroup {
-	margin: 0;
-}
-.alternating > div > hgroup > h2 {
-		font-size: 36px;
-}
-.alternating > div > hgroup > p {
-	
 }
 .alternating > div > hgroup > article > ul {
 	text-align: left;
@@ -2194,6 +2230,98 @@ video#bgvid {
 
 }
 /* @end */
+
+
+
+
+
+
+/* @group Filming Price */
+
+.filming-prices {
+	text-align: center;
+	max-width: 720px;
+	margin: 48px auto;
+	padding: 0 2px;
+}
+.filming-prices > h2 {
+	margin: 0 0 48px 0;
+}
+.filming-prices > section {
+	float: left;
+	width: 32%;
+	text-align: center;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 24px;
+}
+.filming-prices > section > img {
+	width: 48px;
+	border-radius: 24px;
+	margin: -48px 0 24px 0;
+	padding: 12px;
+	border: 1px solid #ccc;
+	background: #fff;
+}
+.filming-prices > section+section {
+	margin-left: 2%;
+}
+.filming-prices > section > h3 {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 24px;
+	margin-bottom: 24px;
+	font: 900 24px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: uppercase;
+}
+.filming-prices > section > h2 {
+	
+}
+.filming-prices > section > h4 {
+	font: 400 12px/12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	letter-spacing: 0;
+	text-transform: uppercase;
+	color: #999;
+}
+.filming-prices > p {
+	padding: 12px 0 0 0;
+	text-align: center;
+	clear: both;
+}
+
+
+@media all and (max-width: 480px) {
+
+
+.filming-prices > section {
+	padding: 24px 6px;
+}
+.filming-prices > section > img {
+	margin: -48px 0 12px 0;
+}
+.filming-prices > section > h2 {
+	font-size: 18px;
+	font-weight: 500;
+	letter-spacing: 0;
+}
+.filming-prices > section > h2 > span {
+	font-weight: 200;
+	font-size: 14px;
+	text-transform: capitalize;
+}
+.filming-prices > section > h3 {
+	font-size: 12px;
+	margin: 0;
+	padding: 3px;
+}
+.filming-prices > section > h4 {
+	font-size: 10px;
+}
+
+}
+
+/* @end */
+
+
 
 
 

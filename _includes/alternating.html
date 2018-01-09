@@ -3,13 +3,31 @@
 	<div id="video-production">
 		<img src="{{ feature.feature_image_path }}" alt=""/>
 		<hgroup class="">
-			<h2 class="editable">{{ feature.feature_title }}</h2>
+			<h2>{{ feature.feature_title }}</h2>
 			<article>
 				{{ feature.feature_description_html }}
 			</article>
 			{% unless feature.button_url == nil %}
 			<a href="{{ feature.button_url }}" class="button">{{ feature.button_text }}</a>
 			{% endunless %}
+			
+			<ul class="videos">
+				{% for video in feature.videos %}
+				{% if video.youtube_id %}
+				<li class="video-wrapper">
+					<iframe width="50" height="96" src="https://www.youtube.com/embed/{{ video.youtube_id }}?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+				</li>
+				{% endif %}
+				{% endfor %}
+			</ul>
+			
+			{% if feature.special_info %}
+			<ul class="special-info">
+				{% for item in feature.special_info %}
+				<li title="{{ item.info_title }}">{{ item.info }}</li>
+				{% endfor %}
+			</ul>
+			{% endif %}
 		</hgroup>
 	</div>
 	{% endfor %}
