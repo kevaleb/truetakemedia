@@ -4,9 +4,16 @@
 		<img src="{{ feature.feature_image_path }}" alt=""/>
 		<hgroup class="">
 			<h2>{{ feature.feature_title }}</h2>
-			<article>
-				{{ feature.feature_description_html }}
-			</article>
+			{%  if feature.feature_description_html %}
+				<article>
+					{{ feature.feature_description_html }}
+				</article>
+			{% elsif feature.feature_description_markdown %}
+				<article>
+					{{ feature.feature_description_markdown }}
+				</article>
+			{% endif %}
+			
 			{% unless feature.button_url == nil %}
 			<a href="{{ feature.button_url }}" class="button">{{ feature.button_text }}</a>
 			{% endunless %}
