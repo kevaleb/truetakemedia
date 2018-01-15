@@ -5,8 +5,7 @@ headline: We Build Websites for wineries
 banner-cta: Learn More
 banner-cta-url: '#alternating'
 features:
-  - feature_title: It needs to load fast
-    
+  - feature_title: Loads fast
     feature_description_markdown: >-
       These days most of your customers will be looking you up on their phones
       which means you need a site that loads instantly. If your customers have
@@ -15,7 +14,7 @@ features:
     feature_image_path:
     button_url:
     button_text:
-  - feature_title: It needs to look great
+  - feature_title: looks great
     feature_image_path:
     feature_description_markdown: >-
       Once the page actually loads you need to wow them immediately by how
@@ -24,7 +23,7 @@ features:
       seconds most people will leave and never come back.
     button_url:
     button_text:
-  - feature_title: It needs to get the job done
+  - feature_title: Gets the job done
     feature_description_markdown: >-
       Once your site visitor decides to stick around a bit, it needs to be easy
       for them to find the information they’re looking for. Don’t make them work
@@ -35,7 +34,7 @@ features:
     feature_image_path:
     button_url:
     button_text:
-  - feature_title: 'And finally, It needs to require minimal effort'
+  - feature_title: Requires minimal effort
     feature_image_path:
     feature_description_markdown: >-
       Websites are supposed to make your life easier. You shouldn’t have to put
@@ -47,13 +46,14 @@ features:
     button_text:
 pricing:
   - title: Basic
-    icon_image_path:
+    icon_image_path: /images/icons/iphone.svg
     description_html: >-
-      <p>Great for wineries looking for a professional website that Loads fast,
-      Looks great, Requires minimal upkeep and helps attract new customers to
-      your tasting room.</p>
+      <p>A simple website with the core requirements for your winery.</p>
     snippet:
-    price_number: 250
+    price_number: 1,000
+    price_type:
+    button_text:
+    button_url:
     list:
       - listitem: Simple navigation
       - listitem: Clear call to action
@@ -67,26 +67,30 @@ pricing:
       - listitem: Address
       - listitem: Directions
       - listitem: Map
-  - title: Pro
-    icon_image_path:
-    description_html: <p>For companies looking to spend $50-$150/day on advertising.</p>
+  - title: Advanced
+    icon_image_path: /images/icons/laptop.svg
+    description_html: <p>Everything in the basic website plus some more advanced functionality.</p>
     snippet:
-    price_number: 500
+    price: Per Module
+    button_text:
+    button_url:
     list:
-      - listitem: Ad creation
-      - listitem: Weekly ad refresh
-      - listitem: Monthly campaign reports
-      - listitem: Monthly strategy meeting
-  - title: Premium
-    icon_image_path:
-    description_html: <p>For companies looking to spend $150+/day on advertising.</p>
+      - listitem: Blog      
+      - listitem: Wine Club
+      - listitem: Subscription Form
+      - listitem: Employees
+      - listitem: Multiple Locations
+      - listitem: Analytics
+      
+  - title: Custom
+    icon_image_path: /images/icons/code.svg
+    description_html: <p>Need some custom interface or functionality? Lets work together & find the ideal solution.</p>
     snippet:
-    price_number: 1000
+    price: Lets Talk
+    button_text:
+    button_url:
     list:
-      - listitem: Ad creation
-      - listitem: Weekly ad refresh
-      - listitem: Monthly campaign reports
-      - listitem: Monthly strategy meeting
+      - listitem:
 ---
 <div class="banner" style="background-image: url('{{ page.banner_image_path }}');">
 	<video playsinline autoplay muted loop poster="{{ page.banner_vid_image_path }}" id="bgvid">
@@ -100,6 +104,6 @@ pricing:
 	<img src="/images/banners/banner-bottom.svg" alt="" class="banner-bottom" />
 </div>
 
-<h2 style="text-align: center;">Things You Should Look For In Your Wineries Website</h2>
+<h2 style="text-align: center;">Here's why you want us to build your website</h2>
 {% include alternating.html %}
 {% include price-tiers.html %}

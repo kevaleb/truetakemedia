@@ -16,8 +16,21 @@
 			<li>{{ listitem.listitem }}</li>
 			{% endfor %}
 		</ul>
-		<h3>${{ pricetier.price_number }}<i>/Mo</i></h3>
-		<a href="#quote-form" class="button">Learn More</a>
+		<h3>
+			{% if pricetier.price_number %}
+				${{ pricetier.price_number }}<i>{{ pricetier.price_type }}</i>
+			{% else %}
+				{{ pricetier.price }}
+			{% endif %}
+			
+		</h3>
+		{%  if pricetier.button_url %}
+			<a href="{{ pricetier.button_url }}" class="button">{{ pricetier.button_text }}</a>
+		{% else %}
+			<a href="#quote-form" class="button">Let's Talk</a>
+		{% endif %}
+		
+		
 	</section>
 	{% endfor %}
 </div>

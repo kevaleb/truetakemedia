@@ -10,7 +10,7 @@
 				</article>
 			{% elsif feature.feature_description_markdown %}
 				<article>
-					{{ feature.feature_description_markdown }}
+					{{ feature.feature_description_markdown | markdownify }}
 				</article>
 			{% endif %}
 			
