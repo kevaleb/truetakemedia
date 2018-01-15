@@ -32,8 +32,8 @@ features:
     feature_image_path: /images/illustrations/features/fb_form.png
     feature_description_html: >-
       <p>We design and develop beautiful websites designed to attract more customers into your tasting room.</p>
-    button_url: 
-    button_text: 
+    button_text: See How it Works
+    button_url: /wineries/websites/
 ---
 <div class="banner" style="background-image: url('{{ page.banner_image_path }}');">
 	<video playsinline autoplay muted loop poster="{{ page.banner_vid_image_path }}" id="bgvid">
