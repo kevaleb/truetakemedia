@@ -1,4 +1,7 @@
 <div class="alternating" id="alternating">
+	{% if include.title %}
+	<h2>{{ include.title }}</h2>
+	{% endif %}
 	{% for feature in page.features %}
 	<div id="video-production">
 		<img src="{{ feature.feature_image_path }}" alt=""/>

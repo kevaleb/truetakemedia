@@ -188,6 +188,13 @@ article > ul > li{
 	color: #fff;
 }
 
+
+.button.dark-border {
+	border: 3px solid #000;
+	background: none;
+	color: #000;
+	font-weight: 900;
+}
 .button.white-border {
 	border: 2px solid #fff;
 	background: none;
@@ -1484,6 +1491,132 @@ video#bgvid {
 
 
 
+/* @group Dev Tiers */
+
+.dev-tiers {
+	padding: 96px 0 48px 0;
+	text-align: center;
+}
+.dev-tiers > section {
+	width: 100%;
+	vertical-align: top;
+}
+.dev-tiers > section > h2 {
+	
+}
+.dev-tiers > section > p {
+	margin: 0 0 24px 0;
+	padding: 12px 48px;
+	line-height: 24px;
+	
+}
+.dev-tiers > section > ul {
+	margin: 0 0 24px 0;
+	column-count: 3;
+	list-style: none;
+}
+
+.dev-tiers > section > ul > li {
+	font: 200 16px/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	letter-spacing: 1px;
+	text-align: left;
+}
+.dev-tiers > section > ul > li:before {
+	content: '\00a0';
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	margin: -3px 6px 0 0;
+	background-image: url('/images/icons/check.svg');
+	background-size: cover;
+	vertical-align: middle;
+}
+.dev-tiers > section > div {
+	position: relative;
+	display: inline-block;
+	margin: 36px 0 18px 0;
+	padding: 36px 72px;
+	border: 3px solid #f2f2f2;
+	border-radius: 3px;
+}
+.dev-tiers > section > div > .icon {
+	position: absolute;
+	top: -30px;
+	left: 50%;
+	display: block;
+	width: 60px;
+	margin: 0 0 0 -30px;
+	padding: 12px;
+	background: #fff;
+	border: 3px solid #f2f2f2;
+	border-radius: 96px;
+}
+.dev-tiers > section > div > .icon > img {
+	width: 100%;
+}
+.dev-tiers > section > div > h3 {
+	font: 900 48px/60px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: uppercase;
+}
+.dev-tiers > section > div > h4 {
+	margin: 12px 0 24px 0;
+	font: 200 14px/14px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	
+}
+.dev-tiers > section > div > h5 {
+	margin: 0 0 12px 0;
+	font: 900 16px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #000;
+	text-transform: uppercase;
+}
+.dev-tiers > section > div > .button {
+	padding: 6px 24px;
+	font-size: 12px;
+}
+
+
+
+
+@media all and (max-width: 720px) {
+
+.dev-tiers {
+	padding: 24px;
+}
+.dev-tiers > section {
+	
+}
+.dev-tiers > section {
+	margin: 48px 0;
+}
+.dev-tiers > section > ul {
+	column-count: 2;
+}
+.dev-tiers > section > ul > li {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.dev-tiers > section > h2 {
+	line-height: 36px;
+	margin: 0 0 24px 0;
+}
+.dev-tiers > section > h2 > strong {
+	display: block;
+}
+.dev-tiers > section > div {
+	
+}
+
+}
+
+/* @end */
+
+
+
+
+
+
+
 /* @group Price Tiers */
 
 .price-tiers {
@@ -1655,11 +1788,161 @@ video#bgvid {
 
 
 
+/* @group Filming Price */
+
+.filming-prices {
+	text-align: center;
+	max-width: 720px;
+	margin: 48px auto;
+	padding: 0 2px;
+}
+.filming-prices > h2 {
+	margin: 0 0 48px 0;
+}
+.filming-prices > section {
+	float: left;
+	width: 32%;
+	text-align: center;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 24px;
+}
+.filming-prices > section > img {
+	width: 48px;
+	border-radius: 24px;
+	margin: -48px 0 24px 0;
+	padding: 12px;
+	border: 1px solid #ccc;
+	background: #fff;
+}
+.filming-prices > section+section {
+	margin-left: 2%;
+}
+.filming-prices > section > h3 {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 24px;
+	margin-bottom: 24px;
+	font: 900 24px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: uppercase;
+}
+.filming-prices > section > h2 {
+	
+}
+.filming-prices > section > h4 {
+	font: 400 12px/12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	letter-spacing: 0;
+	text-transform: uppercase;
+	color: #999;
+}
+.filming-prices > p {
+	padding: 12px 0 0 0;
+	text-align: center;
+	clear: both;
+}
+
+
+@media all and (max-width: 480px) {
+
+
+.filming-prices > section {
+	padding: 24px 6px;
+}
+.filming-prices > section > img {
+	margin: -48px 0 12px 0;
+}
+.filming-prices > section > h2 {
+	font-size: 18px;
+	font-weight: 500;
+	letter-spacing: 0;
+}
+.filming-prices > section > h2 > span {
+	font-weight: 200;
+	font-size: 14px;
+	text-transform: capitalize;
+}
+.filming-prices > section > h3 {
+	font-size: 12px;
+	margin: 0;
+	padding: 3px;
+}
+.filming-prices > section > h4 {
+	font-size: 10px;
+}
+
+}
+
+/* @end */
+
+
+
+
+
+
+/* @group Production Price */
+
+.production_price {
+	padding: 96px 24px;
+	text-align: center;
+	background: #f2f2f2;
+}
+
+.production_price > article {
+	max-width: 480px;
+	margin: 24px auto;
+	padding: 24px;
+	text-align: center;
+	background: #fff;
+}
+.production_price > article > h4 {
+	font: 400 14px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: uppercase;
+	color: #666;
+}
+.production_price > article > h3 {
+	position: relative;
+	margin: 0 0 48px 0;
+	padding: 0 0 48px;
+	border-bottom: 1px solid #ccc;
+	font: bold 48px/48px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+.production_price > article > h3:after {
+	content: 'Notice';
+	display: block;
+	width: 84px;
+	/*position: absolute;*/
+	margin: 24px auto -64px auto;
+	padding: 6px;
+	border: 1px solid #ccc;
+	background: #fff;
+	font: 200 18px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: uppercase;
+	
+}
+.production_price > article > p {
+	font: 400 16px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+.production_price > article > ul {
+	text-align: left;
+}
+.production_price > article > ul > li {
+	margin: 0 0 12px 0;
+	font: 200 15px/14px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+/* @end */
+
+
+
+
 
 
 /* @group ALTERNATING */
 .alternating {
 	padding: 0;
+}
+.alternating > h2 {
+	text-align: center;
+	margin: 96px 0 0 0;
 }
 .alternating > div {
 	position: relative;
@@ -1776,8 +2059,8 @@ video#bgvid {
 	
 }
 .alternating > div:nth-of-type(even) > img {
-	/*height: 150%;*/
-	/*top: -25%;*/
+	height: 110%;
+	top: -5%;
 }
 
 .alternating > div:nth-of-type(even) > hgroup {
@@ -1862,20 +2145,23 @@ video#bgvid {
 
 
 
-@media all and (max-width: 720px) {
+@media all and (max-width: 960px) {
 
 .alternating {
-	
+	padding: 48px;
+}
+.alternating > h2 {
+	margin: 0;
 }
 .alternating > div {
-	padding: 0 0px;
+	padding: 96px 0 48px 0;
 	text-align: center;
 }
 .alternating > div:first-of-type {
 	margin-top: 0;
 }
 .alternating > div > hgroup {
-	position: relative;
+	position: static;
 	margin: 0;
 	padding: 24px!important;
 	text-align: center;
@@ -1891,10 +2177,14 @@ video#bgvid {
 	background: linear-gradient(to bottom, rgba(38,40,40,0) 0%, rgba(38,40,40,100) 100%);
 }
 .alternating > div > hgroup > h2 {
-	margin: 0 0 12px 0;
-	font-size: 20px;
-	font-weight: 400;
+	position: absolute;
+	top: 60px;
+	left: 0;
+	width: 100%;
+	margin: 0;
 	letter-spacing: 0;
+	font-size: 24px;
+	letter-spacing: 1px;
 }
 .alternating > div > hgroup > p {
 	margin: 0;
@@ -1905,19 +2195,41 @@ video#bgvid {
 .alternating > div > img  {
 	position: relative;
 	left: auto;
-	top: ;
-	margin: 0!important;
+	top: 0;
+	margin: 24px 0 0 0;
 	height: auto;
-	width: 100%;
+	width: auto;
+	max-width: 100%;
+	max-height: 320px;
+}
+.alternating > div:nth-of-type(even) {
+	padding: 96px 0 48px 0;
 }
 .alternating > div:nth-of-type(even) > img {
+	top: 0;
 	right: auto;
 	height: auto;
+	margin: 24px 0 0 0;
 }
 .alternating > div > hgroup > article > ul {
 	text-align: left;
 }
 }
+
+
+
+@media all and (max-width: 480px) {
+
+.alternating > div > hgroup > h2 {
+	
+}
+.alternating > div > hgroup > article > p {
+	font: 200 16px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+}
+
+
 /* @end */
 
 
@@ -2236,148 +2548,14 @@ video#bgvid {
 
 
 
-/* @group Filming Price */
-
-.filming-prices {
-	text-align: center;
-	max-width: 720px;
-	margin: 48px auto;
-	padding: 0 2px;
-}
-.filming-prices > h2 {
-	margin: 0 0 48px 0;
-}
-.filming-prices > section {
-	float: left;
-	width: 32%;
-	text-align: center;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-	padding: 24px;
-}
-.filming-prices > section > img {
-	width: 48px;
-	border-radius: 24px;
-	margin: -48px 0 24px 0;
-	padding: 12px;
-	border: 1px solid #ccc;
-	background: #fff;
-}
-.filming-prices > section+section {
-	margin-left: 2%;
-}
-.filming-prices > section > h3 {
-	border-bottom: 1px solid #ccc;
-	padding-bottom: 24px;
-	margin-bottom: 24px;
-	font: 900 24px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	text-transform: uppercase;
-}
-.filming-prices > section > h2 {
-	
-}
-.filming-prices > section > h4 {
-	font: 400 12px/12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	letter-spacing: 0;
-	text-transform: uppercase;
-	color: #999;
-}
-.filming-prices > p {
-	padding: 12px 0 0 0;
-	text-align: center;
-	clear: both;
-}
-
-
-@media all and (max-width: 480px) {
-
-
-.filming-prices > section {
-	padding: 24px 6px;
-}
-.filming-prices > section > img {
-	margin: -48px 0 12px 0;
-}
-.filming-prices > section > h2 {
-	font-size: 18px;
-	font-weight: 500;
-	letter-spacing: 0;
-}
-.filming-prices > section > h2 > span {
-	font-weight: 200;
-	font-size: 14px;
-	text-transform: capitalize;
-}
-.filming-prices > section > h3 {
-	font-size: 12px;
-	margin: 0;
-	padding: 3px;
-}
-.filming-prices > section > h4 {
-	font-size: 10px;
-}
-
-}
-
-/* @end */
 
 
 
 
 
 
-/* @group Production Price */
 
-.production_price {
-	padding: 96px 24px;
-	text-align: center;
-	background: #f2f2f2;
-}
 
-.production_price > article {
-	max-width: 480px;
-	margin: 24px auto;
-	padding: 24px;
-	text-align: center;
-	background: #fff;
-}
-.production_price > article > h4 {
-	font: 400 14px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	text-transform: uppercase;
-	color: #666;
-}
-.production_price > article > h3 {
-	position: relative;
-	margin: 0 0 48px 0;
-	padding: 0 0 48px;
-	border-bottom: 1px solid #ccc;
-	font: bold 48px/48px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-}
-.production_price > article > h3:after {
-	content: 'Notice';
-	display: block;
-	width: 84px;
-	/*position: absolute;*/
-	margin: 24px auto -64px auto;
-	padding: 6px;
-	border: 1px solid #ccc;
-	background: #fff;
-	font: 200 18px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	text-transform: uppercase;
-	
-}
-.production_price > article > p {
-	font: 400 16px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-}
-.production_price > article > ul {
-	text-align: left;
-}
-.production_price > article > ul > li {
-	margin: 0 0 12px 0;
-	font: 200 15px/14px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-}
-
-/* @end */
 
 
 
