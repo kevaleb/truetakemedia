@@ -1555,8 +1555,15 @@ video#bgvid {
 	width: 100%;
 }
 .dev-tiers > section > div > h3 {
-	font: 900 48px/60px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font: 900 60px/60px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	text-transform: uppercase;
+	color: #5db436;
+	letter-spacing: 6;
+}
+.dev-tiers > section > div > h3.on-sale {
+	font: 100 30px/48px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #999;
+	text-decoration: line-through;
 }
 .dev-tiers > section > div > h4 {
 	margin: 12px 0 24px 0;
