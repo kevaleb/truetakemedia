@@ -1283,7 +1283,7 @@ video#bgvid {
 /* @group Video Grid */
 
 .video-grid {
-	padding: 96px 0;
+	padding: 96px 0 0 0;
 	text-align: center;
 }
 .video-grid > h2 {
@@ -1618,6 +1618,69 @@ video#bgvid {
 
 /* @end */
 
+
+
+
+
+
+/* @group Price Box */
+
+.price-box {
+	text-align: center;
+}
+.price-box > section {
+	position: relative;
+	display: inline-block;
+	margin: 36px auto 18px auto;
+	padding: 36px 72px;
+	border: 3px solid #f2f2f2;
+	border-radius: 3px;
+}
+.price-box > section > .icon {
+	position: absolute;
+	top: -30px;
+	left: 50%;
+	display: block;
+	width: 60px;
+	margin: 0 0 0 -30px;
+	padding: 12px;
+	background: #fff;
+	border: 3px solid #f2f2f2;
+	border-radius: 96px;
+}
+.price-box > section > .icon > img {
+	width: 100%;
+}
+.price-box > section > h3 {
+	font: 900 60px/60px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: uppercase;
+	color: #5db436;
+	letter-spacing: 6;
+}
+.price-box > section > h3.on-sale {
+	font: 100 30px/48px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #999;
+	text-decoration: line-through;
+}
+.price-box > section > h4 {
+	margin: 12px 0 24px 0;
+	font: 200 14px/14px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+.price-box > section > h5 {
+	margin: 0 0 12px 0;
+	font: 900 16px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #000;
+	text-transform: uppercase;
+}
+.price-box > section > .button {
+	padding: 6px 24px;
+	font-size: 12px;
+}
+.price-box > section > h3+.button {
+	margin-top: 24px;
+}
+
+/* @end */
 
 
 
@@ -2196,6 +2259,9 @@ video#bgvid {
 .alternating > div > hgroup > p {
 	margin: 0;
 }
+.alternating > div > hgroup > .button {
+	margin: 24px 0 0 0;
+}
 .alternating > div:first-of-type {
 	
 }
@@ -2238,6 +2304,9 @@ video#bgvid {
 
 
 /* @end */
+
+
+
 
 
 
@@ -3042,6 +3111,53 @@ video#bgvid {
 	}
 }
 /* @end */
+
+
+
+
+/* @group FAQ */
+
+.faq {
+	text-align: center;
+	padding: 96px 24px 0 24px;
+}
+.faq > ul {
+	list-style: none;
+	max-width: 720px;
+	margin: 0 auto;
+	padding: 0 24px;
+}
+.faq > ul > li {
+	text-align: center;
+}
+.faq > ul > li+li {
+	margin: 72px 0 0 0;
+}
+.faq > ul > li > h4 {
+	margin: 0 0 12px 0;
+	font: 400 18px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #000;
+}
+.faq > ul > li > h4:before {
+	content: 'Q';
+	/*background: #992f3a;*/
+	width: 18px;
+	margin: 0 6px 0 0;
+	padding: 2px 6px;
+	border: 3px solid #992f3a;
+	border-radius: 3px;
+	font: 900 16px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #992f3a;
+	text-align: center;
+}
+.faq > ul > li > article {
+	padding: 0;
+}
+
+/* @end */
+
+
+
 
 
 

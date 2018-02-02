@@ -1,0 +1,17 @@
+<div class="banner" {% if page.banner_background_image %} style ='background-image: url({{page.banner_background_image}}' {% endif %}>
+	{% if page.banner_video_path %}
+		<video playsinline autoplay muted loop poster="polina.jpg" id="bgvid">
+		    <source src="{{page.banner_video_path}}" type="video/mp4" />
+		</video>
+	{% endif %}
+	<hgroup>
+		{% if page.banner_logo_image %}
+			<img src="{{page.banner_logo_image}}" alt="" />
+		{% endif %}
+			<h1>{{ page.banner_headline }}</h1>
+		{% if page.banner_button_text %}
+			<a href="{{page.banner_button_link}}" target="_blank" class="button-dev">{{page.banner_button_text}}</a>
+		{% endif %}
+	</hgroup>
+	<img src="/images/banners/banner-bottom.svg" alt="" class="banner-bottom" />
+</div>

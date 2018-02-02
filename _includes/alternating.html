@@ -15,11 +15,7 @@
 				<article>
 					{{ feature.feature_description_markdown | markdownify }}
 				</article>
-			{% endif %}
-			
-			{% unless feature.button_url == nil %}
-			<a href="{{ feature.button_url }}" class="button">{{ feature.button_text }}</a>
-			{% endunless %}
+			{% endif %}			
 			
 			<ul class="videos">
 				{% for video in feature.videos %}
@@ -38,6 +34,11 @@
 				{% endfor %}
 			</ul>
 			{% endif %}
+			
+			{% unless feature.button_url == nil %}
+			<br />
+			<a href="{{ feature.button_url }}" class="button">{{ feature.button_text }}</a>
+			{% endunless %}
 		</hgroup>
 	</div>
 	{% endfor %}

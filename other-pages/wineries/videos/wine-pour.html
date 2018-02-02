@@ -1,0 +1,49 @@
+---
+layout: default
+permalink: /wineries/videos/wine-pour/
+banner_headline: '<strong>Wine Pour Videos</strong>'
+banner_logo_image: 
+banner_background_image: 
+banner_bottom_image: 
+banner_video_path: /images/banners/videos/wineries4.mp4 
+banner_button_link: 
+banner_button_text:
+videos:
+  - youtube_id: 'x12i7gHPQY4'
+  - youtube_id: 'szlgNFzvvcI'
+frequently-asked-questions:
+  - question: What is a “Wine Pour Video”?
+    answer_markdown: A “Wine Pour video” is a simple ad featuring a single bottle of wine. It’s usually about 30 seconds long and consists of a specific series of cinematic shots of the bottle being opened and poured.  There are no words (spoken or written) in this style of video… It relies solely on dramatic visuals and music to convey the message.
+  - question: What can you do with it / What is it used for?
+    answer_markdown: These videos are primarily designed to be used as Facebook ads to highlight your favorite bottles, attract new customers to your tasting room or bring attention to an event your hosting or they can simply be posted to your social media accounts or on your website.
+---
+
+{% include banner.html %}
+
+<!--<ul class="video-grid">
+	{% for video in page.videos %}
+	<li class="video-wrapper">
+		<iframe width="50" height="96" src="https://www.youtube.com/embed/{{ video.youtube_id }}?rel=0&amp;controls=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+	</li>
+	{% endfor %}
+</ul>-->
+{% assign videos = page.videos %}
+{% include video-list.html %}
+
+{% include faq.html %}
+
+
+<div class="price-box">
+	<h2>Purchase A Wine Pour Video</h2>
+	<section>
+		<span class="icon">
+			<img src="/images/icons/film-strip.svg" alt="" />
+		</span>
+		<h3 class="on-sale">$750</h3>
+		<h3>$500</h3>
+		<!--<h4>+ $25/Month <i>for Hosting</i></h4>-->
+		<a href="https://waveapps.com/wq59nq-vtq2xy" class="button dark-border">Buy Now</a>
+	</section>
+</div>
+
+

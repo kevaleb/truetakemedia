@@ -1,0 +1,12 @@
+<div class="faq">
+	<ul>
+		{% for faq in page.frequently-asked-questions %}
+		<li>
+			<h4>{{ faq.question }}</h4>
+			<article>
+				{{ faq.answer_markdown }}
+			</article>
+		</li>
+		{% endfor %}
+	</ul>
+</div>
