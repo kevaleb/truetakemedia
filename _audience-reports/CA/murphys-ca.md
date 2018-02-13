@@ -9,7 +9,7 @@ reach_img_path: /uploads/reach.png
 potential_reach: '300,000 <i>Wine Lovers</i>'
 audience_description_html: >-
   <ul><li>Location:<ul><li>United States: Murphys (+50 mi)
-  California</li></ul></li><li>Age:21 - 65+</li><li>People Who
+  California</li></ul></li><li>Age:<ul><li>21 - 65+</li></ul></li><li>People Who
   Match:<ul><li>Interests: Wine, Winery, Vineyard or Wine
   tasting</li><li>Behaviors: Wine</li></ul></li></ul>
 demographics:
