@@ -8,9 +8,10 @@ banner_img_path: /uploads/wine-tasting-banner.jpg
 reach_img_path: /uploads/reach.png
 potential_reach: '300,000 <i>Wine Lovers</i>'
 audience_description_html: >-
-  <p>Location:<br />United States: Murphys (+50 mi) California</p><p>Age:<br
-  />21 - 65+</p><p>People Who Match:<br />Interests: Wine, Winery, Vineyard or
-  Wine tasting<br />Behaviors: Wine</p>
+  <p>Location:</p><ul><li>United States: Murphys (+50 mi)
+  California</li></ul><p>Age:</p><ul><li>21 - 65+</li></ul><p>People Who
+  Match:</p><ul><li>Interests: Wine, Winery, Vineyard or Wine
+  tasting</li><li>Behaviors: Wine</li></ul>
 demographics:
   - image_path: /uploads/screen-shot-2018-02-13-at-5-20-54-am.png
     image_title: Age & Gender
