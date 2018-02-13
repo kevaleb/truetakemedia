@@ -635,7 +635,7 @@ header.open > .menu-button > span.three {
 	box-shadow: 0 100px 50px -50px rgba(0,0,0,.5) inset;
 }
 .banner.small {
-	height: 50%;
+	height: 60%;
 }
 
 .banner > .banner-bottom {
@@ -733,6 +733,25 @@ header.open > .menu-button > span.three {
 .banner > hgroup > ul > li+li:before {
 	content: ':::';
 	margin: 0 12px;
+}
+
+/* @end */
+
+/* @group H Group - Audience Reports */
+
+.banner.audience-reports {
+	
+}
+.banner.audience-reports > hgroup {
+	
+}
+.banner.audience-reports > hgroup > img {
+	max-width: 320px;
+}
+.banner.audience-reports > hgroup > h1 {
+	position: relative;
+	bottom: -265px;
+	font-size: 20px;
 }
 
 /* @end */
@@ -3015,6 +3034,13 @@ video#bgvid {
 
 
 
+
+
+
+
+
+
+
 /* @group Demographics */
 
 #demographics {
@@ -3039,6 +3065,7 @@ video#bgvid {
 .footer {
 	padding: 96px;
 	background: #402828;
+	background: #000;
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;

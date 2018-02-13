@@ -1,11 +1,17 @@
 ---
 layout: default
+acv_number: 250
+ad_spend: 1500
+cpm_number: 30.0
+ctr_number: 1.5
+sr_number: 15.0
+cr_number: 35.0
 ---
-<div class="banner dark" style="background-image: url({{ page.banner_img_path }});">
+<div class="banner dark small audience-reports" style="background-image: url(/images/banners/wine.jpg);">
 	<hgroup>
-		<img src="{{ page.banner_icon_path }}" alt="" style="max-width: 240px;"/>
 		<h1>{{ page.region }}</h1>
-		<a href="#reach" class="button">Learn More</a>
+		<img src="/images/illustrations/wine-lovers.svg" alt="" />
+		<!--<a href="#reach" class="button">Learn More</a>-->
 	</hgroup>
 	<img src="/images/banners/banner-bottom.svg" alt="" class="banner-bottom" />
 </div>
@@ -15,7 +21,7 @@ layout: default
 	<div id="video-production">
 		<img src="{{ page.reach_img_path }}" alt=""/>
 		<hgroup class="">
-			<h2 class="editable">Potential Reach</h2>
+			<h2 class="editable">Customer Base</h2>
 			<h1>{{ page.potential_reach }}</h1>
 			<article>
 				{{ page.audience_description_html }}

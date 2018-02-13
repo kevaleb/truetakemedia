@@ -1,10 +1,8 @@
 ---
 industry: wineries
-meta_title: Wine Lovers In Murphys
+meta_title: Wine Lovers In Murphys, CA
 permalink: /wineries/customer-base/ca/murphys/
 region: 'Murphys, CA'
-banner_icon_path: /images/illustrations/wine_lovers.svg
-banner_img_path: /uploads/wine-tasting-banner.jpg
 reach_img_path: /uploads/reach.png
 potential_reach: '300,000 <i>Wine Lovers</i>'
 audience_description_html: >-
@@ -23,11 +21,11 @@ demographics:
     image_title: Devices
   - image_path: /uploads/screen-shot-2018-02-13-at-5-29-15-am.png
     image_title: Household & Income
-acv_number: 150
-ad_spend: 500
-cpm_number: 32
-ctr_number: 1.45
-sr_number: 25
-cr_number: 25
+acv_number: 250
+ad_spend: 1500
+cpm_number: 30.0
+ctr_number: 1.5
+sr_number: 15.0
+cr_number: 35.0
 ---
 

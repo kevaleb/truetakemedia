@@ -1,10 +1,8 @@
 ---
 industry: wineries
-meta_title: Wine Lovers In San Diego
-permalink: /wineries/customer-base/san-diego/
-region: 'San Diego, CA'
-banner_icon_path: /images/illustrations/wine_lovers.svg
-banner_img_path: /uploads/wine-tasting-banner.jpg
+meta_title: Wine Lovers in....
+permalink: /wineries/customer-base/state/city/
+region: 'City, STATE'
 reach_img_path: 
 potential_reach: '48,000 <i>Wine Lovers</i>'
 audience_description_html: >-
@@ -28,12 +26,10 @@ demographics:
     image_title: Devices
   - image_path:
     image_title: Household & Income
-  - image_path:
-    image_title: Spending
 acv_number: 250
 ad_spend: 1500
 cpm_number: 30.0
-ctr_number: 1.45
+ctr_number: 1.5
 sr_number: 15.0
 cr_number: 35.0
 ---
