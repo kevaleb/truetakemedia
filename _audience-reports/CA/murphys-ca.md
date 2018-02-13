@@ -1,20 +1,18 @@
 ---
 industry: wineries
-meta_title: Wine Lovers In San Diego
-permalink: /wineries/customer-base/san-diego/
-region: 'San Diego, CA'
+meta_title: Wine Lovers In Murphys
+permalink: /wineries/customer-base/ca/murphys/
+region: 'Murphys, CA'
 banner_icon_path: /images/illustrations/wine_lovers.svg
 banner_img_path: /uploads/wine-tasting-banner.jpg
-reach_img_path:
-potential_reach: '48,000 <i>Wine Lovers</i>'
+reach_img_path: /uploads/reach.png
+potential_reach: '300,000 <i>Wine Lovers</i>'
 audience_description_html: >-
-  <ul><li>Location - Living In:<ul><li>United States: Jamul (+50 mi)
-  California</li></ul></li><li>Age:<ul><li>21 - 65+</li></ul></li><li>People Who
-  Match:<ul><li>Behaviors: Wine</li></ul></li><li>And Must Also
-  Match:<ul><li>Interests: Merlot, Wine and food matching, Chardonnay,
-  Sangiovese, Wine, Food &amp; Wine, Cabernet Sauvignon, Wine tasting, Winery,
-  Pinot noir, Riesling, Pinot gris, Sparkling wine, White Zinfandel, Zinfandel,
-  Cabernet Franc or Red wine</li></ul></li></ul>
+  <ul><li><p>Location:</p><ul><li><p>United States: Murphys (+50 mi)
+  California</p></li></ul></li><li><p>Age:</p><ul><li><p>18 -
+  65+</p></li></ul></li><li><p>People Who Match:</p><ul><li><p>Interests: Wine,
+  Winery, Vineyard or Wine tasting</p></li><li><p>Behaviors:
+  Wine</p></li></ul></li></ul>
 demographics:
   - image_path:
     image_title: Age & Gender
@@ -30,12 +28,11 @@ demographics:
     image_title: Household & Income
   - image_path:
     image_title: Spending
-acv_number: 250
-ad_spend: 1500
-cpm_number: 30
+acv_number: 150
+ad_spend: 500
+cpm_number: 32
 ctr_number: 1.45
-sr_number: 15
-cr_number: 35
+sr_number: 25
+cr_number: 25
 ---
-
 
