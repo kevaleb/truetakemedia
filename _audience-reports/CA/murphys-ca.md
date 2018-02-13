@@ -18,16 +18,12 @@ demographics:
     image_title: Age & Gender
   - image_path: /uploads/screen-shot-2018-02-13-at-5-21-34-am.png
     image_title: Relationship & Education
-  - image_path:
-    image_title: Job Titles
-  - image_path:
+  - image_path: /uploads/screen-shot-2018-02-13-at-5-26-49-am.png
     image_title: Page Likes
-  - image_path:
+  - image_path: /uploads/screen-shot-2018-02-13-at-5-28-23-am.png
     image_title: Devices
-  - image_path:
+  - image_path: /uploads/screen-shot-2018-02-13-at-5-29-15-am.png
     image_title: Household & Income
-  - image_path:
-    image_title: Spending
 acv_number: 150
 ad_spend: 500
 cpm_number: 32
