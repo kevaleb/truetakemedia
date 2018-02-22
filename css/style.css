@@ -2103,7 +2103,7 @@ video#bgvid {
 
 
 .alternating > div > hgroup > .special-info {
-	display: inline-block;
+	display: none;
 	/*float: left;*/
 	list-style: none;
 	border: 1px dashed #ccc;
