@@ -4,7 +4,7 @@ permalink: /wineries/
 headline: Video Production For Wineries
 icon_path: /uploads/wine.png
 banner_image_path: /images/banners/videos/wineries.jpg
-headline: 'How to get more customers into<strong>your tasting room</strong>'
+headline: 'Get more customers into<strong>your tasting room</strong>'
 icon_path: /uploads/wine.png
 banner_image_path: /images/banners/videos/wineries.jpg
 banner_vid_image_path: /images/banners/videos/wineries_vid.jpg
