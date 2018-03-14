@@ -1,6 +1,6 @@
 ---
 headline: 'How to get more customers into<strong>your tasting room</strong>'
-icon_path: /uploads/wine.png
+icon_path:
 banner_image_path: /images/banners/videos/wineries.jpg
 banner_vid_image_path: /images/banners/videos/wineries_vid.jpg
 banner_vid_path: /images/banners/videos/wineries3.mp4

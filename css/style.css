@@ -830,39 +830,79 @@ video#bgvid {
 
 
 
+/* @group Video Block */
+
+.video-wrapper {
+	position: relative;
+	z-index: 1000000000000000;
+	max-width: 720px;
+	margin: -150px auto 0 auto;
+	padding: 0 0 48px 0;
+}
+.video-wrapper > img {
+	position: absolute;
+	z-index: -100;
+	left: 0;
+	bottom: 24px;
+}
+
+
+@media all and (max-width: 720px) {
+
+.video-wrapper {
+	margin: 0px 0 24px 0;
+	padding: 24px;
+}
+.video-wrapper > img {
+	left: 24px;
+	bottom: 6px;
+}
+
+}
+
+/* @end */
+
+
 
 
 /* @group Industries */
 
 .industries {
-	position: absolute;
-	z-index: 100000000000;
-	bottom: 0;
 	width: 100%;
 	padding: 48px 0;
-	list-style: none;
+	background: #cb2027;
+	
 	white-space: normal;
+	text-align: center;
 }
-.industries > li {
-	margin: 12px 0;
+.industries > h2 {
+	margin: 0 0 24px 0;
+	font: 400 24px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #fff;
+	letter-spacing: 0;
+}
+.industries > ul {
+	list-style: none;
+}
+.industries > ul > li {
+	margin: 12px;
 	display: inline-block;
 	text-align: center;
 }
-.industries > li+li {
-	margin-left: 12px;
-}
-.industries > li > a {
-	
-}
-.industries > li > a > img {
+.industries > ul > li > img {
 	width: 30px;
-	margin: 0 0 12px 0;
 }
-.industries > li > a > h4 {
-	font: 10px/12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+.industries > ul > li > h3 {
+	font: 900 8px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	color: #fff;
-	letter-spacing: 1px;
 	text-transform: uppercase;
+}
+
+.industries > ul > li.featured > img {
+	width: 60px;
+}
+.industries > ul > li.featured > h3 {
+	font: 900 14px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 }
 
 /* @end */
@@ -1502,6 +1542,70 @@ video#bgvid {
 	color: #fff;
 }
 
+
+/* @end */
+
+
+
+
+
+/* @group Simple List */
+
+.simple-list {
+	
+}
+.simple-list > ul {
+	max-width: 540px;
+	margin: 0 auto;
+	list-style: none;
+	padding-left: 36px;
+}
+.simple-list > ul > li {
+	position: relative;
+	margin: 0 0 24px 0;
+}
+.simple-list > ul > li:before {
+	content: '\00a0';
+	display: inline-block;
+	position: absolute;
+	top: 4px;
+	left: -30px;
+	width: 24px;
+	height: 24px;
+	background-image: url('/images/icons/check.svg');
+	vertical-align: middle;
+}
+
+/* @end */
+
+
+
+
+
+
+/* @group Guarantee */
+
+.guarantee {
+	padding: 96px 24px 0 24px;
+	text-align: center;
+}
+.guarantee > hgroup {
+	max-width: 480px;
+	margin: 0 auto;
+	padding: 36px;
+	border: 5px solid #000;
+	border-radius: 12px;
+}
+.guarantee > hgroup > h2 {
+	font: 400 48px/60px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	letter-spacing: 0;
+}
+.guarantee > hgroup > p {
+	font: 200 18px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+.guarantee > h1 {
+	
+}
 
 /* @end */
 

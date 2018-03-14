@@ -1,5 +1,6 @@
 ---
 layout: default
+featured: true
 permalink: /wineries/
 headline: Video Production For Wineries
 icon_path: /uploads/wine.png

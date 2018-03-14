@@ -1,0 +1,23 @@
+<div class="industries">
+	<h2>We Work In All Kinds Of Industries</h2>
+	<!--<ul>
+	{% for industry in site.industries %}
+		{% if industry.featured == true %}
+		<li class="featured">
+			<img src="{{ industry.icon_path }}" alt="" />
+			<h3>{{ industry.title }}</h3>
+		</li>
+		{% endif %}
+	{% endfor %}
+	</ul>-->
+	<ul>
+	{% for industry in site.industries %}
+		{% if industry.icon_path %}
+		<li>
+			<img src="{{ industry.icon_path }}" alt="" />
+			<h3>{{ industry.title }}</h3>
+		</li>
+		{% endif %}
+	{% endfor %}
+	</ul>
+</div>

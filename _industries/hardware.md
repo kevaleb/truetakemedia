@@ -1,7 +1,7 @@
 ---
 layout: default
-icon_path:
-image_path: /images/icons/wrench.svg
+icon_path: /uploads/tools.png
+image_path: 
 cpm_number: 30
 ctr_number: 1.5
 sr_number: 0.15

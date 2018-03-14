@@ -91,16 +91,19 @@ _comments:
 		<h1>{{ page.headline }}</h1>
 		<a href="#alternating" class="button white-border">See How It Works</a>
 	</hgroup>
+	
 	<img src="/images/banners/banner-bottom-red.svg" alt="" class="banner-bottom" />
 </div>
 
-<div class="we-love-wineries">
+{% include industries.html %}
+
+<!--<div class="we-love-wineries">
 	<section>
 		<img src="/images/illustrations/we-love-wine-2.svg" alt="" />
 		<h3>Are you a winery?</h3>
 		<a href="/wineries/" class="button">Click Here For Special Treatment</a>
 	</section>
-</div>
+</div>-->
 
 <div class="alternating" id="alternating">
 	{% for feature in page.features %}

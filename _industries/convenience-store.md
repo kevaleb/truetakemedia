@@ -1,7 +1,7 @@
 ---
 layout: default
-icon_path:
-image_path: /images/icons/gas.svg
+icon_path: /images/icons/gas.svg
+image_path:
 cpm_number: 30
 ctr_number: 0.015
 sr_number: 0.15
