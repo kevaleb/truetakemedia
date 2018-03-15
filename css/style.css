@@ -832,14 +832,14 @@ video#bgvid {
 
 /* @group Video Block */
 
-.video-wrapper {
+#video-block {
 	position: relative;
 	z-index: 1000000000000000;
 	max-width: 720px;
 	margin: -150px auto 0 auto;
 	padding: 0 0 48px 0;
 }
-.video-wrapper > img {
+#video-block > img {
 	position: absolute;
 	z-index: -100;
 	left: 0;
@@ -849,11 +849,11 @@ video#bgvid {
 
 @media all and (max-width: 720px) {
 
-.video-wrapper {
+#video-block {
 	margin: 0px 0 24px 0;
 	padding: 24px;
 }
-.video-wrapper > img {
+#video-block > img {
 	left: 24px;
 	bottom: 6px;
 }
@@ -861,6 +861,106 @@ video#bgvid {
 }
 
 /* @end */
+
+
+
+
+
+/* @group Video Grid */
+
+.video-grid {
+	padding: 96px 0 0 0;
+	text-align: center;
+}
+.video-grid > h2 {
+	margin: 0 0 48px 0;
+}
+.video-grid > ul {
+	max-width: 960px;
+	margin: 0 auto;
+	list-style: none;
+}
+.video-grid > ul > li.video-wrapper {
+	display: inline-block;
+	width: 48%;
+	max-width: 400px!important;
+	height: 240px;
+	margin: 0 0 4% 0;
+	text-align: left;
+}
+.video-grid > ul > li:nth-of-type(even) {
+	margin-left: 3%;
+}
+.video-grid > ul > li > a {
+	position: relative;
+	display: block;
+	text-decoration: none;
+	background: #cb2027;
+}
+.video-grid > ul > li > a > div {
+	position: relative;
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	opacity: 1;
+}
+.video-grid > ul > li > a > div > img {
+	margin: 96px 0;
+	width: 48px;
+	height: 48px;
+}
+.video-grid > ul > li > a > hgroup {
+	position: absolute;
+	z-index: 1000000;
+	bottom: 12px;
+	left: 2%;
+	width: 96%;
+	padding: 6px;
+	background: none;
+	border-bottom: 3px solid #cb2027;
+	color: #fff;
+}
+.video-grid > ul > li > a > hgroup > h3 {
+	font: 700 18px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: uppercase;
+	color: inherit;
+}
+.video-grid > ul > li > a > hgroup > h4 {
+	margin: 0 0 3px 0;
+	font:100 12px/12px"Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: inherit;
+}
+
+.video-grid > ul > li:hover > a > div {
+	opacity: .96;
+}
+
+
+@media all and (max-width: 1080px) {
+
+.video-grid {
+	padding: 24px;
+}
+.video-grid > ul {
+	
+}
+.video-grid > ul > li {
+	
+}
+
+}
+
+@media all and (max-width: 720px) {
+
+.video-grid > ul > li {
+	width: 100%;
+}
+
+}
+
+/* @end */
+
+
 
 
 
@@ -1339,99 +1439,7 @@ video#bgvid {
 
 
 
-/* @group Video Grid */
 
-.video-grid {
-	padding: 96px 0 0 0;
-	text-align: center;
-}
-.video-grid > h2 {
-	margin: 0 0 48px 0;
-}
-.video-grid > ul {
-	max-width: 960px;
-	margin: 0 auto;
-	list-style: none;
-}
-.video-grid > ul > li {
-	display: inline-block;
-	width: 48%;
-	max-width: 400px;
-	height: 240px;
-	margin: 0 0 4% 0;
-	text-align: left;
-}
-.video-grid > ul > li:nth-of-type(even) {
-	margin-left: 3%;
-}
-.video-grid > ul > li > a {
-	position: relative;
-	display: block;
-	text-decoration: none;
-	background: #cb2027;
-}
-.video-grid > ul > li > a > div {
-	position: relative;
-	background-size: cover;
-	background-position: center;
-	text-align: center;
-	opacity: 1;
-}
-.video-grid > ul > li > a > div > img {
-	margin: 96px 0;
-	width: 48px;
-	height: 48px;
-}
-.video-grid > ul > li > a > hgroup {
-	position: absolute;
-	z-index: 1000000;
-	bottom: 12px;
-	left: 2%;
-	width: 96%;
-	padding: 6px;
-	background: none;
-	border-bottom: 3px solid #cb2027;
-	color: #fff;
-}
-.video-grid > ul > li > a > hgroup > h3 {
-	font: 700 18px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	text-transform: uppercase;
-	color: inherit;
-}
-.video-grid > ul > li > a > hgroup > h4 {
-	margin: 0 0 3px 0;
-	font:100 12px/12px"Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	color: inherit;
-}
-
-.video-grid > ul > li:hover > a > div {
-	opacity: .96;
-}
-
-
-@media all and (max-width: 1080px) {
-
-.video-grid {
-	padding: 24px;
-}
-.video-grid > ul {
-	
-}
-.video-grid > ul > li {
-	
-}
-
-}
-
-@media all and (max-width: 720px) {
-
-.video-grid > ul > li {
-	width: 100%;
-}
-
-}
-
-/* @end */
 
 
 

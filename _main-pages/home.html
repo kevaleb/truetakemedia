@@ -89,7 +89,7 @@ _comments:
 	</video>
 	<hgroup>
 		<h1>{{ page.headline }}</h1>
-		<a href="#alternating" class="button white-border">See How It Works</a>
+		<a href="#alternating" class="button white-border">How Do We Do It?</a>
 	</hgroup>
 	
 	<img src="/images/banners/banner-bottom-red.svg" alt="" class="banner-bottom" />
@@ -97,13 +97,13 @@ _comments:
 
 {% include industries.html %}
 
-<!--<div class="we-love-wineries">
+<div class="we-love-wineries">
 	<section>
 		<img src="/images/illustrations/we-love-wine-2.svg" alt="" />
 		<h3>Are you a winery?</h3>
 		<a href="/wineries/" class="button">Click Here For Special Treatment</a>
 	</section>
-</div>-->
+</div>
 
 <div class="alternating" id="alternating">
 	{% for feature in page.features %}
@@ -124,8 +124,9 @@ _comments:
 
 {% include conversion-funnel.html %}
 
+<h2 style="text-align: center;">Some Of Our Work</h2>
 {% assign videos = site.videos | where:"featured","true" %}
-{% include video-list.html %}
+{% include video-grid.html %}
 
 
 

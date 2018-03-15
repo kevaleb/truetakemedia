@@ -10,6 +10,7 @@ nav_title: videos
 nav_class: videos
 nav_order: 1
 hide_from_nav: false
+youtube_video_id: lmNhJDXYGEk
 ---
 <div class="banner" style="background-image: url('{{ page.banner_image_path }}');">
 	<video playsinline autoplay muted loop poster="{{ page.banner_vid_image_path }}" id="bgvid">
@@ -24,7 +25,7 @@ hide_from_nav: false
 </div>
 
 {% assign videos = site.videos %}
-{% include video-list.html %}
+{% include video-grid.html %}
 
 <!--<div class="quarters">
 	<section>
