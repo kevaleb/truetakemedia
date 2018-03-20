@@ -1,0 +1,38 @@
+---
+layout: default
+title: Websites
+headline: 'We Develop High Performance<strong>Static Websites</strong>'
+banner_image_path:
+permalink: /websites/
+nav_title: websites
+nav_class: /websites/
+nav_order: 2
+hide_from_nav: false
+---
+<div class="banner" style="background-image: url('{{ page.banner_image_path }}');">
+<!--	<video playsinline autoplay muted loop poster="{{ page.banner_vid_image_path }}" id="bgvid">
+	    <!--<source src="polina.webm" type="video/webm">--*>
+	    <source src="{{ page.banner_vid_path }}" type="video/mp4">
+	</video>-->
+	<hgroup>
+		<h1>{{ page.headline }}</h1>
+		<a href="#video-grid" class="button white-border">Check Out A Few Sites We've Built</a>
+	</hgroup>
+	<img src="/images/banners/banner-bottom.svg" alt="" class="banner-bottom" />
+</div>
+
+<div class="websites" id="websites">
+	<ul>
+	{% for website in site.customers %}
+		{% unless website.website_url == nil %}
+		<li>
+			<a href="{{ website.website_url }}" target="_blank">
+				<img src="/images/illustrations/chrome.svg" alt="Chrome Browser" />
+				<div style="background-image: url('{{ website.website_thumbnail_path }}');"></div>
+				<h3>{{ website.website_url }}</h3>
+			</a>
+		</li>
+		{% endunless %}
+	{% endfor %}
+	</ul>
+</div>

@@ -1,0 +1,23 @@
+---
+layout: default
+banner_headline: Blog
+permalink: /blog/
+nav_class: blog
+nav_title: Blog
+nav_order: 4
+banner_path:
+---
+{%  include banner.html %}
+<ul class="blogposts">
+	{% for post in site.posts %}
+		<li>
+			<a href="{{ post.url }}">
+				<!--<div class="postbanner" style="background-image: url('{{ post.banner_image_path }}');"></div>-->
+				<!--<h3>{{ post.category }}</h3>-->
+				<h2>{{ post.banner_headline | strip_html }}</h2>
+				<p>{{ post.excerpt | strip_html | truncate: 120, '...' }}</p>
+				<span class="button">Read More</span>
+			</a>
+		</li>
+	{% endfor %}
+</ul>
