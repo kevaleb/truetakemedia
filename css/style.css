@@ -3367,6 +3367,36 @@ video#bgvid {
 
 
 
+/* @group Webinar Form */
+
+.webinar-form {
+	text-align: center;
+	
+}
+.webinar-form > section {
+	max-width: 480px;
+	margin: 0 auto;
+	padding: 24px;
+}
+.webinar-form > section > h2 {
+	margin: 0 0 12px 0;
+	font: 900 24px/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: uppercase;
+}
+.webinar-form > section > h3 {
+	margin: 0 0 48px 0;
+	font: 400 20px/20px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: capitalize;
+	color: #666;
+}
+
+/* @end */
+
+
+
+
+
+
 /* @group Snapchat Overlay */
 
 .snapchat-overlay {
