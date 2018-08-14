@@ -1,0 +1,29 @@
+---
+layout: basic
+title: Recommended Companies
+permalink: /local-companies/
+recommended-companies:
+  - name: Brothers Bistro
+    logo_path: /images/local-companies/brothers.png
+    url: www.brothersbistro.menu
+  - name: Basic American Supply
+    logo_path: /images/local-companies/basic.png
+    url: www.basicamericansupply.com
+  - name: Bee's Marketplace
+    logo_path: /images/local-companies/bees.png
+    url: www.beesmarketplace.com
+---
+
+<div class="link-network">
+	<h2>Our Local Companies</h2>
+	<ul>
+		{% for company in page.recommended-companies %}
+		<li>
+			<a href="{{ company.url }}">
+				<img src="{{ company.logo_path }}" alt="" />
+				<strong>{{ company.name }}</strong>
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+</div>
