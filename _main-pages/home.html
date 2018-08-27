@@ -1,87 +1,50 @@
 ---
 layout: default
 title: True Take Media
-headline: 'We Help Companies Grow Their Business<strong>With Facebook Video Ads</strong>'
+headline: 'We Use High Quality Video & Targeted Advertising <strong>To Help Grow Your Business</strong>'
 permalink: /
 nav_title: Home
 nav_class: /
 nav_order: .5
 hide_from_nav: true
 icon_path: /uploads/wine.png
-banner_image_path: /images/banners/videos/wineries.jpg
-banner_vid_image_path: /images/banners/videos/wineries_vid.jpg
-banner_vid_path: /images/banners/videos/wineries4.mp4
-acv_number: 250
-ad_spend: 1500
-cpm_number: 30.0
-ctr_number: 1.45
-sr_number: 15.0
-cr_number: 35.0
+banner_image_path: /images/banners/workspace.jpg
+banner_vid_image_path:
+banner_vid_path:
+sections:
+  - title: We produce high quality professional videos
+    icon: /images/icons/film-strip-red.svg
+    description: <p>That tell your story, Highlight products, Promote special offers, Teach people things they didn’t know and a whole lot more.</p>
+    url: /videos/
+    button_text: Learn More
+  - title: We use Facebook advertising to get you in front of your customers and drive real business results.
+    icon: /images/icons/money-red.svg
+    description: <p>Like Increased Brand Awareness, Lead Generation, Getting Customers Through Your Doors, Closing More Deals, Retaining More Customers.</p>
+    url: /videos/
+    button_text: Learn More
 features:
-  - feature_title: Video Production
+  - feature_title: We use Facebook advertising to get you in front of your customers and drive real business results like
     feature_image_path: /images/illustrations/features/video.png
-    feature_description_html:
-      <p>We create professional video ads that give a true representation of your company.</p>
+    feature_description_html: '<ul>
+	<li>Tell your story</li>
+	<li>Highlight products</li>
+	<li>Promote special offers</li>
+	<li>Teach people things they didn’t know.</li>
+</ul>'
     button_url: '#video-grid'
-    button_text: Example Videos
-  - feature_title: Targeted Advertising
+    button_text: Learn More
+  - feature_title: We use Facebook advertising to get you in front of your customers and drive real business results like
     feature_image_path: /images/illustrations/features/fb_ad.png
-    feature_description_html:
-      <p>With the Facebook ad platform we target your local customer base. Using location, interest, behaviors and more to target the people most likely to become your customers.</p>
-    button_url:
-    button_text:
-  - feature_title: Tracking Results
-    feature_image_path: /images/illustrations/features/fb_reports.png
-    feature_description_html: >-
-      <p>We measure return on investment by tracking people reached, leads acquired & sales generated.</p> 
-    button_url: '#conversions'
-    button_text: See How We Track Results
-  - feature_title: Optimize
-    feature_image_path: /images/illustrations/features/fb_demographics.png
-    feature_description_html: >-
-      <p>Through continual split testing we can identify top performing segments of your market and increase effectiveness of your advertising over time.</p>
-    button_url:
-    button_text: 
-description:
-pricing:
-  - title: Basic
-    icon_image_path:
-    description_html: '<p>For companies looking to spend $15-$50/day on advertising.</p>'
-    snippet:
-    price_number: 250 
-    list:
-      - listitem: Ad creation
-      - listitem: Weekly ad refresh
-      - listitem: Monthly campaign reports
-      - listitem: Monthly strategy meeting
-  - title: Pro
-    icon_image_path:
-    description_html: '<p>For companies looking to spend $50-$150/day on advertising.</p>'
-    snippet:
-    price_number: 500 
-    list:
-      - listitem: Ad creation
-      - listitem: Weekly ad refresh
-      - listitem: Monthly campaign reports
-      - listitem: Monthly strategy meeting
-  - title: Premium
-    icon_image_path:
-    description_html: '<p>For companies looking to spend $150+/day on advertising.</p>'
-    snippet:
-    price_number: 1000 
-    list:
-      - listitem: Ad creation
-      - listitem: Weekly ad refresh
-      - listitem: Monthly campaign reports
-      - listitem: Monthly strategy meeting
-_comments:
-  cpm: Cost Per Thousand Views
-  ctr: Click Through Rate
-  sr: Signup Rate
-  cr: Conversion Rate
-  acv: Average Customer Value
+    feature_description_html: '<ul>
+	  	<li>Increased Brand Awareness</li>
+	  	<li>Lead Generation</li>
+	  	<li>Getting Customers Through Your Doors</li>
+	  	<li>Closing More Deals</li>
+	  	<li>Retaining More Customers</li>
+	  </ul>'
+    button_url: #
+    button_text: Learn More
 ---
-
 <div class="banner" style="background-image: url('{{ page.banner_image_path }}');">
 	<video playsinline autoplay muted loop poster="{{ page.banner_vid_image_path }}" id="bgvid">
 	    <!--<source src="polina.webm" type="video/webm">-->
@@ -89,23 +52,29 @@ _comments:
 	</video>
 	<hgroup>
 		<h1>{{ page.headline }}</h1>
-		<a href="#alternating" class="button white-border">How Do We Do It?</a>
+		<a href="#cta" class="button white-border">Get A Quote</a>
 	</hgroup>
 	
-	<img src="/images/banners/banner-bottom-red.svg" alt="" class="banner-bottom" />
+	<img src="/images/banners/banner-bottom.svg" alt="" class="banner-bottom" />
 </div>
 
-{% include industries.html %}
+{% include sections.html %}
 
-<div class="we-love-wineries">
+
+<h2 style="text-align: center;">Some Of Our Work</h2>
+{% assign videos = site.videos | where:"featured","true" %}
+{% include video-grid.html %}
+
+
+<!--<div class="we-love-wineries">
 	<section>
 		<img src="/images/illustrations/we-love-wine-2.svg" alt="" />
 		<h3>Are you a winery?</h3>
 		<a href="/wineries/" class="button">Click Here For Special Treatment</a>
 	</section>
-</div>
+</div>-->
 
-<div class="alternating" id="alternating">
+<!--<div class="alternating" id="alternating">
 	{% for feature in page.features %}
 	<div>
 		<img src="{{ feature.feature_image_path }}" alt=""/>
@@ -120,13 +89,11 @@ _comments:
 		</hgroup>
 	</div>
 	{% endfor %}
-</div>
+</div>-->
 
-{% include conversion-funnel.html %}
 
-<h2 style="text-align: center;">Some Of Our Work</h2>
-{% assign videos = site.videos | where:"featured","true" %}
-{% include video-grid.html %}
+
+
 
 
 

@@ -1,0 +1,18 @@
+<div class="sections">
+	<ul>
+		{% for section in page.sections %}
+		<li>
+			<div class="icon">
+				<img src="{{ section.icon }}" alt="" />
+			</div>
+			<h4>{{ section.title }}</h4>
+			<article>
+				{{ section.description }}
+			</article>
+			{% if section.url %}
+			<a href="{{ section.yrl }}" class="button">{{ section.button_text }}</a>
+			{% endif %}
+		</li>
+		{% endfor %}
+	</ul>
+</div>

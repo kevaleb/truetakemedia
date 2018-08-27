@@ -260,7 +260,7 @@ article.blog-post {
 }
 .content > div {
 	/*height: 100%;*/
-	min-height: 100%;
+	/*min-height: 100%;*/
 	/*max-width: 720px;*/
 	margin: 0 auto;
 	padding: 0;
@@ -698,7 +698,7 @@ header.open > .menu-button > span.three {
 }
 .banner > hgroup > h1 {
 	margin: 0px 0 0 0;
-	font: 400 30px/48px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font: 400 24px/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	letter-spacing: 0px;
 	/*text-shadow: 0 1px 6px rgba(0,0,0,.5);*/
 	text-transform: uppercase;
@@ -768,22 +768,23 @@ header.open > .menu-button > span.three {
 
 /* @end */
 
-@media all and (max-width: 1080px) {
+@media all and (max-width: 960px) {
 
 .banner {
-	height: 50%;
+	/*height: 50%;*/
 }
 .banner > hgroup > h1 {
-	font-size: 24px;
+	font-size: 3vw;
 	line-height: 30px;
+	/*color: #f16;*/
 }
 .banner > hgroup > h1 > strong {
-	font-size: 36px;
+	font-size: 4.5vw;
 }
 
 }
 
-@media all and (max-width: 540px) {
+@media all and (max-width: 480px) {
 
 .banner {
 	height: 50%;
@@ -791,23 +792,15 @@ header.open > .menu-button > span.three {
 }
 
 .banner > hgroup {
-	padding: 24px;
+	/*padding: 24px;*/
 }
 .banner > hgroup > h1 {
-	font-size: 16px;
-	line-height: 24px;
+	font-size: 5vw;
+	line-height: 6vw;
 }
 .banner > hgroup > h1 > strong {
-	font-size: 24px;
-}
-.banner > hgroup > h1.two-tone {
-	font: 200 14px/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	letter-spacing: 1px;
-}
-.banner > hgroup > h1.two-tone > strong {
-	display: block;
-	font: 900 30px/48px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	letter-spacing: 0;
+	font-size: 10vw;
+	line-height: 11vw;
 }
 
 }
@@ -3322,6 +3315,19 @@ video#bgvid {
 
 
 
+/* @group Quote */
+
+.quote {
+	text-align: center;
+}
+
+/* @end */
+
+
+
+
+
+
 /* @group we-love-wineries */
 
 .we-love-wineries {
@@ -3376,7 +3382,7 @@ video#bgvid {
 .webinar-form > section {
 	max-width: 480px;
 	margin: 0 auto;
-	padding: 24px;
+	padding: 36px;
 }
 .webinar-form > section > h2 {
 	margin: 0 0 12px 0;
@@ -3438,8 +3444,54 @@ video#bgvid {
 
 
 
+/* @group Sections */
 
+.sections {
+	padding: 24px;
+}
+.sections > ul {
+	list-style: none;
+}
+.sections > ul > li {
+	text-align: center;
+	max-width: 540px;
+	margin:  0 auto;
+	padding: 48px 0;
+}
+.sections > ul > li > .icon {
+	display: inline-block;
+	width: 96px;
+	height: 96px;
+	margin: 0 0 12px 0;
+	padding: 24px;
+	border: 3px solid #000;
+	border-radius: 96px;
+	box-shadow: 0 0 0 2px #fff, 0 0 0 3px #cb2027 ;
+}
+.sections > ul > li > h4 {
+	font: 900 18px/24px"Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: capitalize;
+}
+.sections > ul > li > h4:after {
+	content: '\00a0';
+	display: block;
+	width: 48px;
+	height: 2px;
+	margin: 12px auto;
+	background: #cb2027;
+}
+.sections > ul > li > article {
+	margin: 0 auto;
+	padding: 0;
+}
+.sections > ul > li > article > p:last-of-type {
+	margin: 0;
+}
+.sections > ul > li > .button {
+	margin: 12px 0 0 0;
+}
 
+/* @end */
 
 
 
