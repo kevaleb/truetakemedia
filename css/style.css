@@ -58,7 +58,7 @@ h4 {
 p,
 ul,
 ol {
-	font: 200 17px/20px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font: 200 16px/20px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	color: #444;
 	letter-spacing: 1px;
 }
@@ -68,7 +68,7 @@ ol {
 }
 ul li,
 ol li {
-	margin: 0 0 24px 0;
+	margin: 0 0 16px 0;
 }
 a {
 	font: 200 18px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
@@ -133,16 +133,6 @@ article > hr {
 	height: 48px;
 	border: none;
 	border-top: 1px dotted #ccc;
-}
-
-
-article > ul {
-	padding: 0 0 0 24px;
-}
-article > ul > li{
-	margin: 36px 0;
-	/*padding: 50px;*/
-	font-size: 20px;
 }
 /* @end */
 
@@ -630,7 +620,7 @@ header.open > .menu-button > span.three {
 /* @group BANNER */
 .banner {
 	position: relative;
-	height: 72%;
+	height: 84vh;
 	/*max-height: 720px;*/
 	min-height: 320px;
 	max-height: 1080px;
@@ -698,7 +688,7 @@ header.open > .menu-button > span.three {
 }
 .banner > hgroup > h1 {
 	margin: 0px 0 0 0;
-	font: 400 24px/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font: 400 24px/48px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	letter-spacing: 0px;
 	/*text-shadow: 0 1px 6px rgba(0,0,0,.5);*/
 	text-transform: uppercase;
@@ -771,7 +761,7 @@ header.open > .menu-button > span.three {
 @media all and (max-width: 960px) {
 
 .banner {
-	/*height: 50%;*/
+	
 }
 .banner > hgroup > h1 {
 	font-size: 3vw;
@@ -787,7 +777,7 @@ header.open > .menu-button > span.three {
 @media all and (max-width: 480px) {
 
 .banner {
-	height: 50%;
+	min-height: 50%;
 	background-attachment: scroll;
 }
 
@@ -874,7 +864,7 @@ video#bgvid {
 /* @group Video Grid */
 
 .video-grid {
-	padding: 96px 0 0 0;
+	padding: 24px;
 	text-align: center;
 }
 .video-grid > h2 {
@@ -3190,8 +3180,7 @@ video#bgvid {
 
 .footer {
 	padding: 96px;
-	background: #402828;
-	background: #000;
+	background: #26292d;
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -3447,7 +3436,7 @@ video#bgvid {
 /* @group Sections */
 
 .sections {
-	padding: 24px;
+	padding: 48px 24px;
 }
 .sections > ul {
 	list-style: none;
@@ -3483,6 +3472,9 @@ video#bgvid {
 .sections > ul > li > article {
 	margin: 0 auto;
 	padding: 0;
+}
+.sections > ul > li > article > ul {
+	text-align: left;
 }
 .sections > ul > li > article > p:last-of-type {
 	margin: 0;

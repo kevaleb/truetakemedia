@@ -1,16 +1,46 @@
 ---
 layout: default
 title: Videos
-headline: 'We Specialize In The Production Of<strong>Facebook Video Ads</strong>'
-banner_image_path: /images/banners/videos/wineries.jpg
-banner_vid_image_path: /images/banners/videos/wineries_vid.jpg
-banner_vid_path: /images/banners/videos/wineries4.mp4
 permalink: /videos/
 nav_title: videos
 nav_class: videos
 nav_order: 1
 hide_from_nav: false
-youtube_video_id: lmNhJDXYGEk
+headline: '<strong>Video Is a Great Way to Stand Out In Your Customers Mind</strong>'
+banner_image_path: /images/banners/workspace.jpg
+banner_vid_image_path: 
+banner_vid_path: 
+sections:
+  - title: What kind of videos do we make?
+    icon: /images/icons/video-camera-red.svg
+    description: '<ul>
+		<li>Branding videos <strong>tell your story </strong>or show what makes your company unique.</li>
+		<li>Product videos highlight <strong>a specific product</strong> or feature.</li>
+		<li>Promotional videos <strong>tell people about an even</strong>t or sale.</li>
+		<li>Sales videos describe an offer, <strong>explain benefits</strong> and instruct the customer what to do next.</li>
+		<li>Explainer videos <strong>guide people through the steps</strong> in a process.</li>
+	</ul>'
+    url:
+    button_text:
+  - title: How Do We Produce Our Videos?
+    icon: /images/icons/wrench-red.svg
+    description: '<p>Most of our videos are filmed with a camera and combined with motion graphics.</p>
+    
+    <strong>1. Interview</strong>
+    <p>Not sure what your video should say? Not a problem. With our simple interview process we can help you describe your business in a way that is natural & conversational but still professional & compelling.</p>
+    
+    <strong>2. Scripted</strong>
+    <p>Don’t want to be on camera? That’s ok. With your invaluable insights and our talented team we’ll write a script and hire a professional actor or voice artist to do the talking for you.</p>
+    
+    <strong>3. Cinematic</strong>
+    <p>Sometimes the product speaks for itself. In that case we can produce a cinematic video that uses stunning visuals and impactful music to convey your message.</p> '
+    url:
+    button_text:
+  - title: Where Can You Use Videos?
+    icon: /images/icons/play-red.svg
+    description: '<p>A good video can be used on your website, in e-mails, for online advertising and across your social media channels.</p>'
+    url:
+    button_text:
 ---
 <div class="banner" style="background-image: url('{{ page.banner_image_path }}');">
 	<video playsinline autoplay muted loop poster="{{ page.banner_vid_image_path }}" id="bgvid">
@@ -19,10 +49,12 @@ youtube_video_id: lmNhJDXYGEk
 	</video>
 	<hgroup>
 		<h1>{{ page.headline }}</h1>
-		<a href="#video-grid" class="button white-border">See A Bit Of Our Work</a>
+		<a href="#cta" class="button">Request A Quote</a>
 	</hgroup>
 	<img src="/images/banners/banner-bottom.svg" alt="" class="banner-bottom" />
 </div>
+
+{% include sections.html %}
 
 {% assign videos = site.videos %}
 {% include video-grid.html %}

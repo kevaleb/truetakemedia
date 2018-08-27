@@ -2,9 +2,11 @@
 	<ul>
 		{% for section in page.sections %}
 		<li>
+			{% if section.icon %}
 			<div class="icon">
 				<img src="{{ section.icon }}" alt="" />
 			</div>
+			{% endif %}
 			<h4>{{ section.title }}</h4>
 			<article>
 				{{ section.description }}
