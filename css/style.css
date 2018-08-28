@@ -3466,7 +3466,7 @@ video#bgvid {
 	display: block;
 	width: 48px;
 	height: 2px;
-	margin: 12px auto;
+	margin: 24px auto;
 	background: #cb2027;
 }
 .sections > ul > li > article {
