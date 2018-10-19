@@ -1,26 +1,64 @@
 <footer class="footer">
-	<section>
-		<a href="/"><img src="/images/logos/logo.svg" alt="Custom Cut Shirts Logo" class="footer-logo"/></a>
+	<div>
+		<section class="contact">
+			<a href="/">
+				<img src="/images/logos/logo-h.svg" alt="Custom Cut Shirts Logo" class="footer-logo"/>
+			</a>
+			
+			<p>
+				<img src="/images/icons/marker-white.svg" alt="" />
+				<span>{{ site.address1 }}<br />{{ site.address2 }}</span>
+			</p>
+			<p>
+				<img src="/images/icons/phone-white.svg" alt="" />
+				
+				<a href="tel:14352362369">{{ site.phone }}</a>
+			</p>
+			<p>
+				<img src="/images/icons/email-white.svg" alt="" />
+				<a href="mailto:{{ site.email }}">{{ site.email }}</a>
+			</p>
+			<p>
+				<img src="/images/icons/chat-white.svg" alt="" />
+				<a href="m.me/truetakeofficial" target="_blank">m.me/truetakeofficial</a>
+			</p>
+			<p>
+				<img src="/images/icons/fax-white.svg" alt="" />
+				{{ site.fax }}
+			</p>
+		</section>
 		
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
-		<div class="social">
-			<a href="{{ site.facebook }}" target="_blank"><span class="fa fa-facebook-official"></span></a>
-			<a href="{{ site.instagram }}" target="_blank"><span class="fa fa-instagram"></span></a>
+		
+		<section class="navigation">
+			<h4>Navigation</h4>
+			{% include nav.html %}
+		</section>
+		
+		
+		<section class="social">
+			<h4>Social</h4>
+			<a href="{{ site.facebook }}" target="_blank">
+				<img src="/images/icons/facebook-white.svg" alt="" />
+			</a>
+			<a href="{{ site.instagram }}" target="_blank">
+				<img src="/images/icons/instagram-white.svg" alt="" />
+			</a>
+			<br />
+			<a href="{{ site.youtube }}" target="_blank">
+				<img src="/images/icons/youtube-white.svg" alt="" />
+			</a>
+			<a href="{{ site.twitter }}" target="_blank">
+				<img src="/images/icons/twitter-white.svg" alt="" />
+			</a>
 			<!--<a href="{{ site.pinterest }}" target="_blank"><span class="fa fa-pinterest"></span></a>-->
-			<!--<a href="{{ site.twitter }}" target="_blank"><span class="fa fa-twitter"></span></a>-->
+			
 			<!--<a href="#" class="snapchat-button"><span class="fa fa-snapchat-square"></span></a>-->
-		</div>
+		</section>
 		
-
 		
-		<p class="copyright">© Copyright {{ 'now' | date: "%Y" }}. {{ site.name }}. All Rights Reserved.</p>
 		
-		<div class="contact">
-			<p>{{ site.name }}</p>
-			<p><i class="fa fa-map-marker" aria-hidden="true"></i>{{ site.address1 }}<br />{{ site.address2 }}</p>
-			<p><i class="fa fa-phone" aria-hidden="true"></i>{{ site.phone }}</p>
-			<p><i class="fa fa-envelope" aria-hidden="true"></i>{{ site.email }}</p>
-			<p><i class="fa fa-fax" aria-hidden="true"></i>{{ site.fax }}</p>
-		</div>
-	</section>
+	</div>
+	<div class="copyright">
+		<p>© Copyright {{ 'now' | date: "%Y" }}. {{ site.name }}. All Rights Reserved.</p>
+	</div>
 </footer>
