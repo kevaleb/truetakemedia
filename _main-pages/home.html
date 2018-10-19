@@ -1,95 +1,69 @@
 ---
 layout: default
 title: True Take Media
-headline: 'We Use High Quality Video & Targeted Advertising <strong>To Help Grow Your Business</strong>'
+headline: 'We Grow Your Business <br />With Video Advertising'
 permalink: /
 nav_title: Home
 nav_class: /
 nav_order: .5
 hide_from_nav: true
 icon_path: /uploads/wine.png
-banner_image_path: /images/banners/workspace.jpg
-banner_vid_image_path:
+banner_headline: 'We Grow Your Business <br />With Video Advertising'
+banner_logo_image: /images/logos/logo.svg
+banner_image_path: /videos/background-videos/filming.png
+banner_video_path: /videos/background-videos/filming.mp4
+banner_video_poster_path: /videos/background-videos/filming.png
 banner_vid_path:
-sections:
-  - title: We produce high quality professional videos
-    icon: /images/icons/film-strip-red.svg
-    description: <p>That tell your story, Highlight products, Promote special offers, Teach people things they didn’t know and a whole lot more.</p>
-    url: /videos/
-    button_text: Learn More
-  - title: We use Facebook advertising to get you in front of your customers and drive real business results.
-    icon: /images/icons/money-red.svg
-    description: <p>Like Increased Brand Awareness, Lead Generation, Getting Customers Through Your Doors, Closing More Deals, Retaining More Customers.</p>
-    url: /videos/
-    button_text: Learn More
+youtube_video_id: rUr-6BvCFXQ
 features:
-  - feature_title: We use Facebook advertising to get you in front of your customers and drive real business results like
-    feature_image_path: /images/illustrations/features/video.png
-    feature_description_html: '<ul>
-	<li>Tell your story</li>
-	<li>Highlight products</li>
-	<li>Promote special offers</li>
-	<li>Teach people things they didn’t know.</li>
-</ul>'
-    button_url: '#video-grid'
+  - feature_title: High Quality Video
+    feature_image_path:
+    bg_image: /images/banners/products.jpg
+    feature_description_html: '<p>Video is the most efficient way to communicate your message and we specialize in producing high quality video ads that convert strangers into customers.</p>'
+    button_url:
+    button_text:
+  - feature_title: Affordable Advertising
+    feature_image_path: 
+    bg_image: /images/banners/phone-card.jpg
+    feature_description_html: '<p>We understand that advertising is only worth it when it generates a positive ROI for your business.</p>'
+    button_url: #
     button_text: Learn More
-  - feature_title: We use Facebook advertising to get you in front of your customers and drive real business results like
-    feature_image_path: /images/illustrations/features/fb_ad.png
-    feature_description_html: '<ul>
-	  	<li>Increased Brand Awareness</li>
-	  	<li>Lead Generation</li>
-	  	<li>Getting Customers Through Your Doors</li>
-	  	<li>Closing More Deals</li>
-	  	<li>Retaining More Customers</li>
-	  </ul>'
+  - feature_title: Convenient Workflow
+    feature_image_path:
+    bg_image: /images/banners/white-board.jpg
+    feature_description_html: '<p>You have million things going on at once and it’s our job to see each project through to completion with minimum time investment on your part.</p>'
     button_url: #
     button_text: Learn More
 ---
-<div class="banner" style="background-image: url('{{ page.banner_image_path }}');">
-	<video playsinline autoplay muted loop poster="{{ page.banner_vid_image_path }}" id="bgvid">
-	    <!--<source src="polina.webm" type="video/webm">-->
-	    <source src="{{ page.banner_vid_path }}" type="video/mp4">
-	</video>
+
+{% include banner.html %}
+<!--<div class="banner" style="background-image: url('{{ page.banner_image_path }}');">
 	<hgroup>
+		<img src="/images/logos/logo.svg" alt="" />
 		<h1>{{ page.headline }}</h1>
-		<a href="#cta" class="button">Request A Quote</a>
+		<a href="#cta" class="button">Get A Quote</a>
 	</hgroup>
 	
 	<img src="/images/banners/banner-bottom.svg" alt="" class="banner-bottom" />
+</div>-->
+
+<div class="ad-icons">
+	<img src="/images/icons/facebook.svg" alt="" />
+	<img src="/images/icons/instagram.svg" alt="" />
+	
+	<img src="/images/icons/google.svg" alt="" />
+	<img src="/images/icons/youtube.svg" alt="" />
+	
+	<h2>Generate leads, drive online sales <br /> & get customers into your store? </h2>
+	
+	<!--{% include video-block.html %}-->
 </div>
 
-{% include sections.html %}
 
 
-<h2 style="text-align: center;">Some Of Our Work</h2>
-{% assign videos = site.videos | where:"featured","true" %}
-{% include video-grid.html %}
+{% include alternating.html %}
 
 
-<!--<div class="we-love-wineries">
-	<section>
-		<img src="/images/illustrations/we-love-wine-2.svg" alt="" />
-		<h3>Are you a winery?</h3>
-		<a href="/wineries/" class="button">Click Here For Special Treatment</a>
-	</section>
-</div>-->
-
-<!--<div class="alternating" id="alternating">
-	{% for feature in page.features %}
-	<div>
-		<img src="{{ feature.feature_image_path }}" alt=""/>
-		<hgroup class="">
-			<h2 class="editable">{{ feature.feature_title }}</h2>
-			<article>
-				{{ feature.feature_description_html }}
-			</article>
-			{% unless feature.button_url == nil %}
-			<a href="{{ feature.button_url }}" class="button">{{ feature.button_text }}</a>
-			{% endunless %}
-		</hgroup>
-	</div>
-	{% endfor %}
-</div>-->
 
 
 
