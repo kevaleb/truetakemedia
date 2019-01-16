@@ -1,14 +1,14 @@
 ---
 layout: default
 title: True Take Media
-headline: 'We Grow Your Business <br />With Video Advertising'
+headline: 'We Specialize In <br />Online Video Advertising'
 permalink: /
 nav_title: Home
 nav_class: /
 nav_order: .5
 hide_from_nav: true
 icon_path: /uploads/wine.png
-banner_headline: 'We Grow Your Business <br />With Video Advertising'
+banner_headline: '<strong>Online Video Advertising</strong>'
 banner_logo_image: /images/logos/logo.svg
 banner_image_path: /videos/background-videos/filming.png
 banner_video_path: /videos/background-videos/filming.mp4
@@ -16,22 +16,22 @@ banner_video_poster_path: /videos/background-videos/filming.png
 banner_vid_path:
 youtube_video_id: rUr-6BvCFXQ
 features:
-  - feature_title: High Quality Video
+  - feature_title: It's Affordable
     feature_image_path:
     bg_image: /images/banners/products.jpg
-    feature_description_html: '<p>Video is the most efficient way to communicate your message and we specialize in producing high quality video ads that convert strangers into customers.</p>'
+    feature_description_html: '<p>This is all quite new, so most companies aren&#39;t taking it seriously yet... Which is great news for us because that means prices are still low.</p>'
     button_url:
     button_text:
-  - feature_title: Affordable Advertising
+  - feature_title: Customers Are Paying Attention
     feature_image_path: 
     bg_image: /images/banners/phone-card.jpg
-    feature_description_html: '<p>We understand that advertising is only worth it when it generates a positive ROI for your business.</p>'
+    feature_description_html: '<p>All your customers are actively engaged on these platforms and we can focus that attention on your store.</p>'
     button_url: #
     button_text: Learn More
-  - feature_title: Convenient Workflow
+  - feature_title: Reach anyone you want
     feature_image_path:
-    bg_image: /images/banners/white-board.jpg
-    feature_description_html: '<p>You have million things going on at once and it’s our job to see each project through to completion with minimum time investment on your part.</p>'
+    bg_image: /images/alternating/targeting.jpg
+    feature_description_html: '<p>With precise targeting we can drop a pin on your store and make sure everyone within a 5 mile radius sees your ads.</p>'
     button_url: #
     button_text: Learn More
 ---
@@ -54,11 +54,49 @@ features:
 	<img src="/images/icons/google.svg" alt="" />
 	<img src="/images/icons/youtube.svg" alt="" />
 	
-	<h2>Generate leads, drive online sales <br /> & get customers into your store? </h2>
+	<h2><strong>We do paid advertising campaigns</strong><br />
+	(NOT social media management!)</h2>
 	
 	<!--{% include video-block.html %}-->
 </div>
 
+
+<ul class="blogposts wide">
+	{% for post in site.posts %}
+		<li>
+			<!--<div class="videoBlock">
+				<div class="videoWrapper">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/{{ post.youtube_video_id }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="none"></iframe>
+				</div>
+				<img src="/images/other/video_shadow.svg" alt="video shadow" />
+			</div>-->
+			<a href="{{ post.url }}">
+				<div class="postbanner" style="background-image: url('{{ post.banner_image_path }}');">
+					<img src="/images/icons/play.svg" alt="" />
+				</div>
+				<h2>{{ post.banner_headline | strip_html }}</h2>
+				<p>{{ post.excerpt | strip_html | truncate: 120, '...' }}</p>
+				<span class="button">Read More</span>
+			</a>
+		</li>
+	{% endfor %}
+</ul>
+
+<div class="testimonial-video">
+	<h2>Bee's Marketplace Grew From <br /><strong>4% to 18% Yearly Growth</strong></h2>
+	<div class="videoBlock">
+		<div class="videoWrapper">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/I-l-iyw7jtA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="none"></iframe>
+		</div>
+		<img src="/images/other/video_shadow.svg" alt="video shadow" />
+	</div>
+	<!--<article>
+		<p>When we started working with Bee's marketplace their growth had slowed to 4%. Within the first year they had grown 12% and by the end of the second they had grown 18%.</p>
+	</article>
+	<a href="#" class="button">Learn More</a>-->
+</div>
+	
+	
 
 
 {% include alternating.html %}

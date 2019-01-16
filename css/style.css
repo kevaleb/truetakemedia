@@ -91,7 +91,8 @@ article > hgroup {
 article > h1,
 article > h2,
 article > h3 {
-	margin: 0 0 36px 0;
+	margin: 0 0 24px 0;
+	padding: 24px 0 0 0;
 }
 article > blockquote > p {
 	/*margin: 72px;*/
@@ -108,11 +109,11 @@ article img {
 	display: block;
 	width: auto;
 	max-width: 100%;
-	margin: 12px 0;
+	margin: 0;
 }
 article p {
 	position: relative;
-	margin: 0 0 48px 0;
+	margin: 0 0 24px 0;
 	overflow: hidden;
 }
 article > h3+p {
@@ -656,7 +657,7 @@ header.open > .menu-button > span.three {
 	height: 100%;
 	vertical-align: middle;
 }
-.banner.dark:after {
+/*.banner.dark:after {
 	content: '\00a0';
 	position: absolute;
 	z-index: 100;
@@ -666,7 +667,7 @@ header.open > .menu-button > span.three {
 	height: 100%;
 	background: rgba(64,40,40,.5);
 	background: rgba(0,0,0,.5);
-}
+}*/
 
 
 /* @group H Group */
@@ -805,8 +806,8 @@ header.open > .menu-button > span.three {
 	position: absolute;
 	z-index: 1000;
 	left: 50%;
-	top: 0;
-	height: 100%;
+	top: 10%;
+	height: 80%;
 	margin: 0 0 0 48px;
 }
 
@@ -904,7 +905,9 @@ header.open > .menu-button > span.three {
 	background-position: center;
 	border-top: 12px solid #fff;
 }
-
+.alternating > div > .bg-img.blurry {
+	filter: blur(3px);
+}
 
 
 
@@ -925,6 +928,8 @@ header.open > .menu-button > span.three {
 .alternating > div.bg:nth-of-type(even) > .bg-img:before {
 	background: linear-gradient(to left, #000000 0%, rgba(0, 0, 0, 0) 72%);
 }
+
+
 
 
 
@@ -1056,39 +1061,53 @@ video#bgvid {
 
 
 
-/* @group Video Block */
+/* @group VideoBlock */
 
-#video-block {
+.videoBlock {
 	position: relative;
-	z-index: 1000000000000000;
+	z-index: 999999;
 	max-width: 720px;
-	margin: 0px auto 96px auto;
-	padding: 0 0 48px 0;
+	margin: 0px auto 24px auto;
+	padding: 24px 24px 0 24px;
 }
-#video-block > img {
+.videoBlock > img {
 	position: absolute;
-	z-index: -100;
-	left: 0;
-	bottom: 24px;
+	width: 90%;
+	z-index: -10;
+	left: 5%;
+	bottom: -6%;	
 }
-
-
-
 @media all and (max-width: 720px) {
 
-.banner > hgroup > img {
-	display: block;
+.videoBlock {
+	
 }
 
-#video-block {
-	margin: 0px 0 24px 0;
-	padding: 24px;
-}
-#video-block > img {
-	left: 24px;
-	bottom: 6px;
 }
 
+/* @end */
+
+
+
+
+
+
+
+/* @group Video Wrapper */
+
+.videoWrapper {
+	/*box-sizing: content-box;*/
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 0px;
+	height: 0;
+}
+.videoWrapper > iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 /* @end */
@@ -1208,6 +1227,11 @@ video#bgvid {
 }
 .ad-icons > h2 {
 	margin: 24px 0 48px 0;
+}
+
+
+.ad-icons.large > img {
+	max-width: 150px;
 }
 
 
@@ -1749,31 +1773,7 @@ video#bgvid {
 
 
 
-/* @group Guarantee */
 
-.guarantee {
-	padding: 96px 24px 0 24px;
-	text-align: center;
-}
-.guarantee > hgroup {
-	max-width: 480px;
-	margin: 0 auto;
-	padding: 36px;
-	border: 5px solid #000;
-	border-radius: 12px;
-}
-.guarantee > hgroup > h2 {
-	font: 400 48px/60px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	letter-spacing: 0;
-}
-.guarantee > hgroup > p {
-	font: 200 18px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-}
-.guarantee > h1 {
-	
-}
-
-/* @end */
 
 
 
@@ -2634,53 +2634,74 @@ video#bgvid {
 .blogposts {
 	max-width: 800px;
 	margin: 0 auto;
-	padding: 96px 0px;
+	padding:  0 0 96px 0px;
 	list-style: none;
 	text-align: left;
+	text-align: center;
+}
+.blogposts.wide {
+	max-width: none;
 }
 .blogposts > li {
 	display: inline-block;
-	max-width: 48%;
+	width: 100%;
+	max-width: 350px;
 	margin: 0 -.25em 4% 0;
+	padding: 0px;
 	background: #fff;
 	/*border: 1px solid #ccc;*/
 	border-top: none;
 	vertical-align: top;
+	text-align: left;
 }
-.blogposts > li:nth-last-of-type(even) {
-	margin-left: 4%;
+.blogposts > li > .videoBlock {
+	margin-bottom: 24px ;
+}
+.blogposts > li > .videoBlock > img {
+	/*bottom: -12px;*/
 }
 .blogposts > li > a {
+	position: relative;
 	display: block;
-	padding: 24px;
+	padding: 12px;
 	text-decoration: none;
+	border: 1px solid #ccc;
+	text-align: center;
 }
 .blogposts > li > a > .postbanner {
-	height: 150px;
-	margin: -24px -24px 24px -24px;
+	height: 200px;
+	margin: -13px -13px 24px -13px;
+	border-bottom: 3px solid #d75151;
 	background-color: #000;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+	text-align: center;
+}
+.blogposts > li > a > .postbanner > img {
+	width: 48px;
+	margin: 76px 0 0 0;
 }
 .blogposts > li > a > h2 {
-	margin: 0 0 12px;
-	font: 900 18px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	color: #333;
+	margin: 0 0 12px 0;
+	font: 900 20px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #000;
 }
-.blogposts > li > a > h2:after {
+/*.blogposts > li > a > h2:after {
 	content: '\00a0';
 	display: block;
-	width: 24px;
-	height: 2px;
-	margin: 12px 0 0 0;
-	background: #d75151;
-}
+	width: 36px;
+	height: 3px;
+	margin: 12px auto;
+	border-radius: 1px;
+	/*background: #d75151;*!/
+	background-color: #000;
+}*/
 .blogposts > li > a > p {
 	/*height: 96px;*/
 	padding: 0;
 	overflow: hidden;
-	font: 14px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font: 300 14px/20px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	color: #666;
 	text-overflow: ellipsis;
 }
@@ -2702,25 +2723,6 @@ video#bgvid {
 
 
 
-/* @group Gallery */
-
-.content .gallery {
-	text-align: center;
-	overflow: hidden;
-	padding: 48px 0 0 0;
-	/*margin: 0 auto;*/
-}
-.gallery > a {
-	display: inline-block;
-	float: left;
-	width: 33.333333%;
-	height: 240px;
-	/*margin: 0 -.25em 0 0;*/
-	background-size: cover;
-	background-position: center;
-}
-
-/* @end */
 
 
 
@@ -2730,49 +2732,8 @@ video#bgvid {
 
 
 
-/* @group Signup */
 
-.signup {
-	padding: 24px 0 96px 0;
-	text-align: center;
-}
-.signup > div > div {
-	display: inline-block;
-	/*margin: 0 -.25em 0 0;*/
-	vertical-align: top;
-}
-.signup > div > .mc-field-group {
-	position: relative;
-	white-space: nowrap;
-	border: 1px solid #ccc;
-	/*border-right: none;*/
-}
-.signup > div > .mc-field-group > label {
-	position: absolute;
-	left: 12px;
-	height: 48px;
-	font:900 12px/53px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-}
-.signup > div > .mc-field-group > label:after {
-	content: ':';
-}
-.signup > div > .mc-field-group > input {
-	width: 250px;
-	height: 50px;
-	padding-left: 60px;
-	font: 400 14px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-}
-.signup > div > .clear {
-	height: 50px;
-}
-.signup > div > .clear > .button {
-	display: inline-block;
-	height: 50px;
-	padding: 10px 24px;
-	font: 200 14px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-}
 
-/* @end */
 
 
 
@@ -2938,39 +2899,9 @@ video#bgvid {
 
 
 
-/* @group Map Address */
 
-.map-address {
-	padding-top: 150px!important;
-	text-align: center;
-}
-.map-address > p {
-	font: 200 24px/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-}
-.map-address > p > strong {
-	font: 700 36px/48px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-}
 
-/* @end */
 
-/* @group Map */
-#map {
-	position: relative;
-    height:72%;
-    width: 100%;
-}
-.gm-style-iw * {
-    display: block;
-    /*width: 100%;*/
-}
-.gm-style-iw h4, .gm-style-iw p {
-    margin: 0;
-    padding: 0;
-}
-.gm-style-iw a {
-    color: #4272db;
-}
-/* @end */
 
 
 
@@ -3209,13 +3140,6 @@ video#bgvid {
 
 
 
-/* @group Quote */
-
-.quote {
-	text-align: center;
-}
-
-/* @end */
 
 
 
@@ -3229,71 +3153,15 @@ video#bgvid {
 
 
 
-/* @group Webinar Form */
-
-.webinar-form {
-	text-align: center;
-	
-}
-.webinar-form > section {
-	max-width: 480px;
-	margin: 0 auto;
-	padding: 36px;
-}
-.webinar-form > section > h2 {
-	margin: 0 0 12px 0;
-	font: 900 24px/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	text-transform: uppercase;
-}
-.webinar-form > section > h3 {
-	margin: 0 0 48px 0;
-	font: 400 20px/20px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	text-transform: capitalize;
-	color: #666;
-}
-
-/* @end */
 
 
 
 
 
 
-/* @group Snapchat Overlay */
 
-.snapchat-overlay {
-	display: none;
-	position: fixed;
-	left: 0;
-	top: 0;
-	z-index: 10000000000000000;
-	width: 100%;
-	height: 100%;
-	background: rgba(0,0,0,.84)!important;
-	cursor: pointer;
-}
-.snapchat-overlay.visible {
-	display: block;
-}
-.snapchat-overlay:before {
-	content: 'X';
-	position: absolute;
-	display: inline-block;
-	width: 48px;
-	height: 48px;
-	top: 12px;
-	right: 12px;
-	font: 200 36px/48px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	color: #fff;
-}
-.snapchat-overlay > img {
-	position: relative;
-	display: block;
-	top: 50%;
-	width: 240px;
-	margin: -120px auto 0 auto;
-}
-/* @end */
+
+
 
 
 
@@ -3444,5 +3312,16 @@ video#bgvid {
 }
 /* @end */
 
+/* @group testimonial-video */
+
+.testimonial-video {
+	text-align: center;
+	padding: 0 24px 96px 24px;
+}
+.testimonial-video > h2 {
+	margin: 0 0 12px 0;
+}
 
 
+
+/* @end */

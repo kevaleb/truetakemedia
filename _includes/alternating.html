@@ -42,7 +42,7 @@
 			{% endunless %}
 		</hgroup>
 		
-		<div class="bg-img" style="background-image: url('{{ feature.bg_image }}');"></div>
+		<div class="bg-img {% if feature.feature_image_path %}blurry{% endif %}" style="background-image: url('{{ feature.bg_image }}');"></div>
 	</div>
 	{% endfor %}
 </div>

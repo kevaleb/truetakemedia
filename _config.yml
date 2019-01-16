@@ -31,18 +31,6 @@ objectives:
 collections:
   main-pages:
     output: true
-  offer-pages:
-    output: true
-  customers:
-    output: true
-  industries:
-    output: true
-  audience-reports:
-    output: true
-  videos:
-    output: false
-  video-types:
-    output: false
   
     
 defaults:
