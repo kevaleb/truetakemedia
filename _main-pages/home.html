@@ -16,22 +16,22 @@ banner_video_poster_path: /videos/background-videos/filming.png
 banner_vid_path:
 youtube_video_id: rUr-6BvCFXQ
 features:
+  - feature_title: Reach anyone you want
+    feature_image_path: /images/illustrations/map.png
+    bg_image: /images/backgrounds/hex.png
+    feature_description_html: '<p>We can drop a pin on your store and make sure everyone within a radius sees your ads.</p>'
+    button_url: #
+    button_text: Learn More	
   - feature_title: It's Affordable
-    feature_image_path:
-    bg_image: /images/banners/products.jpg
-    feature_description_html: '<p>This is all quite new, so most companies aren&#39;t taking it seriously yet... Which is great news for us because that means prices are still low.</p>'
+    feature_image_path: /images/illustrations/money.png
+    bg_image: /images/backgrounds/blue-boxes.png
+    feature_description_html: '<p>Most companies aren&#39;t taking advantage of this opportunity yet... Which is great news for us because that means prices are still low.</p>'
     button_url:
     button_text:
   - feature_title: Customers Are Paying Attention
-    feature_image_path: 
-    bg_image: /images/banners/phone-card.jpg
+    feature_image_path: /images/banners/phone-card.jpg
+    bg_image: 
     feature_description_html: '<p>All your customers are actively engaged on these platforms and we can focus that attention on your store.</p>'
-    button_url: #
-    button_text: Learn More
-  - feature_title: Reach anyone you want
-    feature_image_path:
-    bg_image: /images/alternating/targeting.jpg
-    feature_description_html: '<p>With precise targeting we can drop a pin on your store and make sure everyone within a 5 mile radius sees your ads.</p>'
     button_url: #
     button_text: Learn More
 ---
@@ -61,8 +61,9 @@ features:
 </div>
 
 
-<ul class="blogposts wide">
+<ul class="featured-blog-posts">
 	{% for post in site.posts %}
+	{% if post.featured == true %}
 		<li>
 			<!--<div class="videoBlock">
 				<div class="videoWrapper">
@@ -72,34 +73,38 @@ features:
 			</div>-->
 			<a href="{{ post.url }}">
 				<div class="postbanner" style="background-image: url('{{ post.banner_image_path }}');">
-					<img src="/images/icons/play.svg" alt="" />
 				</div>
-				<h2>{{ post.banner_headline | strip_html }}</h2>
-				<p>{{ post.excerpt | strip_html | truncate: 120, '...' }}</p>
-				<span class="button">Read More</span>
+				<hgroup>
+					<img src="/images/icons/play.svg" alt="" />
+					<h2>{{ post.banner_headline | strip_html }}</h2>
+				</hgroup>
 			</a>
 		</li>
+	{% endif %}
 	{% endfor %}
 </ul>
+	
+{% include alternating.html %}
 
-<div class="testimonial-video">
-	<h2>Bee's Marketplace Grew From <br /><strong>4% to 18% Yearly Growth</strong></h2>
-	<div class="videoBlock">
+<div class="bees-case-study">
+	
+	<img src="/images/home/bees-growth.jpg" alt="" />
+	<section>
+		<h2>18% Annual Growth</h2>
+		<p>How we took Bee's Marketplace from a 4% to an 18% annual growth rate and sold an extra 3 million dollars worth of groceries.</p>
+		<a href="/blog/bees-marketplace/">See How We Did It</a>
+	</section>
+	<!--<div class="videoBlock">
 		<div class="videoWrapper">
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/I-l-iyw7jtA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="none"></iframe>
 		</div>
 		<img src="/images/other/video_shadow.svg" alt="video shadow" />
-	</div>
+	</div>-->
 	<!--<article>
 		<p>When we started working with Bee's marketplace their growth had slowed to 4%. Within the first year they had grown 12% and by the end of the second they had grown 18%.</p>
 	</article>
 	<a href="#" class="button">Learn More</a>-->
 </div>
-	
-	
-
-
-{% include alternating.html %}
 
 
 

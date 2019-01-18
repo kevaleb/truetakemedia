@@ -344,6 +344,7 @@ header > .menu-button {
 
 
 header > div > nav {
+	position: relative;
 	float: right;
 }
 header > div > nav > a {
@@ -400,6 +401,17 @@ header > div > nav > a.cta:hover {
 	color: #000;
 }
 
+
+header > div > nav > a.hover {
+	position: absolute;
+	top: 5px;
+	right: 15px;
+	padding: 1px 6px 2px 6px;
+	border-radius: 3px 3px 0 0;
+	background: #fff;
+	color: #eb363d;
+	font: 200 12px/12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
 
 
 @media all and (max-width: 960px) {
@@ -549,7 +561,6 @@ header > div > nav > a.cta {
 }
 
 
-
 header > div > nav > a.snipcart-checkout {
 	position: fixed;
 	top: 12px;
@@ -635,7 +646,7 @@ header.open > .menu-button > span.three {
 	color: #fff;
 	text-align: center;
 	white-space: nowrap;
-	box-shadow: 0 100px 50px -50px rgba(0,0,0,.5) inset;
+	
 }
 .banner.small {
 	height: 60%;
@@ -657,7 +668,7 @@ header.open > .menu-button > span.three {
 	height: 100%;
 	vertical-align: middle;
 }
-/*.banner.dark:after {
+.banner.dark:after {
 	content: '\00a0';
 	position: absolute;
 	z-index: 100;
@@ -667,7 +678,8 @@ header.open > .menu-button > span.three {
 	height: 100%;
 	background: rgba(64,40,40,.5);
 	background: rgba(0,0,0,.5);
-}*/
+	box-shadow: 0 50px 150px -50px rgba(0,0,0,1) inset;
+}
 
 
 /* @group H Group */
@@ -780,8 +792,15 @@ header.open > .menu-button > span.three {
 
 
 
+
+
+
+
+
+
 /* @group ALTERNATING */
 .alternating {
+	margin: 0;
 	padding: 0;
 }
 .alternating > h2 {
@@ -830,10 +849,12 @@ header.open > .menu-button > span.three {
 }
 .alternating > div > hgroup > article > h2 {
 	margin: 0 0 24px;
-	font-weight: 400;
+	font: 600 22px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	color: inherit;
+	text-transform: uppercase;
 }
 .alternating > div > hgroup > article > p {
+	font: 200 24px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	margin: 0 0 12px 0;
 	color: inherit;
 }
@@ -899,15 +920,16 @@ header.open > .menu-button > span.three {
 	left: -5%;
 	width: 110%;
 	height: 100%;
-	transform: rotate(-3deg);
+	transform: rotate(-1deg);
 	background-color: #f2f2f2;
 	background-size: cover;
 	background-position: center;
-	border-top: 12px solid #fff;
+	border-top: 24px solid #fff;
+	box-shadow: 0 0 24px rgba(0,0,0,.06)inset;
 }
-.alternating > div > .bg-img.blurry {
+/*.alternating > div > .bg-img.blurry {
 	filter: blur(3px);
-}
+}*/
 
 
 
@@ -916,9 +938,9 @@ header.open > .menu-button > span.three {
 	z-index: 10000;
 }
 .alternating > div.bg > hgroup > article {
-	color: #fff;
+	color: #000;
 }
-.alternating > div.bg > .bg-img:before {
+/*.alternating > div.bg > .bg-img:before {
 	content: '\00a0';
 	display: block;
 	width: 100%;
@@ -927,7 +949,7 @@ header.open > .menu-button > span.three {
 }
 .alternating > div.bg:nth-of-type(even) > .bg-img:before {
 	background: linear-gradient(to left, #000000 0%, rgba(0, 0, 0, 0) 72%);
-}
+}*/
 
 
 
@@ -985,7 +1007,7 @@ header.open > .menu-button > span.three {
 }
 
 
-
+.alternating > div:nth-of-type(even) > hgroup > article,
 .alternating > div > hgroup > article {
 	max-width: none;
 }
@@ -2670,7 +2692,7 @@ video#bgvid {
 }
 .blogposts > li > a > .postbanner {
 	height: 200px;
-	margin: -13px -13px 24px -13px;
+	margin: -12px -12px 24px -12px;
 	border-bottom: 3px solid #d75151;
 	background-color: #000;
 	background-size: cover;
@@ -2724,20 +2746,96 @@ video#bgvid {
 
 
 
+/* @group Featured Blog Posts */
+
+.featured-blog-posts {
+	padding:  0px;
+	list-style: none;
+	text-align: left;
+	text-align: center;
+	overflow: hidden;
+}
+.featured-blog-posts > li {
+	float: left;
+	width: 50%;
+	margin: 0;
+	padding: 0px;
+	background: #fff;
+	/*border: 1px solid #ccc;*/
+	border-top: none;
+	vertical-align: top;
+	text-align: left;
+}
+.featured-blog-posts > li > a {
+	position: relative;
+	display: block;
+	/*padding: 12px;*/
+	text-decoration: none;
+	text-align: center;
+}
+.featured-blog-posts > li > a > .postbanner {
+	height: 48vh;
+	margin: 0;
+	/*border-bottom: 3px solid #d75151;*/
+	background-color: #000;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	text-align: center;
+}
+.featured-blog-posts > li > a > hgroup {
+	position: absolute;
+	left: 0;
+	bottom: 0px;
+	z-index: 100;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 100%) rgba(0,0,0,0);
+}
+.featured-blog-posts > li > a > hgroup img {
+	width: 96px;
+	margin: 0;
+}
+.featured-blog-posts > li > a > hgroup > h2 {
+	
+	width: 100%;
+	margin: 0;
+	padding: 36px;
+	font: 900 36px/42px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #fff;
+	text-align: center;
+	text-shadow: 0 1px 2px rgba(0,0,0,.72);
+}
+.featured-blog-posts > li > a > p {
+	/*height: 96px;*/
+	padding: 0;
+	overflow: hidden;
+	font: 300 14px/20px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #666;
+	text-overflow: ellipsis;
+}
+.featured-blog-posts > li > a > .button {
+	display: none;
+	margin: 12px 0 0 0;
+	padding: 3px 12px;
+	font: 900 11px/16px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	letter-spacing: 0;
+}
 
 
+@media all and (max-width: 540px) {
 
+.featured-blog-posts > li {
+	width: 100%;
+}
+.featured-blog-posts > li > a > .postbanner {
+	height: 64vh;
+}
+.featured-blog-posts > li > a > hgroup > h2 {
+	font: 900 24px/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
 
+}
 
-
-
-
-
-
-
-
-
-
+/* @end */
 
 
 
@@ -3312,14 +3410,74 @@ video#bgvid {
 }
 /* @end */
 
-/* @group testimonial-video */
 
-.testimonial-video {
+
+
+
+
+
+/* @group Bee's Case Study*/
+
+.bees-case-study {
 	text-align: center;
-	padding: 0 24px 96px 24px;
+	padding: 6vw 24px;
+	background: #eb363d;
+	text-align: center;
+	white-space: nowrap;
 }
-.testimonial-video > h2 {
+.bees-case-study > img {
+	display: inline-block;
+	vertical-align: middle;
+	max-width: 50%;
+}
+.bees-case-study > section {
+	display: inline-block;
+	width: 480px;
+	max-width: 50%;
+	color: #fff;
+	vertical-align: middle;
+	text-align: center;
+	white-space: normal;
+}
+.bees-case-study > section > h2 {
+	font: 900 36px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: uppercase;
 	margin: 0 0 12px 0;
+	color: inherit;
+}
+.bees-case-study > section > p {
+	color: #fff;
+}
+.bees-case-study > section > a {
+	display: inline-block;
+	margin: 24px 0 0 0;
+	padding: 12px 24px;
+	border-radius: 3px;
+	background: #fff;
+	text-decoration: none;
+	font: bold 18px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #eb363d;
+}
+
+
+@media all and (max-width: 540px) {
+
+.bees-case-study {
+	padding: 9vh 3vw;
+}
+.bees-case-study > img {
+	display: block;
+	width: 90%;
+	max-width: none;
+	margin: 0 auto;
+}
+.bees-case-study > section {
+	display: block;
+	width: 100%;
+	max-width: none;
+	margin: 60px 0 0 0;
+}
+
 }
 
 

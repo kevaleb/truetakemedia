@@ -4,5 +4,6 @@
 	{% for item in navitems %}
 		<a href="{{ item.url }}" {% if page.url contains item.nav_class %}class="selected"{% endif %} {% if item.hide_from_nav == true %}style="display: none;"{% endif %}>{{ item.nav_title }}</a>
 	{% endfor %}
-	<a href="#quote-form" class="cta">Get A Quote</a>
+	<!--<a href="tel:14352362369" class="hover">(435) 236-2369</a>-->
+	<a href="#quote-form" class="cta">Request A Demo</a>
 </nav>
