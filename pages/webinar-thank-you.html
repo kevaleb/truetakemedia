@@ -10,14 +10,37 @@ hide_from_nav: true
 ---
 <div class="banner small">
 	<hgroup>
-		<h2>Congratulations! It Worked...</h2>
-		<h1>Before we can send you a quote... we need to spend a few minutes learning what we can do for you.</h1>
+		{% assign today = 'now' | date: '%s' %}
+			{% assign single_day = 86400 %}
+			{% assign today_number = 'now' | date: '%u' | plus: 0 %}
+		
+			{% if  today_number == 2 %}  
+			
+			  <h1> The Presentation Starts Tomorrow</h1>
+			  <h2>{{ today | plus: single_day | date: '%b %d, %Y' }} @ 2:00PM</h2>
+				
+			{% elsif  today_number == 3 %}  
+			
+			    <h1>The Presentation Starts Today</h1>
+				<h2>{{ today | date: '%b %d, %Y' }} @ 2:00PM</h2>
+			
+			{% else %}
+			
+			    {% assign days_until_next = 9 | minus: today_number  %}
+			    {% assign days_unix = days_until_next | times: single_day  %}
+			    <h1>The Presentation Starts Wednesday</h1>
+				<h2>{{ today | plus: days_unix  | date: '%b %d, %Y' }} @ 2:00PM</h2>
+			
+			{% endif %}
 	</hgroup>
+	<img src="/images/banners/banner-bottom.svg" alt="" class="banner-bottom" />
 </div>
 
-<article style="max-width: 480px; margin: 0 auto; text-align: center;">
-	<h3>We'll be in touch soon to schedule our discovery meeting.</h3>
-	<p></p>
-	<p>If you have any questions before then or want to talk to someone right now feel free to contact us at...</p>
-	<p style="text-align: center;"><strong>(435) 212-3705</strong> or <strong>kevin@truetakemedia.com</strong></p>
+<article style="text-align: center;">
+	<h2>Check your email for a link to the online presentation.</h2>
+	<p>If you want a personalized presentation or just want to talk to a salesman give me a call, send me an email or schedule a meeting below.</p>
+	<p>I'd love to talk about how we can use video advertising to help grow your business.</p>
+	<p style="text-align: center;"><strong>(435) 680-7669</strong> <br /><strong>kevin@truetakemedia.com</strong></p>
 </article>
+
+
