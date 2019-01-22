@@ -9,28 +9,29 @@ nav_order: .5
 hide_from_nav: true
 icon_path: /uploads/wine.png
 banner_headline: '<strong>Online Video Advertising</strong>'
+banner_sub_head: For Grocery Stores & Other Local Business
 banner_logo_image: /images/logos/logo.svg
-banner_image_path: /videos/background-videos/filming.png
-banner_video_path: /videos/background-videos/filming.mp4
-banner_video_poster_path: /videos/background-videos/filming.png
+banner_image_path: /images/banners/food.jpg
+banner_video_path: 
+banner_video_poster_path:
 banner_vid_path:
 youtube_video_id: rUr-6BvCFXQ
 features:
   - feature_title: Reach anyone you want
     feature_image_path: /images/illustrations/map.png
-    bg_image: /images/backgrounds/hex.png
-    feature_description_html: '<p>We can drop a pin on your store and make sure everyone within a radius sees your ads.</p>'
+    bg_image: /images/backgrounds/green.jpg
+    feature_description_html: '<p>We can drop a pin on your store and make sure everyone nearby sees your ads.</p>'
     button_url: #
     button_text: Learn More	
   - feature_title: It's Affordable
     feature_image_path: /images/illustrations/money.png
-    bg_image: /images/backgrounds/blue-boxes.png
+    bg_image: /images/backgrounds/blue.jpg
     feature_description_html: '<p>Most companies aren&#39;t taking advantage of this opportunity yet... Which is great news for us because that means prices are still low.</p>'
     button_url:
     button_text:
   - feature_title: Customers Are Paying Attention
-    feature_image_path: /images/banners/phone-card.jpg
-    bg_image: 
+    feature_image_path: /images/illustrations/phone.png
+    bg_image: /images/backgrounds/purple.jpg
     feature_description_html: '<p>All your customers are actively engaged on these platforms and we can focus that attention on your store.</p>'
     button_url: #
     button_text: Learn More
@@ -60,7 +61,6 @@ features:
 	<!--{% include video-block.html %}-->
 </div>
 
-
 <ul class="featured-blog-posts">
 	{% for post in site.posts %}
 	{% if post.featured == true %}
@@ -73,9 +73,9 @@ features:
 			</div>-->
 			<a href="{{ post.url }}">
 				<div class="postbanner" style="background-image: url('{{ post.banner_image_path }}');">
+					<img src="/images/icons/play.svg" alt="" />
 				</div>
 				<hgroup>
-					<img src="/images/icons/play.svg" alt="" />
 					<h2>{{ post.banner_headline | strip_html }}</h2>
 				</hgroup>
 			</a>
@@ -85,26 +85,6 @@ features:
 </ul>
 	
 {% include alternating.html %}
-
-<div class="bees-case-study">
-	
-	<img src="/images/home/bees-growth.jpg" alt="" />
-	<section>
-		<h2>18% Annual Growth</h2>
-		<p>How we took Bee's Marketplace from a 4% to an 18% annual growth rate and sold an extra 3 million dollars worth of groceries.</p>
-		<a href="/blog/bees-marketplace/">See How We Did It</a>
-	</section>
-	<!--<div class="videoBlock">
-		<div class="videoWrapper">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/I-l-iyw7jtA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="none"></iframe>
-		</div>
-		<img src="/images/other/video_shadow.svg" alt="video shadow" />
-	</div>-->
-	<!--<article>
-		<p>When we started working with Bee's marketplace their growth had slowed to 4%. Within the first year they had grown 12% and by the end of the second they had grown 18%.</p>
-	</article>
-	<a href="#" class="button">Learn More</a>-->
-</div>
 
 
 

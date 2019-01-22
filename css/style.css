@@ -920,13 +920,16 @@ header.open > .menu-button > span.three {
 	left: -5%;
 	width: 110%;
 	height: 100%;
-	transform: rotate(-1deg);
+	transform: rotate(-1.5deg);
 	background-color: #f2f2f2;
 	background-size: cover;
 	background-position: center;
 	border-top: 24px solid #fff;
 	box-shadow: 0 0 24px rgba(0,0,0,.06)inset;
 }
+/*.alternating > div:last-of-type > .bg-img {
+	border-bottom: 24px solid #fff;
+}*/
 /*.alternating > div > .bg-img.blurry {
 	filter: blur(3px);
 }*/
@@ -938,7 +941,7 @@ header.open > .menu-button > span.three {
 	z-index: 10000;
 }
 .alternating > div.bg > hgroup > article {
-	color: #000;
+	color: #fff;
 }
 /*.alternating > div.bg > .bg-img:before {
 	content: '\00a0';
@@ -2749,22 +2752,24 @@ video#bgvid {
 /* @group Featured Blog Posts */
 
 .featured-blog-posts {
-	padding:  0px;
+	padding:  1%;
 	list-style: none;
 	text-align: left;
 	text-align: center;
 	overflow: hidden;
 }
 .featured-blog-posts > li {
-	float: left;
-	width: 50%;
-	margin: 0;
+	display: inline-block;
+	width: 45%;
+	max-width: 480px;
+	margin: 1%;
 	padding: 0px;
 	background: #fff;
-	/*border: 1px solid #ccc;*/
-	border-top: none;
+	border: 1px solid #000;
+	border-radius: 3px;
 	vertical-align: top;
 	text-align: left;
+	overflow: hidden;
 }
 .featured-blog-posts > li > a {
 	position: relative;
@@ -2774,35 +2779,34 @@ video#bgvid {
 	text-align: center;
 }
 .featured-blog-posts > li > a > .postbanner {
-	height: 48vh;
+	position: relative;
+	height: 24vh;
 	margin: 0;
-	/*border-bottom: 3px solid #d75151;*/
+	border-bottom: 3px solid #d75151;
 	background-color: #000;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	text-align: center;
 }
+.featured-blog-posts > li > a > .postbanner > img {
+	position: relative;
+	top: 50%;
+	width: 72px;
+	margin: -36px 0 0 0;
+}
 .featured-blog-posts > li > a > hgroup {
-	position: absolute;
 	left: 0;
 	bottom: 0px;
-	z-index: 100;
-	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 100%) rgba(0,0,0,0);
 }
-.featured-blog-posts > li > a > hgroup img {
-	width: 96px;
-	margin: 0;
-}
+
 .featured-blog-posts > li > a > hgroup > h2 {
-	
 	width: 100%;
 	margin: 0;
-	padding: 36px;
-	font: 900 36px/42px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	color: #fff;
+	padding: 12px;
+	font: 900 24px/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #000;
 	text-align: center;
-	text-shadow: 0 1px 2px rgba(0,0,0,.72);
 }
 .featured-blog-posts > li > a > p {
 	/*height: 96px;*/
@@ -3482,4 +3486,90 @@ video#bgvid {
 
 
 
+/* @end */
+
+
+
+
+
+
+/* @group Testimonial Videos */
+
+.testimonial-videos {
+	padding: 96px 0;
+}
+.testimonial-videos > h2 {
+	text-align: center;
+}
+.testimonial-videos > ul {
+	text-align: center;
+}
+.testimonial-videos > ul > li {
+	position: relative;
+	display: inline-block;
+	width: 320px;
+	vertical-align: middle;
+}
+.testimonial-videos > ul > li:nth-last-of-type(2) {
+	z-index: 100000000;
+	width: 540px;
+	margin: 0 -60px;
+}
+.testimonial-videos > ul > li > .videoBlock {
+	
+}
+
+
+/* @end */
+
+
+
+
+
+
+/* @group signup */
+
+.signup {
+	max-width: 320px;
+	margin: 24px auto;
+}
+.signup > label {
+	display: inline-block;
+	border: 2px solid #fff;
+	background: rgba(0,0,0,.09);
+	border-radius: 96px;
+	margin: 0 0 6px 0;
+	padding: 6px 12px;
+	color: fff;
+} 
+.signup > label > img {
+	width: 24px;
+	vertical-align: middle;
+}
+.signup > label > input {
+	width: 220px;
+	border: none;
+	background: none;
+	vertical-align: middle;
+	outline: none;
+	font: 500 12px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #fff;
+	text-transform: capitalize;
+}
+.signup > label > input::placeholder {
+	color: rgba(255,255,255,.6);
+	font: 400 12px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: capitalize;
+}
+.signup > .button {
+	display: inline-block;
+	margin: 12px 0 0 0;
+	padding: 12px 24px;
+	border: none;
+	border-radius: 96px;
+	background: #fff;
+	text-decoration: none;
+	font: bold 12px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #eb363d;
+}
 /* @end */
