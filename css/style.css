@@ -3449,6 +3449,11 @@ video#bgvid {
 	margin: 0 0 12px 0;
 	color: inherit;
 }
+.bees-case-study > section > h3 {
+	font: 400 16px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: rgba(255,255,255,.75);
+	font-style: italic;
+}
 .bees-case-study > section > p {
 	color: #fff;
 }
@@ -3464,7 +3469,7 @@ video#bgvid {
 }
 
 
-@media all and (max-width: 540px) {
+@media all and (max-width: 840px) {
 
 .bees-case-study {
 	padding: 9vh 3vw;
@@ -3520,6 +3525,18 @@ video#bgvid {
 }
 
 
+
+@media all and (max-width: 960px) {
+
+.testimonial-videos > ul > li,
+.testimonial-videos > ul > li:nth-last-of-type(2)  {
+	display: block;
+	width: 100%;
+	margin: 0;
+}
+
+}
+
 /* @end */
 
 
@@ -3572,4 +3589,27 @@ video#bgvid {
 	font: bold 12px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	color: #eb363d;
 }
+/* @end */
+
+
+
+
+
+
+/* @group Signature */
+
+.signature {
+	text-align: center;
+}
+.signature > .photo {
+	width: 180px;
+	height: 180px;
+	margin: 0 auto 24px auto;
+	border-radius: 240px;
+	border: 6px solid #fff;
+	box-shadow: 0px 3px 5px rgba(0,0,0,.5);
+	background-size: cover;
+	background-position: center;
+}
+
 /* @end */

@@ -8,39 +8,44 @@ nav_class: /webinar-thank-you/
 nav_order: 6
 hide_from_nav: true
 ---
-<div class="banner small">
+<div class="banner small dark" style="background-image: url('/images/banners/food.jpg');">
 	<hgroup>
 		{% assign today = 'now' | date: '%s' %}
-			{% assign single_day = 86400 %}
-			{% assign today_number = 'now' | date: '%u' | plus: 0 %}
+		{% assign single_day = 86400 %}
+		{% assign today_number = 'now' | date: '%u' | plus: 0 %}
+	
+		{% if  today_number == 2 %}  
 		
-			{% if  today_number == 2 %}  
+		  <h1> The Presentation Starts Tomorrow</h1>
+		  <h2>{{ today | plus: single_day | date: '%b %d, %Y' }} @ 2:00PM</h2>
 			
-			  <h1> The Presentation Starts Tomorrow</h1>
-			  <h2>{{ today | plus: single_day | date: '%b %d, %Y' }} @ 2:00PM</h2>
-				
-			{% elsif  today_number == 3 %}  
-			
-			    <h1>The Presentation Starts Today</h1>
-				<h2>{{ today | date: '%b %d, %Y' }} @ 2:00PM</h2>
-			
-			{% else %}
-			
-			    {% assign days_until_next = 9 | minus: today_number  %}
-			    {% assign days_unix = days_until_next | times: single_day  %}
-			    <h1>The Presentation Starts Wednesday</h1>
-				<h2>{{ today | plus: days_unix  | date: '%b %d, %Y' }} @ 2:00PM</h2>
-			
-			{% endif %}
+		{% elsif  today_number == 3 %}  
+		
+		    <h1>The Presentation Starts Today</h1>
+			<h2>{{ today | date: '%b %d, %Y' }} @ 2:00PM</h2>
+		
+		{% else %}
+		
+		    {% assign days_until_next = 9 | minus: today_number  %}
+		    {% assign days_unix = days_until_next | times: single_day  %}
+		    <h1>The Presentation Starts Wednesday</h1>
+			<h2>{{ today | plus: days_unix  | date: '%b %d, %Y' }} @ 2:00PM</h2>
+		
+		{% endif %}
 	</hgroup>
 	<img src="/images/banners/banner-bottom.svg" alt="" class="banner-bottom" />
 </div>
 
 <article style="text-align: center;">
 	<h2>Check your email for a link to the online presentation.</h2>
-	<p>If you want a personalized presentation or just want to talk to a salesman give me a call, send me an email or schedule a meeting below.</p>
-	<p>I'd love to talk about how we can use video advertising to help grow your business.</p>
-	<p style="text-align: center;"><strong>(435) 680-7669</strong> <br /><strong>kevin@truetakemedia.com</strong></p>
+	<p>If you want a personalized presentation or just want to talk to real person give me a call, send me an email or schedule a meeting below. I'd love to talk about how we can use video advertising to help grow your business.</p>
+	<div class="signature">
+		<div class="photo" style="background-image: url('/images/photos/kevin.jpg');"></div>
+		<p><strong>Kevin LeBaron</strong><br /><i>Founder of True Take Media</i></p>
+		<p><strong>(435) 680-7669</strong><br />
+		<strong>kevin@truetakemedia.com</strong></p>
+	</div>
+	
 </article>
 
 

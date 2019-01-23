@@ -31,8 +31,29 @@
 
 <div class="bees-case-study">
 	
-	<img src="/images/home/bees-growth.jpg" alt="" />
+	<img src="/images/illustrations/bees-growth.svg" alt="" />
 	<section>
+		<h3>
+			{% assign today = 'now' | date: '%s' %}
+			{% assign single_day = 86400 %}
+			{% assign today_number = 'now' | date: '%u' | plus: 0 %}
+		
+			{% if  today_number == 2 %}  
+			
+			  Live Presentation Tomorrow
+				
+			{% elsif  today_number == 3 %}  
+			
+			    Live Presentation Today
+			
+			{% else %}
+			
+			    {% assign days_until_next = 9 | minus: today_number  %}
+			    {% assign days_unix = days_until_next | times: single_day  %}
+			    Live Presentation Wednesday {{ today | plus: days_unix  | date: '%b %d, %Y' }}
+			
+			{% endif %}
+		</h3>
 		<h2>18% Annual Growth</h2>
 		<p>How we took Bee's Marketplace from a 4% to an 18% annual growth rate and sold an extra 3 million dollars worth of groceries... using video ads.</p>
 		<!--<a href="/blog/bees-marketplace/">See How We Did It</a>-->
@@ -42,14 +63,14 @@
 		        <img src="/images/icons/email-white.svg" alt="" />
 		        <input type="text" name="email" placeholder="email" />
 		    </label>
-		    <label>
+		    <!--<label>
 		    	<img src="/images/icons/female-white.svg" alt="" />
 		    	<input type="text" name="name" placeholder="Full Name" />
-			</label>
+			</label>-->
 		    <input type="hidden" name="_hook" value="https://hooks.zapier.com/hooks/catch/2059575/xuh01g/">
 		    <input type="text" name="_gotcha" style="display: none;">
 		    
-		    <input type="submit" value="See How We Did It" class="button">
+		    <input type="submit" value="Show me How You Did It" class="button">
 		</form>
 	</section>
 </div>
