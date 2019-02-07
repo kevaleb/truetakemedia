@@ -15,6 +15,8 @@ banner_image_path: /images/banners/food.jpg
 banner_video_path: 
 banner_video_poster_path:
 banner_vid_path:
+banner_button_text: Watch Video
+banner_button_link: "#primaryVideo"
 youtube_video_id: rUr-6BvCFXQ
 features:
   - feature_title: Reach anyone you want
@@ -38,15 +40,6 @@ features:
 ---
 
 {% include banner.html %}
-<!--<div class="banner" style="background-image: url('{{ page.banner_image_path }}');">
-	<hgroup>
-		<img src="/images/logos/logo.svg" alt="" />
-		<h1>{{ page.headline }}</h1>
-		<a href="#cta" class="button">Get A Quote</a>
-	</hgroup>
-	
-	<img src="/images/banners/banner-bottom.svg" alt="" class="banner-bottom" />
-</div>-->
 
 <div class="ad-icons">
 	<img src="/images/icons/facebook.svg" alt="" />
@@ -55,11 +48,39 @@ features:
 	<img src="/images/icons/google.svg" alt="" />
 	<img src="/images/icons/youtube.svg" alt="" />
 	
-	<h2><strong>We do paid advertising campaigns</strong><br />
-	(NOT social media management!)</h2>
-	
-	<!--{% include video-block.html %}-->
+	<h2><strong>We do paid advertising campaigns</strong></h2>
 </div>
+
+<div class="videoBlock" id="primaryVideo">
+	<div class="videoWrapper">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/a7soxXtk09k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="none"></iframe>
+	</div>
+	<img src="/images/other/video_shadow.svg" alt="video shadow" />
+</div>
+
+<div class="subscribe">
+	<hgroup>
+		<h2>Subscribe</h2>
+		<p>Be the first to know about new ad campaigns</p>
+	</hgroup>
+	<form method="post" action="/subscriber-thank-you/">
+		<label>
+			<img src="/images/icons/person.svg" alt="" />
+			<input type="text" name="name" placeholder="Full Name" />
+		</label>
+	    <label>
+	        <img src="/images/icons/email.svg" alt="" />
+	        <input type="text" name="email" placeholder="email" />
+	    </label>
+	    <input type="hidden" name="_hook" value="https://hooks.zapier.com/hooks/catch/2059575/xuh01g/">
+	    <input type="text" name="_gotcha" style="display: none;">
+	    
+	    <input type="submit" value="Subscribe" class="button">
+	</form>
+</div>
+
+
+
 
 <ul class="featured-blog-posts">
 	{% for post in site.posts %}

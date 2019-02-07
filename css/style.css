@@ -1091,7 +1091,7 @@ video#bgvid {
 .videoBlock {
 	position: relative;
 	z-index: 999999;
-	max-width: 720px;
+	max-width: 960px;
 	margin: 0px auto 24px auto;
 	padding: 24px 24px 0 24px;
 }
@@ -2757,15 +2757,17 @@ video#bgvid {
 	text-align: left;
 	text-align: center;
 	overflow: hidden;
+	background: #f2f2f2;
 }
 .featured-blog-posts > li {
 	display: inline-block;
-	width: 45%;
+	width: 22%;
 	max-width: 480px;
 	margin: 1%;
 	padding: 0px;
 	background: #fff;
-	border: 1px solid #000;
+	/*border: 5px solid #f2f2f2;*/
+	box-shadow: 0px 3px 5px rgba(0,0,0,.15);
 	border-radius: 3px;
 	vertical-align: top;
 	text-align: left;
@@ -2780,9 +2782,9 @@ video#bgvid {
 }
 .featured-blog-posts > li > a > .postbanner {
 	position: relative;
-	height: 24vh;
+	height: 16vh;
 	margin: 0;
-	border-bottom: 3px solid #d75151;
+	/*border-bottom: 3px solid #d75151;*/
 	background-color: #000;
 	background-size: cover;
 	background-position: center;
@@ -2804,9 +2806,10 @@ video#bgvid {
 	width: 100%;
 	margin: 0;
 	padding: 12px;
-	font: 900 24px/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font: 900 18px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	color: #000;
 	text-align: center;
+	letter-spacing: 0;
 }
 .featured-blog-posts > li > a > p {
 	/*height: 96px;*/
@@ -2825,13 +2828,19 @@ video#bgvid {
 }
 
 
-@media all and (max-width: 540px) {
+@media all and (max-width: 960px) {
 
+.featured-blog-posts {
+	padding: 24px;
+}
 .featured-blog-posts > li {
 	width: 100%;
+	margin: 0 0 48px 0;
+	border-radius: 0;
+	/*box-shadow: none;*/
 }
 .featured-blog-posts > li > a > .postbanner {
-	height: 64vh;
+	height: 24vh;
 }
 .featured-blog-posts > li > a > hgroup > h2 {
 	font: 900 24px/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
@@ -3610,6 +3619,73 @@ video#bgvid {
 	box-shadow: 0px 3px 5px rgba(0,0,0,.5);
 	background-size: cover;
 	background-position: center;
+}
+
+/* @end */
+
+
+
+
+
+
+/* @group Subscribe */
+
+.subscribe {
+	/*padding: 6vh 0;*/
+	/*background-image: -webkit-linear-gradient(top, white 0%, black 100%);
+	background-image: -moz-linear-gradient(top, white 0%, black 100%);
+	background-image: -ms-linear-gradient(top, white 0%, black 100%);
+	background-image: linear-gradient(to bottom, #362b39 0%, #473c4a 100%);*/
+}
+
+.subscribe > hgroup {
+	text-align: center;
+}
+.subscribe > hgroup > h2 {
+	color: #000;
+	text-transform: uppercase;
+}
+.subscribe > hgroup > p {
+	color: #000;
+}
+
+.subscribe > form {
+	max-width: 320px;
+	margin: 0 auto;
+	padding: 24px;
+	text-align: center;
+}
+.subscribe > form > label {
+	position: relative;
+	display: block;
+	margin: 0 0 6px 0;
+	padding: 0 0 0 36px;
+	border: 1px solid #ccc;
+	background: #f2f2f2;
+	border-radius: 24px;
+}
+.subscribe > form > label > input {
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+	height: 36px;
+	border: none;
+	outline: none;
+	background: none;
+}
+.subscribe > form > label > img {
+	position: absolute;
+	z-index: 1000;
+	left: 9px;
+	top: 9px;
+	width: 18px;
+	display: inline-block;
+	vertical-align: middle;
+	
+	
+}
+.subscribe > form > .button {
+	
 }
 
 /* @end */
