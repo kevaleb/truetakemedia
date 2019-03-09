@@ -8,18 +8,114 @@ nav_order: 2
 banner_path:
 ---
 {%  include banner.html %}
-<ul class="blogposts">
-	{% for post in site.posts %}
-		<li>
-			<a href="{{ post.url }}">
-				<div class="postbanner" style="background-image: url('{{ post.banner_image_path }}');">
-				</div>
-				<!--<div class="postbanner" style="background-image: url('{{ post.banner_image_path }}');"></div>-->
-				<!--<h3>{{ post.category }}</h3>-->
-				<h2>{{ post.banner_headline | strip_html }}</h2>
-				<p>{{ post.excerpt | strip_html | truncate: 120, '...' }}</p>
-				<span class="button">Read More</span>
-			</a>
-		</li>
-	{% endfor %}
+
+<ul class="campaigns">
+	<li>
+		<h2>January</h2>
+		<div class="videoBlock">
+			<div class="videoWrapper">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/4fGXsh7iVkg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="none"></iframe>
+			</div>
+			<img src="/images/other/video_shadow.svg" alt="video shadow" />
+		</div>
+	</li>
+	<li>
+		<h2>February</h2>
+		<div class="videoBlock">
+			<div class="videoWrapper">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/gDxMnV40d98" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="none"></iframe>
+			</div>
+			<img src="/images/other/video_shadow.svg" alt="video shadow" />
+		</div>
+		<div class="videoBlock">
+			<div class="videoWrapper">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/8FcrhbWQFVs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="none"></iframe>
+			</div>
+			<img src="/images/other/video_shadow.svg" alt="video shadow" />
+		</div>
+		<div class="videoBlock">
+			<div class="videoWrapper">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/lgip9Okmbl0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="none"></iframe>
+			</div>
+			<img src="/images/other/video_shadow.svg" alt="video shadow" />
+		</div>
+	</li>
+	<li>
+		<h2>March</h2>
+		<div class="videoBlock">
+			<div class="videoWrapper">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/qDSQBajQev0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="none"></iframe>
+			</div>
+			<img src="/images/other/video_shadow.svg" alt="video shadow" />
+		</div>
+		<div class="videoBlock">
+			<div class="videoWrapper">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/zK3oOV5iQZk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="none"></iframe>
+			</div>
+			<img src="/images/other/video_shadow.svg" alt="video shadow" />
+		</div>
+		<div class="videoBlock">
+			<div class="videoWrapper">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/QlgAKo-ekSg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="none"></iframe>
+			</div>
+			<img src="/images/other/video_shadow.svg" alt="video shadow" />
+		</div>
+	</li>
+	<li>
+		<h2>April (Coming Soon)</h2>
+		<div class="videoBlock ">
+			<div class="videoWrapper coming-soon">
+				<span>Easter Eggs</span>
+			</div>
+			<img src="/images/other/video_shadow.svg" alt="video shadow" />
+		</div>
+		<div class="videoBlock ">
+			<div class="videoWrapper coming-soon">
+				<span>Spring Cleaning</span>
+			</div>
+			<img src="/images/other/video_shadow.svg" alt="video shadow" />
+		</div>
+		<div class="videoBlock ">
+			<div class="videoWrapper coming-soon">
+				<span>Baby Back Ribs</span>
+			</div>
+			<img src="/images/other/video_shadow.svg" alt="video shadow" />
+		</div>
+	</li>
+	<li>
+		<h2>May (Coming Soon)</h2>
+		<div class="videoBlock ">
+			<div class="videoWrapper coming-soon">
+				<span>Authentic Enchilladas</span>
+			</div>
+			<img src="/images/other/video_shadow.svg" alt="video shadow" />
+		</div>
+		<div class="videoBlock ">
+			<div class="videoWrapper coming-soon">
+				<span>Eggs Benedict</span>
+			</div>
+			<img src="/images/other/video_shadow.svg" alt="video shadow" />
+		</div>
+		<div class="videoBlock ">
+			<div class="videoWrapper coming-soon">
+				<span>Dutch Oven</span>
+			</div>
+			<img src="/images/other/video_shadow.svg" alt="video shadow" />
+		</div>
+	</li>
+	<li>
+		<h2>June (Coming Soon)</h2>
+		<div class="videoBlock ">
+			<div class="videoWrapper coming-soon">
+				<span>Surf & Turf</span>
+			</div>
+			<img src="/images/other/video_shadow.svg" alt="video shadow" />
+		</div>
+		<div class="videoBlock ">
+			<div class="videoWrapper coming-soon">
+				<span>Summer Nights</span>
+			</div>
+			<img src="/images/other/video_shadow.svg" alt="video shadow" />
+		</div>
+	</li>
 </ul>

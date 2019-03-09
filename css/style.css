@@ -2855,6 +2855,62 @@ video#bgvid {
 
 
 
+/* @group Campaigns */
+
+.campaigns {
+	overflow: hidden;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	
+}
+.campaigns > li {
+	position: relative;
+	max-width: 540px;
+	margin: 0 auto 48px auto;
+	padding: 0 0 0px 24px;
+	clear: both;
+	border-left: 1px solid #ccc;
+}
+.campaigns > li:before {
+	position: absolute;
+	left: -10px;
+	content: '\00a0';
+	display: block;
+	width: 12px;
+	height: 12px;
+	background: #ccc;
+	border-radius: 24px;
+	border: 4px solid #fff;
+}
+.campaigns > li:after {
+	content: '\00a0';
+	display: block;
+	clear: both;
+}
+.campaigns > li > h2 {
+	position: relative;
+	top: -9px;
+}
+.campaigns > li > .videoBlock {
+	width: 50%;
+	float: left;
+	padding: 6px;
+}
+.campaigns > li > .videoBlock > .coming-soon {
+	background: #999;
+	color: #fff;
+	
+}
+.campaigns > li > .videoBlock > .coming-soon > span {
+	display: inline-block;
+	padding: 12px;
+}
+
+/* @end */
+
+
+
 
 
 
