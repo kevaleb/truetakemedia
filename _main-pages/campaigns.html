@@ -1,6 +1,9 @@
 ---
 layout: default
-banner_headline: Campaign Case Studies
+title: 
+banner_headline: Grocery Store Ad Campaigns
+banner_size: tiny
+banner_bottom_image: /images/other/banner-bottom-grey.svg
 permalink: /campaigns/
 nav_class: campaigns
 nav_title: campaigns
@@ -9,113 +12,115 @@ banner_path:
 ---
 {%  include banner.html %}
 
-<ul class="campaigns">
-	<li>
-		<h2>January</h2>
-		<div class="videoBlock">
-			<div class="videoWrapper">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/4fGXsh7iVkg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="none"></iframe>
-			</div>
-			<img src="/images/other/video_shadow.svg" alt="video shadow" />
+
+<div id="campaignlist">
+	<h2>Choose A Campaign To Get Started</h2>
+	<section>
+		<div class="search-box">
+			<input class="search" id="search-field" placeholder="Search (March, Christmas, Grocery, Etc.)" />
+			<img src="/images/icons/search.svg" alt="" />
 		</div>
-	</li>
-	<li>
-		<h2>February</h2>
-		<div class="videoBlock">
-			<div class="videoWrapper">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/gDxMnV40d98" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="none"></iframe>
-			</div>
-			<img src="/images/other/video_shadow.svg" alt="video shadow" />
+		<div class="sort-box">
+			<span>Sort By:</span>
+			<span class="sort" data-sort="campaigndate">Date</span>
+			<span class="sort" data-sort="campaigntitle">Name</span>
+			<span class="sort" data-sort="campaignprice">Price</span>
 		</div>
-		<div class="videoBlock">
-			<div class="videoWrapper">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/8FcrhbWQFVs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="none"></iframe>
+	</section>  
+	<ul class="campaigns list">
+		
+		{% assign sortedcampaigns = site.campaigns | sort:"start_date" | reverse %}
+		{% assign today_date = 'now' | date: '%s' %}
+		
+		
+		{% for campaign in sortedcampaigns %}
+		<li>
+			<div class="videoBlock">
+				<div class="videoWrapper">
+					{% if campaign.youtube_video_id %}
+					<img data-video="{{ campaign.youtube_video_id }}" alt="Play this video" src="http://img.youtube.com/vi/{{ campaign.youtube_video_id }}/maxresdefault.jpg">
+					{% else %}
+					<div class="coming-soon"></div>
+					{% endif %}
+					<!--<iframe width="560" height="315" src="https://www.youtube.com/embed/{{ campaign.youtube_video_id }}?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="none"></iframe>-->
+				</div>
+				<img src="/images/other/video_shadow.svg" alt="video shadow" />
 			</div>
-			<img src="/images/other/video_shadow.svg" alt="video shadow" />
-		</div>
-		<div class="videoBlock">
-			<div class="videoWrapper">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/lgip9Okmbl0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="none"></iframe>
-			</div>
-			<img src="/images/other/video_shadow.svg" alt="video shadow" />
-		</div>
-	</li>
-	<li>
-		<h2>March</h2>
-		<div class="videoBlock">
-			<div class="videoWrapper">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/qDSQBajQev0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="none"></iframe>
-			</div>
-			<img src="/images/other/video_shadow.svg" alt="video shadow" />
-		</div>
-		<div class="videoBlock">
-			<div class="videoWrapper">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/zK3oOV5iQZk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="none"></iframe>
-			</div>
-			<img src="/images/other/video_shadow.svg" alt="video shadow" />
-		</div>
-		<div class="videoBlock">
-			<div class="videoWrapper">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/QlgAKo-ekSg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="none"></iframe>
-			</div>
-			<img src="/images/other/video_shadow.svg" alt="video shadow" />
-		</div>
-	</li>
-	<li>
-		<h2>April (Coming Soon)</h2>
-		<div class="videoBlock ">
-			<div class="videoWrapper coming-soon">
-				<span>Easter Eggs</span>
-			</div>
-			<img src="/images/other/video_shadow.svg" alt="video shadow" />
-		</div>
-		<div class="videoBlock ">
-			<div class="videoWrapper coming-soon">
-				<span>Spring Cleaning</span>
-			</div>
-			<img src="/images/other/video_shadow.svg" alt="video shadow" />
-		</div>
-		<div class="videoBlock ">
-			<div class="videoWrapper coming-soon">
-				<span>Baby Back Ribs</span>
-			</div>
-			<img src="/images/other/video_shadow.svg" alt="video shadow" />
-		</div>
-	</li>
-	<li>
-		<h2>May (Coming Soon)</h2>
-		<div class="videoBlock ">
-			<div class="videoWrapper coming-soon">
-				<span>Authentic Enchilladas</span>
-			</div>
-			<img src="/images/other/video_shadow.svg" alt="video shadow" />
-		</div>
-		<div class="videoBlock ">
-			<div class="videoWrapper coming-soon">
-				<span>Eggs Benedict</span>
-			</div>
-			<img src="/images/other/video_shadow.svg" alt="video shadow" />
-		</div>
-		<div class="videoBlock ">
-			<div class="videoWrapper coming-soon">
-				<span>Dutch Oven</span>
-			</div>
-			<img src="/images/other/video_shadow.svg" alt="video shadow" />
-		</div>
-	</li>
-	<li>
-		<h2>June (Coming Soon)</h2>
-		<div class="videoBlock ">
-			<div class="videoWrapper coming-soon">
-				<span>Surf & Turf</span>
-			</div>
-			<img src="/images/other/video_shadow.svg" alt="video shadow" />
-		</div>
-		<div class="videoBlock ">
-			<div class="videoWrapper coming-soon">
-				<span>Summer Nights</span>
-			</div>
-			<img src="/images/other/video_shadow.svg" alt="video shadow" />
-		</div>
-	</li>
-</ul>
+			
+			<section>
+				<h3 class="campaigntitle">{{ campaign.title }}</h3>
+				<h4 class="campaignprice">${{ campaign.price | plus: 100 }}</h4>
+				<p class="campaigntags">
+					{% for tag in campaign.tags %}
+					<span>{{ tag }}</span>
+					{% endfor %}
+				</p>
+				<span class="campaigndate">{{ campaign.start_date }}</span>
+				<button
+				    class="snipcart-add-item button"
+				    data-item-id="{{ campaign.id }}"
+				    data-item-name="{{ campaign.title }}"
+				    data-item-price="{{ campaign.price }}"
+				    data-item-url="{{ page.url }}"
+				    data-item-custom1-name="Radius"
+				    data-item-custom1-options="1 Mile|2 Miles[+5.00]|3 Miles[+10.00]|4 Miles[-5.00]|5 Miles|10 Miles|15 Miles|20 Miles"
+				    data-item-custom1-value="1 Mile"
+				    data-item-custom2-name="Impressions"
+				    data-item-custom2-options="5,000 Impressions[+100]|7,500 Impressions[+150.00]|10,000 Impressions[+200.00]|15,000 Impressions[+300.00]|20,000 Impressions[+400.00]|30,000 Impressions[+600.00]|40,000 Impressions[+800.00]|50,000 Impressions[+1000.00]"
+				    data-item-custom2-value="1 Mile"
+				    >
+				    <span>Customize Campaign</span>
+					<p>
+						<img src="/images/icons/radius.svg" alt="" />
+						<span>1 Mile From Store</span>
+						<img src="/images/icons/eye.svg" alt="" />
+						<span>5,000 Impressions</span>
+					</p>
+				</button>
+			</section>
+		</li>
+		{% endfor %}
+	</ul>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+	
+	var options = {
+	    valueNames: [ 'campaigntitle', 'campaignprice', 'campaigntags', 'campaigndate' ]
+	};
+	
+	var campaignList = new List('campaignlist', options);
+	
+	$('#search-field').on('keyup', function() {
+	  var searchString = $(this).val();
+	  campaignList.search(searchString);
+	});
+
+	
+	
+	
+	// Listen for clicks
+	document.addEventListener('click', function (event) {
+	
+		// Check if clicked element is a video thumbnail
+		var videoId = event.target.getAttribute('data-video');
+		if (!videoId) return;
+	
+		// Create iframe
+		var iframe = document.createElement('div');
+		iframe.innerHTML = '<p>x</p><iframe width="560" height="315" src="https://www.youtube.com/embed/' + videoId + '?rel=0&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+		var video = iframe.childNodes[1];
+	
+		// Replace the image with the video
+		event.target.parentNode.replaceChild(video, event.target);
+	
+		// Enter fullscreen mode
+		video.requestFullscreen();
+	
+	}, false);
+</script>
+

@@ -1,0 +1,12 @@
+---
+layout: default
+---
+{%  include banner.html %}
+
+{% if page.youtube_video_id %}
+{% include video-block.html %}
+{% endif %}
+<article class="blog-post">
+	{{ content }}
+</article>
+

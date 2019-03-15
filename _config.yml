@@ -31,6 +31,8 @@ objectives:
 collections:
   main-pages:
     output: true
+  campaigns:
+    output: false
   
     
 defaults:
@@ -46,12 +48,12 @@ defaults:
   -
     scope:
       path: ""
-      type: "industries" 
+      type: "campaigns" 
     values:
-      layout: "industry"
+      layout: "campaign"
       _hide_content: false
-      permalink: /:title/
-      navclass: /industry/
+      permalink: /campaigns/:title/
+      navclass: /campaigns/
   -
     scope:
       path: ""

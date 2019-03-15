@@ -1,4 +1,4 @@
-<div class="banner dark" {% if page.banner_image_path %} style ="background-image: url('{{ page.banner_image_path}}')" {% endif %}>
+<div class="banner dark {% if page.banner_size %}{{ page.banner_size }}{% endif %}" {% if page.banner_image_path %} style ="background-image: url('{{ page.banner_image_path}}')" {% endif %}>
 	{% if page.banner_video_path %}
 		<video playsinline autoplay muted loop poster="{{ banner_video_poster_path: }}" id="bgvid">
 		    <source src="{{page.banner_video_path}}" type="video/mp4" />
@@ -16,5 +16,5 @@
 			<a href="{{ page.banner_button_link }}" class="button">{{page.banner_button_text }}</a>
 		{% endif %}
 	</hgroup>
-	<img src="/images/banners/banner-bottom.svg" alt="" class="banner-bottom" />
+	<img src="{% if page.banner_bottom_image %}{{ page.banner_bottom_image }}{% else %}/images/other/banner-bottom.svg{% endif %}" alt="" class="banner-bottom" />
 </div>

@@ -1,8 +1,19 @@
+
+
+
+
 $(document).ready(function(){	
 	$("header > .menu-button").click(function(){
 	    $("header").toggleClass("open");
 	});
+	
+	
 });
+
+
+
+
+
 
 
 
@@ -20,6 +31,8 @@ $(function() {
 		    $(".overlay").toggleClass("visible");
 		});
 	});
+	
+	
 	
 	
 	
@@ -42,3 +55,5 @@ $(function() {
 
 
 });
+
+
