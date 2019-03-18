@@ -1,7 +1,7 @@
 ---
 title: Baby Back Ribs
 id: 008
-price: 250
+price: 350
 tags:
   - May
   - Labor Day

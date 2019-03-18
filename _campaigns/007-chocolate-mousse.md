@@ -1,7 +1,7 @@
 ---
 title: Chocolate Mousse
 id: 007
-price: 250
+price: 350
 tags:
   - April
   - Mothers Day

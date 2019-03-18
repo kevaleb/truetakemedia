@@ -1,7 +1,7 @@
 ---
 title: Baked Bri
 id: 001
-price: 0
+price: 100
 tags:
   - Baking
   - January

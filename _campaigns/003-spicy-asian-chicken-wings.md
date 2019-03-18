@@ -1,7 +1,7 @@
 ---
 title: Spicy Asian Chicken Wings
 id: 003
-price: 0
+price: 100
 tags:
   - Super Bowl
   - February

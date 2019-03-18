@@ -1,7 +1,7 @@
 ---
 title: Big Game
 id: 004
-price: 0
+price: 100
 tags:
   - Super Bowl
   - February

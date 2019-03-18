@@ -1,7 +1,7 @@
 ---
 title: Whiskey Smash
 id: 005
-price: 150
+price: 250
 tags:
   - St. Patrick's Day
   - March

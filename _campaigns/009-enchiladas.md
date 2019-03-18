@@ -1,7 +1,7 @@
 ---
 title: Enchiladas
 id: 009
-price: 250
+price: 350
 tags:
   - May
   - Cinco De Mayo

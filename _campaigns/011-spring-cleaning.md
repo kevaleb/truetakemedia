@@ -1,7 +1,7 @@
 ---
 title: Spring Cleaning
 id: 011
-price: 250
+price: 350
 tags:
   - April
   - Spring
