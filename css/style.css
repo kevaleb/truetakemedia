@@ -383,6 +383,28 @@ header > div > nav > a:last-of-type {
 	margin-right: 0;
 }
 
+
+header > div > nav > .snipcart-checkout {
+	position: relative;
+	z-index: 0;
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+	background-image: url('/images/icons/cart.svg');
+}
+header > div > nav > .snipcart-checkout > .snipcart-total-items {
+	display: block;
+	position: absolute;
+	z-index: 1000;
+	width: 100%;
+	left: 0px;
+	top: -2px;
+	font: 900 8px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #000;
+	text-align: center;
+}
+
+
 header > div > nav > a.cta {
 	padding: 3px 18px;
 	border: 2px solid #fff;
