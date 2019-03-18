@@ -1,6 +1,6 @@
 ---
 title: Whiskey Smash
-id: 005
+sku: 005
 price: 250
 tags:
   - St. Patrick's Day

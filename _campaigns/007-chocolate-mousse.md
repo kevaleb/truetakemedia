@@ -1,6 +1,6 @@
 ---
 title: Chocolate Mousse
-id: 007
+sku: 007
 price: 350
 tags:
   - April

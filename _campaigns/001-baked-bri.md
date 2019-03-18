@@ -1,6 +1,6 @@
 ---
 title: Baked Bri
-id: 001
+sku: 001
 price: 100
 tags:
   - Baking

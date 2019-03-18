@@ -1,6 +1,6 @@
 ---
 title: Baby Back Ribs
-id: 008
+sku: 008
 price: 350
 tags:
   - May

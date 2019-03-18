@@ -1,6 +1,6 @@
 ---
 title: Spring Cleaning
-id: 011
+sku: 011
 price: 350
 tags:
   - April

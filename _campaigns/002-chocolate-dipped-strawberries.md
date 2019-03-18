@@ -1,6 +1,6 @@
 ---
 title: Chocolate Dipped Strawberries
-id: 002
+sku: 002
 price: 100
 tags:
   - Valentines Day

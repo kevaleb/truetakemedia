@@ -59,7 +59,7 @@ banner_path:
 				<span class="campaigndate">{{ campaign.start_date }}</span>
 				<button
 				    class="snipcart-add-item button"
-				    data-item-id="{{ campaign.id }}"
+				    data-item-id="{{ campaign.sku }}-{{ campaign.title | replace:' ','-' | downcase }}"
 				    data-item-name="{{ campaign.title }}"
 				    data-item-price="{{ campaign.price }}"
 				    data-item-url="https://truetakemedia.com{{ page.url }}"

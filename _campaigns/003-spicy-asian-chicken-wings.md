@@ -1,6 +1,6 @@
 ---
 title: Spicy Asian Chicken Wings
-id: 003
+sku: 003
 price: 100
 tags:
   - Super Bowl

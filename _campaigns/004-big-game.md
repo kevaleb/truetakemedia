@@ -1,6 +1,6 @@
 ---
 title: Big Game
-id: 004
+sku: 004
 price: 100
 tags:
   - Super Bowl

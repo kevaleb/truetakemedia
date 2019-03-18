@@ -1,6 +1,6 @@
 ---
 title: Enchiladas
-id: 009
+sku: 009
 price: 350
 tags:
   - May

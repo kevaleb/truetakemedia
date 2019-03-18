@@ -1,6 +1,6 @@
 ---
 title: Easter Eggs
-id: 010
+sku: 010
 price: 350
 tags:
   - April

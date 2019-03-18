@@ -1,6 +1,6 @@
 ---
 title: Reuben Sandwich
-id: 006
+sku: 006
 price: 250
 tags:
   - St. Patricks Day
