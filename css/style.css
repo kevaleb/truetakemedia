@@ -647,7 +647,7 @@ header.open > .menu-button > span.three {
 /* @group BANNER */
 .banner {
 	position: relative;
-	height: 84vh;
+	height: 72vh;
 	/*max-height: 720px;*/
 	min-height: 320px;
 	max-height: 1080px;
@@ -1113,7 +1113,7 @@ video#bgvid {
 
 .videoBlock {
 	position: relative;
-	z-index: 999999;
+	z-index: 9999;
 	max-width: 960px;
 	margin: 0px auto 24px auto;
 	padding: 24px 24px 0 24px;
@@ -3259,12 +3259,20 @@ video#bgvid {
 /* @group Call To Action */
 
 .call-to-action {
+	position: relative;
 	text-align: center;
-	background: none!important;
-	padding: 96px 0 24px 0;
+	padding: 150px 0;
+	background: #f2f2f2;
+}
+.call-to-action > img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
 }
 .call-to-action > hgroup {
-	
+	position: relative;
+	z-index: 100;
 }
 .call-to-action > hgroup > h2 {
 	font: 200 20px/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
@@ -3283,8 +3291,16 @@ video#bgvid {
 	display: inline-block;
 	padding: 6px 12px;
 	border: 2px solid #ccc;
+	border-radius: 99px;
 	text-decoration: none;
 	white-space: nowrap;
+	background: #fff;
+	color: #000;
+}
+.call-to-action > section > a:hover {
+	background: #cb2027;
+	border-color: #cb2027;
+	color: #fff!important;
 }
 .call-to-action > section > a > img {
 	max-width: 18px;
@@ -3297,6 +3313,7 @@ video#bgvid {
 	font: 500 12px/12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	vertical-align: middle;
 	text-transform: uppercase;
+	color: inherit;
 }
 
 
@@ -3331,7 +3348,8 @@ video#bgvid {
 /* @group Contact Form */
 
 .contact-form {
-	
+	max-width: 480px;
+	margin: 0 auto;
 	text-align: center;
 	padding: 0px;
 	
@@ -4092,6 +4110,42 @@ video#bgvid {
 
 
 
+
+/* @group Best Advertising */
+
+.best-advertising {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 96px 0;
+	overflow: hidden;
+	text-align: center;
+}
+.best-advertising > section {
+	float: left;	
+	width: 33.333%;
+	max-width: 320px;
+	text-align: center;
+}
+.best-advertising > section > img {
+	width: 100%;
+	max-width: 150px;
+	/*border: 2px solid #000;*/
+	/*border-radius: 200px;*/
+	padding: 0px;
+}
+.best-advertising > section > h3 {
+	padding: 0 24px;
+	font: 700 14px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+/* @end */
+
+
+
+
+.leadinModal {
+	z-index: 999999999999999999999!important;
+}
 
 
 

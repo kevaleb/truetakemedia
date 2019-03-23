@@ -19,37 +19,51 @@ banner_button_text: Watch Video
 banner_button_link: "#primaryVideo"
 youtube_video_id: rUr-6BvCFXQ
 features:
-  - feature_title: Reach anyone you want
+  - feature_title: Pre Made Video Campaigns
     feature_image_path: /images/illustrations/map.png
     bg_image: /images/backgrounds/green.jpg
-    feature_description_html: '<p>We can drop a pin on your store and make sure everyone nearby sees your ads.</p>'
-    button_url: #
-    button_text: Learn More	
-  - feature_title: It's Affordable
-    feature_image_path: /images/illustrations/money.png
-    bg_image: /images/backgrounds/blue.jpg
-    feature_description_html: '<p>Most companies aren&#39;t taking advantage of this opportunity yet... Which is great news for us because that means prices are still low.</p>'
+    feature_description_html: '<p>Video production is expensive! We create premade video campaigns that are customized for your store and launched through your social media accounts. So you get high end videos without the high price tag.</p>'
     button_url:
     button_text:
-  - feature_title: Customers Are Paying Attention
+  - feature_title: Ads that don’t feel like ads
+    feature_image_path: /images/illustrations/money.png
+    bg_image: /images/backgrounds/blue.jpg
+    feature_description_html: '<p>We focus on creating videos that your customers will actually enjoy watching.</p>
+    <ul>
+    	<li>Learning how to cook. </li>
+    	<li>Exploring where our food comes from. </li>
+    	<li>Discovering delicious new recipes. </li>
+    	<li>And sharing the joy of cooking & eating together.</li>
+    </ul>'
+    button_url:
+    button_text:
+  - feature_title: Sell a lot of groceries
     feature_image_path: /images/illustrations/phone.png
     bg_image: /images/backgrounds/purple.jpg
-    feature_description_html: '<p>All your customers are actively engaged on these platforms and we can focus that attention on your store.</p>'
+    feature_description_html: '<p>Strengthen customer loyalty, increase shopping frequency and reach a whole new set of people that previous advertising never connected you with. <br /><br />You’ll likely sell out of whatever product we’re promoting, movement will speed up across the department and sales will increase for the entire store.
+    </p>'
     button_url: #
     button_text: Learn More
 ---
 
 {% include banner.html %}
 
-<div class="ad-icons">
-	<img src="/images/icons/facebook.svg" alt="" />
-	<img src="/images/icons/instagram.svg" alt="" />
-	
-	<img src="/images/icons/google.svg" alt="" />
-	<img src="/images/icons/youtube.svg" alt="" />
-	
-	<h2><strong>We do paid advertising campaigns</strong></h2>
+<div class="best-advertising" >
+	<h2>Best Way To Sell Groceries</h2>
+	<section>
+		<img src="/images/illustrations/radius.svg" alt="" />
+		<h3>Accurately target your local customer base.</h3>
+	</section>
+	<section>
+		<img src="/images/illustrations/phone-hand.svg" alt="" />
+		<h3>Affordably reach customers whenever you need to.</h3>
+	</section>
+	<section>
+		<img src="/images/illustrations/video.svg" alt="" />
+		<h3>Effectively influence their buying behavior.</h3>
+	</section>
 </div>
+
 
 <div class="videoBlock" id="primaryVideo">
 	<div class="videoWrapper">
@@ -58,7 +72,54 @@ features:
 	<img src="/images/other/video_shadow.svg" alt="video shadow" />
 </div>
 
-<div class="subscribe">
+
+
+
+	
+{% include alternating.html %}
+
+
+<!--<div class="ad-icons">
+	<img src="/images/icons/facebook.svg" alt="" />
+	<img src="/images/icons/instagram.svg" alt="" />
+	
+	<img src="/images/icons/google.svg" alt="" />
+	<img src="/images/icons/youtube.svg" alt="" />
+	
+	<h2><strong>We do paid advertising campaigns</strong></h2>
+</div>-->
+
+<!--<ul class="featured-blog-posts">
+	{% for post in site.posts %}
+	{% if post.featured == true %}
+		<li>
+			<!--<div class="videoBlock">
+				<div class="videoWrapper">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/{{ post.youtube_video_id }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="none"></iframe>
+				</div>
+				<img src="/images/other/video_shadow.svg" alt="video shadow" />
+			</div>--*>
+			<a href="{{ post.url }}">
+				<div class="postbanner" style="background-image: url('{{ post.banner_image_path }}');">
+					<img src="/images/icons/play.svg" alt="" />
+				</div>
+				<hgroup>
+					<h2>{{ post.banner_headline | strip_html }}</h2>
+				</hgroup>
+			</a>
+		</li>
+	{% endif %}
+	{% endfor %}
+</ul>-->
+
+<!--<div class="videoBlock" id="primaryVideo">
+	<div class="videoWrapper">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/a7soxXtk09k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="none"></iframe>
+	</div>
+	<img src="/images/other/video_shadow.svg" alt="video shadow" />
+</div>-->
+
+<!--<div class="subscribe">
 	<hgroup>
 		<h2>Subscribe</h2>
 		<p>Be the first to know about new ad campaigns</p>
@@ -77,35 +138,7 @@ features:
 	    
 	    <input type="submit" value="Subscribe" class="button">
 	</form>
-</div>
-
-
-
-
-<ul class="featured-blog-posts">
-	{% for post in site.posts %}
-	{% if post.featured == true %}
-		<li>
-			<!--<div class="videoBlock">
-				<div class="videoWrapper">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/{{ post.youtube_video_id }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="none"></iframe>
-				</div>
-				<img src="/images/other/video_shadow.svg" alt="video shadow" />
-			</div>-->
-			<a href="{{ post.url }}">
-				<div class="postbanner" style="background-image: url('{{ post.banner_image_path }}');">
-					<img src="/images/icons/play.svg" alt="" />
-				</div>
-				<hgroup>
-					<h2>{{ post.banner_headline | strip_html }}</h2>
-				</hgroup>
-			</a>
-		</li>
-	{% endif %}
-	{% endfor %}
-</ul>
-	
-{% include alternating.html %}
+</div>-->
 
 
 
