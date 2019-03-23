@@ -823,8 +823,23 @@ header.open > .menu-button > span.three {
 
 /* @group ALTERNATING */
 .alternating {
+	position: relative;
 	margin: 0;
 	padding: 0;
+	background: #f2f2f2;
+}
+.alternating > img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+.alternating > img+img {
+	position: absolute;
+	left: 0;
+	top: auto;
+	bottom: 0;
+	width: 100%;
 }
 .alternating > h2 {
 	text-align: center;
@@ -835,6 +850,7 @@ header.open > .menu-button > span.three {
 	position: relative;
 	margin: 0 auto;
 	padding: 0 0 48px 0;
+	overflow: hidden;
 }
 
 .alternating > div:first-of-type:before {
@@ -848,9 +864,11 @@ header.open > .menu-button > span.three {
 	position: absolute;
 	z-index: 1000;
 	left: 50%;
-	top: 10%;
-	height: 80%;
+	top: 0%;
+	height: 100%;
 	margin: 0 0 0 48px;
+	
+	/*transform: rotateY(72deg);*/
 }
 
 .alternating > div > hgroup {
@@ -943,12 +961,15 @@ header.open > .menu-button > span.three {
 	left: -5%;
 	width: 110%;
 	height: 100%;
-	transform: rotate(-1.5deg);
-	background-color: #f2f2f2;
+	/*transform: rotate(-1.5deg);*/
+	/*background-color: #f2f2f2;*/
 	background-size: cover;
 	background-position: center;
-	border-top: 24px solid #fff;
-	box-shadow: 0 0 24px rgba(0,0,0,.06)inset;
+	/*border-top: 24px solid #fff;*/
+	/*box-shadow: 0 0 24px rgba(0,0,0,.06)inset;*/
+}
+.alternating > div:nth-of-type(even) > .bg-img {
+	/*background: #fff;*/
 }
 /*.alternating > div:last-of-type > .bg-img {
 	border-bottom: 24px solid #fff;
@@ -4116,19 +4137,22 @@ video#bgvid {
 .best-advertising {
 	max-width: 960px;
 	margin: 0 auto;
-	padding: 96px 0;
+	padding: 48px 0;
 	overflow: hidden;
 	text-align: center;
 }
+.best-advertising > h2 {
+	margin: 0 0 48px 0;
+}
 .best-advertising > section {
-	float: left;	
-	width: 33.333%;
-	max-width: 320px;
+	display: inline-block;
+	width: 32%;
+	max-width: 250px;
 	text-align: center;
 }
 .best-advertising > section > img {
 	width: 100%;
-	max-width: 150px;
+	max-width: 100px;
 	/*border: 2px solid #000;*/
 	/*border-radius: 200px;*/
 	padding: 0px;

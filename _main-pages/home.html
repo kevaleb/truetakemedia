@@ -20,14 +20,14 @@ banner_button_link: "#primaryVideo"
 youtube_video_id: rUr-6BvCFXQ
 features:
   - feature_title: Pre Made Video Campaigns
-    feature_image_path: /images/illustrations/map.png
-    bg_image: /images/backgrounds/green.jpg
-    feature_description_html: '<p>Video production is expensive! We create premade video campaigns that are customized for your store and launched through your social media accounts. So you get high end videos without the high price tag.</p>'
+    feature_image_path: /images/illustrations/home/fb-ad-mockup-3.png
+    bg_image:
+    feature_description_html: '<p>Video production is expensive! We create video campaigns that are customized for your store and launched through your social media accounts. So you get high end videos without the high price tag.</p>'
     button_url:
     button_text:
   - feature_title: Ads that don’t feel like ads
-    feature_image_path: /images/illustrations/money.png
-    bg_image: /images/backgrounds/blue.jpg
+    feature_image_path: /images/illustrations/home/videos.jpg
+    bg_image: 
     feature_description_html: '<p>We focus on creating videos that your customers will actually enjoy watching.</p>
     <ul>
     	<li>Learning how to cook. </li>
@@ -37,9 +37,9 @@ features:
     </ul>'
     button_url:
     button_text:
-  - feature_title: Sell a lot of groceries
+  - feature_title: Sell more groceries
     feature_image_path: /images/illustrations/phone.png
-    bg_image: /images/backgrounds/purple.jpg
+    bg_image:
     feature_description_html: '<p>Strengthen customer loyalty, increase shopping frequency and reach a whole new set of people that previous advertising never connected you with. <br /><br />You’ll likely sell out of whatever product we’re promoting, movement will speed up across the department and sales will increase for the entire store.
     </p>'
     button_url: #
@@ -49,31 +49,54 @@ features:
 {% include banner.html %}
 
 <div class="best-advertising" >
-	<h2>Best Way To Sell Groceries</h2>
+	<h2>The Easiest Way To Sell More Groceries</h2>
 	<section>
 		<img src="/images/illustrations/radius.svg" alt="" />
-		<h3>Accurately target your local customer base.</h3>
+		<h3>Accurately target your local customer base</h3>
 	</section>
 	<section>
 		<img src="/images/illustrations/phone-hand.svg" alt="" />
-		<h3>Affordably reach customers whenever you need to.</h3>
+		<h3>Affordably reach them whenever you need</h3>
 	</section>
 	<section>
 		<img src="/images/illustrations/video.svg" alt="" />
-		<h3>Effectively influence their buying behavior.</h3>
+		<h3>Effectively influence their buying behavior</h3>
 	</section>
 </div>
 
 
 <div class="videoBlock" id="primaryVideo">
 	<div class="videoWrapper">
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/a7soxXtk09k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="none"></iframe>
+		<img data-video="NrpMx74qKRQ" alt="Play this video" src="https://img.youtube.com/vi/NrpMx74qKRQ/maxresdefault.jpg" class="thumbnail">
+		<img src="/images/icons/play.svg" alt="" class="play" data-video="NrpMx74qKRQ" />
+		<!--<iframe width="560" height="315" src="https://www.youtube.com/embed/NrpMx74qKRQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="none"></iframe>-->
 	</div>
 	<img src="/images/other/video_shadow.svg" alt="video shadow" />
+	
 </div>
+<script type="text/javascript">
+	document.addEventListener('click', function (event) {
+	
+		// Check if clicked element is a video thumbnail
+		var videoId = event.target.getAttribute('data-video');
+		if (!videoId) return;
+	
+		// Create iframe
+		var iframe = document.createElement('div');
+		iframe.innerHTML = '<p>x</p><iframe width="560" height="315" src="https://www.youtube.com/embed/' + videoId + '?rel=0&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+		var video = iframe.childNodes[1];
+	
+		// Replace the image with the video
+		event.target.parentNode.replaceChild(video, event.target);
+	
+		// Enter fullscreen mode
+		video.requestFullscreen();
+	
+	}, false);
+</script>
 
 
-
+<br /><br /><br /><br /><br /><br />
 
 	
 {% include alternating.html %}
