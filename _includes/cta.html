@@ -1,4 +1,4 @@
-<div class="testimonial-videos">
+<!--<div class="testimonial-videos">
 	<h2>Here's What Our customers Have To Say</h2>
 	<ul>
 		<li>
@@ -26,7 +26,7 @@
 			</div>
 		</li>
 	</ul>
-</div>
+</div>-->
 
 
 <!--<div class="bees-case-study" id="case-study">
@@ -76,13 +76,61 @@
 </div>-->
 
 
+<div class="testimonial-quotes">
+	<ul>
+		<li>
+			<a href="#">
+				<div class="photo" style="background-image: url('/images/photos/customers/dell.jpg');"></div>
+				<img src="/images/icons/quote.svg" alt="" />
+				<p>We've seen great results from the advertising True Take Media has done for us.</p>
+				<h5>Dell</h5>
+				<h6>Blue Sage Adventures</h6>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<div class="photo" style="background-image: url('/images/photos/customers/trish.jpg');"></div>
+				<img src="/images/icons/quote.svg" alt="" />
+				<p> True Take really got our organic produce moving... Now we have a great organics section.</p>
+				<h5>Trish</h5>
+				<h6>Bee's Marketplace</h6>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<div class="photo" style="background-image: url('/images/photos/customers/robert.jpg');"></div>
+				<img src="/images/icons/quote.svg" alt="" />
+				<p>We've been able to reach our local audience and get more customers into the store.</p>
+				<h5>Robert</h5>
+				<h6>The Border Store</h6>
+			</a>
+		</li>
+	</ul>
+</div>
 
 
+
+{% if page.cta == "vendor" %}
+
+<div class="vendor-form" id="quote-form">
+	<h1>Feature Your Product In Our Next Video</h1>
+	<h2>Submit Your Application Below</h2>
+	
+	<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script>
+	<script>
+	  hbspt.forms.create({
+		portalId: "3912351",
+		formId: "159d8319-d985-4e78-b86b-58121cb934eb"
+	});
+	</script>
+</div>
+
+{% else %}
 
 <div class="contact-form" id="quote-form">
    <hgroup>
    	<h1>Your 1st Campaign is <strong>FREE!</strong></h1>
-   	<p>Let Us Show You How Well It Actually Works.</p>
+   	<!--<p>You Won't Believe How Well It Actually Works.</p>-->
    </hgroup>
    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script>
    <script>
@@ -95,10 +143,13 @@
     <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>-->
 </div>
 
+{% endif %}
+
+
 <div class="call-to-action">
 	<img src="/images/other/top-smudge.svg" alt="" />
 	<hgroup>
-		<h2>Looking for a better way to advertise your grocery store?</h2>
+		<h2>Looking for a better way to sell groceries?</h2>
 		<h1>We Would Love To Talk</h1>
 	</hgroup>
 	<section>

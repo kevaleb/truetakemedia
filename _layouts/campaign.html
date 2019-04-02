@@ -3,9 +3,223 @@ layout: default
 ---
 {%  include banner.html %}
 
-{% if page.youtube_video_id %}
-{% include video-block.html %}
-{% endif %}
+<div class="campaign-blocks">
+	<section>
+		<div class="facebook-block">
+			<div class="ad-header">
+				<img src="/images/illustrations/mockups/facebook/cooking-logo.svg" alt="" class="logo" />
+				<hgroup>
+					<h4 class="company-name">Your Company Name</h4>
+					<p>Sponsored · <img src="/images/illustrations/mockups/facebook/globe-icon.svg" alt="" />
+					</p>
+				</hgroup>
+				<p>Ad description</p>
+			</div>
+			<div class="videoBlock" >
+				<div class="videoWrapper">
+					<img data-video="eUnDabkIQu8" alt="Play this video" src="https://img.youtube.com/vi/{{ page.youtube_video_id }}/maxresdefault.jpg" class="thumbnail">
+					<img src="/images/icons/play.svg" alt="" class="play" data-video="{{ page.youtube_video_id }}" />
+					<!--<iframe width="560" height="315" src="https://www.youtube.com/embed/NrpMx74qKRQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="none"></iframe>-->
+				</div>
+			</div>
+			<div class="ad-stats">
+				<img src="/images/illustrations/mockups/facebook/like-icon.svg" alt="" />
+				<img src="/images/illustrations/mockups/facebook/haha-icon.svg" alt="" />
+				<img src="/images/illustrations/mockups/facebook/heart-icon.svg" alt="" />
+				<span>Firstname Lastname and 230 others</span>
+				<p>23.6K Views</p>
+			</div>
+			<div class="ad-buttons">
+				<img src="/images/illustrations/mockups/facebook/thumb-icon.svg" alt="" />
+				<img src="/images/illustrations/mockups/facebook/comment-icon.svg" alt="" />
+				<img src="/images/illustrations/mockups/facebook/share-icon.svg" alt="" />
+			</div>
+		</div>
+		
+		<ul class="tags">
+			{% for tag in page.tags %}
+			<li>{{ tag }}</li>
+			{% endfor %}
+		</ul>
+	</section>
+	
+	<section>
+		<hgroup class="campaign-details">
+			<h1>{{ page.title }}</h1>
+			
+		</hgroup>
+		
+	
+		
+		
+		<div class="campaign-options">
+			<h2 class="price" id="price">{{ page.price }}</h2>
+			<!--<h3><strong id="cost-per-impression">{{ page.price | divided_by: 5000.00 | times: 100 }}</strong> Per Impression</h3>-->
+			<h4>
+				<img src="/images/icons/radius-black.svg" alt="" />
+				<span>Radius</span>
+			</h4>
+			<label class="radius-option">
+				<input type="radio" name="radius" value="1 Mile" checked/>
+				<span>1 Mile</span>
+			</label>
+			<label class="radius-option">
+				<input type="radio" name="radius" value="2 Miles" />
+				<span>2 Miles</span>
+			</label>
+			<label class="radius-option">
+				<input type="radio" name="radius" value="3 Miles" />
+				<span>3 Miles</span>
+			</label>
+			<label class="radius-option">
+				<input type="radio" name="radius" value="4 Miles" />
+				<span>4 Miles</span>
+			</label>
+			<label class="radius-option">
+				<input type="radio" name="radius" value="5 Miles" />
+				<span>5 Miles</span>
+			</label>
+			<label class="radius-option">
+				<input type="radio" name="radius" value="10 Miles" />
+				<span>10 Miles</span>
+			</label>
+			<label class="radius-option">
+				<input type="radio" name="radius" value="15 Miles" />
+				<span>15 Miles</span>
+			</label>
+			<label class="radius-option">
+				<input type="radio" name="radius" value="20 Miles" />
+				<span>20 Miles</span>
+			</label>
+			
+			
+			
+			
+			
+			
+			<h4>
+				<img src="/images/icons/eye-black.svg" alt="" />
+				<span>Impressions</span>
+			</h4>
+			
+			<label class="reach-option">
+				
+				<input type="radio" name="reach" value="5000" data-cost="0" checked/>
+				<span>5,000</span>
+				<div>
+					{% assign basecpi = page.price | divided_by:5000.00 | round: 4 %}
+					<span>{{ basecpi | round: 4 | times: 100 | Round }}¢ Per Impression</span>
+				</div>
+			</label>
+			<label class="reach-option">
+				<input type="radio" name="reach" value="7500" data-cost="150"/>
+				<span>7,500</span>
+				<div>
+					{% assign 7500cpi = page.price | plus:150 | divided_by:7500.00 | round: 4 %}
+					<strong>Save {{ basecpi | minus: 7500cpi | divided_by: basecpi | round: 2 | times: 100 | round }}%</strong>
+					<span>{{ 7500cpi | round: 4 | times: 100 }}¢ Per Impression</span>
+				</div>
+			</label>
+			<label class="reach-option">
+				<input type="radio" name="reach" value="10000" data-cost="200"/>
+				<span>10,000</span>
+				<div>
+					{% assign 10000cpi = page.price | plus:200 | divided_by:10000.00 | round: 4 %}
+					<strong>Save {{ basecpi | minus: 10000cpi | divided_by: basecpi | round: 2 | times: 100 | round }}%</strong>
+					<span>{{ 10000cpi | round: 4 | times: 100 }}¢ Per Impression</span>
+				</div>
+			</label>
+			<label class="reach-option">
+				<input type="radio" name="reach" value="15000" data-cost="300"/>
+				<span>15,000</span>
+				<div>
+					{% assign 15000cpi = page.price | plus:300 | divided_by:15000.00 | round: 4 %}
+					<strong>Save {{ basecpi | minus: 15000cpi | divided_by: basecpi | round: 2 | times: 100 | round }}%</strong>
+					<span>{{ 15000cpi | round: 4 | times: 100 }}¢ Per Impression</span>
+				</div>
+			</label>
+			<label class="reach-option">
+				<input type="radio" name="reach" value="20000" data-cost="400"/>
+				<span>20,000</span>
+				<div>
+					{% assign 20000cpi = page.price  | plus:400 | divided_by:20000.00 | round: 4 %}
+					<strong>Save {{ basecpi | minus: 20000cpi | divided_by: basecpi | round: 2 | times: 100 | round }}%</strong>
+					<span>{{ 20000cpi | round: 4 | times: 100 }}¢ Per Impression</span>
+				</div>
+			</label>
+			<label class="reach-option">
+				<input type="radio" name="reach" value="30000" data-cost="600"/>
+				<span>30,000</span>
+				<div>
+					{% assign 30000cpi = page.price | plus:600 | divided_by:30000.00 | round: 4 %}
+					<strong>Save {{ basecpi | minus: 30000cpi | divided_by: basecpi | round: 2 | times: 100 | round }}%</strong>
+					<span>{{ 30000cpi | round: 4 | times: 100 }}¢ Per Impression</span>
+				</div>
+			</label>
+			<label class="reach-option">
+				<input type="radio" name="reach" value="40000" data-cost="800"/>
+				<span>40,000</span>
+				<div>
+					{% assign 40000cpi = page.price | plus:800 | divided_by:40000.00 | round: 4 %}
+					<strong>Save {{ basecpi | minus: 40000cpi | divided_by: basecpi | round: 2 | times: 100 | round }}%</strong>
+					<span>{{ 40000cpi | round: 4 | times: 100 }}¢ Per Impression</span>
+				</div>
+			</label>
+			<label class="reach-option">
+				<input type="radio" name="reach" value="50000" data-cost="1000"/>
+				<span>50,000</span>
+				<div>
+					{% assign 50000cpi = page.price | plus: 1000 | divided_by:50000.00 | round: 4 %}
+					<strong>Save {{ basecpi | minus: 50000cpi | divided_by: basecpi | round: 2 | times: 100 | round }}%</strong>
+					<span>{{ 50000cpi | round:4 | times:100 }}¢ Per Impression</span>
+				</div>
+			</label>
+		</div>
+		
+		<button
+		    class="snipcart-add-item button"
+		    data-item-id="{{ page.sku }}-{{ page.title | replace:' ','-' | downcase }}"
+		    data-item-name="{{ page.title }}"
+		    data-item-price="{{ page.price }}"
+		    data-item-url="https://truetakemedia.com{{ page.url }}"
+		    data-item-custom1-name="Radius"
+		    data-item-custom1-options="1 Mile|2 Miles|3 Miles|4 Miles|5 Miles|10 Miles|15 Miles|20 Miles"
+		    data-item-custom1-value="1 Mile"
+		    data-item-custom2-name="Impressions"
+		    data-item-custom2-options="5000|7500[+150.00]|10000[+200.00]|15000[+300.00]|20000[+400.00]|30000[+600.00]|40000[+800.00]|50000[+1000.00]"
+		    data-item-custom2-value="5000"
+		    >Add To Cart</button>
+	</section>
+	
+</div>
+
+<script type="text/javascript">
+	$( ".campaign-options > label.radius-option > input" ).change(function() {
+		var radiusValue= $(this).val();
+		$('.snipcart-add-item').attr('data-item-custom1-value',radiusValue);
+	});
+	
+	$( ".campaign-options > label.reach-option > input" ).change(function() {
+		var reachValue= $(this).val();
+		
+		var baseCost= {{ page.price }};
+		var reachCost= $(this).data('cost');
+		
+		var totalCost= baseCost + reachCost;
+		var costPerImpression= (Math.round(totalCost/reachValue*1000)/100)*10;
+		
+		$('.snipcart-add-item').attr('data-item-custom2-value',reachValue);
+		document.getElementById("price").innerHTML = totalCost;
+		document.getElementById("cost-per-impression").innerHTML = costPerImpression;
+	});
+</script>
+
+
+<div class="campaign-ordering">
+	
+</div>
+
+
 <article class="blog-post">
 	{{ content }}
 </article>

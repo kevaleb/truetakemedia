@@ -50,14 +50,24 @@ banner_path:
 			
 			<section>
 				<h3 class="campaigntitle">{{ campaign.title }}</h3>
-				<h4 class="campaignprice">${{ campaign.price }}</h4>
-				<p class="campaigntags">
+				<h4 class="campaignprice">Starting At: ${{ campaign.price }}</h4>
+				<!--<p class="campaigntags">
 					{% for tag in campaign.tags %}
 					<span>{{ tag }}</span>
 					{% endfor %}
-				</p>
+					
+				</p>-->
 				<span class="campaigndate">{{ campaign.start_date }}</span>
-				<button
+				<a href="{{ campaign.url }}" class="button">
+					<span>Customize Campaign</span>
+					<p>
+						<img src="/images/icons/radius.svg" alt="" />
+						<span>1 Mile From Store</span>
+						<img src="/images/icons/eye.svg" alt="" />
+						<span>5,000 Impressions</span>
+					</p>
+				</a>
+				<!--<button
 				    class="snipcart-add-item button"
 				    data-item-id="{{ campaign.sku }}-{{ campaign.title | replace:' ','-' | downcase }}"
 				    data-item-name="{{ campaign.title }}"
@@ -77,11 +87,12 @@ banner_path:
 						<img src="/images/icons/eye.svg" alt="" />
 						<span>5,000 Impressions</span>
 					</p>
-				</button>
+				</button>-->
 			</section>
 		</li>
 		{% endfor %}
 	</ul>
+	<img src="/images/other/bottom-smudge.svg" alt="" class="bottom-smudge" />
 </div>
 
 
@@ -100,28 +111,5 @@ banner_path:
 	  var searchString = $(this).val();
 	  campaignList.search(searchString);
 	});
-
-	
-	
-	
-	// Listen for clicks
-	document.addEventListener('click', function (event) {
-	
-		// Check if clicked element is a video thumbnail
-		var videoId = event.target.getAttribute('data-video');
-		if (!videoId) return;
-	
-		// Create iframe
-		var iframe = document.createElement('div');
-		iframe.innerHTML = '<p>x</p><iframe width="560" height="315" src="https://www.youtube.com/embed/' + videoId + '?rel=0&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
-		var video = iframe.childNodes[1];
-	
-		// Replace the image with the video
-		event.target.parentNode.replaceChild(video, event.target);
-	
-		// Enter fullscreen mode
-		video.requestFullscreen();
-	
-	}, false);
 </script>
 

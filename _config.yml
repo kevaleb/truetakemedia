@@ -32,7 +32,7 @@ collections:
   main-pages:
     output: true
   campaigns:
-    output: false
+    output: true
   
     
 defaults:
@@ -54,6 +54,8 @@ defaults:
       _hide_content: false
       permalink: /campaigns/:title/
       navclass: /campaigns/
+      banner_size: tiny
+      banner_bottom_image: /images/other/banner-bottom-grey.svg
   -
     scope:
       path: ""

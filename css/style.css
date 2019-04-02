@@ -760,24 +760,7 @@ header.open > .menu-button > span.three {
 
 /* @end */
 
-/* @group H Group - Audience Reports */
 
-.banner.audience-reports {
-	
-}
-.banner.audience-reports > hgroup {
-	
-}
-.banner.audience-reports > hgroup > img {
-	max-width: 320px;
-}
-.banner.audience-reports > hgroup > h1 {
-	position: relative;
-	bottom: -265px;
-	font-size: 20px;
-}
-
-/* @end */
 
 
 
@@ -850,7 +833,7 @@ header.open > .menu-button > span.three {
 	position: relative;
 	margin: 0 auto;
 	padding: 0 0 48px 0;
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 
 .alternating > div:first-of-type:before {
@@ -869,7 +852,87 @@ header.open > .menu-button > span.three {
 	margin: 0 0 0 48px;
 	
 	/*transform: rotateY(72deg);*/
+	overflow: visible;
 }
+
+
+.alternating > div > .video {
+	position: absolute;
+	z-index: 999999;
+	left: 50%;
+	top: 0%;
+	height: 100%;
+	width: 100%;
+	perspective: 1000px;
+}
+.alternating > div > .video > .videoBlock {
+	width: 100%;
+	margin: 0!important;
+	transform: rotatey(-15deg);
+	transition: transform 1s ease-in-out 0s;
+}
+.alternating > div:hover > .video > .videoBlock {
+	transform: rotatey(0deg);
+}
+
+
+
+
+.alternating > div >  .campaign {
+	position: absolute;
+	z-index: 999999;
+	left: 50%;
+	top: 0%;
+	min-height: 100%;
+	perspective: 1000px;
+	margin: 0 0 0 48px;
+}
+.alternating > div > .campaign > .facebook-block {
+	transform: rotatey(-15deg);
+	transition: transform 1s ease-in-out 0s;
+}
+.alternating > div:hover > .campaign > .facebook-block {
+	transform: rotatey(0deg);
+}
+
+
+
+.alternating > div > .campaign-choices {
+	position: absolute;
+	z-index: 999999;
+	left: 50%;
+	top: 0%;
+	height: 100%;
+	perspective: 1000px;
+	margin: 0 0 0 48px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.alternating > div > .campaign-choices:before {
+	content: '\00a0';
+	display: inline-block;
+	width: 0px;
+	height: 100%;
+	/*background: #000;*/
+	
+	vertical-align: middle;
+}
+.alternating > div > .campaign-choices > .campaign-options {
+	display: inline-block;
+	max-width: 480px;
+	vertical-align: middle;
+	background: #fff;
+	padding: 36px;
+	box-shadow: 0px 3px 5px rgba(0,0,0,.15);
+	white-space: normal;
+	transform: rotatey(-15deg);
+	transition: transform 1s ease-in-out 0s;
+}
+.alternating > div:hover > .campaign-choices > .campaign-options {
+	transform: rotatey(0deg);
+}
+
+
 
 .alternating > div > hgroup {
 	position: relative;
@@ -946,6 +1009,51 @@ header.open > .menu-button > span.three {
 .alternating > div:nth-of-type(even) > hgroup > article {
 	float: left;
 	max-width: 480px;
+}
+
+.alternating > div:nth-of-type(even) > .campaign {
+	left: auto;
+	right: 50%;
+	margin: 0px 48px 0 0;
+}
+.alternating > div:nth-of-type(even) > .campaign > .facebook-block {
+	transform: rotatey(15deg);
+	
+}
+.alternating > div:nth-of-type(even):hover > .campaign > .facebook-block {
+	transform: rotatey(0deg);
+	
+}
+
+
+
+.alternating > div:nth-of-type(even) > .video {
+	width: 100%;
+	left: auto;
+	right: 50%;
+	margin: 0px 48px 0 0;
+	
+}
+.alternating > div:nth-of-type(even) > .video > .videoBlock {
+	transform: rotatey(15deg);
+	float: right;
+}
+.alternating > div:nth-of-type(even):hover > .video > .videoBlock {
+	transform: rotatey(0deg);
+}
+
+
+
+.alternating > div:nth-of-type(even) > .campaign-choices {
+	left: auto;
+	right: 50%;
+	margin: 0px 48px 0 0;
+}
+.alternating > div:nth-of-type(even) > .campaign-choices > .campaign-options {
+	transform: rotatey(15deg);
+}
+.alternating > div:nth-of-type(even):hover > .campaign-choices > .campaign-options {
+	transform: rotatey(0deg);
 }
 
 
@@ -1031,7 +1139,7 @@ header.open > .menu-button > span.three {
 
 
 .alternating > div > img,
-.alternating > div:nth-of-type(even) > img  {
+.alternating > div:nth-of-type(even) > img {
 	position: relative;
 	left: auto;
 	top: 0;
@@ -1045,6 +1153,28 @@ header.open > .menu-button > span.three {
 	right: auto;
 	height: auto;
 	margin: 0px 0 0 0;
+}
+.alternating > div > .campaign,
+.alternating > div:nth-of-type(even) > .campaign  {
+	position: relative;
+	left: auto;
+	right: 0;
+	top: auto;
+	margin: 0 auto;
+	height: auto;
+	min-height: 0;
+	width: 100%;
+	max-width: 480px;
+}
+.alternating > div > .video,
+.alternating > div:nth-of-type(even) > .video  {
+	position: relative;
+	left: auto;
+	top: auto;
+	margin: 0 auto;
+	height: auto;
+	width: 100%;
+	max-width: 480px;
 }
 
 
@@ -3085,192 +3215,7 @@ video#bgvid {
 
 
 
-/* @group Campaigns */
-.campaigns {
-	position: relative;
-	z-index: 100;
-	list-style: none;
-	max-width: 1280px;
-	margin: 0 auto;
-	padding: 0;
-	text-align: center;
-}
-.campaigns:after {
-	content: '\00a0';
-	display: block;
-	clear: both;
-}
-.campaigns > h2 {
-	margin: 0 0 24px 0;
-}
-.campaigns > li {
-	position: relative;
-	float: left;
-	width: 32%;
-	border-radius: 6px;
-	box-shadow: 0 0 2px rgba(0,0,0,.25);
-	background: #fff;
-}
-.campaigns > li:nth-of-type(3n+2) {
-	margin: 0 2%;
-}
-.campaigns > li > h2 {
-	position: relative;
-	top: -9px;
-}
-.campaigns > li > .videoBlock {
-	padding: 12px 12px 0 12px;
-}
-.campaigns > li > .videoBlock > .coming-soon {
-	background: #999;
-	color: #fff;
-	
-}
-.campaigns > li > .videoBlock > .coming-soon > span {
-	display: inline-block;
-	padding: 12px;
-}
-.campaigns > li > section {
-}
-.campaigns > li > section > h3 {
-	margin: -6px 0 0 0;
-	padding: 0 12px;
-	font: 500 16px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	color: #000;
-}
-.campaigns > li > section > h4 {
-	position: absolute;
-	z-index: 999999;
-	top: 6px;
-	right: 6px;
-	padding: 3px 9px;
-	background: #fff;
-	font: 500 12px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	color: #333;
-	font-style: italic;
-}
-.campaigns > li > section > p {
-	margin: 0 0 18px 0;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-.campaigns > li > section > p > span {
-	padding: 0 4px;
-	font: 400 10px/10px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	color: #999;
-	border: 1px solid #ccc;
-	border-radius: 24px;
-}
-.campaigns > li > section > span {
-	display: none;
-}
-.campaigns > li > section > .button {
-	position: relative;
-	display: block;
-	width: 100%;
-	margin: 6px 0 0 0;
-	padding: 6px 9px;
-	border-radius: 0 0 6px 6px;
-	background: #fff;
-	border-color: rgba(0,0,0,0);
-	border-top: 1px solid #f2f2f2;
-	transition: all .5s ease-in 0s;
-}
-.campaigns > li > section > .button > span,
-.campaigns > li > section > .button > p {
-	font: 400 10px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	color: #cb2027;
-	
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-.campaigns > li > section > .button > p {
-	display: none;
-	text-align: left;
-	letter-spacing: 0;
-}
-.campaigns > li > section > .button > p > img {
-	width: 24px;
-	vertical-align: middle;
-}
-.campaigns > li > section > .button > p > span+img {
-	margin-left: 12px;
-}
-.campaigns > li > section > .button:after {
-	position: absolute;
-	top: 16px;
-	right: 18px;
-	content: "\00a0";
-	display: inline-block;
-	width: 18px;
-	height: 18px;
-	background: url("/images/icons/right-arrow.svg");
-	vertical-align: middle;
-	transition: all .2s ease-out .2s;
-}
-.campaigns > li:hover > section > .button {
-	position: relative;
-	z-index: 100;
-	background: #cb2027;
-	border-top: 1px solid #cb2027;
-	padding-right: 24px;
-}
-.campaigns > li:hover > section > .button:after {
-	right: 6px;
-}
-.campaigns > li:hover > section > .button > p {
-	display: block;
-	color: #fff;
-}
-.campaigns > li:hover > section > .button > span {
-	display: none;
-}
 
-
-@media all and (max-width: 960px) {
-
-.campaigns {
-	padding: 2%;
-}
-.campaigns > li {
-	width: 49%;
-	max-width: none;
-	margin: 0 0 2% 0;
-}
-.campaigns > li:nth-of-type(3n+2) {
-	margin: 0 0 2% 0;
-}
-.campaigns > li:nth-of-type(2n-1) {
-	/*background: #f16;*/
-	/*margin: 0 2% 2% 0;*/
-	margin-right: 2%;
-}
-
-.campaigns > li > section > .button {
-	padding: 12px;
-}
-.campaigns > li > section > .button:after {
-	top: 21px;
-}
-
-}
-
-
-@media all and (max-width: 600px) {
-
-.campaigns > li {
-	width: 100%;
-	max-width: none;
-}
-
-}
-
-/* @end */
 
 
 
@@ -4166,6 +4111,673 @@ video#bgvid {
 
 
 
+
+
+
+/* @group Vendor Form */
+
+.vendor-form {
+	padding: 96px 0;
+	text-align: center;
+}
+.vendor-form > div {
+	max-width: 480px;
+	margin: 0 auto;
+	padding: 48px 0;
+}
+
+/* @end */
+
+
+
+/* @group Campaigns */
+#campaignlist > .bottom-smudge {
+	position: absolute;
+	left: 0;
+	top: auto;
+	bottom: 0;
+	width: 100%;
+}
+
+
+.campaigns {
+	position: relative;
+	z-index: 100;
+	list-style: none;
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 0 0 96px 0;
+	text-align: center;
+}
+.campaigns:after {
+	content: '\00a0';
+	display: block;
+	clear: both;
+}
+
+
+.campaigns > h2 {
+	margin: 0 0 24px 0;
+}
+.campaigns > li {
+	position: relative;
+	float: left;
+	width: 32%;
+	border-radius: 6px;
+	box-shadow: 0 0 2px rgba(0,0,0,.25);
+	background: #fff;
+}
+.campaigns > li:nth-of-type(3n+2) {
+	margin: 0 2%;
+}
+.campaigns > li > h2 {
+	position: relative;
+	top: -9px;
+}
+.campaigns > li > .videoBlock {
+	padding: 12px 12px 0 12px;
+}
+.campaigns > li > .videoBlock > .coming-soon {
+	background: #999;
+	color: #fff;
+	
+}
+.campaigns > li > .videoBlock > .coming-soon > span {
+	display: inline-block;
+	padding: 12px;
+}
+.campaigns > li > section {
+}
+.campaigns > li > section > h3 {
+	margin: -6px 0 0 0;
+	padding: 0 12px;
+	font: 500 16px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #000;
+}
+.campaigns > li > section > h4 {
+	position: absolute;
+	z-index: 999999;
+	top: 6px;
+	right: 6px;
+	padding: 3px 9px;
+	background: #fff;
+	font: 500 12px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #333;
+	font-style: italic;
+}
+.campaigns > li > section > p {
+	margin: 0 0 18px 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.campaigns > li > section > p > span {
+	padding: 0 4px;
+	font: 400 10px/10px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #999;
+	border: 1px solid #ccc;
+	border-radius: 24px;
+}
+.campaigns > li > section > span {
+	display: none;
+}
+.campaigns > li > section > .button {
+	position: relative;
+	display: block;
+	width: 100%;
+	margin: 6px 0 0 0;
+	padding: 6px 9px;
+	border-radius: 0 0 6px 6px;
+	background: #fff;
+	border-color: rgba(0,0,0,0);
+	border-top: 1px solid #f2f2f2;
+	transition: all .5s ease-in 0s;
+}
+.campaigns > li > section > .button > span,
+.campaigns > li > section > .button > p {
+	font: 400 10px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #cb2027;
+	
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.campaigns > li > section > .button > p {
+	display: none;
+	text-align: left;
+	letter-spacing: 0;
+}
+.campaigns > li > section > .button > p > img {
+	width: 24px;
+	vertical-align: middle;
+}
+.campaigns > li > section > .button > p > span+img {
+	margin-left: 12px;
+}
+.campaigns > li > section > .button:after {
+	position: absolute;
+	top: 16px;
+	right: 18px;
+	content: "\00a0";
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	background: url("/images/icons/right-arrow.svg");
+	vertical-align: middle;
+	transition: all .2s ease-out .2s;
+}
+.campaigns > li:hover > section > .button {
+	position: relative;
+	z-index: 100;
+	background: #cb2027;
+	border-top: 1px solid #cb2027;
+	padding-right: 24px;
+}
+.campaigns > li:hover > section > .button:after {
+	right: 6px;
+}
+.campaigns > li:hover > section > .button > p {
+	display: block;
+	color: #fff;
+}
+.campaigns > li:hover > section > .button > span {
+	display: none;
+}
+
+
+@media all and (max-width: 960px) {
+
+.campaigns {
+	padding: 2%;
+}
+.campaigns > li {
+	width: 49%;
+	max-width: none;
+	margin: 0 0 2% 0;
+}
+.campaigns > li:nth-of-type(3n+2) {
+	margin: 0 0 2% 0;
+}
+.campaigns > li:nth-of-type(2n-1) {
+	/*background: #f16;*/
+	/*margin: 0 2% 2% 0;*/
+	margin-right: 2%;
+}
+
+.campaigns > li > section > .button {
+	padding: 12px;
+}
+.campaigns > li > section > .button:after {
+	top: 21px;
+}
+
+}
+
+
+@media all and (max-width: 600px) {
+
+.campaigns > li {
+	width: 100%;
+	max-width: none;
+}
+
+}
+
+/* @end */
+
+
+
+
+/* @group Campaign Blocks */
+
+.campaign-blocks {
+	position: relative;
+	padding: 4% 4% 12% 4%;
+	text-align: center;
+	background: #f2f2f2;
+	overflow: hidden;
+}
+.campaign-blocks > .bottom-smudge {
+	position: absolute;
+	left: 0;
+	bottom: 0%;
+	width: 100%;
+	margin: 0;
+}
+.campaign-blocks > section {
+	position: relative;
+	z-index: 10000;
+	display: inline-block;
+	width: 50%;
+	max-width: 600px;
+	margin: 0 0 0 -.25em;
+	text-align: left;
+	vertical-align: middle;
+	
+	perspective: 1000px;
+}
+.campaign-blocks > section+section {
+	padding-left: 24px;
+}
+
+.campaign-blocks > section > .facebook-block {
+	transform: rotatey(15deg);
+	
+	transition: transform 1s ease-in-out 0s;
+}
+.campaign-blocks > section> .facebook-block:hover  {
+	transform: rotatey(00deg);
+}
+
+
+
+.campaign-blocks > section > .tags {
+	padding: 24px 0;
+}
+
+
+
+
+@media all and (max-width: 720px) {
+
+.campaign-blocks > section {
+	display: block;
+	margin: 0;
+	width: 100%;
+	max-width: none;
+	text-align: center;
+}
+
+}
+
+/* @end */
+
+
+
+
+
+
+/* @group Facebook Block */
+
+.facebook-block {
+	position: relative;
+	width: 100%;
+	max-width: 720px;
+	margin: 0;
+	border: 1px solid #d8d8d8;
+	border-radius: 2px;
+	background: #fff;
+	text-align: left;
+}
+.facebook-block > .ad-header {
+	overflow: hidden;
+	padding: 12px;
+	white-space: nowrap;
+	letter-spacing: 0;
+}
+.facebook-block > .ad-header > img {
+	display: inline-block;
+	width: 12%;
+	min-width: 36px;
+	margin: 0 1% 0 0;
+	vertical-align: middle;
+}
+.facebook-block > .ad-header > hgroup {
+	display: inline-block;
+	width: 84%;
+	vertical-align: middle;
+}
+
+.facebook-block > .ad-header > hgroup > h4 {
+	font:700 16px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #365899;
+	letter-spacing: 0;
+}
+.facebook-block > .ad-header > hgroup > p {
+	font: 400 12px/14px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #6a7078;
+	vertical-align: middle;
+	letter-spacing: 0;
+}
+.facebook-block > .ad-header > hgroup > p > img {
+	width: 3%;
+	vertical-align: middle;
+}
+.facebook-block > .ad-header > p {
+	margin-top: 12px;
+	font: 400 .96em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #1d2129;
+	white-space: normal;
+	letter-spacing: 0;
+}
+
+
+.facebook-block > .videoBlock {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+
+.facebook-block > .ad-stats {
+	padding: 12px;
+	white-space: nowrap;
+}
+.facebook-block > .ad-stats > img {
+	position: relative;
+	width: 5%;
+	vertical-align: middle;
+}
+.facebook-block > .ad-stats > img:first-of-type {
+	z-index: 10;
+}
+.facebook-block > .ad-stats > img:nth-of-type(2) {
+	z-index: 5;
+}
+.facebook-block > .ad-stats > img+img {
+	margin-left: -2.5%;
+}
+.facebook-block > .ad-stats > span {
+	display: inline-block;
+	width: 48%;
+	vertical-align: middle;
+	font: 400 13px/14px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #616770;
+	letter-spacing: 0;
+	/*background: #f16;*/
+}
+.facebook-block > .ad-stats > p {
+	display: inline-block;
+	width: 38%;
+	vertical-align: middle;
+	font: 400 14px/16px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #616770;
+	/*background: #f16;*/
+	text-align: right;
+	letter-spacing: 0;
+}
+
+
+.facebook-block > .ad-buttons {
+	overflow: hidden;
+	padding: 0 12px 12px 12px;
+	text-align: center;
+	white-space: nowrap;
+}
+.facebook-block > .ad-buttons:before {
+	content: '\00a0';
+	display: block;
+	width: 100%;
+	height: 1px;
+	margin: 0 0 12px 0;
+	background: #e5e5e5;
+}
+.facebook-block > .ad-buttons > img {
+	display: inline-block;
+	width: 19%;
+	margin: 0 7%;
+}
+
+
+@media all and (max-width: 720px) {
+
+.facebook-block {
+	/*background: #f16;*/
+}
+.facebook-block > .ad-header > hgroup > h4 {
+	font-size: calc(12px + (12 - 8) * ((100vw - 320px) / (720 - 320)));
+	line-height: calc(12px + (12 - 8) * ((100vw - 320px) / (720 - 320)));
+}
+.facebook-block > .ad-header > hgroup > p {
+	font-size: calc(10px + (10 - 8) * ((100vw - 320px) / (720 - 320)));
+	line-height: calc(14px + (14 - 10) * ((100vw - 320px)/(720 - 320)));
+}
+.facebook-block > .ad-header > p {
+	font-size: calc(12px + (12 - 8) * ((100vw - 320px) / (720 - 320)));
+	line-height: calc(10px + (10 - 6) * ((100vw - 320px)/(720 - 320)));
+}
+
+.facebook-block > .ad-stats > span {
+	/*font: 400 13px/14px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;*/
+	font-size: calc(9px + (9 - 6) * ((100vw - 320px) / (720 - 320)));
+	line-height: calc(9px + (9 - 6) * ((100vw - 320px)/(720 - 320)));
+}
+.facebook-block > .ad-stats > p {
+	/*font: 400 14px/16px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;*/
+	font-size: calc(10px + (10 - 5) * ((100vw - 320px) / (720 - 320)));
+	line-height: calc(10px + (10 - 5) * ((100vw - 320px)/(720 - 320)));
+}
+
+}
+
+/* @end */
+
+
+
+
+
+
+/* @group Campaign Details */
+
+.campaign-details {
+	
+}
+.campaign-details > h1 {
+	margin: 0;
+}
+.campaign-details > h2 {
+	margin: 0;
+}
+.campaign-details > #price:before {
+	content: '$';
+}
+
+/* @end */
+
+
+
+
+
+
+
+/* @group Campaign Options */
+
+.campaign-options {
+	padding: 0 0 24px 0;
+}
+.campaign-options > h2 {
+	margin-bottom: 24px;
+}
+.campaign-options > h2:before {
+	content: '$';
+}
+
+.campaign-options > h3 > strong:after {
+	content: "\00A2";
+}
+.campaign-options > h4 {
+	margin: 18px 0 6px 0;
+	font: bold 12px/14px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #000;
+	text-transform: uppercase;
+}
+.campaign-options > h4 > img {
+	width: 24px;
+	vertical-align: middle;
+}
+.campaign-options > h4 > span {
+	vertical-align: middle;
+}
+
+.campaign-options > label {
+	position: relative;
+	display: inline-block;
+	position: relative;
+	margin: 0 0 6px 0;
+	cursor: pointer;
+}
+.campaign-options > label > input {
+	position: absolute;
+	left: 8px;
+	top: 8px;
+}
+.campaign-options > label > span {
+	display: inline-block;
+	width: 96px;
+	padding: 3px 9px 3px 24px;
+	border: 2px solid #e5e5e5;
+	border-radius: 96px;
+	font: 400 12px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	/*text-align: center;*/
+}
+.campaign-options > label > span:hover {
+	background: #f2f2f2;
+}
+.campaign-options > label > input[type=radio]:checked + span {
+	color: #cb2027;
+	border-color: #cb2027;
+}
+.campaign-options > label > input[type=radio] {
+	display: inline-block;
+	vertical-align: middle;
+}
+.campaign-options > label > div {
+	display: none;
+	position: absolute;
+	left: -50%;
+	width: 200%;
+	bottom: 100%;
+	margin: 0 0 6px 0;
+	padding: 9px 0;
+	background: #cb2027;
+	color: #fff;
+	border-radius: 3px;
+	text-align: center;
+	
+}
+.campaign-options > label:hover > div {
+	display: block;
+}
+.campaign-options > label > div:after {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	content: '\00a0';
+	width: 0;
+    height: 0;
+	margin: 0 0 0 -6px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 3px solid #cb2027;
+}	
+.campaign-options > label > div > strong {
+	display: block;
+	font: 900 12px/12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+.campaign-options > label > div > span {
+	font: 400 11px/16px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: rgba(255,255,255,.75);
+}
+
+.campaign-options > .button {
+	margin-top: 24px;
+}
+
+/* @end */
+
+
+
+
+
+/* @group Tags */
+
+.tags {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+.tags > li {
+	display: inline-block;
+	margin: 0;
+	padding: 3px 6px;
+	border: 1px solid #ccc;
+	border-radius: 48px;
+	font: 400 8px/10px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	
+}
+
+/* @end */
+
+
+
+
+
+
+/* @group Testimonial Quotes */
+
+.testimonial-quotes {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 48px 0;
+}
+.testimonial-quotes > ul {
+	list-style: none;
+	white-space: nowrap;
+	text-align: center;
+}
+.testimonial-quotes > ul > li {
+	display: inline-block;
+	width: 33.333%;
+	padding: 24px;
+	white-space: normal;
+}
+.testimonial-quotes > ul > li:hover {
+	background: #f2f2f2;
+}
+.testimonial-quotes > ul > li > a {
+	text-decoration: none;
+}
+.testimonial-quotes > ul > li > a > .photo {
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
+	background-color: #ccc;
+	border: 1px solid #ccc;
+	border-radius: 200px;
+	background-size: cover;
+	background-position: center;
+	box-shadow: 0 0 0 2px #fff inset;
+}
+.testimonial-quotes > ul > li:nth-last-of-type(2) > a > .photo {
+	width: 200px;
+	height: 200px;
+}
+.testimonial-quotes > ul > li > a > img {
+	width: 36px;
+	margin: -24px 0 0 0;
+	background: #fff;
+	border-radius: 24px;
+	border: 1px solid #ccc;
+}
+.testimonial-quotes > ul > li > a > p {
+	margin: 12px 0;
+}
+.testimonial-quotes > ul > li > a > h5 {
+	font: 900 16px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #000;
+	
+}
+.testimonial-quotes > ul > li > a > h6 {
+	font: 400 10px/12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #666;
+	text-transform: uppercase;
+}
+
+/* @end */
 
 .leadinModal {
 	z-index: 999999999999999999999!important;
