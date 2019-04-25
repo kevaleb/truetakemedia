@@ -115,66 +115,67 @@ layout: default
 				<input type="radio" name="reach" value="7500" data-cost="150"/>
 				<span>7,500</span>
 				<div>
-					{% assign 7500cpi = page.price | plus:150 | divided_by:7500.00 | round: 4 %}
-					<strong>Save {{ basecpi | minus: 7500cpi | divided_by: basecpi | round: 2 | times: 100 | round }}%</strong>
-					<span>{{ 7500cpi | round: 4 | times: 100 }}¢ Per Impression</span>
+					{% assign cpi7500 = page.price | plus:150 | divided_by:7500.00 | round: 4 %}
+					<strong>Save {{ basecpi | minus: cpi7500 | divided_by: basecpi | round: 2 | times: 100 | round }}%</strong>
+					<span>{{ cpi7500 | round: 4 | times: 100 }}¢ Per Impression</span>
 				</div>
 			</label>
 			<label class="reach-option">
 				<input type="radio" name="reach" value="10000" data-cost="200"/>
 				<span>10,000</span>
 				<div>
-					{% assign 10000cpi = page.price | plus:200 | divided_by:10000.00 | round: 4 %}
-					<strong>Save {{ basecpi | minus: 10000cpi | divided_by: basecpi | round: 2 | times: 100 | round }}%</strong>
-					<span>{{ 10000cpi | round: 4 | times: 100 }}¢ Per Impression</span>
+					{% assign cpi10000 = page.price | plus:200 | divided_by:10000.00 | round: 4 %}
+					<strong>Save {{ basecpi | minus: cpi10000 | divided_by: basecpi | round: 2 | times: 100 | round }}%</strong>
+					<span>{{ cpi10000 | round: 4 | times: 100 }}¢ Per Impression</span>
 				</div>
 			</label>
 			<label class="reach-option">
 				<input type="radio" name="reach" value="15000" data-cost="300"/>
 				<span>15,000</span>
 				<div>
-					{% assign 15000cpi = page.price | plus:300 | divided_by:15000.00 | round: 4 %}
-					<strong>Save {{ basecpi | minus: 15000cpi | divided_by: basecpi | round: 2 | times: 100 | round }}%</strong>
-					<span>{{ 15000cpi | round: 4 | times: 100 }}¢ Per Impression</span>
+					{% assign cpi15000 = page.price | plus:300 | divided_by:15000.00 | round: 4 %}
+					<strong>Save {{ basecpi | minus: cpi15000 | divided_by: basecpi | round: 2 | times: 100 | round }}%</strong>
+					<span>{{ cpi15000 | round: 4 | times: 100 }}¢ Per Impression</span>
 				</div>
 			</label>
 			<label class="reach-option">
 				<input type="radio" name="reach" value="20000" data-cost="400"/>
 				<span>20,000</span>
 				<div>
-					{% assign 20000cpi = page.price  | plus:400 | divided_by:20000.00 | round: 4 %}
-					<strong>Save {{ basecpi | minus: 20000cpi | divided_by: basecpi | round: 2 | times: 100 | round }}%</strong>
-					<span>{{ 20000cpi | round: 4 | times: 100 }}¢ Per Impression</span>
+					{% assign cpi20000 = page.price  | plus:400 | divided_by:20000.00 | round: 4 %}
+					<strong>Save {{ basecpi | minus: cpi20000 | divided_by: basecpi | round: 2 | times: 100 | round }}%</strong>
+					<span>{{ cpi20000 | round: 4 | times: 100 }}¢ Per Impression</span>
 				</div>
 			</label>
 			<label class="reach-option">
 				<input type="radio" name="reach" value="30000" data-cost="600"/>
 				<span>30,000</span>
 				<div>
-					{% assign 30000cpi = page.price | plus:600 | divided_by:30000.00 | round: 4 %}
-					<strong>Save {{ basecpi | minus: 30000cpi | divided_by: basecpi | round: 2 | times: 100 | round }}%</strong>
-					<span>{{ 30000cpi | round: 4 | times: 100 }}¢ Per Impression</span>
+					{% assign cpi30000 = page.price | plus:600 | divided_by:30000.00 | round: 4 %}
+					<strong>Save {{ basecpi | minus: cpi30000 | divided_by: basecpi | round: 2 | times: 100 | round }}%</strong>
+					<span>{{ cpi30000 | round: 4 | times: 100 }}¢ Per Impression</span>
 				</div>
 			</label>
 			<label class="reach-option">
 				<input type="radio" name="reach" value="40000" data-cost="800"/>
 				<span>40,000</span>
 				<div>
-					{% assign 40000cpi = page.price | plus:800 | divided_by:40000.00 | round: 4 %}
-					<strong>Save {{ basecpi | minus: 40000cpi | divided_by: basecpi | round: 2 | times: 100 | round }}%</strong>
-					<span>{{ 40000cpi | round: 4 | times: 100 }}¢ Per Impression</span>
+					{% assign cpi40000 = page.price | plus:800 | divided_by:40000.00 | round: 4 %}
+					<strong>Save {{ basecpi | minus: cpi40000 | divided_by: basecpi | round: 2 | times: 100 | round }}%</strong>
+					<span>{{ cpi40000 | round: 4 | times: 100 }}¢ Per Impression</span>
 				</div>
 			</label>
 			<label class="reach-option">
 				<input type="radio" name="reach" value="50000" data-cost="1000"/>
 				<span>50,000</span>
 				<div>
-					{% assign 50000cpi = page.price | plus: 1000 | divided_by:50000.00 | round: 4 %}
-					<strong>Save {{ basecpi | minus: 50000cpi | divided_by: basecpi | round: 2 | times: 100 | round }}%</strong>
-					<span>{{ 50000cpi | round:4 | times:100 }}¢ Per Impression</span>
+					{% assign cpi50000 = page.price | plus: 1000 | divided_by:50000.00 | round: 4 %}
+					<strong>Save {{ basecpi | minus: cpi50000 | divided_by: basecpi | round: 2 | times: 100 | round }}%</strong>
+					<span>{{ cpi50000 | round:4 | times:100 }}¢ Per Impression</span>
 				</div>
 			</label>
 		</div>
+		
 		
 		<button
 		    class="snipcart-add-item button"
