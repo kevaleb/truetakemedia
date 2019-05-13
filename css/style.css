@@ -718,9 +718,11 @@ header.open > .menu-button > span.three {
 	text-align: center;
 }
 .banner > hgroup > img {
-	display: none;
-	max-width: 200px;
+	width: 150px;
 	margin: 0 auto 24px auto;
+	border: 9px solid #fff;
+	border-radius: 96px;
+	box-shadow: 0px 3px 5px rgba(0,0,0,.5);
 }
 .banner > hgroup > h1 {
 	margin: 0px 0 0 0;
@@ -4105,6 +4107,35 @@ video#bgvid {
 .best-advertising > section > h3 {
 	padding: 0 24px;
 	font: 700 14px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+/* @end */
+
+
+
+
+
+
+/* @group Vendors List */
+
+.vendor-list {
+	
+}
+.vendor-list > ul {
+	list-style: none;
+	text-align: center;
+	max-width: 960px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.vendor-list > ul > li {
+	float: leftt;
+}
+.vendor-list > ul > li > a {
+	
+}
+.vendor-list > ul > li > a > img {
+	
 }
 
 /* @end */

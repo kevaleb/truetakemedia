@@ -33,6 +33,8 @@ collections:
     output: true
   campaigns:
     output: true
+  vendors:
+    output: true
   
     
 defaults:
@@ -59,8 +61,34 @@ defaults:
   -
     scope:
       path: ""
-      type: "audience-reports" 
+      type: "vendors" 
     values:
-      layout: "audience-report"
+      layout: "vendor"
       _hide_content: false
-      permalink: /customer-base/:title/
+      permalink: /vendors/:title/
+      navclass: /vendors/
+      banner_bottom_image: /images/other/banner-bottom.svg
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
