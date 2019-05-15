@@ -720,7 +720,7 @@ header.open > .menu-button > span.three {
 .banner > hgroup > img {
 	width: 150px;
 	margin: 0 auto 24px auto;
-	border: 9px solid #fff;
+	border: 3px solid #fff;
 	border-radius: 96px;
 	box-shadow: 0px 3px 5px rgba(0,0,0,.5);
 }
@@ -827,9 +827,11 @@ header.open > .menu-button > span.three {
 	width: 100%;
 }
 .alternating > h2 {
+	position: relative;
+	z-index: 100000;
 	text-align: center;
 	max-width: 720px;
-	margin: 96px auto 0 auto;
+	margin: 48px auto 48px auto;
 }
 .alternating > div {
 	position: relative;
@@ -947,11 +949,15 @@ header.open > .menu-button > span.three {
 	max-width: 480px;
 	float: right;
 }
+
 .alternating > div > hgroup > article {
 	float: right;
 	max-width: 480px;
 	margin: 0;
 	padding: 0;
+}
+.alternating > div > hgroup > article .button {
+	margin: 24px 0 0 0;
 }
 .alternating > div > hgroup > article > h2 {
 	margin: 0 0 24px;
@@ -1124,7 +1130,7 @@ header.open > .menu-button > span.three {
 	/*padding: 48px 0;*/
 }
 .alternating > h2 {
-	margin: 0;
+	/*margin: 0;*/
 }
 .alternating > div,
 .alternating > div:nth-of-type(even) {
@@ -4121,21 +4127,39 @@ video#bgvid {
 .vendor-list {
 	
 }
+.vendor-list > h2 {
+	text-align: center;
+	margin: 48px 0 24px 0;
+}
 .vendor-list > ul {
 	list-style: none;
 	text-align: center;
 	max-width: 960px;
 	margin: 0 auto;
+	padding: 0;
 	overflow: hidden;
+	border: 2px solid #f2f2f2;
 }
 .vendor-list > ul > li {
-	float: leftt;
+	float: left;
+	width: 33.333%;
+	margin: 0;
+	padding: 24px;
+	border: 2px solid #f2f2f2;
 }
+
 .vendor-list > ul > li > a {
-	
+	display: block;
 }
 .vendor-list > ul > li > a > img {
+	width: 100%;
+	position: relative;
+	top: 0;
 	
+	transition: top .3s ease-in-out 0s;
+}
+.vendor-list > ul > li:hover > a > img {
+	top: -12px;
 }
 
 /* @end */

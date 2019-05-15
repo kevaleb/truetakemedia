@@ -55,7 +55,7 @@ layout: default
 		<div class="campaign-options">
 			<h2 class="price" id="price">{{ page.price }}</h2>
 			<!--<h3><strong id="cost-per-impression">{{ page.price | divided_by: 5000.00 | times: 100 }}</strong> Per Impression</h3>-->
-			<h4>
+			<!--<h4>
 				<img src="/images/icons/radius-black.svg" alt="" />
 				<span>Radius</span>
 			</h4>
@@ -90,7 +90,7 @@ layout: default
 			<label class="radius-option">
 				<input type="radio" name="radius" value="20 Miles" />
 				<span>20 Miles</span>
-			</label>
+			</label>-->
 			
 			
 			
@@ -183,12 +183,9 @@ layout: default
 		    data-item-name="{{ page.title }}"
 		    data-item-price="{{ page.price }}"
 		    data-item-url="https://truetakemedia.com{{ page.url }}"
-		    data-item-custom1-name="Radius"
-		    data-item-custom1-options="1 Mile|2 Miles|3 Miles|4 Miles|5 Miles|10 Miles|15 Miles|20 Miles"
-		    data-item-custom1-value="1 Mile"
-		    data-item-custom2-name="Impressions"
-		    data-item-custom2-options="5000|7500[+150.00]|10000[+200.00]|15000[+300.00]|20000[+400.00]|30000[+600.00]|40000[+800.00]|50000[+1000.00]"
-		    data-item-custom2-value="5000"
+		    data-item-custom1-name="Impressions"
+		    data-item-custom1-options="5000|7500[+150.00]|10000[+200.00]|15000[+300.00]|20000[+400.00]|30000[+600.00]|40000[+800.00]|50000[+1000.00]"
+		    data-item-custom1-value="5000"
 		    >Add To Cart</button>
 	</section>
 	
@@ -209,7 +206,7 @@ layout: default
 		var totalCost= baseCost + reachCost;
 		var costPerImpression= (Math.round(totalCost/reachValue*1000)/100)*10;
 		
-		$('.snipcart-add-item').attr('data-item-custom2-value',reachValue);
+		$('.snipcart-add-item').attr('data-item-custom1-value',reachValue);
 		document.getElementById("price").innerHTML = totalCost;
 		document.getElementById("cost-per-impression").innerHTML = costPerImpression;
 	});

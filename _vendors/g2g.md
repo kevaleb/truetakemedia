@@ -1,9 +1,9 @@
 ---
-name: Go Pure Keto
-banner_headline: 'Go Pure Keto Advertising Campaign'
+name: G2G Protein Bars
+banner_headline: How to Sell More G2G Protein Bars
 banner_sub_head:
-banner_image_path: /images/vendors/go-pure-keto/running.jpg
-banner_photo_path: /images/vendors/go-pure-keto/go-pure-keto-logo.jpg
+banner_image_path: /images/vendors/g2g-protein-bars/g2g-banner.jpg
+banner_photo_path: /images/vendors/g2g-protein-bars/g2g-logo.jpg
 ---
 
 True Take Media helps grocery stores and their vendors produce and manage online video advertising campaigns that increase brand awareness and help move products faster.

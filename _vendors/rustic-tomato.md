@@ -1,9 +1,10 @@
 ---
 name: Go Pure Keto
-banner_headline: 'Go Pure Keto Advertising Campaign'
+banner_headline: 'How To Sell More <br/>
+Rustic Tomato Chili Sauce'
 banner_sub_head:
-banner_image_path: /images/vendors/go-pure-keto/running.jpg
-banner_photo_path: /images/vendors/go-pure-keto/go-pure-keto-logo.jpg
+banner_image_path: /images/vendors/rustic-tomato/rustic-tomato-meatballs.jpg
+banner_photo_path: /images/vendors/rustic-tomato/rustic-tomato-logo.jpg
 ---
 
 True Take Media helps grocery stores and their vendors produce and manage online video advertising campaigns that increase brand awareness and help move products faster.
