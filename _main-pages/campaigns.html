@@ -51,12 +51,12 @@ banner_path:
 			<section>
 				<h3 class="campaigntitle">{{ campaign.title }}</h3>
 				<h4 class="campaignprice">Starting At: ${{ campaign.price }}</h4>
-				<!--<p class="campaigntags">
+				<p class="campaigntags">
 					{% for tag in campaign.tags %}
 					<span>{{ tag }}</span>
 					{% endfor %}
 					
-				</p>-->
+				</p>
 				<span class="campaigndate">{{ campaign.start_date }}</span>
 				<a href="{{ campaign.url }}" class="button">
 					<span>Customize Campaign</span>
