@@ -1,7 +1,8 @@
 ---
 layout: default
-banner_headline: Campaign Case Studies
-banner_size: tiny
+banner_headline: True Take Blog
+banner_size:
+form: true
 permalink: /blog/
 nav_class: blog
 nav_title: blog
@@ -10,10 +11,10 @@ banner_path:
 ---
 {%  include banner.html %}
 <ul class="blogposts">
+	<!--<br /><br />
 	<br /><br />
-	<br /><br />
-	<h2>Campaign Case Studies</h2>
-	<br />
+	<!--<h2>Campaign Case Studies</h2>--*>
+	<br />-->
 	{% for post in site.posts %}
 		<li>
 			<a href="{{ post.url }}">
