@@ -3,7 +3,9 @@ title: G2G Protein Bars
 vendor: g2g
 sku: 11
 price: 350
-description:
+description: |-
+  Fresh. Healthy. Delicious. 
+  Find us in the fridge!
 tags:
   - summer
   - snack
