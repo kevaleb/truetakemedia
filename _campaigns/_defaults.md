@@ -1,0 +1,10 @@
+---
+title:
+vendor:
+sku:
+price:
+description:
+start_date:
+stop_date:
+youtube_video_id:
+---

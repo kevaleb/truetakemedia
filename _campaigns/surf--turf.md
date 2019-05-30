@@ -2,7 +2,7 @@
 title: Surf & Turf
 sku: surf-turf
 price: 250
-description: >-
+description_markdown:
   INGREDIENTS
 
   - 2 New york steaks
