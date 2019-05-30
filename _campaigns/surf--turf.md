@@ -2,6 +2,7 @@
 title: Surf & Turf
 sku: surf-turf
 price: 250
+description:
 tags:
   - January
   - Cooking
