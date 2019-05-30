@@ -4556,49 +4556,49 @@ video#bgvid {
 	background: #fff;
 	text-align: left;
 }
-.facebook-block > .ad-header {
+.facebook-block > .campaign-header {
 	overflow: hidden;
 	padding: 12px;
 	white-space: nowrap;
 	letter-spacing: 0;
 }
-.facebook-block > .ad-header > img {
+.facebook-block > .campaign-header > img {
 	display: inline-block;
 	width: 12%;
 	min-width: 36px;
 	margin: 0 1% 0 0;
 	vertical-align: middle;
 }
-.facebook-block > .ad-header > hgroup {
+.facebook-block > .campaign-header > hgroup {
 	display: inline-block;
 	width: 84%;
 	vertical-align: middle;
 }
 
-.facebook-block > .ad-header > hgroup > h4 {
+.facebook-block > .campaign-header > hgroup > h4 {
 	font:700 16px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	color: #365899;
 	letter-spacing: 0;
 }
-.facebook-block > .ad-header > hgroup > p {
+.facebook-block > .campaign-header > hgroup > p {
 	font: 400 12px/14px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	color: #6a7078;
 	vertical-align: middle;
 	letter-spacing: 0;
 }
-.facebook-block > .ad-header > hgroup > p > img {
+.facebook-block > .campaign-header > hgroup > p > img {
 	width: 3%;
 	vertical-align: middle;
 }
 
-.facebook-block > .ad-header > article {
-	padding: 0;
+.facebook-block > .campaign-header > article {
+	padding: 10px 0 0 0;
 	overflow: hidden;
-	max-height: 96px;
+	max-height: 84px;
 }
-.facebook-block > .ad-header > article > p {
+.facebook-block > .campaign-header > article > p {
 	margin: 0;
-	font: 400 .84em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font: 400 .84em/1.36em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	color: #1d2129;
 	white-space: normal;
 	letter-spacing: 0;
@@ -4612,25 +4612,25 @@ video#bgvid {
 }
 
 
-.facebook-block > .ad-stats {
+.facebook-block > .campaign-stats {
 	padding: 12px;
 	white-space: nowrap;
 }
-.facebook-block > .ad-stats > img {
+.facebook-block > .campaign-stats > img {
 	position: relative;
 	width: 5%;
 	vertical-align: middle;
 }
-.facebook-block > .ad-stats > img:first-of-type {
+.facebook-block > .campaign-stats > img:first-of-type {
 	z-index: 10;
 }
-.facebook-block > .ad-stats > img:nth-of-type(2) {
+.facebook-block > .campaign-stats > img:nth-of-type(2) {
 	z-index: 5;
 }
-.facebook-block > .ad-stats > img+img {
+.facebook-block > .campaign-stats > img+img {
 	margin-left: -2.5%;
 }
-.facebook-block > .ad-stats > span {
+.facebook-block > .campaign-stats > span {
 	display: inline-block;
 	width: 48%;
 	vertical-align: middle;
@@ -4639,7 +4639,7 @@ video#bgvid {
 	letter-spacing: 0;
 	/*background: #f16;*/
 }
-.facebook-block > .ad-stats > p {
+.facebook-block > .campaign-stats > p {
 	display: inline-block;
 	width: 38%;
 	vertical-align: middle;
@@ -4651,13 +4651,13 @@ video#bgvid {
 }
 
 
-.facebook-block > .ad-buttons {
+.facebook-block > .campaign-buttons {
 	overflow: hidden;
 	padding: 0 12px 12px 12px;
 	text-align: center;
 	white-space: nowrap;
 }
-.facebook-block > .ad-buttons:before {
+.facebook-block > .campaign-buttons:before {
 	content: '\00a0';
 	display: block;
 	width: 100%;
@@ -4665,7 +4665,7 @@ video#bgvid {
 	margin: 0 0 12px 0;
 	background: #e5e5e5;
 }
-.facebook-block > .ad-buttons > img {
+.facebook-block > .campaign-buttons > img {
 	display: inline-block;
 	width: 19%;
 	margin: 0 7%;
@@ -4677,25 +4677,25 @@ video#bgvid {
 .facebook-block {
 	/*background: #f16;*/
 }
-.facebook-block > .ad-header > hgroup > h4 {
+.facebook-block > .campaign-header > hgroup > h4 {
 	font-size: calc(12px + (12 - 8) * ((100vw - 320px) / (720 - 320)));
 	line-height: calc(12px + (12 - 8) * ((100vw - 320px) / (720 - 320)));
 }
-.facebook-block > .ad-header > hgroup > p {
+.facebook-block > .campaign-header > hgroup > p {
 	font-size: calc(10px + (10 - 8) * ((100vw - 320px) / (720 - 320)));
 	line-height: calc(14px + (14 - 10) * ((100vw - 320px)/(720 - 320)));
 }
-.facebook-block > .ad-header > p {
+.facebook-block > .campaign-header > p {
 	font-size: calc(12px + (12 - 8) * ((100vw - 320px) / (720 - 320)));
 	line-height: calc(10px + (10 - 6) * ((100vw - 320px)/(720 - 320)));
 }
 
-.facebook-block > .ad-stats > span {
+.facebook-block > .campaign-stats > span {
 	/*font: 400 13px/14px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;*/
 	font-size: calc(9px + (9 - 6) * ((100vw - 320px) / (720 - 320)));
 	line-height: calc(9px + (9 - 6) * ((100vw - 320px)/(720 - 320)));
 }
-.facebook-block > .ad-stats > p {
+.facebook-block > .campaign-stats > p {
 	/*font: 400 14px/16px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;*/
 	font-size: calc(10px + (10 - 5) * ((100vw - 320px) / (720 - 320)));
 	line-height: calc(10px + (10 - 5) * ((100vw - 320px)/(720 - 320)));
