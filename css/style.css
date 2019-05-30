@@ -4590,9 +4590,15 @@ video#bgvid {
 	width: 3%;
 	vertical-align: middle;
 }
-.facebook-block > .ad-header > p {
-	margin-top: 12px;
-	font: 400 .96em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+
+.facebook-block > .ad-header > article {
+	padding: 0;
+	overflow: hidden;
+	max-height: 96px;
+}
+.facebook-block > .ad-header > article > p {
+	margin: 0;
+	font: 400 .84em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	color: #1d2129;
 	white-space: normal;
 	letter-spacing: 0;
