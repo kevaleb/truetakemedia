@@ -16,15 +16,15 @@
 		{% if page.banner_button_text %}
 			<a href="{{ page.banner_button_link }}" class="button">{{page.banner_button_text }}</a>
 		{% endif %}
-		{% if page.form %}
-			<form method="post" action="/campaigns/">
-				<h2>Reach Your First 5,000 Customers Free</h2>
-				<input type="email" name="email" value="" placeholder="Email" />
-				<button class="button">Sign Up</button>
+		<!--{% if page.form %}-->
+		<!--	<form method="post" action="/campaigns/">-->
+		<!--		<h2>Reach Your First 5,000 Customers Free</h2>-->
+		<!--		<input type="email" name="email" value="" placeholder="Email" />-->
+		<!--		<button class="button">Sign Up</button>-->
 				
-				<input type="hidden" name="_hook" value="https://hooks.zapier.com/hooks/catch/2059575/j0q32n/">
-			</form>
-		{% endif %}
+		<!--		<input type="hidden" name="_hook" value="https://hooks.zapier.com/hooks/catch/2059575/j0q32n/">-->
+		<!--	</form>-->
+		<!--{% endif %}-->
 	</hgroup>
 	<img src="{% if page.banner_bottom_image %}{{ page.banner_bottom_image }}{% else %}/images/other/banner-bottom.svg{% endif %}" alt="" class="banner-bottom" />
 </div>
