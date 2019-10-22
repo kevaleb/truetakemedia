@@ -4,12 +4,61 @@ title: Videos
 permalink: /videos/
 nav_title: videos
 nav_class: videos
-nav_order: 1
+nav_order: 2
 hide_from_nav: false
-headline: '<strong>Video Is a Great Way to Stand Out In Your Customers Mind</strong>'
+form: false
+banner_headline: Professional Videos
+banner_sub_head: 'Beautiful // Entertaining // Effective '
+banner_logo_image: /images/logos/logo.svg
 banner_image_path: /images/banners/workspace.jpg
-banner_vid_image_path: 
-banner_vid_path: 
+banner_video_path: 
+banner_video_poster_path:
+banner_vid_path:
+banner_button_text: Videos We Produced
+banner_button_link: #vidgrid
+videos:
+  - youtube_id: ORPlj4I5cHg
+  - youtube_id: NsnqOaxgdwc
+  - youtube_id: 82V5ak6jfWQ
+  - youtube_id: w6XQuhMN8XQ
+  - youtube_id: I3TTGSPGJec
+  - youtube_id: 9w19IWikxTA
+  - youtube_id: tgKB4-0A-us
+  - youtube_id: U1bbvm4nze4
+  - youtube_id: AHpDJCz-AY8
+  - youtube_id: cnwU4ZSv9Ak
+  - youtube_id: 6CQBIJjynIQ
+  - youtube_id: qDSQBajQev0
+  - youtube_id: 94EUh4eGMD8
+  - youtube_id: XhZ6EAhBPLA
+  - youtube_id: TyVyzKwy3DQ
+  - youtube_id: z7qfaxG4Uns
+  - youtube_id: uHrRNiTYQV4
+  - youtube_id: 20UZSfkepLw
+  - youtube_id: D0dUmRk_Svw
+  - youtube_id: dAF5KMxSdag
+  - youtube_id: XVk6AIS8nss
+  - youtube_id: fSm7NkdLgOM
+  - youtube_id: qNUskGTYqhU
+  - youtube_id: pU2pbgWyGaE
+  - youtube_id: GlTQVQCJxeY
+  - youtube_id: XHJcoYma6tE
+  - youtube_id: qYsJZShCb0c
+  - youtube_id: d2dE8A59jpg
+  - youtube_id: hhrM0D21H5M
+  - youtube_id: lmNhJDXYGEk
+  - youtube_id: Z2-CIHrbRmM
+  - youtube_id: szlgNFzvvcI
+  - youtube_id: CI0HbRn57dU
+  - youtube_id: VvAWJaPUgqo
+  - youtube_id: 7lf5QDTdNUE
+  - youtube_id: P2ADe07aeWg
+  - youtube_id: IoTOlBNzZMU
+  - youtube_id: dJLQ5ge2bDw
+  - youtube_id: pSrusAomX2k
+  - youtube_id: 8zF60oytYNg
+  - youtube_id: Xs7IfBnFF0g
+  - youtube_id: SkVfjpybW04
 sections:
   - title: What kind of videos do we make?
     icon: /images/icons/video-camera-red.svg
@@ -42,22 +91,32 @@ sections:
     url:
     button_text:
 ---
-<div class="banner" style="background-image: url('{{ page.banner_image_path }}');">
-	<video playsinline autoplay muted loop poster="{{ page.banner_vid_image_path }}" id="bgvid">
-	    <!--<source src="polina.webm" type="video/webm">-->
-	    <source src="{{ page.banner_vid_path }}" type="video/mp4">
-	</video>
-	<hgroup>
-		<h1>{{ page.headline }}</h1>
-		<a href="#cta" class="button">Request A Quote</a>
-	</hgroup>
-	<img src="/images/banners/banner-bottom.svg" alt="" class="banner-bottom" />
+{% include banner.html %}
+
+<article style="text-align: center;">
+	<h2>Video Is The Best Way To Promote Your Business</h2>
+	<p>We're here to help you produce affordable, effective videos that you can use to reach more customers, describe your products or services better and create a more professional feel for your brand.</p>
+</article>
+<!--{% include sections.html %}-->
+
+
+<div class="vidgrid" id="vidgrid">
+	<ul>
+	{% for video in page.videos %}
+		<li style="background-image: url('https://img.youtube.com/vi/{{ video.youtube_id }}/maxresdefault.jpg');" class="videoBlock">
+			<div class="videoWrapper">
+				<img data-video="{{ video.youtube_id }}" alt="Play this video" src="https://img.youtube.com/vi/{{ video.youtube_id }}/maxresdefault.jpg" class="thumbnail">
+				<img src="/images/icons/play.svg" alt="" class="play" />
+			</div>
+		</li>
+	{% endfor %}
+	</ul>
 </div>
 
-{% include sections.html %}
 
-{% assign videos = site.videos %}
-{% include video-grid.html %}
+
+
+
 
 <!--<div class="quarters">
 	<section>

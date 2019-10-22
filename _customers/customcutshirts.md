@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: customer
 title: Custom Cut Shirts
 industry: e-commerce
 logo_path: /uploads/dark-logo-large.jpg

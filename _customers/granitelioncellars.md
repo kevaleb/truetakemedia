@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: customer
 title: Granite Lion Cellars
 industry: wineries
 logo_path:

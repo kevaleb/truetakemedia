@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: customer
 title: UEP Trust
 industry:
 logo_path: /uploads/logo-square.jpg

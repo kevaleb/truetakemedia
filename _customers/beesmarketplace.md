@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: customer
 title: "Bee's Marketplace"
 industry: grocery-store
 logo_path: /uploads/logo-square.jpg

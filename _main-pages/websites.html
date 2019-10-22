@@ -1,0 +1,44 @@
+---
+layout: default
+title: Websites
+banner_image_path:
+permalink: /websites/
+nav_title: websites
+nav_class: /websites/
+nav_order: 3
+hide_from_nav: false
+form: false
+banner_headline: High Performance Websites
+banner_sub_head: 'Easy To Manage // Affordable // Enjoyable'
+banner_logo_image: /images/logos/logo.svg
+banner_image_path: /images/banners/workspace.jpg
+banner_video_path: 
+banner_video_poster_path:
+banner_vid_path:
+banner_button_text: Websites We Developed
+banner_button_link: #websites
+---
+{% include banner.html %}
+
+<article style="text-align: center;">
+	<h2>Your website is the most important piece of your brand</h2>
+	<p>We create beautiful, high performance websites that are easy for you to manage and easy for your customers to use.</p>
+</article>
+
+<div class="websites" id="websites">
+	<img src="/images/other/bottom-smudge.svg" alt="" />
+	<ul>
+	{% for website in site.customers %}
+		{% if website.website_url %}
+		<li>
+			<a href="{{ website.website_url }}" target="_blank">
+				<img src="/images/illustrations/chrome.svg" alt="Chrome Browser" />
+				<div style="background-image: url('{{ website.website_thumbnail_path }}');"></div>
+				<h3>{{ website.website_url }}</h3>
+			</a>
+		</li>
+		{% endif %}
+	{% endfor %}
+	</ul>
+	<img src="/images/other/bottom-smudge.svg" alt="" />
+</div>

@@ -4,12 +4,17 @@ layout: default
 permalink: /advertising/
 nav_title: advertising
 nav_class: /advertising/
-nav_order: 3
+nav_order: 4
 hide_from_nav: false
-headline: '<strong>Facebook Is a Cost Effective Way To Reach Your Customers</strong>'
+banner_headline: Cost Effective Advertising
+banner_sub_head: 'Reach audience // Attract customers // Sell products'
+banner_logo_image: /images/logos/logo.svg
 banner_image_path: /images/banners/workspace.jpg
-banner_vid_image_path: 
-banner_vid_path: 
+banner_video_path: 
+banner_video_poster_path:
+banner_vid_path:
+banner_button_text: Campaigns We Managed
+banner_button_link: #websites 
 youtube_video_id:
 sections:
   - title: Results Driven
@@ -28,25 +33,14 @@ sections:
     url:
     button_text:
 ---
+{% include banner.html %}
 
+<article style="text-align: center;">
+	<h2>The Best Form Of Local Advertising Ever Invented</h2>
+	<p>Facebook & Instagram are the most effective, affordable advertising channels ever created for local businesses... and you should be taking advantage of that.</p>
+</article>
 
-
-
-
-
-<div class="banner" style="background-image: url('{{ page.banner_image_path }}');">
-	<video playsinline autoplay muted loop poster="{{ page.banner_vid_image_path }}" id="bgvid">
-	    <!--<source src="polina.webm" type="video/webm">-->
-	    <source src="{{ page.banner_vid_path }}" type="video/mp4">
-	</video>
-	<hgroup>
-		<h1>{{ page.headline }}</h1>
-		<a href="#cta" class="button">Request A Quote</a>
-	</hgroup>
-	<img src="/images/banners/banner-bottom.svg" alt="" class="banner-bottom" />
-</div>
-
-{% include sections.html %}
+<!--{% include sections.html %}-->
 
 <!--{% include video-block.html %}-->
 

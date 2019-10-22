@@ -2,7 +2,7 @@ version: 3.6.2
 name: True Take Media
 address1: 10 North Central St.
 address2: 'Colorado City, AZ 86021'
-phone: +1 (435) 236-2369
+phone: +1 (435) 680-7669
 email: kevin@truetakemedia.com
 fax: Ha!
 facebook: https://www.facebook.com/truetakeofficial/
@@ -31,9 +31,9 @@ objectives:
 collections:
   main-pages:
     output: true
-  campaigns:
+  categories:
     output: true
-  vendors:
+  customers:
     output: true
   
     
@@ -47,27 +47,6 @@ defaults:
       _hide_content: false
       permalink: /blog/:title/
       navclass: /blog/
-  -
-    scope:
-      path: ""
-      type: "campaigns" 
-    values:
-      layout: "campaign"
-      _hide_content: false
-      permalink: /campaigns/:title/
-      navclass: /campaigns/
-      banner_size: tiny
-      banner_bottom_image: /images/other/banner-bottom-grey.svg
-  -
-    scope:
-      path: ""
-      type: "vendors" 
-    values:
-      layout: "vendor"
-      _hide_content: false
-      permalink: /vendors/:title/
-      navclass: /vendors/
-      banner_bottom_image: /images/other/banner-bottom.svg
       
       
       

@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: customer
 title: Excel Design
 industry: engineering
 logo_path:
