@@ -71,7 +71,7 @@ a {
 
 
 article {
-	max-width: 720px;
+	max-width: 840px;
 	margin: 0 auto;
 	padding: 60px 0px 60px 0;
 }
@@ -847,7 +847,7 @@ header > div > nav > .snipcart-summary > .snipcart-user-profile > img {
 	overflow: hidden;
 	padding: 0px 0;
 	background: #26292d;
-	background-image: url('/images/banners/food.jpg');
+	
 	background-position: center center !important;
 	background-size: cover;
 	background-attachment: fixed;
