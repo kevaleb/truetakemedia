@@ -5000,19 +5000,49 @@ video#bgvid {
 
 
 .forms {
-	
+	text-align: center;
+}
+.forms > h3 {
+	font: bold 1em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	margin: 0 0 24px 0;
 }
 .forms > ul {
 	list-style: none;
+	/*max-width: 960px;*/
+	margin: 0 auto;
 	padding: 0;
 	text-align: center;
+	overflow: hidden;
+	
 }
 .forms > ul > li {
+	display: inline-block;
+	width: 100%;
+	max-width: 240px;
+	padding: 48px 6px;
+	
+	background: #fefdf0;
+	border: 2px solid #ccc;
+	border-radius: 6px;
 	cursor: pointer;
+	text-align: center;
+}
+.forms > ul > li > div {
 	
 }
-.forms > ul > li > h3 {
-	
+.forms > ul > li > div > img {
+	width: 72px;
+	margin: 0 0 24px ;
+}
+.forms > ul > li:hover > 
+.forms > ul > li > div > h3 {
+	margin: 0 auto;
+	font: 900 14px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: uppercase;
+}
+.forms > ul > li > div > p {
+	font: 300 14px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	/*text-transform: lowercase;*/
 }
 .forms > ul > li > form {
 	display: none;
@@ -5023,9 +5053,10 @@ video#bgvid {
 	max-height: 480px;
 	max-width: 480px;
 	margin: 0 auto;
-	padding: 48px 0;
+	padding: 150px 0 48px 0;
 	overflow-y: auto;
 	white-space: nowrap;
+	background: #f2f2f2;
 }
 .forms > ul > li > form > .close {
 	position: absolute;
@@ -5047,16 +5078,39 @@ video#bgvid {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 48px;
+	height: 150px;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	font: 500 16px/48px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font: 500 16px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	border-bottom: 1px solid #ccc;
 	text-align: left;
 	letter-spacing: 0;
 	text-transform: uppercase;
 	padding: 0 36px 0 12px;
 	white-space: nowrap;
+	vertical-align: middle;
+	text-align: center;
+	background: #fff;
+}
+.forms > ul > li > form > h3 > img {
+	display: block;
+	margin: 24px auto 0 auto;
+	height: 60px;
+	vertical-align: middle;
+}
+.forms > ul > li > form > h3 > strong {
+	display: block;
+	vertical-align: middle;
+	margin: 0 6px;
+}
+.forms > ul > li > form > h3 > i {
+	display: block;
+	/*margin-left: 12px;*/
+	font: 400 12px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #999;
+	vertical-align: middle;
+	display: inline-block;
+	text-transform: capitalize;
 }
 .forms > ul > li > form::after {
 	content: '\00a0';
@@ -5126,6 +5180,7 @@ video#bgvid {
 }
 .forms > ul > li > form > section > label > input[type=text] {
 	width: 100%;
+	padding: 3px 12px;
 	border: 2px solid #ccc;
 	border-radius: 3px;
 	font: 200 12px/24px"Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
@@ -5139,13 +5194,15 @@ video#bgvid {
 }
 
 
+
+
 .forms > ul > li > form > section > div {
 	position: absolute;
 	width: 100%;
 	bottom: 0;
 	left: 0;
 	text-align: center;
-	/*background: #f2f2f2;*/
+	background: #fff;
 	margin: 12px 0 0 0;
 	padding: 10px 0;
 	border-top: 1px solid #ccc;
@@ -5175,6 +5232,8 @@ video#bgvid {
 /* Open */
 .forms > ul > li.open {
 	position: fixed;
+	width: 100%;
+	max-width: none;
 	top: 0;
 	left: 0;
 	z-index: 999999999;
@@ -5182,9 +5241,15 @@ video#bgvid {
 	height: 100%;
 	padding: 48px;
 	background: rgba(0,0,0,.72);
+	border: none;
+	border-radius: 0;
 }
 .forms > ul > li.open > form {
 	display: block;
+}
+
+.forms > ul > li.open > div {
+	display: none;
 }
 
 

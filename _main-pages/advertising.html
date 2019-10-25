@@ -40,103 +40,94 @@ sections:
     url:
     button_text:
 forms:
-  - form-title: Test Form
+  - form-title: Visitors
+    form-description: Get more customers walking into your store.
+    form-icon-path: /images/icons/store-front-color.svg
     fieldsets:
       - fieldset-name: Fieldset 1
         fields:
-          - field-name: Colors
-            field-type: radio
+          - field-name: Name
+            field-type: text
             field-options:
-              - option-name: Red
-              - option-name: Green
-              - option-name: Blue
-          - field-name: Monochrome
-            field-type: checkbox
-            field-options:
-              - option-name: white
-              - option-name: black
-          - field-name: animals
-            field-type: radio
-            field-options:
-              - option-name: ostrich
-              - option-name: elephant
-              - option-name: hippo
-      - fieldset-name: Fieldset 2
-        fields:
+              - option-name:
           - field-name: Email
             field-type: text
             field-options:
               - option-name:
-      - fieldset-name: Fieldset 3
-        fields:
-          - field-name: description
-            field-type: textarea
+          - field-name: Phone
+            field-type: text
             field-options:
               - option-name:
-  - form-title: Test Form II
+  - form-title: Brand Awareness
+    form-description: Reach everyone within a radius of your business.
+    form-icon-path: /images/icons/map-color.svg
     fieldsets:
       - fieldset-name: Fieldset 1
         fields:
-          - field-name: Colors
-            field-type: radio
+          - field-name: Name
+            field-type: text
             field-options:
-              - option-name: Red
-              - option-name: Green
-              - option-name: Blue
-          - field-name: Monochrome
-            field-type: checkbox
-            field-options:
-              - option-name: white
-              - option-name: black
-          - field-name: animals
-            field-type: radio
-            field-options:
-              - option-name: ostrich
-              - option-name: elephant
-              - option-name: hippo
-      - fieldset-name: Fieldset 2
-        fields:
+              - option-name:
           - field-name: Email
             field-type: text
             field-options:
               - option-name:
-      - fieldset-name: Fieldset 3
-        fields:
-          - field-name: description
-            field-type: textarea
+          - field-name: Phone
+            field-type: text
             field-options:
               - option-name:
-  - form-title: Test Form III
+  - form-title: Lead Generation
+    form-description: Contact info from people interested in your business.
+    form-icon-path: /images/icons/hand-color-2.svg
     fieldsets:
       - fieldset-name: Fieldset 1
         fields:
-          - field-name: Colors
-            field-type: radio
+          - field-name: Name
+            field-type: text
             field-options:
-              - option-name: Red
-              - option-name: Green
-              - option-name: Blue
-          - field-name: Monochrome
-            field-type: checkbox
-            field-options:
-              - option-name: white
-              - option-name: black
-          - field-name: animals
-            field-type: radio
-            field-options:
-              - option-name: ostrich
-              - option-name: elephant
-              - option-name: hippo
-      - fieldset-name: Fieldset 2
-        fields:
+              - option-name:
           - field-name: Email
             field-type: text
             field-options:
               - option-name:
-      - fieldset-name: Fieldset 3
+          - field-name: Phone
+            field-type: text
+            field-options:
+              - option-name:
+  - form-title: Employment
+    form-description: Receive more applications and hire the perfect employee.
+    form-icon-path: /images/icons/hiring-color.svg
+    fieldsets:
+      - fieldset-name: Fieldset 1
         fields:
-          - field-name: description
-            field-type: textarea
+          - field-name: Name
+            field-type: text
+            field-options:
+              - option-name:
+          - field-name: Email
+            field-type: text
+            field-options:
+              - option-name:
+          - field-name: Phone
+            field-type: text
+            field-options:
+              - option-name:
+  - form-title: Web Traffic
+    form-description: Sell more products through your website.
+    form-icon-path: /images/icons/web-traffic.svg
+    fieldsets:
+      - fieldset-name: Fieldset 1
+        fields:
+          - field-name: Name
+            field-type: text
+            field-options:
+              - option-name:
+          - field-name: Email
+            field-type: text
+            field-options:
+              - option-name:
+          - field-name: Phone
+            field-type: text
             field-options:
               - option-name:
 ---
@@ -150,30 +141,36 @@ forms:
 
 
 <div class="forms">
+	<h3>What Result Are You Looking For?</h3>
 	<ul>
 		{% for form in page.forms %}
 		<li>
 			
-			<h3>{{ form.form-title }}</h3>
+			<div>
+				<img src="{{ form.form-icon-path }}" alt="" />
+				<h3>{{ form.form-title }}</h3>
+				<p>{{ form.form-description }}</p>
+			</div>
 			<form method="post" action="#">
 				<input type="hidden" name="_hook" value="https://hooks.zapier.com/hooks/catch/2059575/j0q32n/">
-				<h3>{{ form.form-title }}</h3>
+				<h3><img src="{{ form.form-icon-path }}" alt="" /> <strong>{{ form.form-title }}</strong> <i>{{ form.form-description }}</i></h3>
 				<span class="close">X</span>
 				{% for fieldset in form.fieldsets %}
 				<section class="">
+					<h4></h4>
 					{% for field in fieldset.fields %}
 					
 						
 					{% if field.field-type == "text" %}
 						<label>
 							<strong>{{ field.field-name }}</strong>
-							<input type="text" name="email" value="" />
+							<input type="text" name="email" value="" placeholder="{{ field.field-name }}" />
 						</label>
 					{% elsif field.field-type == "radio" %}
 						<h4>{{ field.field-name }}</h4>
 						{% for option in field.field-options %}
 						<label style="display: inline-block;">
-							<input type="radio" name="{{ field.field-name }}" value="" />
+							<input type="radio" name="{{ field.field-name }}" value="{{ field.field-name }}" />
 							<strong>{{ option.option-name }}</strong>
 						</label>
 						{% endfor %}
@@ -181,7 +178,7 @@ forms:
 						<h4>{{ field.field-name }}</h4>
 						{% for option in field.field-options %}
 						<label style="display: inline-block;">
-							<input type="checkbox" name="{{ field.field-name }}" value="" />
+							<input type="checkbox" name="{{ field.field-name }}" value="{{ field.field-name }}" />
 							<strong>{{ option.option-name }}</strong>
 						</label>
 						{% endfor %}
@@ -224,19 +221,22 @@ forms:
 
 <script type="text/javascript">
 	
-	$( ".forms > ul > li > h3" ).click(function() {
+	$( ".forms > ul > li > div" ).click(function() {
 		$(this).parent().toggleClass('open');
 	});
+	
 	
 	// Close Form
 	$( ".forms > ul > li > form > .close" ).click(function() {
 		$(this).parent().parent().toggleClass('open');
 	});
 	
+	
 	// Next section
 	$( ".forms > ul > li > form > section > div > .next" ).click(function() {
 		$(this).parent().parent().toggleClass('done');		
 	});
+	
 	
 	// Back section
 	$( ".forms > ul > li > form > section > div > .back" ).click(function() {
