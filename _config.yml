@@ -28,6 +28,13 @@ objectives:
 - none
 
 
+field-types:
+- radio
+- checkbox
+- text
+- textarea
+
+
 collections:
   main-pages:
     output: true

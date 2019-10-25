@@ -50,24 +50,93 @@ forms:
               - option-name: Red
               - option-name: Green
               - option-name: Blue
-          - field-name:
-            field-type:
+          - field-name: Monochrome
+            field-type: checkbox
             field-options:
-              - option-name:
-          - field-name:
-            field-type:
+              - option-name: white
+              - option-name: black
+          - field-name: animals
+            field-type: radio
             field-options:
-              - option-name:
+              - option-name: ostrich
+              - option-name: elephant
+              - option-name: hippo
       - fieldset-name: Fieldset 2
         fields:
-          - field-name:
-            field-type:
+          - field-name: Email
+            field-type: text
             field-options:
               - option-name:
       - fieldset-name: Fieldset 3
         fields:
-          - field-name:
-            field-type:
+          - field-name: description
+            field-type: textarea
+            field-options:
+              - option-name:
+  - form-title: Test Form II
+    fieldsets:
+      - fieldset-name: Fieldset 1
+        fields:
+          - field-name: Colors
+            field-type: radio
+            field-options:
+              - option-name: Red
+              - option-name: Green
+              - option-name: Blue
+          - field-name: Monochrome
+            field-type: checkbox
+            field-options:
+              - option-name: white
+              - option-name: black
+          - field-name: animals
+            field-type: radio
+            field-options:
+              - option-name: ostrich
+              - option-name: elephant
+              - option-name: hippo
+      - fieldset-name: Fieldset 2
+        fields:
+          - field-name: Email
+            field-type: text
+            field-options:
+              - option-name:
+      - fieldset-name: Fieldset 3
+        fields:
+          - field-name: description
+            field-type: textarea
+            field-options:
+              - option-name:
+  - form-title: Test Form III
+    fieldsets:
+      - fieldset-name: Fieldset 1
+        fields:
+          - field-name: Colors
+            field-type: radio
+            field-options:
+              - option-name: Red
+              - option-name: Green
+              - option-name: Blue
+          - field-name: Monochrome
+            field-type: checkbox
+            field-options:
+              - option-name: white
+              - option-name: black
+          - field-name: animals
+            field-type: radio
+            field-options:
+              - option-name: ostrich
+              - option-name: elephant
+              - option-name: hippo
+      - fieldset-name: Fieldset 2
+        fields:
+          - field-name: Email
+            field-type: text
+            field-options:
+              - option-name:
+      - fieldset-name: Fieldset 3
+        fields:
+          - field-name: description
+            field-type: textarea
             field-options:
               - option-name:
 ---
@@ -82,20 +151,107 @@ forms:
 
 <div class="forms">
 	<ul>
+		{% for form in page.forms %}
 		<li>
-			<form method="post" action="">
-				<section>
-					<label>
-						<h3>Email</h3>
-						<input type="text" name="email" value="" />
-					</label>
-					<button>Back</button>
-					<button>Next</button>
+			
+			<h3>{{ form.form-title }}</h3>
+			<form method="post" action="#">
+				<input type="hidden" name="_hook" value="https://hooks.zapier.com/hooks/catch/2059575/j0q32n/">
+				<h3>{{ form.form-title }}</h3>
+				<span class="close">X</span>
+				{% for fieldset in form.fieldsets %}
+				<section class="">
+					{% for field in fieldset.fields %}
+					
+						
+					{% if field.field-type == "text" %}
+						<label>
+							<strong>{{ field.field-name }}</strong>
+							<input type="text" name="email" value="" />
+						</label>
+					{% elsif field.field-type == "radio" %}
+						<h4>{{ field.field-name }}</h4>
+						{% for option in field.field-options %}
+						<label style="display: inline-block;">
+							<input type="radio" name="{{ field.field-name }}" value="" />
+							<strong>{{ option.option-name }}</strong>
+						</label>
+						{% endfor %}
+					{% elsif field.field-type == "checkbox" %}
+						<h4>{{ field.field-name }}</h4>
+						{% for option in field.field-options %}
+						<label style="display: inline-block;">
+							<input type="checkbox" name="{{ field.field-name }}" value="" />
+							<strong>{{ option.option-name }}</strong>
+						</label>
+						{% endfor %}
+					{% elsif field.field-type == "textarea" %}
+						<label>
+							<strong>{{ field.field-name }}</strong>
+							<textarea></textarea>
+						</label>
+					{% endif %}
+						
+					
+					{% endfor %}
+					<div>
+						{% if forloop.first == true %}
+					        
+					    {% else %}
+					        <span class="back">Back</span>
+					    {% endif %}
+						
+						{% if forloop.last == true %}
+						    <button class="submit-button">Submit</button>
+						{% else %}
+						    <span class="next">Next</span>
+						{% endif %}
+						
+					</div>
+				</section>
+				{% endfor %}
+				<section class="success">
+					Thank You
 				</section>
 			</form>
 		</li>
+		{% endfor %}
 	</ul>
 </div>
+
+
+
+
+<script type="text/javascript">
+	
+	$( ".forms > ul > li > h3" ).click(function() {
+		$(this).parent().toggleClass('open');
+	});
+	
+	// Close Form
+	$( ".forms > ul > li > form > .close" ).click(function() {
+		$(this).parent().parent().toggleClass('open');
+	});
+	
+	// Next section
+	$( ".forms > ul > li > form > section > div > .next" ).click(function() {
+		$(this).parent().parent().toggleClass('done');		
+	});
+	
+	// Back section
+	$( ".forms > ul > li > form > section > div > .back" ).click(function() {
+		$(this).parent().parent().prev().toggleClass('done');		
+	});
+	
+	
+	// Back section
+	$( ".forms > ul > li > form > section > div > .submit-button" ).click(function() {
+		$(this).parent().parent().prev().toggleClass('done');		
+	});
+	
+	
+	
+</script>
 
 <!--{% include sections.html %}-->
 
