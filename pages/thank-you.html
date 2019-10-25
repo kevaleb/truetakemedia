@@ -1,18 +1,20 @@
 ---
 layout: default
 title: Thank You
-banner_path:
-permalink: /thank-you/
 nav_title: thank you
 nav_class: /thank-you/
 nav_order: 6
 hide_from_nav: true
+permalink: /thank-you/
+banner_headline: Congratulations, It Worked!
+banner_sub_head: Now Let's Schedule a Time To Talk
+banner_logo_image: /images/logos/logo.svg
+banner_image_path: /images/banners/food.jpg
+banner_video_path: /videos/home.mp4
+banner_button_text: Schedule A Meeting
+banner_button_link: #meeting-form
 ---
-<div class="banner small">
-	<hgroup>
-		<h1>Congratulations, It Worked!</h1>
-	</hgroup>
-</div>
+{% include banner.html %}
 
 {% include request-meeting.html %}
 

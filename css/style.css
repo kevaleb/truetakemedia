@@ -913,9 +913,9 @@ header > div > nav > .snipcart-summary > .snipcart-user-profile > img {
 .banner > hgroup > img {
 	width: 150px;
 	margin: 0 auto 24px auto;
-	border: 3px solid #fff;
-	border-radius: 96px;
-	box-shadow: 0px 3px 5px rgba(0,0,0,.5);
+	/*border: 3px solid #fff;*/
+	/*border-radius: 96px;*/
+	/*box-shadow: 0px 3px 5px rgba(0,0,0,.5);*/
 }
 .banner > hgroup > h1 {
 	margin: 0px 0 0 0;
@@ -1912,8 +1912,8 @@ video#bgvid {
 	z-index: 1000;
 	max-width: 960px;
 	margin: 0 auto;
+	padding:  24px;
 	list-style: none;
-	padding: 24px;
 	text-align: center;
 }
 .websites > ul > li {
@@ -1959,7 +1959,7 @@ video#bgvid {
 		width: 100%;
 	}
 	.websites > ul > li:first-of-type {
-		margin: -96px 0 48px 0;
+		/*margin: -96px 0 48px 0;*/
 	}
 }
 
@@ -5001,6 +5001,7 @@ video#bgvid {
 
 .forms {
 	text-align: center;
+	padding: 0 0 48px 0;
 }
 .forms > h3 {
 	font: bold 1em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
@@ -5053,7 +5054,7 @@ video#bgvid {
 	max-height: 480px;
 	max-width: 480px;
 	margin: 0 auto;
-	padding: 150px 0 48px 0;
+	padding: 150px 0 72px 0;
 	overflow-y: auto;
 	white-space: nowrap;
 	background: #f2f2f2;
@@ -5204,7 +5205,7 @@ video#bgvid {
 	text-align: center;
 	background: #fff;
 	margin: 12px 0 0 0;
-	padding: 10px 0;
+	padding: 22px 0;
 	border-top: 1px solid #ccc;
 }
 .forms > ul > li > form > section > div > .back {
