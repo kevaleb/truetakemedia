@@ -1,0 +1,110 @@
+<div class="forms">
+	<h3>What Result Are You Looking For?</h3>
+	<ul>
+		{% for form in page.forms %}
+		<li>
+			
+			<div>
+				<img src="{{ form.form-icon-path }}" alt="" />
+				<h3>{{ form.form-title }}</h3>
+				<p>{{ form.form-description }}</p>
+			</div>
+			<form method="post" action="/thank-you/">
+				<input type="hidden" name="_hook" value="https://hooks.zapier.com/hooks/catch/2059575/j0q32n/">
+				<h3><img src="{{ form.form-icon-path }}" alt="" /> <strong>{{ form.form-title }}</strong> <i>{{ form.form-description }}</i></h3>
+				<span class="close">X</span>
+				{% for fieldset in form.fieldsets %}
+				<section class="">
+					<h4></h4>
+					{% for field in fieldset.fields %}
+					
+						
+					{% if field.field-type == "text" %}
+						<label>
+							<strong>{{ field.field-name }}</strong>
+							<input type="text" name="email" value="" placeholder="{{ field.field-name }}" />
+						</label>
+					{% elsif field.field-type == "radio" %}
+						<h4>{{ field.field-name }}</h4>
+						{% for option in field.field-options %}
+						<label style="display: inline-block;">
+							<input type="radio" name="{{ field.field-name }}" value="{{ field.field-name }}" />
+							<strong>{{ option.option-name }}</strong>
+						</label>
+						{% endfor %}
+					{% elsif field.field-type == "checkbox" %}
+						<h4>{{ field.field-name }}</h4>
+						{% for option in field.field-options %}
+						<label style="display: inline-block;">
+							<input type="checkbox" name="{{ field.field-name }}" value="{{ field.field-name }}" />
+							<strong>{{ option.option-name }}</strong>
+						</label>
+						{% endfor %}
+					{% elsif field.field-type == "textarea" %}
+						<label>
+							<strong>{{ field.field-name }}</strong>
+							<textarea></textarea>
+						</label>
+					{% endif %}
+						
+					
+					{% endfor %}
+					<div>
+						{% if forloop.first == true %}
+					        
+					    {% else %}
+					        <span class="back">Back</span>
+					    {% endif %}
+						
+						{% if forloop.last == true %}
+						    <button class="submit-button">Submit</button>
+						{% else %}
+						    <span class="next">Next</span>
+						{% endif %}
+						
+					</div>
+				</section>
+				{% endfor %}
+				<section class="success">
+					Thank You
+				</section>
+			</form>
+		</li>
+		{% endfor %}
+	</ul>
+</div>
+
+
+<script type="text/javascript">
+	
+	$( ".forms > ul > li > div" ).click(function() {
+		$(this).parent().toggleClass('open');
+	});
+	
+	
+	// Close Form
+	$( ".forms > ul > li > form > .close" ).click(function() {
+		$(this).parent().parent().toggleClass('open');
+	});
+	
+	
+	// Next section
+	$( ".forms > ul > li > form > section > div > .next" ).click(function() {
+		$(this).parent().parent().toggleClass('done');		
+	});
+	
+	
+	// Back section
+	$( ".forms > ul > li > form > section > div > .back" ).click(function() {
+		$(this).parent().parent().prev().toggleClass('done');		
+	});
+	
+	
+	// Back section
+	$( ".forms > ul > li > form > section > div > .submit-button" ).click(function() {
+		$(this).parent().parent().prev().toggleClass('done');		
+	});
+	
+	
+	
+</script>

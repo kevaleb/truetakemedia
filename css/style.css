@@ -1136,6 +1136,19 @@ header > div > nav > .snipcart-summary > .snipcart-user-profile > img {
 	/*transform: rotateY(72deg);*/
 	overflow: visible;
 }
+.alternating > div > .animation {
+	position: absolute;
+	z-index: 1000;
+	left: 50%;
+	top: 0%;
+	height: 100%;
+	width: 50%;
+	margin: 0 0 0 48px;
+	
+	/*transform: rotateY(72deg);*/
+	overflow: visible;
+	/*background: #f16;*/
+}
 
 
 .alternating > div > .video {
@@ -1289,6 +1302,11 @@ header > div > nav > .snipcart-summary > .snipcart-user-profile > img {
 	right: 50%;
 	margin: 0px 48px 0 0;
 }
+.alternating > div:nth-of-type(even) > .animation  {
+	left: auto;
+	right: 50%;
+	margin: 0px 48px 0 0;
+}
 .alternating > div:nth-of-type(even) > hgroup {
 	padding: 24vh 24px 24vh 50%;
 }
@@ -1426,6 +1444,22 @@ header > div > nav > .snipcart-summary > .snipcart-user-profile > img {
 
 .alternating > div > img,
 .alternating > div:nth-of-type(even) > img {
+	position: relative;
+	left: auto;
+	top: 0;
+	margin: 24px 0 0 0;
+	height: auto;
+	width: auto;
+	max-width: 100%;
+	max-height: 320px;
+	
+	top: 0;
+	right: auto;
+	height: auto;
+	margin: 0px 0 0 0;
+}
+.alternating > div > .animation,
+.alternating > div:nth-of-type(even) > .animation {
 	position: relative;
 	left: auto;
 	top: 0;
@@ -5009,7 +5043,7 @@ video#bgvid {
 }
 .forms > ul {
 	list-style: none;
-	/*max-width: 960px;*/
+	max-width: 1000px;
 	margin: 0 auto;
 	padding: 0;
 	text-align: center;
