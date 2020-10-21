@@ -381,8 +381,23 @@ header > div > nav > a.selected:after  {
 	height: 5px;
 	background: #eb363d;
 }
-header > div > nav > a:last-of-type {
+/*header > div > nav > a:last-of-type {
 	margin-right: 0;
+}*/
+
+
+header > div > nav > a.cta {
+	border: 2px solid #fff;
+	line-height: 24px;
+	padding: 3px 12px;
+	border-radius: 96px;
+	letter-spacing: 0;
+	font-weight: 700;
+}
+header > div > nav > a.cta:hover {
+	background: #eb363d;
+	color: #fff;
+	border-color: #eb363d;
 }
 
 
@@ -898,6 +913,19 @@ header > div > nav > .snipcart-summary > .snipcart-user-profile > img {
 }
 
 
+@keyframes animatedBackground {
+	0% { background-position: 0% 0%; }
+	50% { background-position: 100% 100%; }
+	100% { background-position: 0% 0%; }
+}
+.banner.animate {
+	background-size: cover;
+	background-repeat: repeat-x;
+
+	animation: animatedBackground 40s ease-in-out infinite;
+}
+
+
 /* @group H Group */
 .banner > hgroup {
 	position: relative;
@@ -937,6 +965,17 @@ header > div > nav > .snipcart-summary > .snipcart-user-profile > img {
 }
 .banner > hgroup > .button {
 	margin: 24px 0 0 0;
+	padding: 12px 24px;
+	font: 700 16px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	letter-spacing: 0;
+}
+.banner > hgroup > .button > img {
+	/*position: relative;
+	top: -4px;
+	right: -12px;*/
+	width: 18px;
+	margin: 0 0 0 12px;
+	/*vertical-align: middle;*/
 }
 .banner > hgroup > ul {
 	list-style: none;

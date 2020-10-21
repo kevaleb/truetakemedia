@@ -1,4 +1,4 @@
-<div class="banner dark {% if page.banner_size %}{{ page.banner_size }}{% endif %}" {% if page.banner_image_path %} style ="background-image: url('{{ page.banner_image_path}}')" {% endif %}>
+<div class="banner {{ page.banner-classes }} {% if page.banner_size %}{{ page.banner_size }}{% endif %}" {% if page.banner_image_path %} style ="background-image: url('{{ page.banner_image_path}}')" {% endif %}>
 	{% if page.banner_video_path %}
 		<video playsinline autoplay muted loop poster="{{ banner_video_poster_path: }}" id="bgvid">
 		    <source src="{{page.banner_video_path}}" type="video/mp4" />
@@ -12,7 +12,10 @@
 			<h2>{{ page.banner_sub_head }}</h2>
 		{% endif %}
 		{% if page.banner_button_text %}
-			<a href="{{ page.banner_button_link }}" class="button">{{page.banner_button_text }}</a>
+			<a href="{{ page.banner_button_link }}" class="button" {% if page.banner_button_newtab == true %}target="_blank"{% endif %} >
+				{{page.banner_button_text }}
+				{% if page.banner_button_image %}<img src="{{ page.banner_button_image }}"  alt="" />{% endif %}
+			</a>
 		{% endif %}
 		<!--{% if page.form %}-->
 		<!--	<form method="post" action="/campaigns/">-->

@@ -1,7 +1,8 @@
 <nav>
-	<a href="/" {% if page.url == '/' %}class="selected"{% endif %}>Home</a>
+	<!--<a href="/" {% if page.url == '/' %}class="selected"{% endif %}>Home</a>-->
 	{% assign navitems = site.main-pages | sort: 'nav_order'  %}
 	{% for item in navitems %}
 		<a href="{{ item.url }}" {% if page.url contains item.nav_class %}class="selected"{% endif %} {% if item.hide_from_nav == true %}style="display: none;"{% endif %}>{{ item.nav_title }}</a>
 	{% endfor %}
+	<a href="/manage-ads" class="cta">Manage Ads</a>
 </nav>
